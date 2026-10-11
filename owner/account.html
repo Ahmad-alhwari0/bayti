@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bayti — حسابي</title>
+    <title>بيتي — حسابي</title>
 
     <link
       id="bootstrap-css"
@@ -15,22 +15,234 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="../assets/css/main.css" />
-    <script src="../assets/i18n/ar.js"></script>
-    <script src="../assets/i18n/en.js"></script>
-    <script src="../assets/js/i18n.js"></script>
+    <link rel="stylesheet" href="../assets/css/pages/owner.css" />
   </head>
-  <!-- data-role: seeker | owner | admin — و data-page لازم يطابق key بالـ MENUS بـ layout.js -->
-  <body data-layout="app" data-role="owner" data-page="account">
-    <main>
-      <div class="page-head">
-        <div>
-          <h1 data-i18n="menu.owner.account"></h1>
-          <p data-i18n="app.comingSoon"></p>
+  <body data-role="owner" data-page="account">
+    <!-- ===== Topbar ===== -->
+    <header class="app-topbar">
+      <button
+        class="icon-btn d-lg-none"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#appSidebar"
+        aria-label="القائمة"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+      <a class="brand" href="dashboard.html"
+        ><span class="brand-mark">B</span><span>بيتي</span></a
+      >
+      <div class="ms-auto d-flex align-items-center gap-1">
+        <button type="button" class="btn btn-link nav-lang px-2" data-action="toggle-lang">
+          <i class="bi bi-translate"></i><span>EN</span>
+        </button>
+        <div class="dropdown">
+          <button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-label="الإشعارات">
+            <i class="bi bi-bell"></i><span class="dot"></span>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end shadow-sm p-0" style="width: 320px">
+            <div class="px-3 py-2 border-bottom fw-semibold">الإشعارات</div>
+            <div class="py-1">
+              <a class="dropdown-item d-flex gap-2 py-2 text-wrap" href="requests.html">
+                <span class="kpi-icon flex-shrink-0" style="width: 34px; height: 34px; font-size: 1rem"><i class="bi bi-inbox"></i></span>
+                <span class="small">
+                  <span class="d-block">طلب معاينة جديد من سارة خالد</span>
+                  <span class="text-muted" style="font-size: 0.72rem">قبل 10 دقايق</span>
+                </span>
+              </a>
+              <a class="dropdown-item d-flex gap-2 py-2 text-wrap" href="properties.html">
+                <span class="kpi-icon flex-shrink-0" style="width: 34px; height: 34px; font-size: 1rem"><i class="bi bi-shield-check"></i></span>
+                <span class="small">
+                  <span class="d-block">تم توثيق عقارك استوديو الجبيهة</span>
+                  <span class="text-muted" style="font-size: 0.72rem">قبل ساعة</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="app-user" type="button" data-bs-toggle="dropdown">
+            <span class="avatar">أ</span>
+            <span class="d-none d-md-inline text-start lh-sm">
+              <span class="d-block small fw-semibold">أبو أحمد</span>
+              <span class="d-block text-muted" style="font-size: 0.72rem">صاحب عقار</span>
+            </span>
+            <i class="bi bi-chevron-down small text-muted"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+            <li><a class="dropdown-item" href="account.html">حسابي</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item text-danger" href="../index.html">تسجيل الخروج</a></li>
+          </ul>
         </div>
       </div>
-    </main>
+    </header>
+
+    <div class="app-shell">
+      <!-- ===== Sidebar ===== -->
+      <aside class="app-sidebar offcanvas-lg offcanvas-start" tabindex="-1" id="appSidebar">
+        <div class="offcanvas-header border-bottom">
+          <a class="brand" href="../index.html"><span class="brand-mark">B</span><span>بيتي</span></a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#appSidebar" aria-label="إغلاق"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="side-label">صاحب عقار</div>
+          <a class="side-link" href="dashboard.html"><i class="bi bi-grid-1x2"></i><span class="flex-grow-1">لوحة التحكم</span></a>
+          <a class="side-link" href="properties.html"><i class="bi bi-house-door"></i><span class="flex-grow-1">عقاراتي</span></a>
+          <a class="side-link" href="property-form.html"><i class="bi bi-plus-square"></i><span class="flex-grow-1">إضافة عقار</span></a>
+          <a class="side-link" href="requests.html"><i class="bi bi-inbox"></i><span class="flex-grow-1">الطلبات والمعاينات</span><span class="side-badge">3</span></a>
+          <a class="side-link" href="chat.html"><i class="bi bi-chat-dots"></i><span class="flex-grow-1">الرسائل</span><span class="side-badge">1</span></a>
+          <a class="side-link active" href="account.html" aria-current="page"><i class="bi bi-person-badge"></i><span class="flex-grow-1">حسابي</span></a>
+        </div>
+      </aside>
+
+      <!-- ===== Content ===== -->
+      <main class="app-main">
+        <!-- 1. راس الصفحة -->
+        <div class="page-head">
+          <div>
+            <h1>حسابي</h1>
+            <p>معلوماتك، التوثيق، والاشتراك.</p>
+          </div>
+        </div>
+
+        <div class="row g-4 align-items-start">
+          <!-- ===== العمود الرئيسي ===== -->
+          <div class="col-lg-8 d-flex flex-column gap-4">
+            <!-- 2. المعلومات الشخصية -->
+            <form class="panel form-section" id="accountForm" aria-labelledby="secPersonal">
+              <h2 id="secPersonal" class="mb-3">المعلومات الشخصية</h2>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="aName" class="form-label">الاسم</label>
+                  <input type="text" class="form-control" id="aName" name="name" value="أبو أحمد" autocomplete="name" />
+                </div>
+                <div class="col-md-6">
+                  <label for="aType" class="form-label">نوع الحساب</label>
+                  <select class="form-select" id="aType" name="account_type">
+                    <option value="individual" selected>مالك فرد</option>
+                    <option value="agency">مكتب عقاري</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="aEmail" class="form-label">البريد الإلكتروني</label>
+                  <input type="email" class="form-control" id="aEmail" name="email" value="abuahmad@example.com" autocomplete="email" />
+                </div>
+                <div class="col-md-6">
+                  <label for="aPhone" class="form-label">رقم الهاتف</label>
+                  <input type="tel" class="form-control text-start" id="aPhone" name="phone" dir="ltr" value="079 ••• ••21" autocomplete="tel" />
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-2 mt-3 small text-muted">
+                <i class="bi bi-lock text-primary-bt"></i>
+                <span>رقمك وإيميلك ما بيظهروا للباحثين قبل تأكيد الحجز.</span>
+              </div>
+            </form>
+
+            <!-- 3. التوثيق -->
+            <section class="panel" aria-labelledby="secVerify">
+              <div class="panel-head flex-wrap">
+                <h2 id="secVerify">التوثيق</h2>
+                <span class="status status--success status--icon"><i class="bi bi-patch-check-fill"></i>حساب موثّق</span>
+              </div>
+              <ul class="list-clean" id="verificationDocs">
+                <li class="list-row flex-wrap">
+                  <span class="kpi-icon"><i class="bi bi-file-earmark-text"></i></span>
+                  <div class="grow flex-main">
+                    <b class="d-block">الهوية الشخصية</b>
+                    <small>رُفعت 12 سبتمبر · راجعها الأدمن 13 سبتمبر</small>
+                  </div>
+                  <span class="status status--success">معتمد</span>
+                </li>
+                <li class="list-row flex-wrap">
+                  <span class="kpi-icon"><i class="bi bi-file-earmark-text"></i></span>
+                  <div class="grow flex-main">
+                    <b class="d-block">سند ملكية — استوديو الجبيهة</b>
+                    <small>رُفع 12 سبتمبر · راجعه الأدمن 13 سبتمبر</small>
+                  </div>
+                  <span class="status status--success">معتمد</span>
+                </li>
+              </ul>
+              <label class="btn btn-outline-primary btn-dashed mt-3" for="extraDoc">
+                <i class="bi bi-upload"></i>
+                <span>ارفع وثيقة إضافية</span>
+              </label>
+              <input type="file" class="visually-hidden" id="extraDoc" name="document" accept="image/*,application/pdf" />
+            </section>
+
+            <!-- 4. حساب استلام الدفعات -->
+            <section class="panel form-section" aria-labelledby="secPayout">
+              <h2 id="secPayout">حساب استلام الدفعات</h2>
+              <p>لما الباحث يأكد الاستلام، بتتحول الدفعة لهالحساب خلال يومين عمل.</p>
+              <div class="d-flex flex-wrap align-items-center gap-3 p-3 bg-body rounded-3" id="payoutAccount">
+                <i class="bi bi-cash-stack fs-4 text-primary-bt"></i>
+                <div class="flex-grow-1">
+                  <b class="d-block">البنك العربي</b>
+                  <span class="small text-muted" dir="ltr">JO•• •••• •••• 4821</span>
+                </div>
+                <button type="button" class="btn btn-link text-primary-bt text-decoration-none" data-action="change-payout">تغيير</button>
+              </div>
+            </section>
+          </div>
+
+          <!-- ===== الاشتراك ===== -->
+          <aside class="col-lg-4 d-flex flex-column gap-3" aria-labelledby="secPlans" id="plans">
+            <h2 class="h5 mb-0" id="secPlans">الاشتراك</h2>
+
+            <!-- مجاني -->
+            <div class="plan">
+              <div class="d-flex justify-content-between align-items-center gap-2">
+                <b class="fs-5">مجاني</b>
+              </div>
+              <div class="price">0 د.أ</div>
+              <ul class="check-list mt-0">
+                <li><i class="bi bi-check2"></i>لحد 3 عقارات</li>
+                <li><i class="bi bi-check2"></i>إحصائيات أساسية</li>
+              </ul>
+              <button type="button" class="btn btn-outline-primary mt-auto" data-plan="free">الخطة الأساسية</button>
+            </div>
+
+            <!-- مميز (الحالية) -->
+            <div class="plan is-current">
+              <div class="d-flex justify-content-between align-items-center gap-2">
+                <b class="fs-5">مميز</b>
+                <span class="pill-soft">خطتك الحالية</span>
+              </div>
+              <div class="price">10 د.أ <small>شهريا لكل عقار</small></div>
+              <ul class="check-list mt-0">
+                <li><i class="bi bi-check2"></i>عقارك بأول النتائج</li>
+                <li><i class="bi bi-check2"></i>شارة "مميز"</li>
+                <li><i class="bi bi-check2"></i>إحصائيات مفصّلة</li>
+              </ul>
+              <button type="button" class="btn btn-primary mt-auto" data-plan="featured">جدّد لـ 30 نوفمبر</button>
+            </div>
+
+            <!-- مكتب عقاري -->
+            <div class="plan">
+              <div class="d-flex justify-content-between align-items-center gap-2">
+                <b class="fs-5">مكتب عقاري</b>
+              </div>
+              <div class="price">35 د.أ <small>شهريا</small></div>
+              <ul class="check-list mt-0">
+                <li><i class="bi bi-check2"></i>عقارات بدون حد</li>
+                <li><i class="bi bi-check2"></i>5 إعلانات مميزة</li>
+                <li><i class="bi bi-check2"></i>تقارير شهرية</li>
+              </ul>
+              <button type="button" class="btn btn-outline-primary mt-auto" data-plan="agency">رقّي حسابك</button>
+            </div>
+
+            <div class="d-flex align-items-center gap-2 small text-muted">
+              <i class="bi bi-receipt"></i>
+              <span>آخر دفعة: 10 د.أ · 30 سبتمبر 2026</span>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/layout.js"></script>
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/pages/owner/account.js"></script>
   </body>
 </html>

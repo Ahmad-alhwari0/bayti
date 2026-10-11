@@ -1,0 +1,229 @@
+/* =========================================================
+   Owner pages — ستايلات خاصة بصفحات صاحب العقار
+   (المكونات المشتركة بـ main.css)
+   ========================================================= */
+
+:root {
+  /* لون نص الإعلان المميز على الخلفية البترولية */
+  --owner-featured-label: #f2c7a9;
+  /* نفس ألوان حالات main.css */
+  --owner-success-soft: #e3f1e9;
+  --owner-warn-text: #8a5a12;
+}
+
+/* ---------- مشترك ---------- */
+/* عمود رئيسي مرن جوا الصفوف */
+.flex-main {
+  flex: 2 1 240px;
+  min-width: 0;
+}
+.avatar-lg {
+  width: 46px;
+  height: 46px;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+/* زر أيقونة مربع */
+.btn-square {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+/* زر ثانوي بحد خفيف */
+.btn-ghost {
+  --bs-btn-color: var(--bt-text);
+  --bs-btn-bg: var(--bt-surface);
+  --bs-btn-border-color: var(--bt-line);
+  --bs-btn-hover-color: var(--bt-primary);
+  --bs-btn-hover-bg: var(--bt-bg);
+  --bs-btn-hover-border-color: var(--bt-line);
+  --bs-btn-active-color: var(--bt-primary);
+  --bs-btn-active-bg: var(--bt-bg);
+  --bs-btn-active-border-color: var(--bt-line);
+  --bs-btn-focus-shadow-rgb: 31, 74, 74;
+  border-width: 1.5px;
+}
+/* شارة بترولية ناعمة بدون نقطة */
+.pill-soft {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--bt-primary);
+  background: var(--bt-primary-soft);
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+  white-space: nowrap;
+}
+/* حالة فيها أيقونة بدل النقطة */
+.status--icon::before {
+  display: none;
+}
+
+/* ---------- dashboard.html ---------- */
+.btn-alert {
+  --bs-btn-color: var(--owner-warn-text);
+  --bs-btn-bg: var(--bt-surface);
+  --bs-btn-border-color: var(--bt-surface);
+  --bs-btn-hover-color: var(--owner-warn-text);
+  --bs-btn-hover-bg: var(--bt-bg);
+  --bs-btn-hover-border-color: var(--bt-bg);
+  --bs-btn-active-color: var(--owner-warn-text);
+  --bs-btn-active-bg: var(--bt-bg);
+  --bs-btn-active-border-color: var(--bt-bg);
+}
+.trend-up {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--bt-success);
+}
+.panel-featured {
+  background: var(--bt-primary);
+  color: #fff;
+}
+.panel-featured .featured-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--owner-featured-label);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.panel-featured p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.progress-bar.is-warn {
+  background: var(--bt-warning);
+}
+.kpi-icon.is-success {
+  background: var(--owner-success-soft);
+  color: var(--bt-success);
+}
+
+/* ---------- properties.html ---------- */
+.prop-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.prop-row .listing-thumb {
+  width: 104px;
+  height: 84px;
+  border-radius: 12px;
+}
+.prop-row__title {
+  font-size: 1.05rem;
+  color: var(--bt-text);
+  margin: 0;
+}
+.prop-row__stats {
+  flex: 1 1 260px;
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+.prop-row__stats .stat-tile {
+  padding: 0.5rem;
+}
+.prop-row__stats .stat-tile b {
+  font-size: 1rem;
+}
+.fresh-note {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--bt-muted);
+  margin-top: 0.25rem;
+}
+.fresh-note.is-warn {
+  color: var(--owner-warn-text);
+}
+
+/* ---------- property-form.html ---------- */
+.map-picker {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.map-drop-pin {
+  position: relative;
+  z-index: 1;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--bt-accent);
+  margin-bottom: 2.5rem;
+}
+
+/* ---------- requests.html ---------- */
+.request-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1rem;
+}
+.request-row__name {
+  font-size: 1rem;
+  color: var(--bt-text);
+  margin: 0;
+}
+.verified-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--bt-success);
+}
+.day-tile {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  background: var(--bt-primary-soft);
+  color: var(--bt-primary);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.day-tile i {
+  font-size: 1.05rem;
+}
+.btn-delete {
+  color: var(--bt-danger);
+}
+.btn-delete:hover {
+  color: var(--bt-danger);
+  background: var(--bt-bg);
+}
+
+/* ---------- chat.html ---------- */
+.chat-item .meta .prop {
+  color: var(--bt-primary);
+  font-size: 0.75rem;
+}
+.chat-head small.is-online {
+  color: var(--bt-success);
+}
+
+/* ---------- account.html ---------- */
+.btn-dashed {
+  border-style: dashed;
+  border-width: 1.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
