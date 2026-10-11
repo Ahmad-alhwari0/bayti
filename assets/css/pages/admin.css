@@ -192,7 +192,8 @@
 /* زر الإضافة بيتغير حسب التاب المفتوح (CSS بس) */
 .app-main:has(#tab-places.active) .add-hood,
 .app-main:not(:has(#tab-places.active)) .add-place {
-  display: none;
+  /* !important عشان يغلب d-inline-flex تبع Bootstrap */
+  display: none !important;
 }
 .place-type {
   font-size: 0.75rem;
