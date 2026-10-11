@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bayti — ملفي وأولوياتي</title>
+    <title>بيتي — ملفي وأولوياتي</title>
 
     <link
       id="bootstrap-css"
@@ -15,22 +15,229 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="../assets/css/main.css" />
-    <script src="../assets/i18n/ar.js"></script>
-    <script src="../assets/i18n/en.js"></script>
-    <script src="../assets/js/i18n.js"></script>
+    <link rel="stylesheet" href="../assets/css/pages/seeker.css" />
   </head>
-  <!-- data-role: seeker | owner | admin — و data-page لازم يطابق key بالـ MENUS بـ layout.js -->
-  <body data-layout="app" data-role="seeker" data-page="profile">
-    <main>
-      <div class="page-head">
-        <div>
-          <h1 data-i18n="menu.seeker.profile"></h1>
-          <p data-i18n="app.comingSoon"></p>
+  <body data-role="seeker" data-page="profile">
+    <!-- ===== Topbar ===== -->
+    <header class="app-topbar">
+      <button
+        class="icon-btn d-lg-none"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#appSidebar"
+        aria-label="القائمة"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+      <a class="brand" href="search.html"
+        ><span class="brand-mark">B</span><span>بيتي</span></a
+      >
+      <div class="ms-auto d-flex align-items-center gap-1">
+        <button type="button" class="btn btn-link nav-lang px-2" data-action="toggle-lang">
+          <i class="bi bi-translate"></i><span>EN</span>
+        </button>
+        <div class="dropdown">
+          <button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-label="الإشعارات">
+            <i class="bi bi-bell"></i><span class="dot"></span>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end shadow-sm p-0" style="width: 320px">
+            <div class="px-3 py-2 border-bottom fw-semibold">الإشعارات</div>
+            <div class="py-1">
+              <a class="dropdown-item d-flex gap-2 py-2 text-wrap" href="property.html">
+                <span class="kpi-icon flex-shrink-0" style="width: 34px; height: 34px; font-size: 1rem"><i class="bi bi-stars"></i></span>
+                <span class="small">
+                  <span class="d-block">نزل بيت جديد بتوافق 89% بالجبيهة</span>
+                  <span class="text-muted" style="font-size: 0.72rem">قبل 10 دقايق</span>
+                </span>
+              </a>
+              <a class="dropdown-item d-flex gap-2 py-2 text-wrap" href="bookings.html">
+                <span class="kpi-icon flex-shrink-0" style="width: 34px; height: 34px; font-size: 1rem"><i class="bi bi-check2-circle"></i></span>
+                <span class="small">
+                  <span class="d-block">أبو أحمد أكّد موعد المعاينة يوم الخميس</span>
+                  <span class="text-muted" style="font-size: 0.72rem">قبل ساعة</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="app-user" type="button" data-bs-toggle="dropdown">
+            <span class="avatar">س</span>
+            <span class="d-none d-md-inline text-start lh-sm">
+              <span class="d-block small fw-semibold">سارة خالد</span>
+              <span class="d-block text-muted" style="font-size: 0.72rem">باحث عن سكن</span>
+            </span>
+            <i class="bi bi-chevron-down small text-muted"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+            <li><a class="dropdown-item" href="profile.html">ملفي</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item text-danger" href="../index.html">تسجيل الخروج</a></li>
+          </ul>
         </div>
       </div>
-    </main>
+    </header>
+
+    <div class="app-shell">
+      <!-- ===== Sidebar ===== -->
+      <aside class="app-sidebar offcanvas-lg offcanvas-start" tabindex="-1" id="appSidebar">
+        <div class="offcanvas-header border-bottom">
+          <a class="brand" href="../index.html"><span class="brand-mark">B</span><span>بيتي</span></a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#appSidebar" aria-label="إغلاق"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="side-label">باحث عن سكن</div>
+          <a class="side-link" href="search.html"><i class="bi bi-stars"></i><span class="flex-grow-1">اكتشف بيتك</span></a>
+          <a class="side-link" href="bookings.html"><i class="bi bi-calendar-check"></i><span class="flex-grow-1">حجوزاتي</span><span class="side-badge">1</span></a>
+          <a class="side-link" href="chat.html"><i class="bi bi-chat-dots"></i><span class="flex-grow-1">الرسائل</span><span class="side-badge">2</span></a>
+          <a class="side-link active" href="profile.html" aria-current="page"><i class="bi bi-sliders"></i><span class="flex-grow-1">ملفي وأولوياتي</span></a>
+        </div>
+      </aside>
+
+      <!-- ===== Content ===== -->
+      <main class="app-main">
+        <!-- 1. راس الصفحة -->
+        <div class="page-head">
+          <div>
+            <h1>ملفي وأولوياتي</h1>
+            <p>أي تعديل هون بيحدّث نسب التوافق على كل البيوت.</p>
+          </div>
+        </div>
+
+        <form id="profileForm">
+          <div class="row g-4 align-items-start">
+            <!-- ===== 2. كرت الحساب ===== -->
+            <div class="col-lg-4">
+              <aside class="panel" aria-label="حسابي">
+                <div class="text-center pb-3 border-bottom">
+                  <span class="avatar avatar-xl mb-2">س</span>
+                  <b class="d-block fs-5">سارة خالد</b>
+                  <div class="small text-muted">sara@example.com</div>
+                  <span class="status status--success mt-2">الإيميل مؤكد</span>
+                </div>
+
+                <!-- لغة الموقع -->
+                <fieldset class="py-3 border-bottom">
+                  <legend class="fs-6 fw-semibold mb-2">لغة الموقع</legend>
+                  <div class="seg-tabs d-flex w-100" role="radiogroup" aria-label="لغة الموقع">
+                    <input type="radio" class="btn-check" name="lang" id="langAr" value="ar" checked />
+                    <label class="nav-link flex-fill" for="langAr">العربية</label>
+                    <input type="radio" class="btn-check" name="lang" id="langEn" value="en" />
+                    <label class="nav-link flex-fill" for="langEn">English</label>
+                  </div>
+                </fieldset>
+
+                <!-- التنبيهات -->
+                <fieldset class="pt-3">
+                  <legend class="fs-6 fw-semibold mb-1">التنبيهات</legend>
+                  <div class="form-check form-switch switch-row">
+                    <label class="form-check-label" for="alertNewMatch">بيت جديد بتوافق أعلى من 80%</label>
+                    <input class="form-check-input" type="checkbox" role="switch" id="alertNewMatch" name="alertNewMatch" checked />
+                  </div>
+                  <div class="form-check form-switch switch-row">
+                    <label class="form-check-label" for="alertBookings">تحديثات الحجز والمعاينات</label>
+                    <input class="form-check-input" type="checkbox" role="switch" id="alertBookings" name="alertBookings" checked />
+                  </div>
+                  <div class="form-check form-switch switch-row">
+                    <label class="form-check-label" for="alertMessages">رسائل جديدة</label>
+                    <input class="form-check-input" type="checkbox" role="switch" id="alertMessages" name="alertMessages" />
+                  </div>
+                </fieldset>
+              </aside>
+            </div>
+
+            <!-- ===== الإعدادات ===== -->
+            <div class="col-lg-8 d-flex flex-column gap-3">
+              <!-- 3. ليش جاي؟ -->
+              <fieldset class="panel">
+                <legend class="h5 mb-3">ليش جاي؟</legend>
+                <div class="d-flex flex-wrap gap-2" id="purposeOptions">
+                  <input type="radio" class="btn-check" name="purpose" id="pStudy" value="study" checked />
+                  <label class="chip-select" for="pStudy"><i class="bi bi-mortarboard"></i>دراسة</label>
+                  <input type="radio" class="btn-check" name="purpose" id="pWork" value="work" />
+                  <label class="chip-select" for="pWork"><i class="bi bi-briefcase"></i>شغل</label>
+                  <input type="radio" class="btn-check" name="purpose" id="pTourism" value="tourism" />
+                  <label class="chip-select" for="pTourism"><i class="bi bi-camera"></i>سياحة</label>
+                  <input type="radio" class="btn-check" name="purpose" id="pMedical" value="medical" />
+                  <label class="chip-select" for="pMedical"><i class="bi bi-hospital"></i>علاج</label>
+                  <input type="radio" class="btn-check" name="purpose" id="pRelocation" value="relocation" />
+                  <label class="chip-select" for="pRelocation"><i class="bi bi-truck"></i>انتقال</label>
+                  <input type="radio" class="btn-check" name="purpose" id="pOther" value="other" />
+                  <label class="chip-select" for="pOther"><i class="bi bi-three-dots"></i>غير ذلك</label>
+                </div>
+              </fieldset>
+
+              <!-- 4. مكانك اليومي -->
+              <section class="panel" aria-labelledby="placeTitle">
+                <h2 class="h5 mb-3" id="placeTitle">مكانك اليومي</h2>
+                <div class="d-flex flex-wrap align-items-center gap-3" id="dailyPlace">
+                  <span class="icon-tile icon-tile--lg is-solid"><i class="bi bi-mortarboard"></i></span>
+                  <div class="flex-grow-1">
+                    <b class="d-block">الجامعة الأردنية</b>
+                    <span class="small text-muted">جامعة · الجبيهة</span>
+                  </div>
+                  <input type="hidden" name="placeId" value="ju" />
+                  <button type="button" class="btn btn-outline-primary"><i class="bi bi-geo-alt me-1"></i>غيّر المكان</button>
+                </div>
+              </section>
+
+              <!-- 5. الأولويات -->
+              <section class="panel" aria-labelledby="prioTitle">
+                <h2 class="h5 mb-3" id="prioTitle">أولوياتك</h2>
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <label for="budget" class="fw-medium">ميزانيتك الشهرية (شامل الفواتير)</label>
+                  <output for="budget" class="fw-bold fs-5 text-primary-bt" id="budgetVal">300 د.أ</output>
+                </div>
+                <input type="range" class="form-range mb-2" id="budget" name="budget" min="100" max="800" step="10" value="300" />
+
+                <div id="priorities" class="border-top">
+                  <div class="priority">
+                    <label for="pr-price"><i class="bi bi-cash-coin"></i>السعر</label>
+                    <input type="range" class="form-range" id="pr-price" name="price" min="1" max="5" value="5" />
+                    <span class="prio-val">مهم جدا</span>
+                  </div>
+                  <div class="priority">
+                    <label for="pr-distance"><i class="bi bi-geo-alt"></i>القرب من مكانك</label>
+                    <input type="range" class="form-range" id="pr-distance" name="distance" min="1" max="5" value="5" />
+                    <span class="prio-val">مهم جدا</span>
+                  </div>
+                  <div class="priority">
+                    <label for="pr-quiet"><i class="bi bi-volume-mute"></i>الهدوء</label>
+                    <input type="range" class="form-range" id="pr-quiet" name="quiet" min="1" max="5" value="4" />
+                    <span class="prio-val">مهم</span>
+                  </div>
+                  <div class="priority">
+                    <label for="pr-access"><i class="bi bi-universal-access"></i>سهولة الوصول</label>
+                    <input type="range" class="form-range" id="pr-access" name="access" min="1" max="5" value="2" />
+                    <span class="prio-val">قليل</span>
+                  </div>
+                  <div class="priority">
+                    <label for="pr-ready"><i class="bi bi-lightning-charge"></i>جاهز فورا</label>
+                    <input type="range" class="form-range" id="pr-ready" name="ready" min="1" max="5" value="3" />
+                    <span class="prio-val">متوسط</span>
+                  </div>
+                  <div class="priority">
+                    <label for="pr-sharing"><i class="bi bi-people"></i>مشاركة السكن</label>
+                    <input type="range" class="form-range" id="pr-sharing" name="sharing" min="1" max="5" value="3" />
+                    <span class="prio-val">متوسط</span>
+                  </div>
+                </div>
+              </section>
+
+              <!-- 6. الحفظ -->
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+                <span class="d-flex align-items-center gap-2 small text-muted"><i class="bi bi-arrow-repeat"></i>رح نعيد حساب نسب التوافق بعد الحفظ.</span>
+                <button type="submit" class="btn btn-primary btn-lg">حفظ التغييرات</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </main>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/layout.js"></script>
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/pages/seeker/profile.js"></script>
   </body>
 </html>

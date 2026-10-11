@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bayti — تفاصيل العقار</title>
+    <title>بيتي — استوديو مفروش، الجبيهة</title>
 
     <link
       id="bootstrap-css"
@@ -15,22 +15,287 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="../assets/css/main.css" />
-    <script src="../assets/i18n/ar.js"></script>
-    <script src="../assets/i18n/en.js"></script>
-    <script src="../assets/js/i18n.js"></script>
+    <link rel="stylesheet" href="../assets/css/pages/seeker.css" />
   </head>
-  <!-- data-role: seeker | owner | admin — و data-page لازم يطابق key بالـ MENUS بـ layout.js -->
-  <body data-layout="app" data-role="seeker" data-page="search">
-    <main>
-      <div class="page-head">
-        <div>
-          <h1 data-i18n="page.property"></h1>
-          <p data-i18n="app.comingSoon"></p>
+  <body data-role="seeker" data-page="property">
+    <!-- ===== Topbar ===== -->
+    <header class="app-topbar">
+      <button
+        class="icon-btn d-lg-none"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#appSidebar"
+        aria-label="القائمة"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+      <a class="brand" href="search.html"
+        ><span class="brand-mark">B</span><span>بيتي</span></a
+      >
+      <div class="ms-auto d-flex align-items-center gap-1">
+        <button type="button" class="btn btn-link nav-lang px-2" data-action="toggle-lang">
+          <i class="bi bi-translate"></i><span>EN</span>
+        </button>
+        <div class="dropdown">
+          <button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-label="الإشعارات">
+            <i class="bi bi-bell"></i><span class="dot"></span>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end shadow-sm p-0" style="width: 320px">
+            <div class="px-3 py-2 border-bottom fw-semibold">الإشعارات</div>
+            <div class="py-1">
+              <a class="dropdown-item d-flex gap-2 py-2 text-wrap" href="property.html">
+                <span class="kpi-icon flex-shrink-0" style="width: 34px; height: 34px; font-size: 1rem"><i class="bi bi-stars"></i></span>
+                <span class="small">
+                  <span class="d-block">نزل بيت جديد بتوافق 89% بالجبيهة</span>
+                  <span class="text-muted" style="font-size: 0.72rem">قبل 10 دقايق</span>
+                </span>
+              </a>
+              <a class="dropdown-item d-flex gap-2 py-2 text-wrap" href="bookings.html">
+                <span class="kpi-icon flex-shrink-0" style="width: 34px; height: 34px; font-size: 1rem"><i class="bi bi-check2-circle"></i></span>
+                <span class="small">
+                  <span class="d-block">أبو أحمد أكّد موعد المعاينة يوم الخميس</span>
+                  <span class="text-muted" style="font-size: 0.72rem">قبل ساعة</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="app-user" type="button" data-bs-toggle="dropdown">
+            <span class="avatar">س</span>
+            <span class="d-none d-md-inline text-start lh-sm">
+              <span class="d-block small fw-semibold">سارة خالد</span>
+              <span class="d-block text-muted" style="font-size: 0.72rem">باحث عن سكن</span>
+            </span>
+            <i class="bi bi-chevron-down small text-muted"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+            <li><a class="dropdown-item" href="profile.html">ملفي</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item text-danger" href="../index.html">تسجيل الخروج</a></li>
+          </ul>
         </div>
       </div>
-    </main>
+    </header>
+
+    <div class="app-shell">
+      <!-- ===== Sidebar ===== -->
+      <aside class="app-sidebar offcanvas-lg offcanvas-start" tabindex="-1" id="appSidebar">
+        <div class="offcanvas-header border-bottom">
+          <a class="brand" href="../index.html"><span class="brand-mark">B</span><span>بيتي</span></a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#appSidebar" aria-label="إغلاق"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="side-label">باحث عن سكن</div>
+          <a class="side-link active" href="search.html"><i class="bi bi-stars"></i><span class="flex-grow-1">اكتشف بيتك</span></a>
+          <a class="side-link" href="bookings.html"><i class="bi bi-calendar-check"></i><span class="flex-grow-1">حجوزاتي</span><span class="side-badge">1</span></a>
+          <a class="side-link" href="chat.html"><i class="bi bi-chat-dots"></i><span class="flex-grow-1">الرسائل</span><span class="side-badge">2</span></a>
+          <a class="side-link" href="profile.html"><i class="bi bi-sliders"></i><span class="flex-grow-1">ملفي وأولوياتي</span></a>
+        </div>
+      </aside>
+
+      <!-- ===== Content ===== -->
+      <main class="app-main">
+        <!-- 1. رجوع للنتائج -->
+        <a href="search.html" class="back-link"><i class="bi bi-arrow-right dir-flip"></i>رجوع للنتائج</a>
+
+        <!-- 2. معرض الصور -->
+        <div class="gallery mt-2 mb-4" id="propertyGallery">
+          <div class="g-main ph ph-1"><i class="bi bi-house-door" aria-hidden="true"></i></div>
+          <div class="ph ph-5"></div>
+          <div class="ph ph-3"></div>
+          <div class="ph ph-1"></div>
+          <div class="g-more ph ph-5"><span>+8 صور</span></div>
+        </div>
+
+        <div class="row g-4 align-items-start">
+          <!-- ===== تفاصيل البيت ===== -->
+          <div class="col-lg-8 d-flex flex-column gap-3">
+            <!-- 3. العنوان والمعلومات السريعة -->
+            <div class="prop-head">
+              <div class="d-flex flex-wrap align-items-center gap-2">
+                <h1>استوديو مفروش — الجبيهة</h1>
+                <span class="status status--info"><i class="bi bi-patch-check-fill"></i>موثّق</span>
+              </div>
+              <p class="d-flex align-items-center gap-2 small text-muted mt-2 mb-3">
+                <i class="bi bi-arrow-repeat ic-ok"></i>المالك أكّد إنه متاح قبل يومين
+              </p>
+              <div class="facts">
+                <span class="fact"><i class="bi bi-arrows-angle-expand"></i>45 م²</span>
+                <span class="fact"><i class="bi bi-house-door"></i>استوديو</span>
+                <span class="fact"><i class="bi bi-layers"></i>الطابق 2</span>
+                <span class="fact"><i class="bi bi-universal-access"></i>مصعد</span>
+                <span class="fact"><i class="bi bi-calendar3"></i>أقل مدة 3 شهور</span>
+              </div>
+            </div>
+
+            <!-- 4. ليش هاد البيت إلك؟ -->
+            <section class="panel" aria-labelledby="whyTitle">
+              <div class="row g-4 align-items-center">
+                <div class="col-md-5 d-flex align-items-center gap-3">
+                  <div class="score-ring score-ring--lg" style="--value: 92"><div class="score-ring__inner">92<small>توافق</small></div></div>
+                  <div>
+                    <h2 class="h5 mb-1" id="whyTitle">ليش هاد البيت إلك؟</h2>
+                    <p class="small text-muted mb-0">محسوب من أولوياتك. بتقدر تعدّلها من <a href="profile.html">ملفك</a>.</p>
+                  </div>
+                </div>
+                <div class="col-md-7 why-bars" id="matchBars">
+                  <div class="score-bar">
+                    <span>القرب</span>
+                    <div class="progress" role="progressbar" aria-label="القرب" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width: 95%"></div></div>
+                    <b>95</b>
+                  </div>
+                  <div class="score-bar">
+                    <span>السعر</span>
+                    <div class="progress" role="progressbar" aria-label="السعر" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width: 80%"></div></div>
+                    <b>80</b>
+                  </div>
+                  <div class="score-bar">
+                    <span>الهدوء</span>
+                    <div class="progress" role="progressbar" aria-label="الهدوء" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width: 90%"></div></div>
+                    <b>90</b>
+                  </div>
+                  <div class="score-bar">
+                    <span>سهولة الوصول</span>
+                    <div class="progress" role="progressbar" aria-label="سهولة الوصول" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width: 85%"></div></div>
+                    <b>85</b>
+                  </div>
+                  <div class="score-bar mb-0">
+                    <span>جاهز فورا</span>
+                    <div class="progress" role="progressbar" aria-label="جاهز فورا" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width: 100%"></div></div>
+                    <b>100</b>
+                  </div>
+                </div>
+              </div>
+              <div class="why-checks">
+                <span><i class="bi bi-check-circle-fill ic-ok"></i>8 دقايق عن جامعتك</span>
+                <span><i class="bi bi-check-circle-fill ic-ok"></i>شارع هادي، بعيد عن الحركة</span>
+                <span><i class="bi bi-exclamation-triangle-fill ic-warn"></i>أغلى من ميزانيتك بـ 15 د.أ</span>
+              </div>
+            </section>
+
+            <!-- 5. التكلفة الشهرية -->
+            <section class="panel" aria-labelledby="costTitle">
+              <h2 class="h5 mb-1" id="costTitle">التكلفة الشهرية الحقيقية</h2>
+              <div class="cost-row"><span>الإيجار</span><span>220 د.أ</span></div>
+              <div class="cost-row"><span>كهربا ومي <span class="badge-soft">تقديري</span></span><span>30 د.أ</span></div>
+              <div class="cost-row"><span>إنترنت</span><span>15 د.أ</span></div>
+              <div class="cost-total"><span>المجموع</span><span>265 د.أ</span></div>
+            </section>
+
+            <!-- 6. عن البيت والمرافق -->
+            <section class="panel" aria-labelledby="aboutTitle">
+              <h2 class="h5 mb-2" id="aboutTitle">عن البيت</h2>
+              <p class="mb-3">استوديو مفروش بالكامل بالطابق الثاني، فيه مطبخ صغير، مكتب للدراسة، وتكييف. البناية هادية وفيها مصعد، وعلى بعد دقايق مشي من بوابة الجامعة الشمالية.</p>
+              <ul class="amenities list-unstyled mb-0" id="amenitiesList">
+                <li class="amenity"><i class="bi bi-snow"></i>تكييف</li>
+                <li class="amenity"><i class="bi bi-wifi"></i>إنترنت سريع</li>
+                <li class="amenity"><i class="bi bi-droplet"></i>غسالة</li>
+                <li class="amenity"><i class="bi bi-cup-hot"></i>مطبخ مجهز</li>
+                <li class="amenity"><i class="bi bi-book"></i>مكتب دراسة</li>
+                <li class="amenity"><i class="bi bi-universal-access"></i>مصعد</li>
+                <li class="amenity is-off"><i class="bi bi-car-front"></i><span>موقف سيارة <span class="visually-hidden">(غير متوفر)</span></span></li>
+                <li class="amenity is-off"><i class="bi bi-door-open"></i><span>بلكونة <span class="visually-hidden">(غير متوفر)</span></span></li>
+              </ul>
+            </section>
+
+            <!-- 7. الموقع -->
+            <section class="panel" aria-labelledby="locationTitle">
+              <h2 class="h5 mb-3" id="locationTitle">الموقع</h2>
+              <div class="map-mock mb-2" id="propertyMap" role="img" aria-label="خريطة تقريبية لموقع البيت">
+                <span class="map-area" style="top: 46%; left: 55%; width: 160px; height: 160px"></span>
+                <span class="map-place" style="top: 30%; left: 22%"><i class="bi bi-mortarboard"></i></span>
+              </div>
+              <div class="privacy-note mb-3"><i class="bi bi-lock"></i>العنوان الدقيق بيظهر بعد تأكيد الحجز.</div>
+              <h3 class="h6 text-body fw-semibold mb-2">قريب منك</h3>
+              <ul class="near-list list-unstyled mb-0">
+                <li><span class="icon-tile"><i class="bi bi-mortarboard"></i></span><span class="flex-grow-1">الجامعة الأردنية</span><span class="text-muted">8 دقايق</span></li>
+                <li><span class="icon-tile"><i class="bi bi-capsule"></i></span><span class="flex-grow-1">صيدلية</span><span class="text-muted">3 دقايق</span></li>
+                <li><span class="icon-tile"><i class="bi bi-bus-front"></i></span><span class="flex-grow-1">موقف باصات</span><span class="text-muted">4 دقايق</span></li>
+                <li><span class="icon-tile"><i class="bi bi-cart"></i></span><span class="flex-grow-1">سوبرماركت</span><span class="text-muted">2 دقيقة</span></li>
+              </ul>
+            </section>
+
+            <!-- 8. صاحب العقار -->
+            <section class="panel d-flex flex-wrap align-items-center gap-3" aria-label="صاحب العقار">
+              <span class="avatar avatar-lg">أ</span>
+              <div class="flex-grow-1">
+                <div class="small text-muted">صاحب العقار</div>
+                <div class="d-flex align-items-center gap-1 fw-semibold fs-5">أبو أحمد<i class="bi bi-patch-check-fill text-primary-bt fs-6" title="موثّق"></i></div>
+                <div class="small text-muted">بيرد عادة خلال ساعة · على بيتي من سبتمبر 2026</div>
+              </div>
+              <a href="chat.html" class="btn btn-outline-primary"><i class="bi bi-chat-dots me-1"></i>راسل المالك</a>
+            </section>
+          </div>
+
+          <!-- ===== صندوق الحجز ===== -->
+          <div class="col-lg-4">
+            <aside class="panel sticky-box" aria-label="الحجز">
+              <div class="mb-3"><b class="fs-3">265 د.أ</b> <span class="small text-muted">شهريا شامل الفواتير</span></div>
+              <form id="bookingForm" action="bookings.html">
+                <div class="mb-3">
+                  <label for="moveIn" class="form-label">تاريخ الدخول</label>
+                  <input type="date" class="form-control" id="moveIn" name="moveIn" value="2026-11-01" required />
+                </div>
+                <div class="mb-3">
+                  <label for="duration" class="form-label">المدة</label>
+                  <select class="form-select" id="duration" name="duration">
+                    <option value="6" selected>6 شهور</option>
+                    <option value="3">3 شهور</option>
+                    <option value="12">12 شهر</option>
+                  </select>
+                </div>
+                <div class="d-flex justify-content-between small py-1"><span class="text-muted">الدفعة الأولى (شهر)</span><span>265 د.أ</span></div>
+                <div class="d-flex justify-content-between small py-1"><span class="text-muted">رسوم الخدمة</span><span>13 د.أ</span></div>
+                <div class="book-total"><span>المطلوب هلأ</span><span id="bookingTotal">278 د.أ</span></div>
+                <button type="submit" class="btn btn-accent btn-lg w-100 mb-2">اطلب حجز</button>
+                <button type="button" class="btn btn-outline-primary w-100 mb-3" id="bookViewingBtn">احجز معاينة</button>
+              </form>
+              <div class="privacy-note"><i class="bi bi-shield-check flex-shrink-0"></i>دفعتك بتضل محجوزة عند بيتي، وما بتوصل للمالك إلا لما تستلم وتأكد إنه البيت مطابق.</div>
+              <div class="d-flex gap-2 mt-3">
+                <button type="button" class="btn btn-outline-secondary flex-fill fw-medium" aria-pressed="true" id="favBtn"><i class="bi bi-heart-fill text-accent me-1"></i>بالمفضلة</button>
+                <button type="button" class="btn btn-outline-secondary flex-fill fw-medium" id="shareBtn"><i class="bi bi-send me-1"></i>مشاركة</button>
+              </div>
+            </aside>
+          </div>
+        </div>
+
+        <!-- 9. مساعد الأحياء -->
+        <div class="collapse show mt-4" id="aiAssistant">
+          <div class="d-flex justify-content-end">
+            <section class="ai-panel is-inline" aria-label="مساعد الأحياء">
+              <div class="ai-head">
+                <i class="bi bi-stars fs-5"></i>
+                <div class="lh-sm"><b>مساعد الأحياء</b><small>بيجاوبك من بيانات الحي</small></div>
+                <button type="button" class="btn-close btn-close-white" data-bs-toggle="collapse" data-bs-target="#aiAssistant" aria-controls="aiAssistant" aria-label="إغلاق"></button>
+              </div>
+              <div class="chat-body" id="aiMessages">
+                <div class="msg">أهلين! أنا بعرف الجبيهة منيح. شو بدك تعرف؟</div>
+                <div class="msg me">الحي هادي بالليل؟</div>
+                <div class="msg">آه، المنطقة الي فيها البيت سكنية وهادية، خصوصا بعد الساعة 10. الحركة بتكون أكثر عشارع الجامعة، بس البيت بعيد عنه شارعين.</div>
+              </div>
+              <div class="ai-suggest">
+                <button type="button">في صيدلية قريبة؟</button>
+                <button type="button">كيف المواصلات للجامعة؟</button>
+              </div>
+              <form class="chat-input" id="aiForm">
+                <input type="text" class="form-control" name="question" aria-label="سؤالك" placeholder="اسأل أي إشي عن الجبيهة..." autocomplete="off" />
+                <button type="submit" class="btn btn-primary px-3" aria-label="إرسال"><i class="bi bi-send"></i></button>
+              </form>
+            </section>
+          </div>
+        </div>
+
+        <!-- زر فتح المساعد -->
+        <button type="button" class="btn btn-primary ai-fab" data-bs-toggle="collapse" data-bs-target="#aiAssistant" aria-controls="aiAssistant" aria-expanded="true">
+          <i class="bi bi-stars me-1"></i>اسأل عن الحي
+        </button>
+      </main>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/layout.js"></script>
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/pages/seeker/property.js"></script>
   </body>
 </html>
