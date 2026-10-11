@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bayti — بيتي</title>
+
+    <!-- الترتيب مهم: Bootstrap ← الأيقونات ← main.css ← الترجمات ← i18n.js -->
+    <link
+      id="bootstrap-css"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="assets/i18n/ar.js"></script>
+    <script src="assets/i18n/en.js"></script>
+    <script src="assets/js/i18n.js"></script>
+  </head>
+  <body data-layout="public">
+    <main>
+      <!-- ===== Hero ===== -->
+      <section class="hero">
+        <div class="container">
+          <div class="row align-items-center g-4 g-lg-5">
+            <div class="col-lg-6">
+              <h1 data-i18n="hero.title"></h1>
+              <p class="lead" data-i18n="hero.lead"></p>
+              <div
+                class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start"
+              >
+                <a
+                  class="btn btn-accent btn-lg"
+                  href="auth/register.html"
+                  data-i18n="hero.cta"
+                ></a>
+                <a
+                  class="btn btn-outline-primary btn-lg"
+                  href="seeker/search.html"
+                  data-i18n="hero.browse"
+                ></a>
+              </div>
+              <div class="hero-trust">
+                <span
+                  ><i class="bi bi-patch-check-fill"></i>
+                  <span data-i18n="hero.trust1"></span
+                ></span>
+                <span
+                  ><i class="bi bi-arrow-repeat"></i>
+                  <span data-i18n="hero.trust2"></span
+                ></span>
+                <span
+                  ><i class="bi bi-shield-check"></i>
+                  <span data-i18n="hero.trust3"></span
+                ></span>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="hero-visual">
+                <article class="bt-card property-card">
+                  <div class="img-placeholder">
+                    <span class="badge-verified"
+                      ><i class="bi bi-check2"></i
+                      ><span data-i18n="demo.verified"></span
+                    ></span>
+                  </div>
+                  <div
+                    class="p-3 d-flex justify-content-between align-items-center gap-3"
+                  >
+                    <div>
+                      <h3 class="h6 mb-1 text-body" data-i18n="demo.title"></h3>
+                      <div class="small text-muted mb-1">
+                        <i class="bi bi-geo-alt"></i>
+                        <span data-i18n="demo.distance"></span>
+                      </div>
+                      <div>
+                        <strong data-i18n="demo.price"></strong>
+                        <span
+                          class="small text-muted"
+                          data-i18n="demo.priceNote"
+                        ></span>
+                      </div>
+                    </div>
+                    <div class="score-ring" style="--value: 92">
+                      <div class="score-ring__inner">
+                        92<small data-i18n="demo.match"></small>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <div class="floating-note">
+                  <i class="bi bi-check-circle-fill"></i
+                  ><span data-i18n="demo.note"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== المشكلة ===== -->
+      <section class="section" id="problem">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow" data-i18n="problem.eyebrow"></span>
+            <h2 data-i18n="problem.title"></h2>
+            <p class="text-muted mb-0" data-i18n="problem.lead"></p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <article class="bt-card feature-card h-100">
+                <span class="feature-icon"><i class="bi bi-puzzle"></i></span>
+                <h3 class="h5" data-i18n="problem.match.title"></h3>
+                <p class="text-muted mb-0" data-i18n="problem.match.text"></p>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="bt-card feature-card h-100">
+                <span class="feature-icon"><i class="bi bi-receipt"></i></span>
+                <h3 class="h5" data-i18n="problem.cost.title"></h3>
+                <p class="text-muted mb-0" data-i18n="problem.cost.text"></p>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="bt-card feature-card h-100">
+                <span class="feature-icon"
+                  ><i class="bi bi-shield-exclamation"></i
+                ></span>
+                <h3 class="h5" data-i18n="problem.trust.title"></h3>
+                <p class="text-muted mb-0" data-i18n="problem.trust.text"></p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== كيف بيشتغل ===== -->
+      <section class="section section-alt" id="how">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow" data-i18n="how.eyebrow"></span>
+            <h2 data-i18n="how.title"></h2>
+            <p class="text-muted mb-0" data-i18n="how.lead"></p>
+          </div>
+
+          <div class="row g-4 steps">
+            <div class="col-md-4">
+              <div class="step">
+                <span class="step-icon"
+                  ><i class="bi bi-signpost-2"></i
+                  ><span class="step-num">1</span></span
+                >
+                <h3 class="h5" data-i18n="how.step1.title"></h3>
+                <p class="text-muted mb-0" data-i18n="how.step1.text"></p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="step">
+                <span class="step-icon"
+                  ><i class="bi bi-geo-alt"></i
+                  ><span class="step-num">2</span></span
+                >
+                <h3 class="h5" data-i18n="how.step2.title"></h3>
+                <p class="text-muted mb-0" data-i18n="how.step2.text"></p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="step">
+                <span class="step-icon"
+                  ><i class="bi bi-sliders"></i
+                  ><span class="step-num">3</span></span
+                >
+                <h3 class="h5" data-i18n="how.step3.title"></h3>
+                <p class="text-muted mb-0" data-i18n="how.step3.text"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="how-result">
+            <i class="bi bi-stars"></i>
+            <span data-i18n="how.result"></span>
+          </div>
+        </div>
+      </section>
+      <!-- ===== المميزات ===== -->
+      <section class="section" id="features">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow" data-i18n="features.eyebrow"></span>
+            <h2 data-i18n="features.title"></h2>
+            <p class="text-muted mb-0" data-i18n="features.lead"></p>
+          </div>
+
+          <!-- 1. المطابقة -->
+          <div class="row align-items-center g-4 g-lg-5 feature-row">
+            <div class="col-lg-6">
+              <span class="feature-tag"
+                ><i class="bi bi-stars"></i
+                ><span data-i18n="features.match.tag"></span
+              ></span>
+              <h3 data-i18n="features.match.title"></h3>
+              <p class="text-muted" data-i18n="features.match.text"></p>
+              <ul class="check-list">
+                <li>
+                  <i class="bi bi-check2-circle"></i
+                  ><span data-i18n="features.match.b1"></span>
+                </li>
+                <li>
+                  <i class="bi bi-check2-circle"></i
+                  ><span data-i18n="features.match.b2"></span>
+                </li>
+                <li>
+                  <i class="bi bi-check2-circle"></i
+                  ><span data-i18n="features.match.b3"></span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <div class="bt-card visual-card">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <strong data-i18n="features.match.v.title"></strong>
+                  <div class="score-ring" style="--value: 92">
+                    <div class="score-ring__inner">
+                      92<small data-i18n="demo.match"></small>
+                    </div>
+                  </div>
+                </div>
+                <div class="score-bar">
+                  <span data-i18n="features.match.v.near"></span>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 95%"></div>
+                  </div>
+                  <b>95</b>
+                </div>
+                <div class="score-bar">
+                  <span data-i18n="features.match.v.price"></span>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 80%"></div>
+                  </div>
+                  <b>80</b>
+                </div>
+                <div class="score-bar">
+                  <span data-i18n="features.match.v.quiet"></span>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 90%"></div>
+                  </div>
+                  <b>90</b>
+                </div>
+                <hr />
+                <div class="small d-grid gap-2">
+                  <div>
+                    <i class="bi bi-check-circle-fill ic-ok"></i>
+                    <span data-i18n="features.match.v.why1"></span>
+                  </div>
+                  <div>
+                    <i class="bi bi-exclamation-circle-fill ic-warn"></i>
+                    <span data-i18n="features.match.v.why2"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. التكلفة الحقيقية (الصورة على الجهة الثانية) -->
+          <div class="row align-items-center g-4 g-lg-5 feature-row">
+            <div class="col-lg-6 order-lg-2">
+              <span class="feature-tag"
+                ><i class="bi bi-receipt"></i
+                ><span data-i18n="features.cost.tag"></span
+              ></span>
+              <h3 data-i18n="features.cost.title"></h3>
+              <p class="text-muted" data-i18n="features.cost.text"></p>
+              <ul class="check-list">
+                <li>
+                  <i class="bi bi-check2-circle"></i
+                  ><span data-i18n="features.cost.b1"></span>
+                </li>
+                <li>
+                  <i class="bi bi-check2-circle"></i
+                  ><span data-i18n="features.cost.b2"></span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+              <div class="bt-card visual-card">
+                <strong
+                  class="d-block mb-2"
+                  data-i18n="features.cost.v.title"
+                ></strong>
+                <div class="cost-row">
+                  <span data-i18n="features.cost.v.rent"></span
+                  ><span data-i18n="features.cost.v.rentVal"></span>
+                </div>
+                <div class="cost-row">
+                  <span
+                    ><span data-i18n="features.cost.v.bills"></span
+                    ><span
+                      class="badge-soft"
+                      data-i18n="features.cost.v.estimate"
+                    ></span></span
+                  ><span data-i18n="features.cost.v.billsVal"></span>
+                </div>
+                <div class="cost-row">
+                  <span data-i18n="features.cost.v.internet"></span
+                  ><span data-i18n="features.cost.v.internetVal"></span>
+                </div>
+                <div class="cost-total">
+                  <span data-i18n="features.cost.v.total"></span
+                  ><span data-i18n="features.cost.v.totalVal"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. الثقة -->
+          <div class="row align-items-center g-4 g-lg-5 feature-row">
+            <div class="col-lg-6">
+              <span class="feature-tag"
+                ><i class="bi bi-shield-check"></i
+                ><span data-i18n="features.trust.tag"></span
+              ></span>
+              <h3 data-i18n="features.trust.title"></h3>
+              <p class="text-muted" data-i18n="features.trust.text"></p>
+              <ul class="check-list">
+                <li>
+                  <i class="bi bi-check2-circle"></i
+                  ><span data-i18n="features.trust.b1"></span>
+                </li>
+                <li>
+                  <i class="bi bi-check2-circle"></i
+                  ><span data-i18n="features.trust.b2"></span>
+                </li>
+                <li>
+                  <i class="bi bi-check2-circle"></i
+                  ><span data-i18n="features.trust.b3"></span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <div class="bt-card visual-card">
+                <ul class="timeline">
+                  <li>
+                    <span class="tl-icon is-done"
+                      ><i class="bi bi-patch-check"></i></span
+                    ><span data-i18n="features.trust.v.s1"></span>
+                  </li>
+                  <li>
+                    <span class="tl-icon is-done"
+                      ><i class="bi bi-arrow-repeat"></i></span
+                    ><span data-i18n="features.trust.v.s2"></span>
+                  </li>
+                  <li>
+                    <span class="tl-icon is-done"
+                      ><i class="bi bi-lock"></i></span
+                    ><span data-i18n="features.trust.v.s3"></span>
+                  </li>
+                  <li>
+                    <span class="tl-icon"
+                      ><i class="bi bi-house-check"></i></span
+                    ><span
+                      class="text-muted"
+                      data-i18n="features.trust.v.s4"
+                    ></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== لمين ===== -->
+      <section class="section section-alt" id="who">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow" data-i18n="who.eyebrow"></span>
+            <h2 data-i18n="who.title"></h2>
+            <p class="text-muted mb-0" data-i18n="who.lead"></p>
+          </div>
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-3">
+            <div class="col">
+              <div class="purpose-card">
+                <span class="purpose-icon"
+                  ><i class="bi bi-mortarboard"></i
+                ></span>
+                <h3 class="h6" data-i18n="who.study.title"></h3>
+                <p data-i18n="who.study.text"></p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="purpose-card">
+                <span class="purpose-icon"
+                  ><i class="bi bi-briefcase"></i
+                ></span>
+                <h3 class="h6" data-i18n="who.work.title"></h3>
+                <p data-i18n="who.work.text"></p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="purpose-card">
+                <span class="purpose-icon"><i class="bi bi-camera"></i></span>
+                <h3 class="h6" data-i18n="who.tourism.title"></h3>
+                <p data-i18n="who.tourism.text"></p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="purpose-card">
+                <span class="purpose-icon"><i class="bi bi-hospital"></i></span>
+                <h3 class="h6" data-i18n="who.medical.title"></h3>
+                <p data-i18n="who.medical.text"></p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="purpose-card">
+                <span class="purpose-icon"><i class="bi bi-truck"></i></span>
+                <h3 class="h6" data-i18n="who.relocation.title"></h3>
+                <p data-i18n="who.relocation.text"></p>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-center text-muted small mt-4 mb-0">
+            <i class="bi bi-sliders"></i> <span data-i18n="who.other"></span>
+          </p>
+        </div>
+      </section>
+      <!-- ===== للملاك ===== -->
+      <section class="section" id="owners">
+        <div class="container">
+          <div class="row align-items-center g-4 g-lg-5">
+            <div class="col-lg-6">
+              <span class="eyebrow" data-i18n="owners.eyebrow"></span>
+              <h2 data-i18n="owners.title"></h2>
+              <p class="text-muted" data-i18n="owners.text"></p>
+              <ul class="check-list mb-4">
+                <li>
+                  <i class="bi bi-patch-check"></i
+                  ><span data-i18n="owners.b1"></span>
+                </li>
+                <li>
+                  <i class="bi bi-shield-check"></i
+                  ><span data-i18n="owners.b2"></span>
+                </li>
+                <li>
+                  <i class="bi bi-graph-up"></i
+                  ><span data-i18n="owners.b3"></span>
+                </li>
+                <li>
+                  <i class="bi bi-star"></i><span data-i18n="owners.b4"></span>
+                </li>
+              </ul>
+              <a
+                class="btn btn-primary"
+                href="auth/register.html?role=owner"
+                data-i18n="owners.cta"
+              ></a>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="bt-card visual-card">
+                <div class="stat-tiles">
+                  <div class="stat-tile">
+                    <b>1,240</b><span data-i18n="owners.v.views"></span>
+                  </div>
+                  <div class="stat-tile">
+                    <b>18</b><span data-i18n="owners.v.requests"></span>
+                  </div>
+                  <div class="stat-tile">
+                    <b>84%</b><span data-i18n="owners.v.avg"></span>
+                  </div>
+                </div>
+                <div class="listing-row">
+                  <span class="listing-thumb img-placeholder"></span>
+                  <div class="flex-grow-1 min-w-0">
+                    <div
+                      class="fw-semibold small"
+                      data-i18n="owners.v.listing"
+                    ></div>
+                    <span class="badge-featured"
+                      ><i class="bi bi-star-fill"></i>
+                      <span data-i18n="owners.v.featured"></span
+                    ></span>
+                  </div>
+                  <div class="text-center">
+                    <div
+                      class="text-muted"
+                      style="font-size: 0.7rem"
+                      data-i18n="owners.v.still"
+                    ></div>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-primary"
+                      data-i18n="owners.v.confirm"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== الدعوة الأخيرة ===== -->
+      <section>
+        <div class="container">
+          <div class="cta-card">
+            <h2 data-i18n="cta.title"></h2>
+            <p data-i18n="cta.text"></p>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+              <a
+                class="btn btn-accent btn-lg"
+                href="auth/register.html"
+                data-i18n="cta.start"
+              ></a>
+              <a
+                class="btn btn-outline-light btn-lg"
+                href="auth/register.html?role=owner"
+                data-i18n="cta.owner"
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/layout.js"></script>
+  </body>
+</html>

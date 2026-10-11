@@ -1,0 +1,25 @@
+/* =========================================================
+   Seeker pages — ستايلات خاصة بصفحات الباحث عن سكن
+   (المكونات المشتركة بـ main.css)
+   ========================================================= */
+
+/* ---------- search.html ---------- */
+.areas-table {
+  min-width: 720px;
+}
+.areas-table .col-total {
+  width: 220px;
+}
+.total-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.total-bar b {
+  width: 64px;
+  color: var(--bt-primary);
+  flex-shrink: 0;
+}
+.total-bar .progress-bar.is-best {
+  background: var(--bt-success);
+}

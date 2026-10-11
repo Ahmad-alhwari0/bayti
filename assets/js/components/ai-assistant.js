@@ -1,0 +1,1 @@
+/* Floating neighborhood assistant panel. */
