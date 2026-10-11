@@ -23,3 +23,171 @@
 .total-bar .progress-bar.is-best {
   background: var(--bt-success);
 }
+
+/* ---------- shared (property / bookings / profile) ---------- */
+/* مربع أيقونة صغير بخلفية بترولي فاتحة */
+.icon-tile {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--bt-primary-soft);
+  color: var(--bt-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.icon-tile--lg {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+}
+.icon-tile.is-solid {
+  background: var(--bt-primary);
+  color: #fff;
+}
+.avatar-lg {
+  width: 56px;
+  height: 56px;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+.avatar-xl {
+  width: 80px;
+  height: 80px;
+  font-size: 1.9rem;
+}
+.text-accent {
+  color: var(--bt-accent) !important;
+}
+
+/* ---------- property.html ---------- */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  color: var(--bt-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.back-link:hover {
+  color: var(--bt-primary);
+}
+.gallery .g-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+.prop-head h1 {
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  margin: 0;
+}
+.prop-head .fact {
+  background: var(--bt-surface);
+  border: 1px solid var(--bt-line);
+}
+.why-bars .score-bar {
+  grid-template-columns: 96px 1fr 28px;
+}
+.why-checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  border-top: 1px solid var(--bt-line);
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  font-size: 0.9rem;
+}
+.why-checks span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.near-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.6rem;
+}
+.near-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+}
+.book-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  padding: 0.6rem 0 1rem;
+  border-top: 1px solid var(--bt-line);
+  margin-top: 0.4rem;
+}
+/* مساعد الأحياء جوا الصفحة (مش عائم) */
+.ai-panel.is-inline {
+  position: static;
+  display: flex;
+  width: 380px;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+}
+.ai-panel .chat-body {
+  flex: 0 0 auto;
+  padding: 0.9rem;
+}
+.ai-panel .msg {
+  max-width: 85%;
+  font-size: 0.88rem;
+}
+.ai-panel .ai-suggest {
+  padding: 0 0.9rem 0.9rem;
+}
+.ai-head .btn-close {
+  margin-inline-start: auto;
+}
+
+/* ---------- chat.html ---------- */
+.chat-item .meta .chat-prop {
+  color: var(--bt-primary);
+  font-size: 0.75rem;
+}
+.chat-head small.is-online {
+  color: var(--bt-success);
+}
+.chat-context .t {
+  display: block;
+}
+
+/* ---------- profile.html ---------- */
+/* سويتش اللغة بشكل التابات */
+.seg-tabs .btn-check:checked + .nav-link {
+  background: var(--bt-surface);
+  color: var(--bt-primary);
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.seg-tabs label.nav-link {
+  cursor: pointer;
+  text-align: center;
+}
+.switch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 48px;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+.switch-row .form-check-input {
+  float: none;
+  margin: 0;
+  width: 2.75em;
+  height: 1.5em;
+  flex-shrink: 0;
+}
