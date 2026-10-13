@@ -33,28 +33,58 @@
         ><span class="brand-mark">B</span><span>بيتي</span></a
       >
       <div class="ms-auto d-flex align-items-center gap-1">
-        <button type="button" class="btn btn-link nav-lang px-2" data-action="toggle-lang">
+        <button
+          type="button"
+          class="btn btn-link nav-lang px-2"
+          data-action="toggle-lang"
+        >
           <i class="bi bi-translate"></i><span>EN</span>
         </button>
         <div class="dropdown">
-          <button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-label="الإشعارات">
+          <button
+            class="icon-btn"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-label="الإشعارات"
+          >
             <i class="bi bi-bell"></i><span class="dot"></span>
           </button>
-          <div class="dropdown-menu dropdown-menu-end shadow-sm p-0" style="width: 320px">
+          <div
+            class="dropdown-menu dropdown-menu-end shadow-sm p-0"
+            style="width: 320px"
+          >
             <div class="px-3 py-2 border-bottom fw-semibold">الإشعارات</div>
             <div class="py-1">
-              <a class="dropdown-item d-flex gap-2 py-2 text-wrap" href="requests.html">
-                <span class="kpi-icon flex-shrink-0" style="width: 34px; height: 34px; font-size: 1rem"><i class="bi bi-inbox"></i></span>
+              <a
+                class="dropdown-item d-flex gap-2 py-2 text-wrap"
+                href="requests.html"
+              >
+                <span
+                  class="kpi-icon flex-shrink-0"
+                  style="width: 34px; height: 34px; font-size: 1rem"
+                  ><i class="bi bi-inbox"></i
+                ></span>
                 <span class="small">
                   <span class="d-block">طلب معاينة جديد من سارة خالد</span>
-                  <span class="text-muted" style="font-size: 0.72rem">قبل 10 دقايق</span>
+                  <span class="text-muted" style="font-size: 0.72rem"
+                    >قبل 10 دقايق</span
+                  >
                 </span>
               </a>
-              <a class="dropdown-item d-flex gap-2 py-2 text-wrap" href="properties.html">
-                <span class="kpi-icon flex-shrink-0" style="width: 34px; height: 34px; font-size: 1rem"><i class="bi bi-shield-check"></i></span>
+              <a
+                class="dropdown-item d-flex gap-2 py-2 text-wrap"
+                href="properties.html"
+              >
+                <span
+                  class="kpi-icon flex-shrink-0"
+                  style="width: 34px; height: 34px; font-size: 1rem"
+                  ><i class="bi bi-shield-check"></i
+                ></span>
                 <span class="small">
                   <span class="d-block">تم توثيق عقارك استوديو الجبيهة</span>
-                  <span class="text-muted" style="font-size: 0.72rem">قبل ساعة</span>
+                  <span class="text-muted" style="font-size: 0.72rem"
+                    >قبل ساعة</span
+                  >
                 </span>
               </a>
             </div>
@@ -65,14 +95,20 @@
             <span class="avatar">أ</span>
             <span class="d-none d-md-inline text-start lh-sm">
               <span class="d-block small fw-semibold">أبو أحمد</span>
-              <span class="d-block text-muted" style="font-size: 0.72rem">صاحب عقار</span>
+              <span class="d-block text-muted" style="font-size: 0.72rem"
+                >صاحب عقار</span
+              >
             </span>
             <i class="bi bi-chevron-down small text-muted"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
             <li><a class="dropdown-item" href="account.html">حسابي</a></li>
             <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item text-danger" href="../index.html">تسجيل الخروج</a></li>
+            <li>
+              <a class="dropdown-item text-danger" href="../index.html"
+                >تسجيل الخروج</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -80,19 +116,51 @@
 
     <div class="app-shell">
       <!-- ===== Sidebar ===== -->
-      <aside class="app-sidebar offcanvas-lg offcanvas-start" tabindex="-1" id="appSidebar">
+      <aside
+        class="app-sidebar offcanvas-lg offcanvas-start"
+        tabindex="-1"
+        id="appSidebar"
+      >
         <div class="offcanvas-header border-bottom">
-          <a class="brand" href="../index.html"><span class="brand-mark">B</span><span>بيتي</span></a>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#appSidebar" aria-label="إغلاق"></button>
+          <a class="brand" href="../index.html"
+            ><span class="brand-mark">B</span><span>بيتي</span></a
+          >
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            data-bs-target="#appSidebar"
+            aria-label="إغلاق"
+          ></button>
         </div>
         <div class="offcanvas-body">
           <div class="side-label">صاحب عقار</div>
-          <a class="side-link" href="dashboard.html"><i class="bi bi-grid-1x2"></i><span class="flex-grow-1">لوحة التحكم</span></a>
-          <a class="side-link" href="properties.html"><i class="bi bi-house-door"></i><span class="flex-grow-1">عقاراتي</span></a>
-          <a class="side-link" href="property-form.html"><i class="bi bi-plus-square"></i><span class="flex-grow-1">إضافة عقار</span></a>
-          <a class="side-link active" href="requests.html" aria-current="page"><i class="bi bi-inbox"></i><span class="flex-grow-1">الطلبات والمعاينات</span><span class="side-badge">3</span></a>
-          <a class="side-link" href="chat.html"><i class="bi bi-chat-dots"></i><span class="flex-grow-1">الرسائل</span><span class="side-badge">1</span></a>
-          <a class="side-link" href="account.html"><i class="bi bi-person-badge"></i><span class="flex-grow-1">حسابي</span></a>
+          <a class="side-link" href="dashboard.html"
+            ><i class="bi bi-grid-1x2"></i
+            ><span class="flex-grow-1">لوحة التحكم</span></a
+          >
+          <a class="side-link" href="properties.html"
+            ><i class="bi bi-house-door"></i
+            ><span class="flex-grow-1">عقاراتي</span></a
+          >
+          <a class="side-link" href="property-form.html"
+            ><i class="bi bi-plus-square"></i
+            ><span class="flex-grow-1">إضافة عقار</span></a
+          >
+          <a class="side-link active" href="requests.html" aria-current="page"
+            ><i class="bi bi-inbox"></i
+            ><span class="flex-grow-1">الطلبات والمعاينات</span
+            ><span class="side-badge">3</span></a
+          >
+          <a class="side-link" href="chat.html"
+            ><i class="bi bi-chat-dots"></i
+            ><span class="flex-grow-1">الرسائل</span
+            ><span class="side-badge">1</span></a
+          >
+          <a class="side-link" href="account.html"
+            ><i class="bi bi-person-badge"></i
+            ><span class="flex-grow-1">حسابي</span></a
+          >
         </div>
       </aside>
 
@@ -102,19 +170,38 @@
         <div class="page-head">
           <div>
             <h1>الطلبات والمعاينات</h1>
-            <p>رد على الطلبات بسرعة، الباحثين بيفضلوا الملاك الي بيردوا خلال ساعات.</p>
+            <p>
+              رد على الطلبات بسرعة، الباحثين بيفضلوا الملاك الي بيردوا خلال
+              ساعات.
+            </p>
           </div>
         </div>
 
         <!-- 2. التابات -->
         <ul class="nav seg-tabs mb-3" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-requests" type="button" role="tab" aria-controls="tab-requests" aria-selected="true">
+            <button
+              class="nav-link active"
+              data-bs-toggle="tab"
+              data-bs-target="#tab-requests"
+              type="button"
+              role="tab"
+              aria-controls="tab-requests"
+              aria-selected="true"
+            >
               طلبات الحجز<span class="count">5</span>
             </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-slots" type="button" role="tab" aria-controls="tab-slots" aria-selected="false">
+            <button
+              class="nav-link"
+              data-bs-toggle="tab"
+              data-bs-target="#tab-slots"
+              type="button"
+              role="tab"
+              aria-controls="tab-slots"
+              aria-selected="false"
+            >
               أوقات المعاينة<span class="count">3</span>
             </button>
           </li>
@@ -122,63 +209,154 @@
 
         <div class="tab-content">
           <!-- ===== طلبات الحجز ===== -->
-          <section class="tab-pane fade show active" id="tab-requests" role="tabpanel" tabindex="0">
+          <section
+            class="tab-pane fade show active"
+            id="tab-requests"
+            role="tabpanel"
+            tabindex="0"
+          >
             <!-- الفلاتر -->
-            <div class="d-flex flex-wrap gap-2 mb-3" role="radiogroup" aria-label="فلترة الطلبات" id="requestFilters">
-              <input type="radio" class="btn-check" name="status" id="rfAll" value="all" checked />
+            <div
+              class="d-flex flex-wrap gap-2 mb-3"
+              role="radiogroup"
+              aria-label="فلترة الطلبات"
+              id="requestFilters"
+            >
+              <input
+                type="radio"
+                class="btn-check"
+                name="status"
+                id="rfAll"
+                value="all"
+                checked
+              />
               <label class="chip-select py-2" for="rfAll">الكل</label>
-              <input type="radio" class="btn-check" name="status" id="rfPending" value="pending" />
-              <label class="chip-select py-2" for="rfPending">بانتظار ردك (3)</label>
-              <input type="radio" class="btn-check" name="status" id="rfAccepted" value="accepted" />
+              <input
+                type="radio"
+                class="btn-check"
+                name="status"
+                id="rfPending"
+                value="pending"
+              />
+              <label class="chip-select py-2" for="rfPending"
+                >بانتظار ردك (3)</label
+              >
+              <input
+                type="radio"
+                class="btn-check"
+                name="status"
+                id="rfAccepted"
+                value="accepted"
+              />
               <label class="chip-select py-2" for="rfAccepted">مقبول</label>
-              <input type="radio" class="btn-check" name="status" id="rfRejected" value="rejected" />
+              <input
+                type="radio"
+                class="btn-check"
+                name="status"
+                id="rfRejected"
+                value="rejected"
+              />
               <label class="chip-select py-2" for="rfRejected">مرفوض</label>
             </div>
 
             <!-- قائمة الطلبات -->
             <div class="d-flex flex-column gap-3" id="requestsList">
               <!-- طلب 1 -->
-              <article class="panel request-row" data-request="1" data-status="pending">
+              <article
+                class="panel request-row"
+                data-request="1"
+                data-status="pending"
+              >
                 <span class="avatar avatar-lg">س</span>
                 <div class="flex-main">
                   <div class="d-flex flex-wrap align-items-center gap-2">
                     <h2 class="request-row__name">سارة خالد</h2>
                     <span class="badge-soft ms-0">دراسة</span>
-                    <span class="verified-note"><i class="bi bi-patch-check-fill"></i>هوية مؤكدة</span>
+                    <span class="verified-note"
+                      ><i class="bi bi-patch-check-fill"></i>هوية مؤكدة</span
+                    >
                   </div>
                   <div class="small text-muted">استوديو مفروش — الجبيهة</div>
                   <div class="small text-muted">الدخول 1 نوفمبر · 6 شهور</div>
                 </div>
-                <div class="score-ring" style="--value: 92; --size: 54px"><div class="score-ring__inner">92<small>توافق</small></div></div>
+                <div class="score-ring" style="--value: 92; --size: 54px">
+                  <div class="score-ring__inner">92<small>توافق</small></div>
+                </div>
                 <div class="d-flex flex-wrap align-items-center gap-2">
-                  <button type="button" class="btn btn-primary" data-action="accept">قبول</button>
-                  <button type="button" class="btn btn-ghost" data-action="reject">رفض</button>
-                  <a href="chat.html" class="btn btn-ghost btn-square text-primary-bt" aria-label="مراسلة سارة خالد"><i class="bi bi-chat-dots"></i></a>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-action="accept"
+                  >
+                    قبول
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-ghost"
+                    data-action="reject"
+                  >
+                    رفض
+                  </button>
+                  <a
+                    href="chat.html"
+                    class="btn btn-ghost btn-square text-primary-bt"
+                    aria-label="مراسلة سارة خالد"
+                    ><i class="bi bi-chat-dots"></i
+                  ></a>
                 </div>
               </article>
 
               <!-- طلب 2 -->
-              <article class="panel request-row" data-request="2" data-status="pending">
+              <article
+                class="panel request-row"
+                data-request="2"
+                data-status="pending"
+              >
                 <span class="avatar avatar-lg">م</span>
                 <div class="flex-main">
                   <div class="d-flex flex-wrap align-items-center gap-2">
                     <h2 class="request-row__name">محمد العلي</h2>
                     <span class="badge-soft ms-0">شغل</span>
-                    <span class="verified-note"><i class="bi bi-patch-check-fill"></i>هوية مؤكدة</span>
+                    <span class="verified-note"
+                      ><i class="bi bi-patch-check-fill"></i>هوية مؤكدة</span
+                    >
                   </div>
                   <div class="small text-muted">غرفة بشقة مشتركة — الجبيهة</div>
                   <div class="small text-muted">الدخول 15 نوفمبر · 3 شهور</div>
                 </div>
-                <div class="score-ring" style="--value: 81; --size: 54px"><div class="score-ring__inner">81<small>توافق</small></div></div>
+                <div class="score-ring" style="--value: 81; --size: 54px">
+                  <div class="score-ring__inner">81<small>توافق</small></div>
+                </div>
                 <div class="d-flex flex-wrap align-items-center gap-2">
-                  <button type="button" class="btn btn-primary" data-action="accept">قبول</button>
-                  <button type="button" class="btn btn-ghost" data-action="reject">رفض</button>
-                  <a href="chat.html" class="btn btn-ghost btn-square text-primary-bt" aria-label="مراسلة محمد العلي"><i class="bi bi-chat-dots"></i></a>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-action="accept"
+                  >
+                    قبول
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-ghost"
+                    data-action="reject"
+                  >
+                    رفض
+                  </button>
+                  <a
+                    href="chat.html"
+                    class="btn btn-ghost btn-square text-primary-bt"
+                    aria-label="مراسلة محمد العلي"
+                    ><i class="bi bi-chat-dots"></i
+                  ></a>
                 </div>
               </article>
 
               <!-- طلب 3 -->
-              <article class="panel request-row" data-request="3" data-status="pending">
+              <article
+                class="panel request-row"
+                data-request="3"
+                data-status="pending"
+              >
                 <span class="avatar avatar-lg">E</span>
                 <div class="flex-main">
                   <div class="d-flex flex-wrap align-items-center gap-2">
@@ -188,87 +366,164 @@
                   <div class="small text-muted">استوديو مفروش — الجبيهة</div>
                   <div class="small text-muted">الدخول 20 أكتوبر · شهر</div>
                 </div>
-                <div class="score-ring" style="--value: 77; --size: 54px"><div class="score-ring__inner">77<small>توافق</small></div></div>
+                <div class="score-ring" style="--value: 77; --size: 54px">
+                  <div class="score-ring__inner">77<small>توافق</small></div>
+                </div>
                 <div class="d-flex flex-wrap align-items-center gap-2">
-                  <button type="button" class="btn btn-primary" data-action="accept">قبول</button>
-                  <button type="button" class="btn btn-ghost" data-action="reject">رفض</button>
-                  <a href="chat.html" class="btn btn-ghost btn-square text-primary-bt" aria-label="مراسلة Emily Carter"><i class="bi bi-chat-dots"></i></a>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-action="accept"
+                  >
+                    قبول
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-ghost"
+                    data-action="reject"
+                  >
+                    رفض
+                  </button>
+                  <a
+                    href="chat.html"
+                    class="btn btn-ghost btn-square text-primary-bt"
+                    aria-label="مراسلة Emily Carter"
+                    ><i class="bi bi-chat-dots"></i
+                  ></a>
                 </div>
               </article>
 
               <!-- طلب 4 (مقبول) -->
-              <article class="panel request-row" data-request="4" data-status="accepted">
+              <article
+                class="panel request-row"
+                data-request="4"
+                data-status="accepted"
+              >
                 <span class="avatar avatar-lg">خ</span>
                 <div class="flex-main">
                   <div class="d-flex flex-wrap align-items-center gap-2">
                     <h2 class="request-row__name">خالد يوسف</h2>
                     <span class="badge-soft ms-0">علاج</span>
-                    <span class="verified-note"><i class="bi bi-patch-check-fill"></i>هوية مؤكدة</span>
+                    <span class="verified-note"
+                      ><i class="bi bi-patch-check-fill"></i>هوية مؤكدة</span
+                    >
                   </div>
                   <div class="small text-muted">شقة غرفة نوم — الجبيهة</div>
                   <div class="small text-muted">الدخول 10 أكتوبر · 2 شهور</div>
                 </div>
-                <div class="score-ring" style="--value: 70; --size: 54px"><div class="score-ring__inner">70<small>توافق</small></div></div>
+                <div class="score-ring" style="--value: 70; --size: 54px">
+                  <div class="score-ring__inner">70<small>توافق</small></div>
+                </div>
                 <div class="d-flex flex-wrap align-items-center gap-2">
                   <span class="status status--success">مقبول</span>
-                  <a href="chat.html" class="btn btn-ghost btn-square text-primary-bt" aria-label="مراسلة خالد يوسف"><i class="bi bi-chat-dots"></i></a>
+                  <a
+                    href="chat.html"
+                    class="btn btn-ghost btn-square text-primary-bt"
+                    aria-label="مراسلة خالد يوسف"
+                    ><i class="bi bi-chat-dots"></i
+                  ></a>
                 </div>
               </article>
 
               <!-- طلب 5 (مرفوض) -->
-              <article class="panel request-row" data-request="5" data-status="rejected">
+              <article
+                class="panel request-row"
+                data-request="5"
+                data-status="rejected"
+              >
                 <span class="avatar avatar-lg">ر</span>
                 <div class="flex-main">
                   <div class="d-flex flex-wrap align-items-center gap-2">
                     <h2 class="request-row__name">رنا سمير</h2>
                     <span class="badge-soft ms-0">انتقال</span>
-                    <span class="verified-note"><i class="bi bi-patch-check-fill"></i>هوية مؤكدة</span>
+                    <span class="verified-note"
+                      ><i class="bi bi-patch-check-fill"></i>هوية مؤكدة</span
+                    >
                   </div>
                   <div class="small text-muted">غرفة بشقة مشتركة — الجبيهة</div>
                   <div class="small text-muted">الدخول 5 أكتوبر · 12 شهر</div>
                 </div>
-                <div class="score-ring" style="--value: 54; --size: 54px"><div class="score-ring__inner">54<small>توافق</small></div></div>
+                <div class="score-ring" style="--value: 54; --size: 54px">
+                  <div class="score-ring__inner">54<small>توافق</small></div>
+                </div>
                 <div class="d-flex flex-wrap align-items-center gap-2">
                   <span class="status status--danger">مرفوض</span>
-                  <a href="chat.html" class="btn btn-ghost btn-square text-primary-bt" aria-label="مراسلة رنا سمير"><i class="bi bi-chat-dots"></i></a>
+                  <a
+                    href="chat.html"
+                    class="btn btn-ghost btn-square text-primary-bt"
+                    aria-label="مراسلة رنا سمير"
+                    ><i class="bi bi-chat-dots"></i
+                  ></a>
                 </div>
               </article>
             </div>
           </section>
 
           <!-- ===== أوقات المعاينة ===== -->
-          <section class="tab-pane fade" id="tab-slots" role="tabpanel" tabindex="0">
+          <section
+            class="tab-pane fade"
+            id="tab-slots"
+            role="tabpanel"
+            tabindex="0"
+          >
             <div class="row g-4 align-items-start">
               <!-- الأوقات الحالية -->
               <div class="col-lg-7">
                 <div class="panel">
                   <ul class="list-clean" id="slotsList">
                     <li class="list-row flex-wrap" data-slot="1">
-                      <span class="day-tile"><i class="bi bi-clock"></i>خميس</span>
+                      <span class="day-tile"
+                        ><i class="bi bi-clock"></i>خميس</span
+                      >
                       <div class="grow flex-main">
                         <b class="d-block">5:00 – 7:00 مساء</b>
                         <small>استوديو مفروش — الجبيهة</small>
                       </div>
                       <span class="status status--info">1 محجوز</span>
-                      <button type="button" class="btn btn-link btn-square btn-delete" data-action="delete-slot" aria-label="حذف الموعد"><i class="bi bi-trash3"></i></button>
+                      <button
+                        type="button"
+                        class="btn btn-link btn-square btn-delete"
+                        data-action="delete-slot"
+                        aria-label="حذف الموعد"
+                      >
+                        <i class="bi bi-trash3"></i>
+                      </button>
                     </li>
                     <li class="list-row flex-wrap" data-slot="2">
-                      <span class="day-tile"><i class="bi bi-clock"></i>سبت</span>
+                      <span class="day-tile"
+                        ><i class="bi bi-clock"></i>سبت</span
+                      >
                       <div class="grow flex-main">
                         <b class="d-block">11:00 – 1:00 ظهرا</b>
                         <small>استوديو مفروش — الجبيهة</small>
                       </div>
                       <span class="status status--muted">فاضي</span>
-                      <button type="button" class="btn btn-link btn-square btn-delete" data-action="delete-slot" aria-label="حذف الموعد"><i class="bi bi-trash3"></i></button>
+                      <button
+                        type="button"
+                        class="btn btn-link btn-square btn-delete"
+                        data-action="delete-slot"
+                        aria-label="حذف الموعد"
+                      >
+                        <i class="bi bi-trash3"></i>
+                      </button>
                     </li>
                     <li class="list-row flex-wrap" data-slot="3">
-                      <span class="day-tile"><i class="bi bi-clock"></i>سبت</span>
+                      <span class="day-tile"
+                        ><i class="bi bi-clock"></i>سبت</span
+                      >
                       <div class="grow flex-main">
                         <b class="d-block">4:00 – 6:00 مساء</b>
                         <small>غرفة بشقة مشتركة — الجبيهة</small>
                       </div>
                       <span class="status status--info">2 محجوز</span>
-                      <button type="button" class="btn btn-link btn-square btn-delete" data-action="delete-slot" aria-label="حذف الموعد"><i class="bi bi-trash3"></i></button>
+                      <button
+                        type="button"
+                        class="btn btn-link btn-square btn-delete"
+                        data-action="delete-slot"
+                        aria-label="حذف الموعد"
+                      >
+                        <i class="bi bi-trash3"></i>
+                      </button>
                     </li>
                   </ul>
                 </div>
@@ -281,7 +536,9 @@
                   <div class="mb-3">
                     <label for="sProperty" class="form-label">العقار</label>
                     <select class="form-select" id="sProperty" name="property">
-                      <option value="1" selected>استوديو مفروش — الجبيهة</option>
+                      <option value="1" selected>
+                        استوديو مفروش — الجبيهة
+                      </option>
                       <option value="2">غرفة بشقة مشتركة — الجبيهة</option>
                       <option value="3">شقة غرفة نوم — الجبيهة</option>
                     </select>
@@ -301,14 +558,28 @@
                   <div class="row g-2 mb-3">
                     <div class="col-6">
                       <label for="sFrom" class="form-label">من</label>
-                      <input type="time" class="form-control" id="sFrom" name="from" value="17:00" />
+                      <input
+                        type="time"
+                        class="form-control"
+                        id="sFrom"
+                        name="from"
+                        value="17:00"
+                      />
                     </div>
                     <div class="col-6">
                       <label for="sTo" class="form-label">لـ</label>
-                      <input type="time" class="form-control" id="sTo" name="to" value="19:00" />
+                      <input
+                        type="time"
+                        class="form-control"
+                        id="sTo"
+                        name="to"
+                        value="19:00"
+                      />
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-primary w-100">أضف الوقت</button>
+                  <button type="submit" class="btn btn-primary w-100">
+                    أضف الوقت
+                  </button>
                 </form>
               </div>
             </div>

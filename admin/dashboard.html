@@ -33,21 +33,44 @@
         ><span class="brand-mark">B</span><span>بيتي</span></a
       >
       <div class="ms-auto d-flex align-items-center gap-1">
-        <button type="button" class="btn btn-link nav-lang px-2" data-action="toggle-lang">
+        <button
+          type="button"
+          class="btn btn-link nav-lang px-2"
+          data-action="toggle-lang"
+        >
           <i class="bi bi-translate"></i><span>EN</span>
         </button>
         <div class="dropdown">
-          <button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-label="الإشعارات">
+          <button
+            class="icon-btn"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-label="الإشعارات"
+          >
             <i class="bi bi-bell"></i><span class="dot"></span>
           </button>
-          <div class="dropdown-menu dropdown-menu-end shadow-sm p-0" style="width: 320px">
+          <div
+            class="dropdown-menu dropdown-menu-end shadow-sm p-0"
+            style="width: 320px"
+          >
             <div class="px-3 py-2 border-bottom fw-semibold">الإشعارات</div>
             <div class="py-1">
-              <a class="dropdown-item d-flex gap-2 py-2 text-wrap" href="verifications.html">
-                <span class="kpi-icon flex-shrink-0" style="width: 34px; height: 34px; font-size: 1rem"><i class="bi bi-patch-check"></i></span>
+              <a
+                class="dropdown-item d-flex gap-2 py-2 text-wrap"
+                href="verifications.html"
+              >
+                <span
+                  class="kpi-icon flex-shrink-0"
+                  style="width: 34px; height: 34px; font-size: 1rem"
+                  ><i class="bi bi-patch-check"></i
+                ></span>
                 <span class="small">
-                  <span class="d-block">4 طلبات توثيق جديدة بانتظار المراجعة</span>
-                  <span class="text-muted" style="font-size: 0.72rem">اليوم</span>
+                  <span class="d-block"
+                    >4 طلبات توثيق جديدة بانتظار المراجعة</span
+                  >
+                  <span class="text-muted" style="font-size: 0.72rem"
+                    >اليوم</span
+                  >
                 </span>
               </a>
             </div>
@@ -58,12 +81,18 @@
             <span class="avatar">م</span>
             <span class="d-none d-md-inline text-start lh-sm">
               <span class="d-block small fw-semibold">مدير النظام</span>
-              <span class="d-block text-muted" style="font-size: 0.72rem">الأدمن</span>
+              <span class="d-block text-muted" style="font-size: 0.72rem"
+                >الأدمن</span
+              >
             </span>
             <i class="bi bi-chevron-down small text-muted"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-            <li><a class="dropdown-item text-danger" href="../index.html">تسجيل الخروج</a></li>
+            <li>
+              <a class="dropdown-item text-danger" href="../index.html"
+                >تسجيل الخروج</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -71,17 +100,42 @@
 
     <div class="app-shell">
       <!-- ===== Sidebar ===== -->
-      <aside class="app-sidebar offcanvas-lg offcanvas-start" tabindex="-1" id="appSidebar">
+      <aside
+        class="app-sidebar offcanvas-lg offcanvas-start"
+        tabindex="-1"
+        id="appSidebar"
+      >
         <div class="offcanvas-header border-bottom">
-          <a class="brand" href="../index.html"><span class="brand-mark">B</span><span>بيتي</span></a>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#appSidebar" aria-label="إغلاق"></button>
+          <a class="brand" href="../index.html"
+            ><span class="brand-mark">B</span><span>بيتي</span></a
+          >
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            data-bs-target="#appSidebar"
+            aria-label="إغلاق"
+          ></button>
         </div>
         <div class="offcanvas-body">
           <div class="side-label">الأدمن</div>
-          <a class="side-link active" href="dashboard.html" aria-current="page"><i class="bi bi-grid-1x2"></i><span class="flex-grow-1">لوحة التحكم</span></a>
-          <a class="side-link" href="verifications.html"><i class="bi bi-patch-check"></i><span class="flex-grow-1">طلبات التوثيق</span><span class="side-badge">4</span></a>
-          <a class="side-link" href="users.html"><i class="bi bi-people"></i><span class="flex-grow-1">المستخدمين</span></a>
-          <a class="side-link" href="places.html"><i class="bi bi-geo-alt"></i><span class="flex-grow-1">الأحياء والأماكن</span></a>
+          <a class="side-link active" href="dashboard.html" aria-current="page"
+            ><i class="bi bi-grid-1x2"></i
+            ><span class="flex-grow-1">لوحة التحكم</span></a
+          >
+          <a class="side-link" href="verifications.html"
+            ><i class="bi bi-patch-check"></i
+            ><span class="flex-grow-1">طلبات التوثيق</span
+            ><span class="side-badge">4</span></a
+          >
+          <a class="side-link" href="users.html"
+            ><i class="bi bi-people"></i
+            ><span class="flex-grow-1">المستخدمين</span></a
+          >
+          <a class="side-link" href="places.html"
+            ><i class="bi bi-geo-alt"></i
+            ><span class="flex-grow-1">الأحياء والأماكن</span></a
+          >
         </div>
       </aside>
 
@@ -143,13 +197,42 @@
                 <h2 id="revTitle">العمولات · آخر 6 شهور</h2>
                 <span class="small text-muted">بالدينار</span>
               </div>
-              <div class="bar-chart rev-chart" id="revenueChart" role="img" aria-label="العمولات بالدينار: مايو 1,420، يونيو 1,760، يوليو 2,310، أغسطس 2,650، سبتمبر 2,240، أكتوبر 2,880">
-                <div class="bar-col"><span>1,420</span><div class="bar" style="height: 79px"></div><span>مايو</span></div>
-                <div class="bar-col"><span>1,760</span><div class="bar" style="height: 98px"></div><span>يونيو</span></div>
-                <div class="bar-col"><span>2,310</span><div class="bar" style="height: 128px"></div><span>يوليو</span></div>
-                <div class="bar-col"><span>2,650</span><div class="bar" style="height: 147px"></div><span>أغسطس</span></div>
-                <div class="bar-col"><span>2,240</span><div class="bar" style="height: 124px"></div><span>سبتمبر</span></div>
-                <div class="bar-col"><span>2,880</span><div class="bar is-hi" style="height: 160px"></div><span>أكتوبر</span></div>
+              <div
+                class="bar-chart rev-chart"
+                id="revenueChart"
+                role="img"
+                aria-label="العمولات بالدينار: مايو 1,420، يونيو 1,760، يوليو 2,310، أغسطس 2,650، سبتمبر 2,240، أكتوبر 2,880"
+              >
+                <div class="bar-col">
+                  <span>1,420</span>
+                  <div class="bar" style="height: 79px"></div>
+                  <span>مايو</span>
+                </div>
+                <div class="bar-col">
+                  <span>1,760</span>
+                  <div class="bar" style="height: 98px"></div>
+                  <span>يونيو</span>
+                </div>
+                <div class="bar-col">
+                  <span>2,310</span>
+                  <div class="bar" style="height: 128px"></div>
+                  <span>يوليو</span>
+                </div>
+                <div class="bar-col">
+                  <span>2,650</span>
+                  <div class="bar" style="height: 147px"></div>
+                  <span>أغسطس</span>
+                </div>
+                <div class="bar-col">
+                  <span>2,240</span>
+                  <div class="bar" style="height: 124px"></div>
+                  <span>سبتمبر</span>
+                </div>
+                <div class="bar-col">
+                  <span>2,880</span>
+                  <div class="bar is-hi" style="height: 160px"></div>
+                  <span>أكتوبر</span>
+                </div>
               </div>
             </section>
           </div>
@@ -163,23 +246,51 @@
               <ul class="list-clean" id="pendingList">
                 <li class="list-row">
                   <span class="avatar">أ</span>
-                  <div class="grow"><b class="d-block small">أبو أحمد</b><small>مالك · وثيقتين · اليوم 9:12 ص</small></div>
-                  <a href="verifications.html" class="small fw-semibold text-decoration-none">راجع</a>
+                  <div class="grow">
+                    <b class="d-block small">أبو أحمد</b
+                    ><small>مالك · وثيقتين · اليوم 9:12 ص</small>
+                  </div>
+                  <a
+                    href="verifications.html"
+                    class="small fw-semibold text-decoration-none"
+                    >راجع</a
+                  >
                 </li>
                 <li class="list-row">
                   <span class="avatar">ر</span>
-                  <div class="grow"><b class="d-block small">مكتب الريادة العقاري</b><small>مكتب · 3 وثائق · اليوم 8:40 ص</small></div>
-                  <a href="verifications.html" class="small fw-semibold text-decoration-none">راجع</a>
+                  <div class="grow">
+                    <b class="d-block small">مكتب الريادة العقاري</b
+                    ><small>مكتب · 3 وثائق · اليوم 8:40 ص</small>
+                  </div>
+                  <a
+                    href="verifications.html"
+                    class="small fw-semibold text-decoration-none"
+                    >راجع</a
+                  >
                 </li>
                 <li class="list-row">
                   <span class="avatar">ي</span>
-                  <div class="grow"><b class="d-block small">أم يزن</b><small>مالك · وثيقتين · أمس</small></div>
-                  <a href="verifications.html" class="small fw-semibold text-decoration-none">راجع</a>
+                  <div class="grow">
+                    <b class="d-block small">أم يزن</b
+                    ><small>مالك · وثيقتين · أمس</small>
+                  </div>
+                  <a
+                    href="verifications.html"
+                    class="small fw-semibold text-decoration-none"
+                    >راجع</a
+                  >
                 </li>
                 <li class="list-row">
                   <span class="avatar">س</span>
-                  <div class="grow"><b class="d-block small">سامي حداد</b><small>مالك · وثيقة · أمس</small></div>
-                  <a href="verifications.html" class="small fw-semibold text-decoration-none">راجع</a>
+                  <div class="grow">
+                    <b class="d-block small">سامي حداد</b
+                    ><small>مالك · وثيقة · أمس</small>
+                  </div>
+                  <a
+                    href="verifications.html"
+                    class="small fw-semibold text-decoration-none"
+                    >راجع</a
+                  >
                 </li>
               </ul>
             </section>
@@ -212,7 +323,9 @@
                       <td>استوديو — الجبيهة</td>
                       <td>265 د.أ</td>
                       <td class="fw-semibold text-primary-bt">26.5 د.أ</td>
-                      <td><span class="status status--info">الدفع محجوز</span></td>
+                      <td>
+                        <span class="status status--info">الدفع محجوز</span>
+                      </td>
                     </tr>
                     <tr>
                       <td class="text-muted" dir="ltr">BK-1041</td>
@@ -220,7 +333,11 @@
                       <td>شقة غرفة — الجبيهة</td>
                       <td>305 د.أ</td>
                       <td class="fw-semibold text-primary-bt">30.5 د.أ</td>
-                      <td><span class="status status--success">تم تحرير الدفع</span></td>
+                      <td>
+                        <span class="status status--success"
+                          >تم تحرير الدفع</span
+                        >
+                      </td>
                     </tr>
                     <tr>
                       <td class="text-muted" dir="ltr">BK-1040</td>
@@ -228,7 +345,11 @@
                       <td>شقة غرفتين — تلاع العلي</td>
                       <td>395 د.أ</td>
                       <td class="fw-semibold text-primary-bt">39.5 د.أ</td>
-                      <td><span class="status status--success">تم تحرير الدفع</span></td>
+                      <td>
+                        <span class="status status--success"
+                          >تم تحرير الدفع</span
+                        >
+                      </td>
                     </tr>
                     <tr>
                       <td class="text-muted" dir="ltr">BK-1039</td>
@@ -253,18 +374,33 @@
               </div>
               <ul class="list-clean" id="violationsList">
                 <li class="list-row">
-                  <span class="icon-tile icon-tile--danger"><i class="bi bi-shield-exclamation"></i></span>
-                  <div class="grow"><b class="d-block small">فادي منصور</b><small>رقم هاتف · اليوم</small></div>
+                  <span class="icon-tile icon-tile--danger"
+                    ><i class="bi bi-shield-exclamation"></i
+                  ></span>
+                  <div class="grow">
+                    <b class="d-block small">فادي منصور</b
+                    ><small>رقم هاتف · اليوم</small>
+                  </div>
                   <span class="status status--danger no-dot">4 مخالفات</span>
                 </li>
                 <li class="list-row">
-                  <span class="icon-tile icon-tile--danger"><i class="bi bi-shield-exclamation"></i></span>
-                  <div class="grow"><b class="d-block small">Emily Carter</b><small>واتساب · أمس</small></div>
+                  <span class="icon-tile icon-tile--danger"
+                    ><i class="bi bi-shield-exclamation"></i
+                  ></span>
+                  <div class="grow">
+                    <b class="d-block small">Emily Carter</b
+                    ><small>واتساب · أمس</small>
+                  </div>
                   <span class="status status--pending no-dot">2 مخالفة</span>
                 </li>
                 <li class="list-row">
-                  <span class="icon-tile icon-tile--danger"><i class="bi bi-shield-exclamation"></i></span>
-                  <div class="grow"><b class="d-block small">أبو أحمد</b><small>رقم هاتف · أمس</small></div>
+                  <span class="icon-tile icon-tile--danger"
+                    ><i class="bi bi-shield-exclamation"></i
+                  ></span>
+                  <div class="grow">
+                    <b class="d-block small">أبو أحمد</b
+                    ><small>رقم هاتف · أمس</small>
+                  </div>
                   <span class="status status--muted no-dot">1 مخالفة</span>
                 </li>
               </ul>
@@ -278,17 +414,26 @@
               <ul class="list-clean" id="featuredList">
                 <li class="list-row">
                   <i class="bi bi-star-fill ic-star" aria-hidden="true"></i>
-                  <div class="grow"><b class="d-block small">أبو أحمد</b><small>استوديو — الجبيهة · لحد 30 أكتوبر</small></div>
+                  <div class="grow">
+                    <b class="d-block small">أبو أحمد</b
+                    ><small>استوديو — الجبيهة · لحد 30 أكتوبر</small>
+                  </div>
                   <span class="status status--success">فعّال</span>
                 </li>
                 <li class="list-row">
                   <i class="bi bi-star-fill ic-star" aria-hidden="true"></i>
-                  <div class="grow"><b class="d-block small">أم يزن</b><small>شقة غرفة — الشميساني · لحد 12 نوفمبر</small></div>
+                  <div class="grow">
+                    <b class="d-block small">أم يزن</b
+                    ><small>شقة غرفة — الشميساني · لحد 12 نوفمبر</small>
+                  </div>
                   <span class="status status--success">فعّال</span>
                 </li>
                 <li class="list-row">
                   <i class="bi bi-star-fill ic-star" aria-hidden="true"></i>
-                  <div class="grow"><b class="d-block small">دار السكن</b><small>شقة غرفتين — العبدلي · لحد 2 أكتوبر</small></div>
+                  <div class="grow">
+                    <b class="d-block small">دار السكن</b
+                    ><small>شقة غرفتين — العبدلي · لحد 2 أكتوبر</small>
+                  </div>
                   <span class="status status--muted">منتهي</span>
                 </li>
               </ul>

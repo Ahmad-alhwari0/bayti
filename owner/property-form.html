@@ -33,28 +33,58 @@
         ><span class="brand-mark">B</span><span>بيتي</span></a
       >
       <div class="ms-auto d-flex align-items-center gap-1">
-        <button type="button" class="btn btn-link nav-lang px-2" data-action="toggle-lang">
+        <button
+          type="button"
+          class="btn btn-link nav-lang px-2"
+          data-action="toggle-lang"
+        >
           <i class="bi bi-translate"></i><span>EN</span>
         </button>
         <div class="dropdown">
-          <button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-label="الإشعارات">
+          <button
+            class="icon-btn"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-label="الإشعارات"
+          >
             <i class="bi bi-bell"></i><span class="dot"></span>
           </button>
-          <div class="dropdown-menu dropdown-menu-end shadow-sm p-0" style="width: 320px">
+          <div
+            class="dropdown-menu dropdown-menu-end shadow-sm p-0"
+            style="width: 320px"
+          >
             <div class="px-3 py-2 border-bottom fw-semibold">الإشعارات</div>
             <div class="py-1">
-              <a class="dropdown-item d-flex gap-2 py-2 text-wrap" href="requests.html">
-                <span class="kpi-icon flex-shrink-0" style="width: 34px; height: 34px; font-size: 1rem"><i class="bi bi-inbox"></i></span>
+              <a
+                class="dropdown-item d-flex gap-2 py-2 text-wrap"
+                href="requests.html"
+              >
+                <span
+                  class="kpi-icon flex-shrink-0"
+                  style="width: 34px; height: 34px; font-size: 1rem"
+                  ><i class="bi bi-inbox"></i
+                ></span>
                 <span class="small">
                   <span class="d-block">طلب معاينة جديد من سارة خالد</span>
-                  <span class="text-muted" style="font-size: 0.72rem">قبل 10 دقايق</span>
+                  <span class="text-muted" style="font-size: 0.72rem"
+                    >قبل 10 دقايق</span
+                  >
                 </span>
               </a>
-              <a class="dropdown-item d-flex gap-2 py-2 text-wrap" href="properties.html">
-                <span class="kpi-icon flex-shrink-0" style="width: 34px; height: 34px; font-size: 1rem"><i class="bi bi-shield-check"></i></span>
+              <a
+                class="dropdown-item d-flex gap-2 py-2 text-wrap"
+                href="properties.html"
+              >
+                <span
+                  class="kpi-icon flex-shrink-0"
+                  style="width: 34px; height: 34px; font-size: 1rem"
+                  ><i class="bi bi-shield-check"></i
+                ></span>
                 <span class="small">
                   <span class="d-block">تم توثيق عقارك استوديو الجبيهة</span>
-                  <span class="text-muted" style="font-size: 0.72rem">قبل ساعة</span>
+                  <span class="text-muted" style="font-size: 0.72rem"
+                    >قبل ساعة</span
+                  >
                 </span>
               </a>
             </div>
@@ -65,14 +95,20 @@
             <span class="avatar">أ</span>
             <span class="d-none d-md-inline text-start lh-sm">
               <span class="d-block small fw-semibold">أبو أحمد</span>
-              <span class="d-block text-muted" style="font-size: 0.72rem">صاحب عقار</span>
+              <span class="d-block text-muted" style="font-size: 0.72rem"
+                >صاحب عقار</span
+              >
             </span>
             <i class="bi bi-chevron-down small text-muted"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
             <li><a class="dropdown-item" href="account.html">حسابي</a></li>
             <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item text-danger" href="../index.html">تسجيل الخروج</a></li>
+            <li>
+              <a class="dropdown-item text-danger" href="../index.html"
+                >تسجيل الخروج</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -80,19 +116,54 @@
 
     <div class="app-shell">
       <!-- ===== Sidebar ===== -->
-      <aside class="app-sidebar offcanvas-lg offcanvas-start" tabindex="-1" id="appSidebar">
+      <aside
+        class="app-sidebar offcanvas-lg offcanvas-start"
+        tabindex="-1"
+        id="appSidebar"
+      >
         <div class="offcanvas-header border-bottom">
-          <a class="brand" href="../index.html"><span class="brand-mark">B</span><span>بيتي</span></a>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#appSidebar" aria-label="إغلاق"></button>
+          <a class="brand" href="../index.html"
+            ><span class="brand-mark">B</span><span>بيتي</span></a
+          >
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            data-bs-target="#appSidebar"
+            aria-label="إغلاق"
+          ></button>
         </div>
         <div class="offcanvas-body">
           <div class="side-label">صاحب عقار</div>
-          <a class="side-link" href="dashboard.html"><i class="bi bi-grid-1x2"></i><span class="flex-grow-1">لوحة التحكم</span></a>
-          <a class="side-link" href="properties.html"><i class="bi bi-house-door"></i><span class="flex-grow-1">عقاراتي</span></a>
-          <a class="side-link active" href="property-form.html" aria-current="page"><i class="bi bi-plus-square"></i><span class="flex-grow-1">إضافة عقار</span></a>
-          <a class="side-link" href="requests.html"><i class="bi bi-inbox"></i><span class="flex-grow-1">الطلبات والمعاينات</span><span class="side-badge">3</span></a>
-          <a class="side-link" href="chat.html"><i class="bi bi-chat-dots"></i><span class="flex-grow-1">الرسائل</span><span class="side-badge">1</span></a>
-          <a class="side-link" href="account.html"><i class="bi bi-person-badge"></i><span class="flex-grow-1">حسابي</span></a>
+          <a class="side-link" href="dashboard.html"
+            ><i class="bi bi-grid-1x2"></i
+            ><span class="flex-grow-1">لوحة التحكم</span></a
+          >
+          <a class="side-link" href="properties.html"
+            ><i class="bi bi-house-door"></i
+            ><span class="flex-grow-1">عقاراتي</span></a
+          >
+          <a
+            class="side-link active"
+            href="property-form.html"
+            aria-current="page"
+            ><i class="bi bi-plus-square"></i
+            ><span class="flex-grow-1">إضافة عقار</span></a
+          >
+          <a class="side-link" href="requests.html"
+            ><i class="bi bi-inbox"></i
+            ><span class="flex-grow-1">الطلبات والمعاينات</span
+            ><span class="side-badge">3</span></a
+          >
+          <a class="side-link" href="chat.html"
+            ><i class="bi bi-chat-dots"></i
+            ><span class="flex-grow-1">الرسائل</span
+            ><span class="side-badge">1</span></a
+          >
+          <a class="side-link" href="account.html"
+            ><i class="bi bi-person-badge"></i
+            ><span class="flex-grow-1">حسابي</span></a
+          >
         </div>
       </aside>
 
@@ -102,7 +173,9 @@
         <div class="page-head">
           <div>
             <h1>إضافة عقار</h1>
-            <p>كل ما عبّيت معلومات أكثر، كل ما طلع توافق عقارك أدق مع الباحثين.</p>
+            <p>
+              كل ما عبّيت معلومات أكثر، كل ما طلع توافق عقارك أدق مع الباحثين.
+            </p>
           </div>
         </div>
 
@@ -117,7 +190,14 @@
                 <div class="row g-3">
                   <div class="col-12">
                     <label for="fTitle" class="form-label">عنوان الإعلان</label>
-                    <input type="text" class="form-control" id="fTitle" name="title" value="استوديو مفروش قريب من الجامعة الأردنية" required />
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fTitle"
+                      name="title"
+                      value="استوديو مفروش قريب من الجامعة الأردنية"
+                      required
+                    />
                   </div>
                   <div class="col-sm-6 col-xl-3">
                     <label for="fCategory" class="form-label">التصنيف</label>
@@ -138,11 +218,24 @@
                   </div>
                   <div class="col-sm-6 col-xl-3">
                     <label for="fSize" class="form-label">المساحة (م²)</label>
-                    <input type="number" class="form-control" id="fSize" name="size" value="45" min="1" />
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="fSize"
+                      name="size"
+                      value="45"
+                      min="1"
+                    />
                   </div>
                   <div class="col-sm-6 col-xl-3">
                     <label for="fFloor" class="form-label">الطابق</label>
-                    <input type="number" class="form-control" id="fFloor" name="floor" value="2" />
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="fFloor"
+                      name="floor"
+                      value="2"
+                    />
                   </div>
                 </div>
 
@@ -150,22 +243,92 @@
                 <fieldset class="mt-3">
                   <legend class="visually-hidden">المرافق</legend>
                   <div class="d-flex flex-wrap gap-2" id="amenities">
-                    <input type="checkbox" class="btn-check" id="amFurnished" name="amenities" value="furnished" checked />
-                    <label class="chip-select" for="amFurnished"><i class="bi bi-house-door"></i>مفروش</label>
-                    <input type="checkbox" class="btn-check" id="amElevator" name="amenities" value="elevator" checked />
-                    <label class="chip-select" for="amElevator"><i class="bi bi-arrow-down-up"></i>مصعد</label>
-                    <input type="checkbox" class="btn-check" id="amAc" name="amenities" value="ac" checked />
-                    <label class="chip-select" for="amAc"><i class="bi bi-snow"></i>تكييف</label>
-                    <input type="checkbox" class="btn-check" id="amWifi" name="amenities" value="internet" checked />
-                    <label class="chip-select" for="amWifi"><i class="bi bi-wifi"></i>إنترنت</label>
-                    <input type="checkbox" class="btn-check" id="amWasher" name="amenities" value="washer" checked />
-                    <label class="chip-select" for="amWasher"><i class="bi bi-droplet"></i>غسالة</label>
-                    <input type="checkbox" class="btn-check" id="amDesk" name="amenities" value="desk" checked />
-                    <label class="chip-select" for="amDesk"><i class="bi bi-book"></i>مكتب دراسة</label>
-                    <input type="checkbox" class="btn-check" id="amParking" name="amenities" value="parking" />
-                    <label class="chip-select" for="amParking"><i class="bi bi-car-front"></i>موقف سيارة</label>
-                    <input type="checkbox" class="btn-check" id="amBalcony" name="amenities" value="balcony" />
-                    <label class="chip-select" for="amBalcony"><i class="bi bi-door-open"></i>بلكونة</label>
+                    <input
+                      type="checkbox"
+                      class="btn-check"
+                      id="amFurnished"
+                      name="amenities"
+                      value="furnished"
+                      checked
+                    />
+                    <label class="chip-select" for="amFurnished"
+                      ><i class="bi bi-house-door"></i>مفروش</label
+                    >
+                    <input
+                      type="checkbox"
+                      class="btn-check"
+                      id="amElevator"
+                      name="amenities"
+                      value="elevator"
+                      checked
+                    />
+                    <label class="chip-select" for="amElevator"
+                      ><i class="bi bi-arrow-down-up"></i>مصعد</label
+                    >
+                    <input
+                      type="checkbox"
+                      class="btn-check"
+                      id="amAc"
+                      name="amenities"
+                      value="ac"
+                      checked
+                    />
+                    <label class="chip-select" for="amAc"
+                      ><i class="bi bi-snow"></i>تكييف</label
+                    >
+                    <input
+                      type="checkbox"
+                      class="btn-check"
+                      id="amWifi"
+                      name="amenities"
+                      value="internet"
+                      checked
+                    />
+                    <label class="chip-select" for="amWifi"
+                      ><i class="bi bi-wifi"></i>إنترنت</label
+                    >
+                    <input
+                      type="checkbox"
+                      class="btn-check"
+                      id="amWasher"
+                      name="amenities"
+                      value="washer"
+                      checked
+                    />
+                    <label class="chip-select" for="amWasher"
+                      ><i class="bi bi-droplet"></i>غسالة</label
+                    >
+                    <input
+                      type="checkbox"
+                      class="btn-check"
+                      id="amDesk"
+                      name="amenities"
+                      value="desk"
+                      checked
+                    />
+                    <label class="chip-select" for="amDesk"
+                      ><i class="bi bi-book"></i>مكتب دراسة</label
+                    >
+                    <input
+                      type="checkbox"
+                      class="btn-check"
+                      id="amParking"
+                      name="amenities"
+                      value="parking"
+                    />
+                    <label class="chip-select" for="amParking"
+                      ><i class="bi bi-car-front"></i>موقف سيارة</label
+                    >
+                    <input
+                      type="checkbox"
+                      class="btn-check"
+                      id="amBalcony"
+                      name="amenities"
+                      value="balcony"
+                    />
+                    <label class="chip-select" for="amBalcony"
+                      ><i class="bi bi-door-open"></i>بلكونة</label
+                    >
                   </div>
                 </fieldset>
               </section>
@@ -173,14 +336,23 @@
               <!-- 2. الوصف + المساعد الذكي -->
               <section class="panel form-section" aria-labelledby="secDesc">
                 <h2 id="secDesc">2. الوصف</h2>
-                <p>اكتبه بنفسك، أو خلّي المساعد يكتبه من المعلومات الي عبّيتها.</p>
+                <p>
+                  اكتبه بنفسك، أو خلّي المساعد يكتبه من المعلومات الي عبّيتها.
+                </p>
                 <div class="ai-box flex-wrap mb-3">
                   <i class="bi bi-magic"></i>
                   <div class="flex-grow-1">
                     <b class="d-block">كاتب الإعلان الذكي</b>
-                    <span class="small text-muted">بيكتب وصف عربي وإنجليزي جاهز بثواني.</span>
+                    <span class="small text-muted"
+                      >بيكتب وصف عربي وإنجليزي جاهز بثواني.</span
+                    >
                   </div>
-                  <button type="button" class="btn btn-primary" data-action="ai-write" aria-controls="fDescAr fDescEn">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-action="ai-write"
+                    aria-controls="fDescAr fDescEn"
+                  >
                     <i class="bi bi-stars"></i>
                     <span>اكتبلي الوصف</span>
                   </button>
@@ -188,20 +360,68 @@
 
                 <ul class="nav seg-tabs mb-2" role="tablist">
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#desc-ar" type="button" role="tab" aria-controls="desc-ar" aria-selected="true">عربي</button>
+                    <button
+                      class="nav-link active"
+                      data-bs-toggle="tab"
+                      data-bs-target="#desc-ar"
+                      type="button"
+                      role="tab"
+                      aria-controls="desc-ar"
+                      aria-selected="true"
+                    >
+                      عربي
+                    </button>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#desc-en" type="button" role="tab" aria-controls="desc-en" aria-selected="false">English</button>
+                    <button
+                      class="nav-link"
+                      data-bs-toggle="tab"
+                      data-bs-target="#desc-en"
+                      type="button"
+                      role="tab"
+                      aria-controls="desc-en"
+                      aria-selected="false"
+                    >
+                      English
+                    </button>
                   </li>
                 </ul>
                 <div class="tab-content">
-                  <div class="tab-pane fade show active" id="desc-ar" role="tabpanel" tabindex="0">
-                    <label for="fDescAr" class="visually-hidden">الوصف بالعربي</label>
-                    <textarea class="form-control" id="fDescAr" name="description_ar" rows="5">استوديو مفروش بالكامل بالطابق الثاني، فيه مطبخ صغير، مكتب للدراسة، وتكييف. البناية هادية وفيها مصعد، وعلى بعد دقايق مشي من بوابة الجامعة الشمالية. مناسب للطلاب والموظفين الي بدهم مكان مريح وقريب.</textarea>
+                  <div
+                    class="tab-pane fade show active"
+                    id="desc-ar"
+                    role="tabpanel"
+                    tabindex="0"
+                  >
+                    <label for="fDescAr" class="visually-hidden"
+                      >الوصف بالعربي</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="fDescAr"
+                      name="description_ar"
+                      rows="5"
+                    >
+استوديو مفروش بالكامل بالطابق الثاني، فيه مطبخ صغير، مكتب للدراسة، وتكييف. البناية هادية وفيها مصعد، وعلى بعد دقايق مشي من بوابة الجامعة الشمالية. مناسب للطلاب والموظفين الي بدهم مكان مريح وقريب.</textarea
+                    >
                   </div>
-                  <div class="tab-pane fade" id="desc-en" role="tabpanel" tabindex="0">
-                    <label for="fDescEn" class="visually-hidden">الوصف بالإنجليزي</label>
-                    <textarea class="form-control" id="fDescEn" name="description_en" rows="5" dir="ltr" placeholder="Description in English..."></textarea>
+                  <div
+                    class="tab-pane fade"
+                    id="desc-en"
+                    role="tabpanel"
+                    tabindex="0"
+                  >
+                    <label for="fDescEn" class="visually-hidden"
+                      >الوصف بالإنجليزي</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="fDescEn"
+                      name="description_en"
+                      rows="5"
+                      dir="ltr"
+                      placeholder="Description in English..."
+                    ></textarea>
                   </div>
                 </div>
               </section>
@@ -212,10 +432,22 @@
                 <p>صور حقيقية وحديثة. أول صورة هي الغلاف.</p>
                 <label class="dropzone d-block mb-3" for="fPhotos">
                   <i class="bi bi-cloud-arrow-up"></i>
-                  <span class="d-block fw-semibold text-body">اسحب الصور لهون، أو <span class="text-primary-bt text-decoration-underline">اختارها من جهازك</span></span>
+                  <span class="d-block fw-semibold text-body"
+                    >اسحب الصور لهون، أو
+                    <span class="text-primary-bt text-decoration-underline"
+                      >اختارها من جهازك</span
+                    ></span
+                  >
                   <span class="d-block small">JPG أو PNG · لحد 10 صور</span>
                 </label>
-                <input type="file" class="visually-hidden" id="fPhotos" name="photos" accept="image/jpeg,image/png" multiple />
+                <input
+                  type="file"
+                  class="visually-hidden"
+                  id="fPhotos"
+                  name="photos"
+                  accept="image/jpeg,image/png"
+                  multiple
+                />
                 <div class="thumbs" id="photoThumbs">
                   <div class="t ph ph-1"><span class="cover">الغلاف</span></div>
                   <div class="t ph ph-5"></div>
@@ -228,7 +460,10 @@
               <!-- 4. الموقع -->
               <section class="panel form-section" aria-labelledby="secLocation">
                 <h2 id="secLocation">4. الموقع</h2>
-                <p>حط الدبوس على مكان البناية بالزبط. الباحثين بيشوفوا الحي بس قبل الحجز.</p>
+                <p>
+                  حط الدبوس على مكان البناية بالزبط. الباحثين بيشوفوا الحي بس
+                  قبل الحجز.
+                </p>
                 <div class="row g-3 mb-3">
                   <div class="col-md-4">
                     <label for="fHood" class="form-label">الحي</label>
@@ -239,11 +474,24 @@
                     </select>
                   </div>
                   <div class="col-md-8">
-                    <label for="fStreet" class="form-label">الشارع ورقم البناية</label>
-                    <input type="text" class="form-control" id="fStreet" name="street" value="شارع الملكة رانيا، بناية 14" />
+                    <label for="fStreet" class="form-label"
+                      >الشارع ورقم البناية</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fStreet"
+                      name="street"
+                      value="شارع الملكة رانيا، بناية 14"
+                    />
                   </div>
                 </div>
-                <div class="map-mock map-picker" id="locationMap" role="img" aria-label="خريطة موقع العقار">
+                <div
+                  class="map-mock map-picker"
+                  id="locationMap"
+                  role="img"
+                  aria-label="خريطة موقع العقار"
+                >
                   <i class="bi bi-geo-alt-fill map-drop-pin"></i>
                 </div>
                 <input type="hidden" name="lat" id="fLat" value="" />
@@ -253,22 +501,50 @@
               <!-- 5. السعر والفواتير -->
               <section class="panel form-section" aria-labelledby="secPrice">
                 <h2 id="secPrice">5. السعر والفواتير</h2>
-                <p>إذا ما بتعرف متوسط الفواتير، منحسبها من متوسط الحي ومنكتب جنبها "تقديري".</p>
+                <p>
+                  إذا ما بتعرف متوسط الفواتير، منحسبها من متوسط الحي ومنكتب
+                  جنبها "تقديري".
+                </p>
                 <div class="row g-3">
                   <div class="col-sm-6 col-xl-3">
                     <label for="fRent" class="form-label">الإيجار الشهري</label>
-                    <input type="number" class="form-control" id="fRent" name="rent" value="220" min="0" />
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="fRent"
+                      name="rent"
+                      value="220"
+                      min="0"
+                    />
                   </div>
                   <div class="col-sm-6 col-xl-3">
-                    <label for="fBills" class="form-label">متوسط الكهربا والمي</label>
-                    <input type="number" class="form-control" id="fBills" name="bills" placeholder="فاضي = تقديري" min="0" />
+                    <label for="fBills" class="form-label"
+                      >متوسط الكهربا والمي</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="fBills"
+                      name="bills"
+                      placeholder="فاضي = تقديري"
+                      min="0"
+                    />
                   </div>
                   <div class="col-sm-6 col-xl-3">
                     <label for="fInternet" class="form-label">الإنترنت</label>
-                    <input type="number" class="form-control" id="fInternet" name="internet" value="15" min="0" />
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="fInternet"
+                      name="internet"
+                      value="15"
+                      min="0"
+                    />
                   </div>
                   <div class="col-sm-6 col-xl-3">
-                    <label for="fMinStay" class="form-label">أقل مدة إيجار</label>
+                    <label for="fMinStay" class="form-label"
+                      >أقل مدة إيجار</label
+                    >
                     <select class="form-select" id="fMinStay" name="min_stay">
                       <option value="3" selected>3 شهور</option>
                       <option value="1">شهر</option>
@@ -276,17 +552,38 @@
                     </select>
                   </div>
                 </div>
-                <div class="d-flex flex-wrap align-items-center gap-3 mt-3 p-3 bg-body rounded-3" id="pricePreview">
+                <div
+                  class="d-flex flex-wrap align-items-center gap-3 mt-3 p-3 bg-body rounded-3"
+                  id="pricePreview"
+                >
                   <i class="bi bi-receipt fs-5 text-primary-bt"></i>
-                  <span class="flex-grow-1 small">الباحث رح يشوف: <b>265 د.أ شهريا شامل الفواتير</b></span>
-                  <span class="small text-muted">السعر المقترح لهالحي: 240 – 290 د.أ</span>
+                  <span class="flex-grow-1 small"
+                    >الباحث رح يشوف: <b>265 د.أ شهريا شامل الفواتير</b></span
+                  >
+                  <span class="small text-muted"
+                    >السعر المقترح لهالحي: 240 – 290 د.أ</span
+                  >
                 </div>
               </section>
 
               <!-- أزرار الحفظ -->
               <div class="d-flex flex-wrap justify-content-end gap-2 mt-4">
-                <button type="submit" class="btn btn-outline-primary btn-lg" name="action" value="draft">احفظ كمسودة</button>
-                <button type="submit" class="btn btn-accent btn-lg" name="action" value="publish">انشر الإعلان</button>
+                <button
+                  type="submit"
+                  class="btn btn-outline-primary btn-lg"
+                  name="action"
+                  value="draft"
+                >
+                  احفظ كمسودة
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-accent btn-lg"
+                  name="action"
+                  value="publish"
+                >
+                  انشر الإعلان
+                </button>
               </div>
             </form>
           </div>
@@ -297,21 +594,55 @@
               <!-- جاهزية الإعلان -->
               <section class="panel" aria-labelledby="readyTitle">
                 <h2 class="fs-6 mb-2" id="readyTitle">جاهزية الإعلان</h2>
-                <div class="progress mb-3" role="progressbar" aria-label="جاهزية الإعلان" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width: 80%"></div></div>
-                <ul class="list-clean d-flex flex-column gap-2 small" id="readinessList">
-                  <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill ic-ok"></i>المعلومات الأساسية</li>
-                  <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill ic-ok"></i>الوصف</li>
-                  <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill ic-ok"></i>5 صور (ينصح بـ 8)</li>
-                  <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill ic-ok"></i>الموقع</li>
-                  <li class="d-flex align-items-center gap-2"><i class="bi bi-exclamation-circle-fill ic-warn"></i>متوسط الفواتير</li>
+                <div
+                  class="progress mb-3"
+                  role="progressbar"
+                  aria-label="جاهزية الإعلان"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div class="progress-bar" style="width: 80%"></div>
+                </div>
+                <ul
+                  class="list-clean d-flex flex-column gap-2 small"
+                  id="readinessList"
+                >
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle-fill ic-ok"></i>المعلومات
+                    الأساسية
+                  </li>
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle-fill ic-ok"></i>الوصف
+                  </li>
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle-fill ic-ok"></i>5 صور (ينصح بـ
+                    8)
+                  </li>
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle-fill ic-ok"></i>الموقع
+                  </li>
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="bi bi-exclamation-circle-fill ic-warn"></i>متوسط
+                    الفواتير
+                  </li>
                 </ul>
               </section>
 
               <!-- بعد النشر -->
               <section class="panel" aria-labelledby="afterTitle">
                 <h2 class="fs-6 mb-2" id="afterTitle">بعد النشر</h2>
-                <div class="d-flex gap-2 small text-muted mb-2"><i class="bi bi-patch-check text-primary-bt"></i><span>الأدمن بيراجع الإعلان خلال 24 ساعة.</span></div>
-                <div class="d-flex gap-2 small text-muted"><i class="bi bi-arrow-repeat text-primary-bt"></i><span>لازم تأكد كل أسبوع إنه لسا متاح، وإلا بيختفي من النتائج.</span></div>
+                <div class="d-flex gap-2 small text-muted mb-2">
+                  <i class="bi bi-patch-check text-primary-bt"></i
+                  ><span>الأدمن بيراجع الإعلان خلال 24 ساعة.</span>
+                </div>
+                <div class="d-flex gap-2 small text-muted">
+                  <i class="bi bi-arrow-repeat text-primary-bt"></i
+                  ><span
+                    >لازم تأكد كل أسبوع إنه لسا متاح، وإلا بيختفي من
+                    النتائج.</span
+                  >
+                </div>
               </section>
             </div>
           </aside>

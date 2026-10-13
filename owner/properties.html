@@ -33,28 +33,58 @@
         ><span class="brand-mark">B</span><span>بيتي</span></a
       >
       <div class="ms-auto d-flex align-items-center gap-1">
-        <button type="button" class="btn btn-link nav-lang px-2" data-action="toggle-lang">
+        <button
+          type="button"
+          class="btn btn-link nav-lang px-2"
+          data-action="toggle-lang"
+        >
           <i class="bi bi-translate"></i><span>EN</span>
         </button>
         <div class="dropdown">
-          <button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-label="الإشعارات">
+          <button
+            class="icon-btn"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-label="الإشعارات"
+          >
             <i class="bi bi-bell"></i><span class="dot"></span>
           </button>
-          <div class="dropdown-menu dropdown-menu-end shadow-sm p-0" style="width: 320px">
+          <div
+            class="dropdown-menu dropdown-menu-end shadow-sm p-0"
+            style="width: 320px"
+          >
             <div class="px-3 py-2 border-bottom fw-semibold">الإشعارات</div>
             <div class="py-1">
-              <a class="dropdown-item d-flex gap-2 py-2 text-wrap" href="requests.html">
-                <span class="kpi-icon flex-shrink-0" style="width: 34px; height: 34px; font-size: 1rem"><i class="bi bi-inbox"></i></span>
+              <a
+                class="dropdown-item d-flex gap-2 py-2 text-wrap"
+                href="requests.html"
+              >
+                <span
+                  class="kpi-icon flex-shrink-0"
+                  style="width: 34px; height: 34px; font-size: 1rem"
+                  ><i class="bi bi-inbox"></i
+                ></span>
                 <span class="small">
                   <span class="d-block">طلب معاينة جديد من سارة خالد</span>
-                  <span class="text-muted" style="font-size: 0.72rem">قبل 10 دقايق</span>
+                  <span class="text-muted" style="font-size: 0.72rem"
+                    >قبل 10 دقايق</span
+                  >
                 </span>
               </a>
-              <a class="dropdown-item d-flex gap-2 py-2 text-wrap" href="properties.html">
-                <span class="kpi-icon flex-shrink-0" style="width: 34px; height: 34px; font-size: 1rem"><i class="bi bi-shield-check"></i></span>
+              <a
+                class="dropdown-item d-flex gap-2 py-2 text-wrap"
+                href="properties.html"
+              >
+                <span
+                  class="kpi-icon flex-shrink-0"
+                  style="width: 34px; height: 34px; font-size: 1rem"
+                  ><i class="bi bi-shield-check"></i
+                ></span>
                 <span class="small">
                   <span class="d-block">تم توثيق عقارك استوديو الجبيهة</span>
-                  <span class="text-muted" style="font-size: 0.72rem">قبل ساعة</span>
+                  <span class="text-muted" style="font-size: 0.72rem"
+                    >قبل ساعة</span
+                  >
                 </span>
               </a>
             </div>
@@ -65,14 +95,20 @@
             <span class="avatar">أ</span>
             <span class="d-none d-md-inline text-start lh-sm">
               <span class="d-block small fw-semibold">أبو أحمد</span>
-              <span class="d-block text-muted" style="font-size: 0.72rem">صاحب عقار</span>
+              <span class="d-block text-muted" style="font-size: 0.72rem"
+                >صاحب عقار</span
+              >
             </span>
             <i class="bi bi-chevron-down small text-muted"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
             <li><a class="dropdown-item" href="account.html">حسابي</a></li>
             <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item text-danger" href="../index.html">تسجيل الخروج</a></li>
+            <li>
+              <a class="dropdown-item text-danger" href="../index.html"
+                >تسجيل الخروج</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -80,19 +116,51 @@
 
     <div class="app-shell">
       <!-- ===== Sidebar ===== -->
-      <aside class="app-sidebar offcanvas-lg offcanvas-start" tabindex="-1" id="appSidebar">
+      <aside
+        class="app-sidebar offcanvas-lg offcanvas-start"
+        tabindex="-1"
+        id="appSidebar"
+      >
         <div class="offcanvas-header border-bottom">
-          <a class="brand" href="../index.html"><span class="brand-mark">B</span><span>بيتي</span></a>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#appSidebar" aria-label="إغلاق"></button>
+          <a class="brand" href="../index.html"
+            ><span class="brand-mark">B</span><span>بيتي</span></a
+          >
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            data-bs-target="#appSidebar"
+            aria-label="إغلاق"
+          ></button>
         </div>
         <div class="offcanvas-body">
           <div class="side-label">صاحب عقار</div>
-          <a class="side-link" href="dashboard.html"><i class="bi bi-grid-1x2"></i><span class="flex-grow-1">لوحة التحكم</span></a>
-          <a class="side-link active" href="properties.html" aria-current="page"><i class="bi bi-house-door"></i><span class="flex-grow-1">عقاراتي</span></a>
-          <a class="side-link" href="property-form.html"><i class="bi bi-plus-square"></i><span class="flex-grow-1">إضافة عقار</span></a>
-          <a class="side-link" href="requests.html"><i class="bi bi-inbox"></i><span class="flex-grow-1">الطلبات والمعاينات</span><span class="side-badge">3</span></a>
-          <a class="side-link" href="chat.html"><i class="bi bi-chat-dots"></i><span class="flex-grow-1">الرسائل</span><span class="side-badge">1</span></a>
-          <a class="side-link" href="account.html"><i class="bi bi-person-badge"></i><span class="flex-grow-1">حسابي</span></a>
+          <a class="side-link" href="dashboard.html"
+            ><i class="bi bi-grid-1x2"></i
+            ><span class="flex-grow-1">لوحة التحكم</span></a
+          >
+          <a class="side-link active" href="properties.html" aria-current="page"
+            ><i class="bi bi-house-door"></i
+            ><span class="flex-grow-1">عقاراتي</span></a
+          >
+          <a class="side-link" href="property-form.html"
+            ><i class="bi bi-plus-square"></i
+            ><span class="flex-grow-1">إضافة عقار</span></a
+          >
+          <a class="side-link" href="requests.html"
+            ><i class="bi bi-inbox"></i
+            ><span class="flex-grow-1">الطلبات والمعاينات</span
+            ><span class="side-badge">3</span></a
+          >
+          <a class="side-link" href="chat.html"
+            ><i class="bi bi-chat-dots"></i
+            ><span class="flex-grow-1">الرسائل</span
+            ><span class="side-badge">1</span></a
+          >
+          <a class="side-link" href="account.html"
+            ><i class="bi bi-person-badge"></i
+            ><span class="flex-grow-1">حسابي</span></a
+          >
         </div>
       </aside>
 
@@ -119,10 +187,14 @@
               <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
                 <h2 class="prop-row__title">استوديو مفروش — الجبيهة</h2>
                 <span class="status status--success">فعّال</span>
-                <span class="badge-featured mt-0"><i class="bi bi-star-fill"></i>مميز</span>
+                <span class="badge-featured mt-0"
+                  ><i class="bi bi-star-fill"></i>مميز</span
+                >
               </div>
               <div class="small text-muted">265 د.أ شهريا شامل الفواتير</div>
-              <div class="fresh-note"><i class="bi bi-arrow-repeat"></i>آخر تأكيد إنه متاح: قبل يومين</div>
+              <div class="fresh-note">
+                <i class="bi bi-arrow-repeat"></i>آخر تأكيد إنه متاح: قبل يومين
+              </div>
             </div>
             <div class="stat-tiles prop-row__stats">
               <div class="stat-tile"><b>642</b><span>مشاهدة</span></div>
@@ -130,8 +202,20 @@
               <div class="stat-tile"><b>88%</b><span>توافق</span></div>
             </div>
             <div class="d-flex gap-2">
-              <a href="property-form.html" class="btn btn-ghost btn-square text-primary-bt" aria-label="تعديل استوديو مفروش — الجبيهة"><i class="bi bi-pencil"></i></a>
-              <button type="button" class="btn btn-ghost btn-square" data-action="hide" aria-label="إخفاء استوديو مفروش — الجبيهة"><i class="bi bi-eye-slash"></i></button>
+              <a
+                href="property-form.html"
+                class="btn btn-ghost btn-square text-primary-bt"
+                aria-label="تعديل استوديو مفروش — الجبيهة"
+                ><i class="bi bi-pencil"></i
+              ></a>
+              <button
+                type="button"
+                class="btn btn-ghost btn-square"
+                data-action="hide"
+                aria-label="إخفاء استوديو مفروش — الجبيهة"
+              >
+                <i class="bi bi-eye-slash"></i>
+              </button>
             </div>
           </article>
 
@@ -144,7 +228,9 @@
                 <span class="status status--success">فعّال</span>
               </div>
               <div class="small text-muted">170 د.أ شهريا شامل الفواتير</div>
-              <div class="fresh-note"><i class="bi bi-arrow-repeat"></i>آخر تأكيد إنه متاح: قبل 4 أيام</div>
+              <div class="fresh-note">
+                <i class="bi bi-arrow-repeat"></i>آخر تأكيد إنه متاح: قبل 4 أيام
+              </div>
             </div>
             <div class="stat-tiles prop-row__stats">
               <div class="stat-tile"><b>318</b><span>مشاهدة</span></div>
@@ -152,8 +238,20 @@
               <div class="stat-tile"><b>79%</b><span>توافق</span></div>
             </div>
             <div class="d-flex gap-2">
-              <a href="property-form.html" class="btn btn-ghost btn-square text-primary-bt" aria-label="تعديل غرفة بشقة مشتركة — الجبيهة"><i class="bi bi-pencil"></i></a>
-              <button type="button" class="btn btn-ghost btn-square" data-action="hide" aria-label="إخفاء غرفة بشقة مشتركة — الجبيهة"><i class="bi bi-eye-slash"></i></button>
+              <a
+                href="property-form.html"
+                class="btn btn-ghost btn-square text-primary-bt"
+                aria-label="تعديل غرفة بشقة مشتركة — الجبيهة"
+                ><i class="bi bi-pencil"></i
+              ></a>
+              <button
+                type="button"
+                class="btn btn-ghost btn-square"
+                data-action="hide"
+                aria-label="إخفاء غرفة بشقة مشتركة — الجبيهة"
+              >
+                <i class="bi bi-eye-slash"></i>
+              </button>
             </div>
           </article>
 
@@ -166,7 +264,10 @@
                 <span class="status status--pending">بحاجة تأكيد</span>
               </div>
               <div class="small text-muted">305 د.أ شهريا شامل الفواتير</div>
-              <div class="fresh-note is-warn"><i class="bi bi-arrow-repeat"></i>ما انتأكد من 8 أيام، رح يختفي بكرا</div>
+              <div class="fresh-note is-warn">
+                <i class="bi bi-arrow-repeat"></i>ما انتأكد من 8 أيام، رح يختفي
+                بكرا
+              </div>
             </div>
             <div class="stat-tiles prop-row__stats">
               <div class="stat-tile"><b>211</b><span>مشاهدة</span></div>
@@ -174,9 +275,27 @@
               <div class="stat-tile"><b>76%</b><span>توافق</span></div>
             </div>
             <div class="d-flex gap-2">
-              <button type="button" class="btn btn-primary" data-action="confirm-available">لسا متاح</button>
-              <a href="property-form.html" class="btn btn-ghost btn-square text-primary-bt" aria-label="تعديل شقة غرفة نوم — الجبيهة"><i class="bi bi-pencil"></i></a>
-              <button type="button" class="btn btn-ghost btn-square" data-action="hide" aria-label="إخفاء شقة غرفة نوم — الجبيهة"><i class="bi bi-eye-slash"></i></button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-action="confirm-available"
+              >
+                لسا متاح
+              </button>
+              <a
+                href="property-form.html"
+                class="btn btn-ghost btn-square text-primary-bt"
+                aria-label="تعديل شقة غرفة نوم — الجبيهة"
+                ><i class="bi bi-pencil"></i
+              ></a>
+              <button
+                type="button"
+                class="btn btn-ghost btn-square"
+                data-action="hide"
+                aria-label="إخفاء شقة غرفة نوم — الجبيهة"
+              >
+                <i class="bi bi-eye-slash"></i>
+              </button>
             </div>
           </article>
 
@@ -189,7 +308,9 @@
                 <span class="status status--info">مؤجّر</span>
               </div>
               <div class="small text-muted">200 د.أ شهريا شامل الفواتير</div>
-              <div class="fresh-note"><i class="bi bi-arrow-repeat"></i>مؤجّر لحد 1 مارس 2027</div>
+              <div class="fresh-note">
+                <i class="bi bi-arrow-repeat"></i>مؤجّر لحد 1 مارس 2027
+              </div>
             </div>
             <div class="stat-tiles prop-row__stats">
               <div class="stat-tile"><b>69</b><span>مشاهدة</span></div>
@@ -197,8 +318,20 @@
               <div class="stat-tile"><b>71%</b><span>توافق</span></div>
             </div>
             <div class="d-flex gap-2">
-              <a href="property-form.html" class="btn btn-ghost btn-square text-primary-bt" aria-label="تعديل استوديو صغير — صويلح"><i class="bi bi-pencil"></i></a>
-              <button type="button" class="btn btn-ghost btn-square" data-action="hide" aria-label="إخفاء استوديو صغير — صويلح"><i class="bi bi-eye-slash"></i></button>
+              <a
+                href="property-form.html"
+                class="btn btn-ghost btn-square text-primary-bt"
+                aria-label="تعديل استوديو صغير — صويلح"
+                ><i class="bi bi-pencil"></i
+              ></a>
+              <button
+                type="button"
+                class="btn btn-ghost btn-square"
+                data-action="hide"
+                aria-label="إخفاء استوديو صغير — صويلح"
+              >
+                <i class="bi bi-eye-slash"></i>
+              </button>
             </div>
           </article>
         </div>

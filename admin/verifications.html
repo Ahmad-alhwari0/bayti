@@ -33,21 +33,44 @@
         ><span class="brand-mark">B</span><span>بيتي</span></a
       >
       <div class="ms-auto d-flex align-items-center gap-1">
-        <button type="button" class="btn btn-link nav-lang px-2" data-action="toggle-lang">
+        <button
+          type="button"
+          class="btn btn-link nav-lang px-2"
+          data-action="toggle-lang"
+        >
           <i class="bi bi-translate"></i><span>EN</span>
         </button>
         <div class="dropdown">
-          <button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-label="الإشعارات">
+          <button
+            class="icon-btn"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-label="الإشعارات"
+          >
             <i class="bi bi-bell"></i><span class="dot"></span>
           </button>
-          <div class="dropdown-menu dropdown-menu-end shadow-sm p-0" style="width: 320px">
+          <div
+            class="dropdown-menu dropdown-menu-end shadow-sm p-0"
+            style="width: 320px"
+          >
             <div class="px-3 py-2 border-bottom fw-semibold">الإشعارات</div>
             <div class="py-1">
-              <a class="dropdown-item d-flex gap-2 py-2 text-wrap" href="verifications.html">
-                <span class="kpi-icon flex-shrink-0" style="width: 34px; height: 34px; font-size: 1rem"><i class="bi bi-patch-check"></i></span>
+              <a
+                class="dropdown-item d-flex gap-2 py-2 text-wrap"
+                href="verifications.html"
+              >
+                <span
+                  class="kpi-icon flex-shrink-0"
+                  style="width: 34px; height: 34px; font-size: 1rem"
+                  ><i class="bi bi-patch-check"></i
+                ></span>
                 <span class="small">
-                  <span class="d-block">4 طلبات توثيق جديدة بانتظار المراجعة</span>
-                  <span class="text-muted" style="font-size: 0.72rem">اليوم</span>
+                  <span class="d-block"
+                    >4 طلبات توثيق جديدة بانتظار المراجعة</span
+                  >
+                  <span class="text-muted" style="font-size: 0.72rem"
+                    >اليوم</span
+                  >
                 </span>
               </a>
             </div>
@@ -58,12 +81,18 @@
             <span class="avatar">م</span>
             <span class="d-none d-md-inline text-start lh-sm">
               <span class="d-block small fw-semibold">مدير النظام</span>
-              <span class="d-block text-muted" style="font-size: 0.72rem">الأدمن</span>
+              <span class="d-block text-muted" style="font-size: 0.72rem"
+                >الأدمن</span
+              >
             </span>
             <i class="bi bi-chevron-down small text-muted"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-            <li><a class="dropdown-item text-danger" href="../index.html">تسجيل الخروج</a></li>
+            <li>
+              <a class="dropdown-item text-danger" href="../index.html"
+                >تسجيل الخروج</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -71,17 +100,45 @@
 
     <div class="app-shell">
       <!-- ===== Sidebar ===== -->
-      <aside class="app-sidebar offcanvas-lg offcanvas-start" tabindex="-1" id="appSidebar">
+      <aside
+        class="app-sidebar offcanvas-lg offcanvas-start"
+        tabindex="-1"
+        id="appSidebar"
+      >
         <div class="offcanvas-header border-bottom">
-          <a class="brand" href="../index.html"><span class="brand-mark">B</span><span>بيتي</span></a>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#appSidebar" aria-label="إغلاق"></button>
+          <a class="brand" href="../index.html"
+            ><span class="brand-mark">B</span><span>بيتي</span></a
+          >
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            data-bs-target="#appSidebar"
+            aria-label="إغلاق"
+          ></button>
         </div>
         <div class="offcanvas-body">
           <div class="side-label">الأدمن</div>
-          <a class="side-link" href="dashboard.html"><i class="bi bi-grid-1x2"></i><span class="flex-grow-1">لوحة التحكم</span></a>
-          <a class="side-link active" href="verifications.html" aria-current="page"><i class="bi bi-patch-check"></i><span class="flex-grow-1">طلبات التوثيق</span><span class="side-badge">4</span></a>
-          <a class="side-link" href="users.html"><i class="bi bi-people"></i><span class="flex-grow-1">المستخدمين</span></a>
-          <a class="side-link" href="places.html"><i class="bi bi-geo-alt"></i><span class="flex-grow-1">الأحياء والأماكن</span></a>
+          <a class="side-link" href="dashboard.html"
+            ><i class="bi bi-grid-1x2"></i
+            ><span class="flex-grow-1">لوحة التحكم</span></a
+          >
+          <a
+            class="side-link active"
+            href="verifications.html"
+            aria-current="page"
+            ><i class="bi bi-patch-check"></i
+            ><span class="flex-grow-1">طلبات التوثيق</span
+            ><span class="side-badge">4</span></a
+          >
+          <a class="side-link" href="users.html"
+            ><i class="bi bi-people"></i
+            ><span class="flex-grow-1">المستخدمين</span></a
+          >
+          <a class="side-link" href="places.html"
+            ><i class="bi bi-geo-alt"></i
+            ><span class="flex-grow-1">الأحياء والأماكن</span></a
+          >
         </div>
       </aside>
 
@@ -98,55 +155,129 @@
         <div class="row g-4 align-items-start">
           <!-- 2. قائمة الطلبات -->
           <div class="col-lg-5 col-xl-4">
-            <section class="panel p-0 overflow-hidden" aria-label="قائمة الطلبات">
+            <section
+              class="panel p-0 overflow-hidden"
+              aria-label="قائمة الطلبات"
+            >
               <ul class="nav pill-tabs" role="tablist">
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#queue-pending" type="button" role="tab" aria-controls="queue-pending" aria-selected="true">قيد المراجعة (4)</button>
+                  <button
+                    class="nav-link active"
+                    data-bs-toggle="tab"
+                    data-bs-target="#queue-pending"
+                    type="button"
+                    role="tab"
+                    aria-controls="queue-pending"
+                    aria-selected="true"
+                  >
+                    قيد المراجعة (4)
+                  </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#queue-approved" type="button" role="tab" aria-controls="queue-approved" aria-selected="false">معتمد</button>
+                  <button
+                    class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#queue-approved"
+                    type="button"
+                    role="tab"
+                    aria-controls="queue-approved"
+                    aria-selected="false"
+                  >
+                    معتمد
+                  </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#queue-rejected" type="button" role="tab" aria-controls="queue-rejected" aria-selected="false">مرفوض</button>
+                  <button
+                    class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#queue-rejected"
+                    type="button"
+                    role="tab"
+                    aria-controls="queue-rejected"
+                    aria-selected="false"
+                  >
+                    مرفوض
+                  </button>
                 </li>
               </ul>
 
               <div class="tab-content">
                 <!-- قيد المراجعة -->
-                <div class="tab-pane fade show active" id="queue-pending" role="tabpanel" tabindex="0">
+                <div
+                  class="tab-pane fade show active"
+                  id="queue-pending"
+                  role="tabpanel"
+                  tabindex="0"
+                >
                   <div id="queuePendingList">
-                    <a href="#reviewPanel" class="queue-item is-active" aria-current="true">
+                    <a
+                      href="#reviewPanel"
+                      class="queue-item is-active"
+                      aria-current="true"
+                    >
                       <span class="avatar">أ</span>
-                      <span class="flex-grow-1 min-w-0"><b class="d-block">أبو أحمد</b><small>مالك · وثيقتين · 4 عقارات</small></span>
+                      <span class="flex-grow-1 min-w-0"
+                        ><b class="d-block">أبو أحمد</b
+                        ><small>مالك · وثيقتين · 4 عقارات</small></span
+                      >
                       <span class="small text-muted">9:12 ص</span>
                     </a>
                     <a href="#reviewPanel" class="queue-item">
                       <span class="avatar">ر</span>
-                      <span class="flex-grow-1 min-w-0"><b class="d-block">مكتب الريادة العقاري</b><small>مكتب · 3 وثائق · 12 عقار</small></span>
+                      <span class="flex-grow-1 min-w-0"
+                        ><b class="d-block">مكتب الريادة العقاري</b
+                        ><small>مكتب · 3 وثائق · 12 عقار</small></span
+                      >
                       <span class="small text-muted">8:40 ص</span>
                     </a>
                     <a href="#reviewPanel" class="queue-item">
                       <span class="avatar">ي</span>
-                      <span class="flex-grow-1 min-w-0"><b class="d-block">أم يزن</b><small>مالك · وثيقتين · عقار</small></span>
+                      <span class="flex-grow-1 min-w-0"
+                        ><b class="d-block">أم يزن</b
+                        ><small>مالك · وثيقتين · عقار</small></span
+                      >
                       <span class="small text-muted">أمس</span>
                     </a>
                     <a href="#reviewPanel" class="queue-item">
                       <span class="avatar">س</span>
-                      <span class="flex-grow-1 min-w-0"><b class="d-block">سامي حداد</b><small>مالك · وثيقة · عقارين</small></span>
+                      <span class="flex-grow-1 min-w-0"
+                        ><b class="d-block">سامي حداد</b
+                        ><small>مالك · وثيقة · عقارين</small></span
+                      >
                       <span class="small text-muted">أمس</span>
                     </a>
                   </div>
                 </div>
                 <!-- معتمد -->
-                <div class="tab-pane fade" id="queue-approved" role="tabpanel" tabindex="0">
+                <div
+                  class="tab-pane fade"
+                  id="queue-approved"
+                  role="tabpanel"
+                  tabindex="0"
+                >
                   <div id="queueApprovedList">
-                    <p class="text-muted small text-center p-4 mb-0"><i class="bi bi-patch-check d-block fs-3 text-primary-bt mb-1"></i>الطلبات المعتمدة بتظهر هون.</p>
+                    <p class="text-muted small text-center p-4 mb-0">
+                      <i
+                        class="bi bi-patch-check d-block fs-3 text-primary-bt mb-1"
+                      ></i
+                      >الطلبات المعتمدة بتظهر هون.
+                    </p>
                   </div>
                 </div>
                 <!-- مرفوض -->
-                <div class="tab-pane fade" id="queue-rejected" role="tabpanel" tabindex="0">
+                <div
+                  class="tab-pane fade"
+                  id="queue-rejected"
+                  role="tabpanel"
+                  tabindex="0"
+                >
                   <div id="queueRejectedList">
-                    <p class="text-muted small text-center p-4 mb-0"><i class="bi bi-x-circle d-block fs-3 text-primary-bt mb-1"></i>الطلبات المرفوضة بتظهر هون.</p>
+                    <p class="text-muted small text-center p-4 mb-0">
+                      <i
+                        class="bi bi-x-circle d-block fs-3 text-primary-bt mb-1"
+                      ></i
+                      >الطلبات المرفوضة بتظهر هون.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -155,13 +286,21 @@
 
           <!-- 3. مراجعة الطلب -->
           <div class="col-lg-7 col-xl-8">
-            <section class="panel p-4" id="reviewPanel" aria-labelledby="reviewName">
+            <section
+              class="panel p-4"
+              id="reviewPanel"
+              aria-labelledby="reviewName"
+            >
               <!-- صاحب الطلب -->
-              <div class="review-head d-flex flex-wrap align-items-center gap-3">
+              <div
+                class="review-head d-flex flex-wrap align-items-center gap-3"
+              >
                 <span class="avatar avatar-lg">أ</span>
                 <div class="flex-grow-1">
                   <b class="d-block fs-5" id="reviewName">أبو أحمد</b>
-                  <span class="small text-muted">مالك فرد · انضم 12 سبتمبر · 4 عقارات</span>
+                  <span class="small text-muted"
+                    >مالك فرد · انضم 12 سبتمبر · 4 عقارات</span
+                  >
                 </div>
                 <span class="status status--pending">قيد المراجعة</span>
               </div>
@@ -172,19 +311,37 @@
                 <div class="row g-3" id="reviewDocs">
                   <div class="col-sm-6">
                     <div class="doc-card">
-                      <div class="doc-preview"><i class="bi bi-file-earmark-text"></i>id-front.jpg</div>
-                      <div class="d-flex justify-content-between align-items-center px-3 py-1">
+                      <div class="doc-preview">
+                        <i class="bi bi-file-earmark-text"></i>id-front.jpg
+                      </div>
+                      <div
+                        class="d-flex justify-content-between align-items-center px-3 py-1"
+                      >
                         <b class="small">الهوية الشخصية</b>
-                        <a href="#" class="small fw-semibold text-decoration-none py-2" aria-label="فتح الهوية الشخصية">فتح</a>
+                        <a
+                          href="#"
+                          class="small fw-semibold text-decoration-none py-2"
+                          aria-label="فتح الهوية الشخصية"
+                          >فتح</a
+                        >
                       </div>
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="doc-card">
-                      <div class="doc-preview"><i class="bi bi-file-earmark-text"></i>ownership.pdf</div>
-                      <div class="d-flex justify-content-between align-items-center px-3 py-1">
+                      <div class="doc-preview">
+                        <i class="bi bi-file-earmark-text"></i>ownership.pdf
+                      </div>
+                      <div
+                        class="d-flex justify-content-between align-items-center px-3 py-1"
+                      >
                         <b class="small">سند الملكية</b>
-                        <a href="#" class="small fw-semibold text-decoration-none py-2" aria-label="فتح سند الملكية">فتح</a>
+                        <a
+                          href="#"
+                          class="small fw-semibold text-decoration-none py-2"
+                          aria-label="فتح سند الملكية"
+                          >فتح</a
+                        >
                       </div>
                     </div>
                   </div>
@@ -194,20 +351,76 @@
                 <h2 class="h6 mt-4 mb-1">قائمة التحقق</h2>
                 <fieldset id="reviewChecks">
                   <legend class="visually-hidden">قائمة التحقق</legend>
-                  <label class="check-row" for="chkName"><input class="form-check-input m-0" type="checkbox" id="chkName" name="checks" value="name" checked />الاسم بالهوية مطابق لاسم الحساب</label>
-                  <label class="check-row" for="chkValid"><input class="form-check-input m-0" type="checkbox" id="chkValid" name="checks" value="valid" checked />الهوية سارية المفعول</label>
-                  <label class="check-row" for="chkOwner"><input class="form-check-input m-0" type="checkbox" id="chkOwner" name="checks" value="owner" />سند الملكية باسم نفس الشخص أو فيه تفويض</label>
-                  <label class="check-row" for="chkAddress"><input class="form-check-input m-0" type="checkbox" id="chkAddress" name="checks" value="address" />عنوان العقار مطابق للإعلان</label>
+                  <label class="check-row" for="chkName"
+                    ><input
+                      class="form-check-input m-0"
+                      type="checkbox"
+                      id="chkName"
+                      name="checks"
+                      value="name"
+                      checked
+                    />الاسم بالهوية مطابق لاسم الحساب</label
+                  >
+                  <label class="check-row" for="chkValid"
+                    ><input
+                      class="form-check-input m-0"
+                      type="checkbox"
+                      id="chkValid"
+                      name="checks"
+                      value="valid"
+                      checked
+                    />الهوية سارية المفعول</label
+                  >
+                  <label class="check-row" for="chkOwner"
+                    ><input
+                      class="form-check-input m-0"
+                      type="checkbox"
+                      id="chkOwner"
+                      name="checks"
+                      value="owner"
+                    />سند الملكية باسم نفس الشخص أو فيه تفويض</label
+                  >
+                  <label class="check-row" for="chkAddress"
+                    ><input
+                      class="form-check-input m-0"
+                      type="checkbox"
+                      id="chkAddress"
+                      name="checks"
+                      value="address"
+                    />عنوان العقار مطابق للإعلان</label
+                  >
                 </fieldset>
 
                 <!-- الملاحظة -->
-                <label for="vnote" class="form-label mt-3">ملاحظة (بتنبعت للمالك إذا رفضت)</label>
-                <textarea class="form-control" id="vnote" name="note" rows="2" placeholder="مثلا: صورة الهوية مش واضحة"></textarea>
+                <label for="vnote" class="form-label mt-3"
+                  >ملاحظة (بتنبعت للمالك إذا رفضت)</label
+                >
+                <textarea
+                  class="form-control"
+                  id="vnote"
+                  name="note"
+                  rows="2"
+                  placeholder="مثلا: صورة الهوية مش واضحة"
+                ></textarea>
 
                 <!-- الإجراءات -->
                 <div class="d-flex flex-wrap justify-content-end gap-2 mt-3">
-                  <button type="submit" class="btn btn-outline-danger" name="decision" value="reject">رفض</button>
-                  <button type="submit" class="btn btn-primary d-inline-flex align-items-center gap-2" name="decision" value="approve"><i class="bi bi-patch-check"></i>اعتمد وأعطي الشارة</button>
+                  <button
+                    type="submit"
+                    class="btn btn-outline-danger"
+                    name="decision"
+                    value="reject"
+                  >
+                    رفض
+                  </button>
+                  <button
+                    type="submit"
+                    class="btn btn-primary d-inline-flex align-items-center gap-2"
+                    name="decision"
+                    value="approve"
+                  >
+                    <i class="bi bi-patch-check"></i>اعتمد وأعطي الشارة
+                  </button>
                 </div>
               </form>
             </section>
