@@ -1,14 +1,13 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>بيتي — الأحياء والأماكن</title>
+    <title>Bayti — Areas &amp; places</title>
 
     <link
-      id="bootstrap-css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
@@ -25,27 +24,20 @@
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#appSidebar"
-        aria-label="القائمة"
+        aria-label="Menu"
       >
         <i class="bi bi-list"></i>
       </button>
       <a class="brand" href="dashboard.html"
-        ><span class="brand-mark">B</span><span>بيتي</span></a
+        ><span class="brand-mark">B</span><span>Bayti</span></a
       >
       <div class="ms-auto d-flex align-items-center gap-1">
-        <button
-          type="button"
-          class="btn btn-link nav-lang px-2"
-          data-action="toggle-lang"
-        >
-          <i class="bi bi-translate"></i><span>EN</span>
-        </button>
         <div class="dropdown">
           <button
             class="icon-btn"
             type="button"
             data-bs-toggle="dropdown"
-            aria-label="الإشعارات"
+            aria-label="Notifications"
           >
             <i class="bi bi-bell"></i><span class="dot"></span>
           </button>
@@ -53,7 +45,7 @@
             class="dropdown-menu dropdown-menu-end shadow-sm p-0"
             style="width: 320px"
           >
-            <div class="px-3 py-2 border-bottom fw-semibold">الإشعارات</div>
+            <div class="px-3 py-2 border-bottom fw-semibold">Notifications</div>
             <div class="py-1">
               <a
                 class="dropdown-item d-flex gap-2 py-2 text-wrap"
@@ -66,10 +58,10 @@
                 ></span>
                 <span class="small">
                   <span class="d-block"
-                    >4 طلبات توثيق جديدة بانتظار المراجعة</span
+                    >4 verification requests waiting for review</span
                   >
                   <span class="text-muted" style="font-size: 0.72rem"
-                    >اليوم</span
+                    >Today</span
                   >
                 </span>
               </a>
@@ -78,11 +70,11 @@
         </div>
         <div class="dropdown">
           <button class="app-user" type="button" data-bs-toggle="dropdown">
-            <span class="avatar">م</span>
+            <span class="avatar">A</span>
             <span class="d-none d-md-inline text-start lh-sm">
-              <span class="d-block small fw-semibold">مدير النظام</span>
+              <span class="d-block small fw-semibold">System admin</span>
               <span class="d-block text-muted" style="font-size: 0.72rem"
-                >الأدمن</span
+                >Admin</span
               >
             </span>
             <i class="bi bi-chevron-down small text-muted"></i>
@@ -90,7 +82,7 @@
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
             <li>
               <a class="dropdown-item text-danger" href="../index.html"
-                >تسجيل الخروج</a
+                >Log out</a
               >
             </li>
           </ul>
@@ -107,57 +99,57 @@
       >
         <div class="offcanvas-header border-bottom">
           <a class="brand" href="../index.html"
-            ><span class="brand-mark">B</span><span>بيتي</span></a
+            ><span class="brand-mark">B</span><span>Bayti</span></a
           >
           <button
             type="button"
             class="btn-close"
             data-bs-dismiss="offcanvas"
             data-bs-target="#appSidebar"
-            aria-label="إغلاق"
+            aria-label="Close"
           ></button>
         </div>
         <div class="offcanvas-body">
-          <div class="side-label">الأدمن</div>
+          <div class="side-label">Admin</div>
           <a class="side-link" href="dashboard.html"
             ><i class="bi bi-grid-1x2"></i
-            ><span class="flex-grow-1">لوحة التحكم</span></a
+            ><span class="flex-grow-1">Dashboard</span></a
           >
           <a class="side-link" href="verifications.html"
             ><i class="bi bi-patch-check"></i
-            ><span class="flex-grow-1">طلبات التوثيق</span
+            ><span class="flex-grow-1">Verifications</span
             ><span class="side-badge">4</span></a
           >
           <a class="side-link" href="users.html"
             ><i class="bi bi-people"></i
-            ><span class="flex-grow-1">المستخدمين</span></a
+            ><span class="flex-grow-1">Users</span></a
           >
           <a class="side-link active" href="places.html" aria-current="page"
             ><i class="bi bi-geo-alt"></i
-            ><span class="flex-grow-1">الأحياء والأماكن</span></a
+            ><span class="flex-grow-1">Areas &amp; places</span></a
           >
         </div>
       </aside>
 
       <!-- ===== Content ===== -->
       <main class="app-main">
-        <!-- 1. راس الصفحة -->
+        <!-- 1. Page header -->
         <div class="page-head">
           <div>
-            <h1>الأحياء والأماكن</h1>
+            <h1>Areas &amp; places</h1>
             <p>
-              بيانات الأحياء بتغذي التكلفة التقديرية ومساعد الأحياء، والأماكن
-              بتظهر بالـ Onboarding.
+              Area data powers the estimated costs and the area assistant;
+              places show up during onboarding.
             </p>
           </div>
-          <!-- زر الإضافة بيتبدل حسب التاب (CSS) -->
+          <!-- The add button switches with the open tab (CSS) -->
           <button
             type="button"
             class="btn btn-primary d-inline-flex align-items-center gap-2 add-hood"
             id="addHoodBtn"
             data-action="add-hood"
           >
-            <i class="bi bi-plus-lg"></i><span>أضف حي</span>
+            <i class="bi bi-plus-lg"></i><span>Add area</span>
           </button>
           <button
             type="button"
@@ -165,11 +157,11 @@
             id="addPlaceBtn"
             data-action="add-place"
           >
-            <i class="bi bi-plus-lg"></i><span>أضف مكان</span>
+            <i class="bi bi-plus-lg"></i><span>Add place</span>
           </button>
         </div>
 
-        <!-- 2. التابات -->
+        <!-- 2. Tabs -->
         <ul class="nav seg-tabs mb-3" role="tablist">
           <li class="nav-item" role="presentation">
             <button
@@ -181,7 +173,7 @@
               aria-controls="tab-hoods"
               aria-selected="true"
             >
-              الأحياء<span class="count">6</span>
+              Areas<span class="count">6</span>
             </button>
           </li>
           <li class="nav-item" role="presentation">
@@ -194,13 +186,13 @@
               aria-controls="tab-places"
               aria-selected="false"
             >
-              الأماكن<span class="count">7</span>
+              Places<span class="count">7</span>
             </button>
           </li>
         </ul>
 
         <div class="tab-content">
-          <!-- ===== الأحياء ===== -->
+          <!-- ===== Areas ===== -->
           <section
             class="tab-pane fade show active"
             id="tab-hoods"
@@ -212,128 +204,128 @@
                 <table class="table bt-table hoods-table">
                   <thead>
                     <tr>
-                      <th scope="col">الحي</th>
-                      <th scope="col">المحافظة</th>
-                      <th scope="col">متوسط الكهربا والمي</th>
-                      <th scope="col">الإنترنت</th>
-                      <th scope="col">الأمان</th>
-                      <th scope="col">الهدوء</th>
-                      <th scope="col">عقارات</th>
+                      <th scope="col">Area</th>
+                      <th scope="col">Governorate</th>
+                      <th scope="col">Avg. electricity &amp; water</th>
+                      <th scope="col">Internet</th>
+                      <th scope="col">Safety</th>
+                      <th scope="col">Quietness</th>
+                      <th scope="col">Properties</th>
                       <th scope="col">
-                        <span class="visually-hidden">إجراءات</span>
+                        <span class="visually-hidden">Actions</span>
                       </th>
                     </tr>
                   </thead>
                   <tbody id="hoodsBody">
                     <tr>
-                      <td class="fw-semibold">الجبيهة</td>
-                      <td class="text-muted">عمّان</td>
-                      <td>30 د.أ</td>
-                      <td>15 د.أ</td>
-                      <td class="dots" aria-label="4 من 5">●●●●○</td>
-                      <td class="dots" aria-label="4 من 5">●●●●○</td>
+                      <td class="fw-semibold">Al Jubeiha</td>
+                      <td class="text-muted">Amman</td>
+                      <td>30 JOD</td>
+                      <td>15 JOD</td>
+                      <td class="dots" aria-label="4 out of 5">●●●●○</td>
+                      <td class="dots" aria-label="4 out of 5">●●●●○</td>
                       <td class="text-muted">64</td>
                       <td>
                         <button
                           type="button"
                           class="btn-icon"
                           data-action="edit-hood"
-                          aria-label="تعديل الجبيهة"
+                          aria-label="Edit Al Jubeiha"
                         >
                           <i class="bi bi-pencil"></i>
                         </button>
                       </td>
                     </tr>
                     <tr>
-                      <td class="fw-semibold">صويلح</td>
-                      <td class="text-muted">عمّان</td>
-                      <td>25 د.أ</td>
-                      <td>15 د.أ</td>
-                      <td class="dots" aria-label="4 من 5">●●●●○</td>
-                      <td class="dots" aria-label="3 من 5">●●●○○</td>
+                      <td class="fw-semibold">Sweileh</td>
+                      <td class="text-muted">Amman</td>
+                      <td>25 JOD</td>
+                      <td>15 JOD</td>
+                      <td class="dots" aria-label="4 out of 5">●●●●○</td>
+                      <td class="dots" aria-label="3 out of 5">●●●○○</td>
                       <td class="text-muted">41</td>
                       <td>
                         <button
                           type="button"
                           class="btn-icon"
                           data-action="edit-hood"
-                          aria-label="تعديل صويلح"
+                          aria-label="Edit Sweileh"
                         >
                           <i class="bi bi-pencil"></i>
                         </button>
                       </td>
                     </tr>
                     <tr>
-                      <td class="fw-semibold">تلاع العلي</td>
-                      <td class="text-muted">عمّان</td>
-                      <td>35 د.أ</td>
-                      <td>20 د.أ</td>
-                      <td class="dots" aria-label="5 من 5">●●●●●</td>
-                      <td class="dots" aria-label="5 من 5">●●●●●</td>
+                      <td class="fw-semibold">Tla Al Ali</td>
+                      <td class="text-muted">Amman</td>
+                      <td>35 JOD</td>
+                      <td>20 JOD</td>
+                      <td class="dots" aria-label="5 out of 5">●●●●●</td>
+                      <td class="dots" aria-label="5 out of 5">●●●●●</td>
                       <td class="text-muted">52</td>
                       <td>
                         <button
                           type="button"
                           class="btn-icon"
                           data-action="edit-hood"
-                          aria-label="تعديل تلاع العلي"
+                          aria-label="Edit Tla Al Ali"
                         >
                           <i class="bi bi-pencil"></i>
                         </button>
                       </td>
                     </tr>
                     <tr>
-                      <td class="fw-semibold">الشميساني</td>
-                      <td class="text-muted">عمّان</td>
-                      <td>40 د.أ</td>
-                      <td>20 د.أ</td>
-                      <td class="dots" aria-label="5 من 5">●●●●●</td>
-                      <td class="dots" aria-label="3 من 5">●●●○○</td>
+                      <td class="fw-semibold">Shmeisani</td>
+                      <td class="text-muted">Amman</td>
+                      <td>40 JOD</td>
+                      <td>20 JOD</td>
+                      <td class="dots" aria-label="5 out of 5">●●●●●</td>
+                      <td class="dots" aria-label="3 out of 5">●●●○○</td>
                       <td class="text-muted">38</td>
                       <td>
                         <button
                           type="button"
                           class="btn-icon"
                           data-action="edit-hood"
-                          aria-label="تعديل الشميساني"
+                          aria-label="Edit Shmeisani"
                         >
                           <i class="bi bi-pencil"></i>
                         </button>
                       </td>
                     </tr>
                     <tr>
-                      <td class="fw-semibold">خلدا</td>
-                      <td class="text-muted">عمّان</td>
-                      <td>40 د.أ</td>
-                      <td>20 د.أ</td>
-                      <td class="dots" aria-label="5 من 5">●●●●●</td>
-                      <td class="dots" aria-label="5 من 5">●●●●●</td>
+                      <td class="fw-semibold">Khalda</td>
+                      <td class="text-muted">Amman</td>
+                      <td>40 JOD</td>
+                      <td>20 JOD</td>
+                      <td class="dots" aria-label="5 out of 5">●●●●●</td>
+                      <td class="dots" aria-label="5 out of 5">●●●●●</td>
                       <td class="text-muted">47</td>
                       <td>
                         <button
                           type="button"
                           class="btn-icon"
                           data-action="edit-hood"
-                          aria-label="تعديل خلدا"
+                          aria-label="Edit Khalda"
                         >
                           <i class="bi bi-pencil"></i>
                         </button>
                       </td>
                     </tr>
                     <tr>
-                      <td class="fw-semibold">العبدلي</td>
-                      <td class="text-muted">عمّان</td>
-                      <td>40 د.أ</td>
-                      <td>20 د.أ</td>
-                      <td class="dots" aria-label="4 من 5">●●●●○</td>
-                      <td class="dots" aria-label="2 من 5">●●○○○</td>
+                      <td class="fw-semibold">Abdali</td>
+                      <td class="text-muted">Amman</td>
+                      <td>40 JOD</td>
+                      <td>20 JOD</td>
+                      <td class="dots" aria-label="4 out of 5">●●●●○</td>
+                      <td class="dots" aria-label="2 out of 5">●●○○○</td>
                       <td class="text-muted">29</td>
                       <td>
                         <button
                           type="button"
                           class="btn-icon"
                           data-action="edit-hood"
-                          aria-label="تعديل العبدلي"
+                          aria-label="Edit Abdali"
                         >
                           <i class="bi bi-pencil"></i>
                         </button>
@@ -345,7 +337,7 @@
             </div>
           </section>
 
-          <!-- ===== الأماكن ===== -->
+          <!-- ===== Places ===== -->
           <section
             class="tab-pane fade"
             id="tab-places"
@@ -359,15 +351,15 @@
                     ><i class="bi bi-mortarboard"></i
                   ></span>
                   <div class="grow">
-                    <b class="d-block">الجامعة الأردنية</b
-                    ><small>الجبيهة</small>
+                    <b class="d-block">University of Jordan</b
+                    ><small>Al Jubeiha</small>
                   </div>
-                  <span class="place-type">جامعة</span>
+                  <span class="place-type">University</span>
                   <button
                     type="button"
                     class="btn-icon"
                     data-action="edit-place"
-                    aria-label="تعديل الجامعة الأردنية"
+                    aria-label="Edit University of Jordan"
                   >
                     <i class="bi bi-pencil"></i>
                   </button>
@@ -377,15 +369,15 @@
                     ><i class="bi bi-mortarboard"></i
                   ></span>
                   <div class="grow">
-                    <b class="d-block">جامعة العلوم التطبيقية</b
-                    ><small>شفا بدران</small>
+                    <b class="d-block">Applied Science University</b
+                    ><small>Shafa Badran</small>
                   </div>
-                  <span class="place-type">جامعة</span>
+                  <span class="place-type">University</span>
                   <button
                     type="button"
                     class="btn-icon"
                     data-action="edit-place"
-                    aria-label="تعديل جامعة العلوم التطبيقية"
+                    aria-label="Edit Applied Science University"
                   >
                     <i class="bi bi-pencil"></i>
                   </button>
@@ -393,15 +385,15 @@
                 <li class="list-row flex-wrap">
                   <span class="kpi-icon"><i class="bi bi-hospital"></i></span>
                   <div class="grow">
-                    <b class="d-block">مستشفى الخالدي</b
-                    ><small>جبل عمّان</small>
+                    <b class="d-block">Al Khalidi Hospital</b
+                    ><small>Jabal Amman</small>
                   </div>
-                  <span class="place-type">مستشفى</span>
+                  <span class="place-type">Hospital</span>
                   <button
                     type="button"
                     class="btn-icon"
                     data-action="edit-place"
-                    aria-label="تعديل مستشفى الخالدي"
+                    aria-label="Edit Al Khalidi Hospital"
                   >
                     <i class="bi bi-pencil"></i>
                   </button>
@@ -409,15 +401,15 @@
                 <li class="list-row flex-wrap">
                   <span class="kpi-icon"><i class="bi bi-hospital"></i></span>
                   <div class="grow">
-                    <b class="d-block">المستشفى التخصصي</b
-                    ><small>الشميساني</small>
+                    <b class="d-block">The Specialty Hospital</b
+                    ><small>Shmeisani</small>
                   </div>
-                  <span class="place-type">مستشفى</span>
+                  <span class="place-type">Hospital</span>
                   <button
                     type="button"
                     class="btn-icon"
                     data-action="edit-place"
-                    aria-label="تعديل المستشفى التخصصي"
+                    aria-label="Edit The Specialty Hospital"
                   >
                     <i class="bi bi-pencil"></i>
                   </button>
@@ -425,15 +417,15 @@
                 <li class="list-row flex-wrap">
                   <span class="kpi-icon"><i class="bi bi-hospital"></i></span>
                   <div class="grow">
-                    <b class="d-block">مستشفى الجامعة الأردنية</b
-                    ><small>الجبيهة</small>
+                    <b class="d-block">Jordan University Hospital</b
+                    ><small>Al Jubeiha</small>
                   </div>
-                  <span class="place-type">مستشفى</span>
+                  <span class="place-type">Hospital</span>
                   <button
                     type="button"
                     class="btn-icon"
                     data-action="edit-place"
-                    aria-label="تعديل مستشفى الجامعة الأردنية"
+                    aria-label="Edit Jordan University Hospital"
                   >
                     <i class="bi bi-pencil"></i>
                   </button>
@@ -441,15 +433,14 @@
                 <li class="list-row flex-wrap">
                   <span class="kpi-icon"><i class="bi bi-briefcase"></i></span>
                   <div class="grow">
-                    <b class="d-block">بوليفارد العبدلي</b
-                    ><small>العبدلي</small>
+                    <b class="d-block">Abdali Boulevard</b><small>Abdali</small>
                   </div>
-                  <span class="place-type">شغل</span>
+                  <span class="place-type">Work</span>
                   <button
                     type="button"
                     class="btn-icon"
                     data-action="edit-place"
-                    aria-label="تعديل بوليفارد العبدلي"
+                    aria-label="Edit Abdali Boulevard"
                   >
                     <i class="bi bi-pencil"></i>
                   </button>
@@ -457,14 +448,14 @@
                 <li class="list-row flex-wrap">
                   <span class="kpi-icon"><i class="bi bi-geo-alt"></i></span>
                   <div class="grow">
-                    <b class="d-block">وسط البلد</b><small>البلد</small>
+                    <b class="d-block">Downtown Amman</b><small>Al Balad</small>
                   </div>
-                  <span class="place-type">معلم</span>
+                  <span class="place-type">Landmark</span>
                   <button
                     type="button"
                     class="btn-icon"
                     data-action="edit-place"
-                    aria-label="تعديل وسط البلد"
+                    aria-label="Edit Downtown Amman"
                   >
                     <i class="bi bi-pencil"></i>
                   </button>
@@ -477,8 +468,5 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/config.js"></script>
-    <script src="../assets/js/app.js"></script>
-    <script src="../assets/js/pages/admin/places.js"></script>
   </body>
 </html>

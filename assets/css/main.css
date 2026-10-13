@@ -1,7 +1,7 @@
 /* =========================================================
    Bayti — Design tokens & base styles
-   الألوان: بترولي وطين | الخط: IBM Plex Sans Arabic
-   قاعدة 60-30-10: الخلفية 60% · البترولي 30% · الطين 10% (الزر الرئيسي بس)
+   Colors: petrol & clay | Font: IBM Plex Sans Arabic (Latin subset)
+   60-30-10 rule: background 60% · petrol 30% · clay 10% (primary button only)
    ========================================================= */
 
 /* ---------- Fonts (local, arabic + latin subsets) ---------- */
@@ -68,36 +68,36 @@
 
 /* ---------- Tokens ---------- */
 :root {
-  /* 60% — الجدران */
+  /* 60% — walls */
   --bt-bg: #f7f6f2;
   --bt-surface: #ffffff;
   --bt-line: #e2e4df;
 
-  /* النصوص */
+  /* Text */
   --bt-text: #1e2a2a;
   --bt-muted: #66706f;
 
-  /* 30% — البترولي */
+  /* 30% — petrol */
   --bt-primary: #1f4a4a;
   --bt-primary-hover: #183b3b;
   --bt-primary-soft: #e4edec;
 
-  /* 10% — الطين (للزر الرئيسي بس) */
+  /* 10% — clay (primary button only) */
   --bt-accent: #b05a30;
   --bt-accent-hover: #964c28;
 
-  /* رسائل النظام فقط — مش للـ Score */
+  /* System messages only — not for the match score */
   --bt-success: #2f7a55;
   --bt-warning: #b7791f;
   --bt-danger: #b42318;
 
-  /* الأشكال */
+  /* Shapes */
   --bt-radius: 14px;
   --bt-radius-sm: 10px;
   --bt-shadow: 0 1px 0 var(--bt-line), 0 8px 24px rgba(30, 42, 42, 0.06);
   --bt-topbar-h: 64px;
 
-  /* ربط Bootstrap بالألوان تبعتنا */
+  /* Map Bootstrap to our colors */
   --bs-body-bg: var(--bt-bg);
   --bs-body-color: var(--bt-text);
   --bs-body-font-family:
@@ -158,7 +158,7 @@ h6,
   font-size: 1.05rem;
 }
 
-/* الزر الرئيسي — لون الطين. زر واحد بس بكل شاشة */
+/* Primary button — clay color. Only one per screen */
 .btn-accent {
   --bs-btn-color: #fff;
   --bs-btn-bg: var(--bt-accent);
@@ -203,6 +203,10 @@ h6,
   border-radius: var(--bt-radius-sm);
   border-color: var(--bt-line);
   padding: 0.6rem 0.9rem;
+}
+/* Leave room for the dropdown arrow */
+.form-select {
+  padding-inline-end: 2.25rem;
 }
 .form-control:focus,
 .form-select:focus {
@@ -309,7 +313,7 @@ h6,
 }
 
 /* ---------- Components ---------- */
-/* الكرت */
+/* Card */
 .bt-card {
   background: var(--bt-surface);
   border-radius: var(--bt-radius);
@@ -317,7 +321,7 @@ h6,
   overflow: hidden;
 }
 
-/* الفلاتر */
+/* Filters */
 .chip {
   display: inline-flex;
   align-items: center;
@@ -335,7 +339,7 @@ h6,
   color: #fff;
 }
 
-/* شارة موثّق */
+/* Verified badge */
 .badge-verified {
   display: inline-flex;
   align-items: center;
@@ -348,7 +352,7 @@ h6,
   font-weight: 600;
 }
 
-/* حلقة التوافق — <div class="score-ring" style="--value:92"> */
+/* Match score ring — <div class="score-ring" style="--value:92"> */
 .score-ring {
   --value: 0;
   --size: 60px;
@@ -392,12 +396,12 @@ h6,
   font-size: 0.75rem;
 }
 
-/* صورة بديلة لحد ما تجيب صور حقيقية */
+/* Placeholder image until real photos are added */
 .img-placeholder {
   background: linear-gradient(135deg, #e2e4df, #afc3c0);
 }
 
-/* ---------- App layout (بعد تسجيل الدخول) ---------- */
+/* ---------- App layout (after login) ---------- */
 .app-topbar {
   position: sticky;
   top: 0;
@@ -614,7 +618,7 @@ h6,
   }
 }
 
-/* راس كل قسم + كروت المميزات (بنستخدمهم بأكثر من قسم) */
+/* Section heading + feature cards (used in several sections) */
 .section-head {
   max-width: 40rem;
   margin: 0 auto 3rem;
@@ -640,12 +644,12 @@ h6,
   margin-bottom: 1rem;
 }
 
-/* قسم بخلفية بيضا عشان نفصل بين الأقسام */
+/* Section with a white background to separate sections */
 .section-alt {
   background: var(--bt-surface);
 }
 
-/* كيف بيشتغل */
+/* How it works */
 .step {
   text-align: center;
   padding-inline: 1rem;
@@ -712,7 +716,7 @@ h6,
   }
 }
 
-/* المميزات */
+/* Features */
 .feature-row + .feature-row {
   margin-top: 4rem;
 }
@@ -760,7 +764,7 @@ h6,
 }
 .score-bar {
   display: grid;
-  grid-template-columns: 70px 1fr 28px;
+  grid-template-columns: 96px 1fr 28px;
   align-items: center;
   gap: 0.75rem;
   font-size: 0.9rem;
@@ -830,7 +834,7 @@ h6,
   color: #fff;
 }
 
-/* لمين */
+/* Who it is for */
 .purpose-card {
   height: 100%;
   background: var(--bt-bg);
@@ -868,7 +872,7 @@ h6,
   box-shadow: 0 0 0 1px var(--bt-line);
 }
 
-/* للملاك */
+/* For owners */
 .stat-tiles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -921,7 +925,7 @@ h6,
   min-width: 0;
 }
 
-/* الدعوة الأخيرة */
+/* Final call to action */
 .cta-card {
   position: relative;
   overflow: hidden;
@@ -954,7 +958,7 @@ h6,
 }
 
 /* =========================================================
-   App components (لوحات التحكم وصفحات الباحث)
+   App components (dashboards and seeker pages)
    ========================================================= */
 @media (max-width: 575.98px) {
   .app-main {
@@ -1002,7 +1006,7 @@ h6,
   text-decoration: none;
 }
 
-/* تابات */
+/* Tabs */
 .seg-tabs {
   display: inline-flex;
   flex-wrap: wrap;
@@ -1037,7 +1041,7 @@ h6,
   margin-inline-start: 0.35rem;
 }
 
-/* حالات */
+/* Statuses */
 .status {
   display: inline-flex;
   align-items: center;
@@ -1076,7 +1080,7 @@ h6,
   color: var(--bt-muted);
 }
 
-/* جداول */
+/* Tables */
 .bt-table {
   --bs-table-bg: transparent;
   margin: 0;
@@ -1110,7 +1114,7 @@ h6,
   font-size: 0.75rem;
 }
 
-/* أرقام لوحة التحكم */
+/* Dashboard KPIs */
 .kpi {
   background: var(--bt-surface);
   border-radius: var(--bt-radius);
@@ -1149,7 +1153,7 @@ h6,
   color: var(--bt-success);
 }
 
-/* رسم بياني بسيط */
+/* Simple bar chart */
 .bar-chart {
   display: flex;
   align-items: flex-end;
@@ -1173,7 +1177,7 @@ h6,
   margin-top: 0.5rem;
 }
 
-/* صور بديلة بألوان مختلفة */
+/* Placeholder images in different colors */
 .ph {
   background: linear-gradient(
     135deg,
@@ -1206,7 +1210,7 @@ h6,
   --ph-b: #c9a595;
 }
 
-/* كرت العقار */
+/* Property card */
 .prop-card {
   background: var(--bt-surface);
   border-radius: var(--bt-radius);
@@ -1328,7 +1332,7 @@ h6,
   margin: 0;
 }
 
-/* شريط البحث والفلاتر */
+/* Search bar and filters */
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -1368,7 +1372,7 @@ h6,
   border-color: var(--bt-primary);
 }
 
-/* شريط المقارنة */
+/* Compare tray */
 .compare-tray {
   position: fixed;
   bottom: 1rem;
@@ -1390,7 +1394,7 @@ h6,
   display: flex;
 }
 
-/* خريطة بديلة (لحد ما نربط Leaflet) */
+/* Placeholder map (until Leaflet is connected) */
 .map-mock {
   position: relative;
   overflow: hidden;
@@ -1476,7 +1480,7 @@ h6,
   box-shadow: 0 0 0 5px rgba(176, 90, 48, 0.25);
 }
 
-/* صفحات الدخول */
+/* Auth pages */
 .auth-wrap {
   min-height: 100vh;
   display: grid;
@@ -1586,7 +1590,7 @@ h6,
   padding-inline-start: 2.5rem;
 }
 
-/* بطاقات الاختيار (radio/checkbox) */
+/* Choice cards (radio/checkbox) */
 .choice-card {
   display: flex;
   gap: 0.85rem;
@@ -1652,7 +1656,7 @@ h6,
   color: #fff;
 }
 
-/* الـ Onboarding */
+/* Onboarding */
 .wizard {
   max-width: 760px;
   margin: 0 auto;
@@ -1671,7 +1675,7 @@ h6,
 .wizard-progress span.is-done {
   background: var(--bt-primary);
 }
-/* هلأ كل الخطوات ظاهرة ورا بعض. بمرحلة الـ JS بنخفيها ونعرض وحدة وحدة */
+/* All wizard steps are shown one after another */
 .wizard-step + .wizard-step {
   margin-top: 2.5rem;
   padding-top: 2.5rem;
@@ -1695,7 +1699,7 @@ h6,
 }
 .priority {
   display: grid;
-  grid-template-columns: minmax(150px, 1fr) 2fr 84px;
+  grid-template-columns: minmax(150px, 1fr) 2fr 112px;
   gap: 1rem;
   align-items: center;
   padding: 0.9rem 0;
@@ -1745,7 +1749,7 @@ h6,
   border-color: var(--bt-primary);
 }
 
-/* صفحة العقار */
+/* Property page */
 .gallery {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -1840,7 +1844,7 @@ h6,
   color: var(--bt-primary);
 }
 
-/* مساعد الأحياء العائم */
+/* Floating neighborhood assistant */
 .ai-fab {
   position: fixed;
   bottom: 1.25rem;
@@ -1897,7 +1901,7 @@ h6,
   color: var(--bt-primary);
 }
 
-/* الشات */
+/* Chat */
 .chat {
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -2068,7 +2072,7 @@ h6,
   }
 }
 
-/* خطوات أفقية (حالة الحجز) */
+/* Horizontal steps (booking status) */
 .steps-h {
   display: flex;
   align-items: center;
@@ -2131,7 +2135,7 @@ h6,
   color: var(--bt-muted);
 }
 
-/* رفع ملفات وصور */
+/* File and photo uploads */
 .dropzone {
   border: 2px dashed var(--bt-line);
   border-radius: var(--bt-radius);
@@ -2196,7 +2200,7 @@ h6,
   color: var(--bt-primary);
 }
 
-/* خطط الاشتراك */
+/* Subscription plans */
 .plan {
   border: 1.5px solid var(--bt-line);
   border-radius: var(--bt-radius);
@@ -2287,7 +2291,7 @@ h6,
   padding: 0 0.35rem;
 }
 
-/* أيقونات الأسهم بتنقلب مع اتجاه اللغة */
+/* Arrow icons flip to match the language direction */
 html[dir="ltr"] .dir-flip {
   display: inline-block;
   transform: scaleX(-1);
@@ -2296,15 +2300,15 @@ html[dir="ltr"] .dir-flip {
   display: block;
 }
 
-/* رقم التنبيه بالـ sidebar بدون النقطة */
+/* Sidebar badge number without the dot */
 .side-link .status::before {
   display: none;
 }
 
 /* =========================================================
-   Static shell helpers (صفحات الـ HTML الثابتة)
+   Static shell helpers (static HTML pages)
    ========================================================= */
-/* أيقونة بنص صورة الكرت لحد ما تيجي صور حقيقية */
+/* Icon centered in the card image until real photos are added */
 .prop-media .ph-icon {
   position: absolute;
   inset: 0;
@@ -2314,7 +2318,7 @@ html[dir="ltr"] .dir-flip {
   font-size: 2.5rem;
   color: rgba(255, 255, 255, 0.75);
 }
-/* شريط تنبيه ناعم بلون البترولي */
+/* Soft notice bar in petrol */
 .notice {
   display: flex;
   flex-wrap: wrap;
@@ -2331,12 +2335,12 @@ html[dir="ltr"] .dir-flip {
   color: var(--bt-primary);
   font-weight: 600;
 }
-/* شريط المقارنة جوا الصفحة (مش ثابت) */
+/* In-page compare tray (not fixed) */
 .compare-tray.is-inline {
   position: sticky;
   margin-top: 1.5rem;
 }
-/* نقاط الهدوء */
+/* Quiet-level dots */
 .dots {
   color: var(--bt-primary);
   letter-spacing: 2px;
@@ -2344,7 +2348,7 @@ html[dir="ltr"] .dir-flip {
 .text-primary-bt {
   color: var(--bt-primary) !important;
 }
-/* رقم التنبيه بالـ sidebar (لون الطين زي التصميم) */
+/* Sidebar badge number (clay, as in the design) */
 .side-badge {
   min-width: 20px;
   height: 20px;
@@ -2357,4 +2361,11 @@ html[dir="ltr"] .dir-flip {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Keep absolutely positioned children (e.g. .visually-hidden labels in
+   table headers) inside the scroll box, so wide tables never make the
+   whole page scroll sideways on phones */
+.table-responsive {
+  position: relative;
 }

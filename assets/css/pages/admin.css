@@ -1,16 +1,16 @@
 /* =========================================================
-   Admin pages — ستايلات خاصة بصفحات الأدمن
-   (المكونات المشتركة بـ main.css)
+   Admin pages — styles specific to the admin pages
+   (shared components live in main.css)
    ========================================================= */
 
 :root {
-  /* أعمدة الرسم البياني العادية (أغمق شوي من primary-soft عشان تبين) */
+  /* Regular chart bars (slightly darker than primary-soft so they stand out) */
   --admin-bar: #c9d9d7;
   --admin-danger-soft: #fbe7e5;
 }
 
-/* ---------- مشترك بين صفحات الأدمن ---------- */
-/* زر أحمر محدد بلون النظام */
+/* ---------- Shared across admin pages ---------- */
+/* Red outline button using the system danger color */
 .btn-outline-danger {
   --bs-btn-color: var(--bt-danger);
   --bs-btn-border-color: var(--bt-danger);
@@ -22,11 +22,11 @@
   --bs-btn-active-border-color: var(--bt-danger);
   --bs-btn-focus-shadow-rgb: 180, 35, 24;
 }
-/* شارة رقم بدون النقطة */
+/* Number badge without the dot */
 .status.no-dot::before {
   display: none;
 }
-/* زر أيقونة مربع (تعديل) */
+/* Square icon button (edit) */
 .btn-icon {
   width: 40px;
   height: 40px;
@@ -189,10 +189,10 @@
 .hoods-table {
   min-width: 780px;
 }
-/* زر الإضافة بيتغير حسب التاب المفتوح (CSS بس) */
+/* The add button switches with the open tab (CSS only) */
 .app-main:has(#tab-places.active) .add-hood,
 .app-main:not(:has(#tab-places.active)) .add-place {
-  /* !important عشان يغلب d-inline-flex تبع Bootstrap */
+  /* !important so it overrides Bootstrap's d-inline-flex */
   display: none !important;
 }
 .place-type {

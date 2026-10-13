@@ -1,14 +1,13 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>بيتي — اكتشف بيتك</title>
+    <title>Bayti — Discover</title>
 
     <link
-      id="bootstrap-css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
@@ -25,27 +24,20 @@
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#appSidebar"
-        aria-label="القائمة"
+        aria-label="Menu"
       >
         <i class="bi bi-list"></i>
       </button>
       <a class="brand" href="search.html"
-        ><span class="brand-mark">B</span><span>بيتي</span></a
+        ><span class="brand-mark">B</span><span>Bayti</span></a
       >
       <div class="ms-auto d-flex align-items-center gap-1">
-        <button
-          type="button"
-          class="btn btn-link nav-lang px-2"
-          data-action="toggle-lang"
-        >
-          <i class="bi bi-translate"></i><span>EN</span>
-        </button>
         <div class="dropdown">
           <button
             class="icon-btn"
             type="button"
             data-bs-toggle="dropdown"
-            aria-label="الإشعارات"
+            aria-label="Notifications"
           >
             <i class="bi bi-bell"></i><span class="dot"></span>
           </button>
@@ -53,7 +45,7 @@
             class="dropdown-menu dropdown-menu-end shadow-sm p-0"
             style="width: 320px"
           >
-            <div class="px-3 py-2 border-bottom fw-semibold">الإشعارات</div>
+            <div class="px-3 py-2 border-bottom fw-semibold">Notifications</div>
             <div class="py-1">
               <a
                 class="dropdown-item d-flex gap-2 py-2 text-wrap"
@@ -65,9 +57,12 @@
                   ><i class="bi bi-stars"></i
                 ></span>
                 <span class="small">
-                  <span class="d-block">نزل بيت جديد بتوافق 89% بالجبيهة</span>
+                  <span class="d-block"
+                    >A new home just listed in Al Jubeiha with an 89%
+                    match</span
+                  >
                   <span class="text-muted" style="font-size: 0.72rem"
-                    >قبل 10 دقايق</span
+                    >10 minutes ago</span
                   >
                 </span>
               </a>
@@ -82,10 +77,10 @@
                 ></span>
                 <span class="small">
                   <span class="d-block"
-                    >أبو أحمد أكّد موعد المعاينة يوم الخميس</span
+                    >Abu Ahmad confirmed your viewing on Thursday</span
                   >
                   <span class="text-muted" style="font-size: 0.72rem"
-                    >قبل ساعة</span
+                    >1 hour ago</span
                   >
                 </span>
               </a>
@@ -94,21 +89,21 @@
         </div>
         <div class="dropdown">
           <button class="app-user" type="button" data-bs-toggle="dropdown">
-            <span class="avatar">س</span>
+            <span class="avatar">S</span>
             <span class="d-none d-md-inline text-start lh-sm">
-              <span class="d-block small fw-semibold">سارة خالد</span>
+              <span class="d-block small fw-semibold">Sara Khaled</span>
               <span class="d-block text-muted" style="font-size: 0.72rem"
-                >باحث عن سكن</span
+                >Home seeker</span
               >
             </span>
             <i class="bi bi-chevron-down small text-muted"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-            <li><a class="dropdown-item" href="profile.html">ملفي</a></li>
+            <li><a class="dropdown-item" href="profile.html">My profile</a></li>
             <li><hr class="dropdown-divider" /></li>
             <li>
               <a class="dropdown-item text-danger" href="../index.html"
-                >تسجيل الخروج</a
+                >Log out</a
               >
             </li>
           </ul>
@@ -125,63 +120,66 @@
       >
         <div class="offcanvas-header border-bottom">
           <a class="brand" href="../index.html"
-            ><span class="brand-mark">B</span><span>بيتي</span></a
+            ><span class="brand-mark">B</span><span>Bayti</span></a
           >
           <button
             type="button"
             class="btn-close"
             data-bs-dismiss="offcanvas"
             data-bs-target="#appSidebar"
-            aria-label="إغلاق"
+            aria-label="Close"
           ></button>
         </div>
         <div class="offcanvas-body">
-          <div class="side-label">باحث عن سكن</div>
+          <div class="side-label">Home seeker</div>
           <a class="side-link active" href="search.html" aria-current="page"
             ><i class="bi bi-stars"></i
-            ><span class="flex-grow-1">اكتشف بيتك</span></a
+            ><span class="flex-grow-1">Discover</span></a
           >
           <a class="side-link" href="bookings.html"
             ><i class="bi bi-calendar-check"></i
-            ><span class="flex-grow-1">حجوزاتي</span
+            ><span class="flex-grow-1">My bookings</span
             ><span class="side-badge">1</span></a
           >
           <a class="side-link" href="chat.html"
             ><i class="bi bi-chat-dots"></i
-            ><span class="flex-grow-1">الرسائل</span
+            ><span class="flex-grow-1">Messages</span
             ><span class="side-badge">2</span></a
           >
           <a class="side-link" href="profile.html"
             ><i class="bi bi-sliders"></i
-            ><span class="flex-grow-1">ملفي وأولوياتي</span></a
+            ><span class="flex-grow-1">Profile &amp; priorities</span></a
           >
         </div>
       </aside>
 
       <!-- ===== Content ===== -->
       <main class="app-main">
-        <!-- 1. راس الصفحة -->
+        <!-- 1. Page header -->
         <div class="page-head">
           <div>
-            <h1>أفضل البيوت إلك</h1>
-            <p>مرتبة حسب توافقها مع أولوياتك · من الجامعة الأردنية</p>
+            <h1>Your best-fit homes</h1>
+            <p>
+              Ranked by how well they match your priorities · from University
+              of Jordan
+            </p>
           </div>
           <a href="profile.html" class="btn btn-outline-primary">
             <i class="bi bi-sliders"></i>
-            <span>عدّل أولوياتي</span>
+            <span>Edit my priorities</span>
           </a>
         </div>
 
-        <!-- 2. تنبيه بيت جديد -->
+        <!-- 2. New home alert -->
         <div class="notice mb-3">
           <span class="d-flex align-items-center gap-2"
-            ><i class="bi bi-stars fs-5"></i>نزل بيت جديد بتوافق 89%
-            بالجبيهة</span
+            ><i class="bi bi-stars fs-5"></i>A new home just listed in Al
+            Jubeiha with an 89% match</span
           >
-          <a href="property.html">شوفه</a>
+          <a href="property.html">View it</a>
         </div>
 
-        <!-- 3. التابات -->
+        <!-- 3. Tabs -->
         <ul class="nav seg-tabs mb-3" role="tablist">
           <li class="nav-item" role="presentation">
             <button
@@ -193,7 +191,7 @@
               aria-controls="tab-results"
               aria-selected="true"
             >
-              النتائج<span class="count">8</span>
+              Results<span class="count">8</span>
             </button>
           </li>
           <li class="nav-item" role="presentation">
@@ -206,7 +204,7 @@
               aria-controls="tab-favorites"
               aria-selected="false"
             >
-              المفضلة<span class="count">2</span>
+              Favorites<span class="count">2</span>
             </button>
           </li>
           <li class="nav-item" role="presentation">
@@ -219,20 +217,20 @@
               aria-controls="tab-areas"
               aria-selected="false"
             >
-              مقارنة الأحياء
+              Compare neighborhoods
             </button>
           </li>
         </ul>
 
         <div class="tab-content">
-          <!-- ===== النتائج ===== -->
+          <!-- ===== Results ===== -->
           <section
             class="tab-pane fade show active"
             id="tab-results"
             role="tabpanel"
             tabindex="0"
           >
-            <!-- الفلاتر -->
+            <!-- Filters -->
             <form class="filter-bar mb-3" role="search" id="searchFilters">
               <div class="search-input">
                 <i class="bi bi-search"></i>
@@ -240,24 +238,24 @@
                   type="search"
                   class="form-control"
                   name="q"
-                  placeholder="ابحث باسم الحي..."
-                  aria-label="ابحث باسم الحي"
+                  placeholder="Search by neighborhood..."
+                  aria-label="Search by neighborhood"
                 />
               </div>
-              <select class="form-select" name="price" aria-label="السعر">
-                <option value="300">لحد 300 د.أ</option>
-                <option value="">أي سعر</option>
+              <select class="form-select" name="price" aria-label="Price">
+                <option value="300">Up to 300 JOD</option>
+                <option value="">Any price</option>
               </select>
-              <select class="form-select" name="type" aria-label="النوع">
-                <option value="">كل الأنواع</option>
-                <option value="studio">استوديو</option>
-                <option value="apartment">شقة</option>
-                <option value="room">غرفة</option>
+              <select class="form-select" name="type" aria-label="Type">
+                <option value="">All types</option>
+                <option value="studio">Studio</option>
+                <option value="apartment">Apartment</option>
+                <option value="room">Room</option>
               </select>
-              <select class="form-select" name="sort" aria-label="الترتيب">
-                <option value="score">الأعلى توافقا</option>
-                <option value="price">الأقل سعرا</option>
-                <option value="distance">الأقرب</option>
+              <select class="form-select" name="sort" aria-label="Sort by">
+                <option value="score">Best match</option>
+                <option value="price">Lowest price</option>
+                <option value="distance">Closest</option>
               </select>
               <input
                 type="checkbox"
@@ -267,7 +265,7 @@
                 checked
               />
               <label class="chip-select py-2" for="fVerified"
-                ><i class="bi bi-patch-check"></i>موثّق بس</label
+                ><i class="bi bi-patch-check"></i>Verified only</label
               >
               <input
                 type="checkbox"
@@ -276,18 +274,18 @@
                 name="ready"
               />
               <label class="chip-select py-2" for="fReady"
-                ><i class="bi bi-lightning-charge"></i>جاهز فورا</label
+                ><i class="bi bi-lightning-charge"></i>Ready now</label
               >
               <div
                 class="btn-group view-toggle ms-auto"
                 role="group"
-                aria-label="طريقة العرض"
+                aria-label="View"
               >
                 <button
                   type="button"
                   class="btn btn-outline-secondary active"
                   aria-pressed="true"
-                  aria-label="شبكة"
+                  aria-label="Grid"
                 >
                   <i class="bi bi-grid"></i>
                 </button>
@@ -295,23 +293,23 @@
                   type="button"
                   class="btn btn-outline-secondary"
                   aria-pressed="false"
-                  aria-label="خريطة"
+                  aria-label="Map"
                 >
                   <i class="bi bi-map"></i>
                 </button>
               </div>
             </form>
 
-            <p class="small text-muted mb-3">8 بيوت · مرتبة حسب التوافق</p>
+            <p class="small text-muted mb-3">8 homes · sorted by match</p>
 
-            <!-- الكروت -->
+            <!-- Cards -->
             <div class="row g-4" id="resultsGrid">
               <div class="col-sm-6 col-xl-4">
                 <article class="prop-card">
                   <button
                     type="button"
                     class="fav-btn is-on"
-                    aria-label="شيل من المفضلة"
+                    aria-label="Remove from favorites"
                     aria-pressed="true"
                   >
                     <i class="bi bi-heart-fill"></i>
@@ -326,33 +324,33 @@
                       ><i class="bi bi-house-door"></i
                     ></span>
                     <span class="badge-verified"
-                      ><i class="bi bi-patch-check-fill"></i>موثّق</span
+                      ><i class="bi bi-patch-check-fill"></i>Verified</span
                     >
                     <div class="score-ring" style="--value: 92">
                       <div class="score-ring__inner">
-                        92<small>توافق</small>
+                        92<small>match</small>
                       </div>
                     </div>
                   </a>
                   <div class="prop-body">
                     <a href="property.html" class="prop-title"
-                      >استوديو مفروش — الجبيهة</a
+                      >Furnished studio — Al Jubeiha</a
                     >
-                    <span class="prop-match">توافق عالي</span>
+                    <span class="prop-match">High match</span>
                     <div class="prop-meta">
-                      <span><i class="bi bi-clock"></i> 8 دقيقة عن مكانك</span>
+                      <span><i class="bi bi-clock"></i> 8 min to your place</span>
                       <span
-                        ><i class="bi bi-arrows-angle-expand"></i> 45 م²</span
+                        ><i class="bi bi-arrows-angle-expand"></i> 45 m²</span
                       >
                     </div>
                     <div class="prop-price">
-                      <div><b>265 د.أ</b> <span>شهريا شامل الفواتير</span></div>
+                      <div><b>265 JOD</b> <span>per month, bills included</span></div>
                       <label class="compare-check"
                         ><input
                           type="checkbox"
                           class="form-check-input m-0"
                           checked
-                        />قارن</label
+                        />Compare</label
                       >
                     </div>
                   </div>
@@ -364,7 +362,7 @@
                   <button
                     type="button"
                     class="fav-btn"
-                    aria-label="أضف للمفضلة"
+                    aria-label="Add to favorites"
                     aria-pressed="false"
                   >
                     <i class="bi bi-heart"></i>
@@ -379,33 +377,33 @@
                       ><i class="bi bi-house-door"></i
                     ></span>
                     <span class="badge-verified"
-                      ><i class="bi bi-patch-check-fill"></i>موثّق</span
+                      ><i class="bi bi-patch-check-fill"></i>Verified</span
                     >
                     <div class="score-ring" style="--value: 86">
                       <div class="score-ring__inner">
-                        86<small>توافق</small>
+                        86<small>match</small>
                       </div>
                     </div>
                   </a>
                   <div class="prop-body">
                     <a href="property.html" class="prop-title"
-                      >شقة غرفتين — تلاع العلي</a
+                      >2-bedroom apartment — Tla Al Ali</a
                     >
-                    <span class="prop-match">توافق عالي</span>
+                    <span class="prop-match">High match</span>
                     <div class="prop-meta">
-                      <span><i class="bi bi-clock"></i> 14 دقيقة عن مكانك</span>
+                      <span><i class="bi bi-clock"></i> 14 min to your place</span>
                       <span
-                        ><i class="bi bi-arrows-angle-expand"></i> 95 م²</span
+                        ><i class="bi bi-arrows-angle-expand"></i> 95 m²</span
                       >
                     </div>
                     <div class="prop-price">
-                      <div><b>395 د.أ</b> <span>شهريا شامل الفواتير</span></div>
+                      <div><b>395 JOD</b> <span>per month, bills included</span></div>
                       <label class="compare-check"
                         ><input
                           type="checkbox"
                           class="form-check-input m-0"
                           checked
-                        />قارن</label
+                        />Compare</label
                       >
                     </div>
                   </div>
@@ -417,7 +415,7 @@
                   <button
                     type="button"
                     class="fav-btn"
-                    aria-label="أضف للمفضلة"
+                    aria-label="Add to favorites"
                     aria-pressed="false"
                   >
                     <i class="bi bi-heart"></i>
@@ -433,28 +431,28 @@
                     ></span>
                     <div class="score-ring" style="--value: 81">
                       <div class="score-ring__inner">
-                        81<small>توافق</small>
+                        81<small>match</small>
                       </div>
                     </div>
                   </a>
                   <div class="prop-body">
                     <a href="property.html" class="prop-title"
-                      >غرفة بشقة مشتركة — الجبيهة</a
+                      >Room in a shared apartment — Al Jubeiha</a
                     >
-                    <span class="prop-match">توافق عالي</span>
+                    <span class="prop-match">High match</span>
                     <div class="prop-meta">
-                      <span><i class="bi bi-clock"></i> 5 دقيقة عن مكانك</span>
+                      <span><i class="bi bi-clock"></i> 5 min to your place</span>
                       <span
-                        ><i class="bi bi-arrows-angle-expand"></i> 18 م²</span
+                        ><i class="bi bi-arrows-angle-expand"></i> 18 m²</span
                       >
                     </div>
                     <div class="prop-price">
-                      <div><b>170 د.أ</b> <span>شهريا شامل الفواتير</span></div>
+                      <div><b>170 JOD</b> <span>per month, bills included</span></div>
                       <label class="compare-check"
                         ><input
                           type="checkbox"
                           class="form-check-input m-0"
-                        />قارن</label
+                        />Compare</label
                       >
                     </div>
                   </div>
@@ -466,7 +464,7 @@
                   <button
                     type="button"
                     class="fav-btn is-on"
-                    aria-label="شيل من المفضلة"
+                    aria-label="Remove from favorites"
                     aria-pressed="true"
                   >
                     <i class="bi bi-heart-fill"></i>
@@ -481,35 +479,35 @@
                       ><i class="bi bi-house-door"></i
                     ></span>
                     <span class="badge-verified"
-                      ><i class="bi bi-patch-check-fill"></i>موثّق</span
+                      ><i class="bi bi-patch-check-fill"></i>Verified</span
                     >
                     <span class="badge-featured"
-                      ><i class="bi bi-star-fill"></i>مميز</span
+                      ><i class="bi bi-star-fill"></i>Featured</span
                     >
                     <div class="score-ring" style="--value: 74">
                       <div class="score-ring__inner">
-                        74<small>توافق</small>
+                        74<small>match</small>
                       </div>
                     </div>
                   </a>
                   <div class="prop-body">
                     <a href="property.html" class="prop-title"
-                      >شقة غرفة نوم — الشميساني</a
+                      >1-bedroom apartment — Shmeisani</a
                     >
-                    <span class="prop-match">توافق جيد</span>
+                    <span class="prop-match">Good match</span>
                     <div class="prop-meta">
-                      <span><i class="bi bi-clock"></i> 22 دقيقة عن مكانك</span>
+                      <span><i class="bi bi-clock"></i> 22 min to your place</span>
                       <span
-                        ><i class="bi bi-arrows-angle-expand"></i> 70 م²</span
+                        ><i class="bi bi-arrows-angle-expand"></i> 70 m²</span
                       >
                     </div>
                     <div class="prop-price">
-                      <div><b>440 د.أ</b> <span>شهريا شامل الفواتير</span></div>
+                      <div><b>440 JOD</b> <span>per month, bills included</span></div>
                       <label class="compare-check"
                         ><input
                           type="checkbox"
                           class="form-check-input m-0"
-                        />قارن</label
+                        />Compare</label
                       >
                     </div>
                   </div>
@@ -521,7 +519,7 @@
                   <button
                     type="button"
                     class="fav-btn"
-                    aria-label="أضف للمفضلة"
+                    aria-label="Add to favorites"
                     aria-pressed="false"
                   >
                     <i class="bi bi-heart"></i>
@@ -536,32 +534,32 @@
                       ><i class="bi bi-house-door"></i
                     ></span>
                     <span class="badge-verified"
-                      ><i class="bi bi-patch-check-fill"></i>موثّق</span
+                      ><i class="bi bi-patch-check-fill"></i>Verified</span
                     >
                     <div class="score-ring" style="--value: 69">
                       <div class="score-ring__inner">
-                        69<small>توافق</small>
+                        69<small>match</small>
                       </div>
                     </div>
                   </a>
                   <div class="prop-body">
                     <a href="property.html" class="prop-title"
-                      >استوديو — صويلح</a
+                      >Studio — Sweileh</a
                     >
-                    <span class="prop-match">توافق جيد</span>
+                    <span class="prop-match">Good match</span>
                     <div class="prop-meta">
-                      <span><i class="bi bi-clock"></i> 18 دقيقة عن مكانك</span>
+                      <span><i class="bi bi-clock"></i> 18 min to your place</span>
                       <span
-                        ><i class="bi bi-arrows-angle-expand"></i> 40 م²</span
+                        ><i class="bi bi-arrows-angle-expand"></i> 40 m²</span
                       >
                     </div>
                     <div class="prop-price">
-                      <div><b>220 د.أ</b> <span>شهريا شامل الفواتير</span></div>
+                      <div><b>220 JOD</b> <span>per month, bills included</span></div>
                       <label class="compare-check"
                         ><input
                           type="checkbox"
                           class="form-check-input m-0"
-                        />قارن</label
+                        />Compare</label
                       >
                     </div>
                   </div>
@@ -573,7 +571,7 @@
                   <button
                     type="button"
                     class="fav-btn"
-                    aria-label="أضف للمفضلة"
+                    aria-label="Add to favorites"
                     aria-pressed="false"
                   >
                     <i class="bi bi-heart"></i>
@@ -589,28 +587,28 @@
                     ></span>
                     <div class="score-ring" style="--value: 58">
                       <div class="score-ring__inner">
-                        58<small>توافق</small>
+                        58<small>match</small>
                       </div>
                     </div>
                   </a>
                   <div class="prop-body">
                     <a href="property.html" class="prop-title"
-                      >شقة 3 غرف — خلدا</a
+                      >3-bedroom apartment — Khalda</a
                     >
-                    <span class="prop-match">توافق متوسط</span>
+                    <span class="prop-match">Fair match</span>
                     <div class="prop-meta">
-                      <span><i class="bi bi-clock"></i> 30 دقيقة عن مكانك</span>
+                      <span><i class="bi bi-clock"></i> 30 min to your place</span>
                       <span
-                        ><i class="bi bi-arrows-angle-expand"></i> 150 م²</span
+                        ><i class="bi bi-arrows-angle-expand"></i> 150 m²</span
                       >
                     </div>
                     <div class="prop-price">
-                      <div><b>595 د.أ</b> <span>شهريا شامل الفواتير</span></div>
+                      <div><b>595 JOD</b> <span>per month, bills included</span></div>
                       <label class="compare-check"
                         ><input
                           type="checkbox"
                           class="form-check-input m-0"
-                        />قارن</label
+                        />Compare</label
                       >
                     </div>
                   </div>
@@ -618,24 +616,24 @@
               </div>
             </div>
 
-            <!-- شريط المقارنة -->
+            <!-- Compare tray -->
             <div class="compare-tray is-open is-inline" id="compareTray">
-              <span class="fw-medium">اخترت 2 للمقارنة</span>
+              <span class="fw-medium">2 selected to compare</span>
               <div class="d-flex gap-2">
                 <button
                   type="button"
                   class="btn btn-link text-white text-decoration-none"
                 >
-                  مسح
+                  Clear
                 </button>
                 <button type="button" class="btn btn-light text-primary-bt">
-                  قارن هلأ
+                  Compare now
                 </button>
               </div>
             </div>
           </section>
 
-          <!-- ===== المفضلة ===== -->
+          <!-- ===== Favorites ===== -->
           <section
             class="tab-pane fade"
             id="tab-favorites"
@@ -648,7 +646,7 @@
                   <button
                     type="button"
                     class="fav-btn is-on"
-                    aria-label="شيل من المفضلة"
+                    aria-label="Remove from favorites"
                     aria-pressed="true"
                   >
                     <i class="bi bi-heart-fill"></i>
@@ -663,32 +661,32 @@
                       ><i class="bi bi-house-door"></i
                     ></span>
                     <span class="badge-verified"
-                      ><i class="bi bi-patch-check-fill"></i>موثّق</span
+                      ><i class="bi bi-patch-check-fill"></i>Verified</span
                     >
                     <div class="score-ring" style="--value: 92">
                       <div class="score-ring__inner">
-                        92<small>توافق</small>
+                        92<small>match</small>
                       </div>
                     </div>
                   </a>
                   <div class="prop-body">
                     <a href="property.html" class="prop-title"
-                      >استوديو مفروش — الجبيهة</a
+                      >Furnished studio — Al Jubeiha</a
                     >
-                    <span class="prop-match">توافق عالي</span>
+                    <span class="prop-match">High match</span>
                     <div class="prop-meta">
-                      <span><i class="bi bi-clock"></i> 8 دقيقة عن مكانك</span>
+                      <span><i class="bi bi-clock"></i> 8 min to your place</span>
                       <span
-                        ><i class="bi bi-arrows-angle-expand"></i> 45 م²</span
+                        ><i class="bi bi-arrows-angle-expand"></i> 45 m²</span
                       >
                     </div>
                     <div class="prop-price">
-                      <div><b>265 د.أ</b> <span>شهريا شامل الفواتير</span></div>
+                      <div><b>265 JOD</b> <span>per month, bills included</span></div>
                       <label class="compare-check"
                         ><input
                           type="checkbox"
                           class="form-check-input m-0"
-                        />قارن</label
+                        />Compare</label
                       >
                     </div>
                   </div>
@@ -699,7 +697,7 @@
                   <button
                     type="button"
                     class="fav-btn is-on"
-                    aria-label="شيل من المفضلة"
+                    aria-label="Remove from favorites"
                     aria-pressed="true"
                   >
                     <i class="bi bi-heart-fill"></i>
@@ -714,35 +712,35 @@
                       ><i class="bi bi-house-door"></i
                     ></span>
                     <span class="badge-verified"
-                      ><i class="bi bi-patch-check-fill"></i>موثّق</span
+                      ><i class="bi bi-patch-check-fill"></i>Verified</span
                     >
                     <span class="badge-featured"
-                      ><i class="bi bi-star-fill"></i>مميز</span
+                      ><i class="bi bi-star-fill"></i>Featured</span
                     >
                     <div class="score-ring" style="--value: 74">
                       <div class="score-ring__inner">
-                        74<small>توافق</small>
+                        74<small>match</small>
                       </div>
                     </div>
                   </a>
                   <div class="prop-body">
                     <a href="property.html" class="prop-title"
-                      >شقة غرفة نوم — الشميساني</a
+                      >1-bedroom apartment — Shmeisani</a
                     >
-                    <span class="prop-match">توافق جيد</span>
+                    <span class="prop-match">Good match</span>
                     <div class="prop-meta">
-                      <span><i class="bi bi-clock"></i> 22 دقيقة عن مكانك</span>
+                      <span><i class="bi bi-clock"></i> 22 min to your place</span>
                       <span
-                        ><i class="bi bi-arrows-angle-expand"></i> 70 م²</span
+                        ><i class="bi bi-arrows-angle-expand"></i> 70 m²</span
                       >
                     </div>
                     <div class="prop-price">
-                      <div><b>440 د.أ</b> <span>شهريا شامل الفواتير</span></div>
+                      <div><b>440 JOD</b> <span>per month, bills included</span></div>
                       <label class="compare-check"
                         ><input
                           type="checkbox"
                           class="form-check-input m-0"
-                        />قارن</label
+                        />Compare</label
                       >
                     </div>
                   </div>
@@ -751,7 +749,7 @@
             </div>
           </section>
 
-          <!-- ===== مقارنة الأحياء ===== -->
+          <!-- ===== Neighborhood comparison ===== -->
           <section
             class="tab-pane fade"
             id="tab-areas"
@@ -759,40 +757,40 @@
             tabindex="0"
           >
             <div class="panel">
-              <h2 class="h5 mb-1">نفس الحسبة، بكل حي</h2>
+              <h2 class="h5 mb-1">Same math, every neighborhood</h2>
               <p class="text-muted small mb-3">
-                متوسط التكلفة الشهرية الكاملة، والوقت لمكانك اليومي.
+                Average full monthly cost, and travel time to your daily place.
               </p>
               <div class="table-responsive">
                 <table class="table bt-table areas-table">
                   <thead>
                     <tr>
-                      <th scope="col">الحي</th>
-                      <th scope="col">متوسط الإيجار</th>
-                      <th scope="col">الفواتير</th>
-                      <th scope="col">الإنترنت</th>
-                      <th scope="col" class="col-total">المجموع</th>
-                      <th scope="col">لمكانك</th>
-                      <th scope="col">الهدوء</th>
-                      <th scope="col">عقارات</th>
+                      <th scope="col">Neighborhood</th>
+                      <th scope="col">Avg. rent</th>
+                      <th scope="col">Bills</th>
+                      <th scope="col">Internet</th>
+                      <th scope="col" class="col-total">Total</th>
+                      <th scope="col">To your place</th>
+                      <th scope="col">Quiet</th>
+                      <th scope="col">Listings</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td class="fw-semibold">
-                        صويلح
-                        <span class="status status--success ms-1">الأوفر</span>
+                        Sweileh
+                        <span class="status status--success ms-1">Cheapest</span>
                       </td>
-                      <td>200 د.أ</td>
-                      <td>25 د.أ</td>
-                      <td>15 د.أ</td>
+                      <td>200 JOD</td>
+                      <td>25 JOD</td>
+                      <td>15 JOD</td>
                       <td>
                         <div class="total-bar">
-                          <b>240 د.أ</b>
+                          <b>240 JOD</b>
                           <div
                             class="progress flex-grow-1"
                             role="progressbar"
-                            aria-label="المجموع"
+                            aria-label="Total"
                             aria-valuenow="48"
                             aria-valuemin="0"
                             aria-valuemax="100"
@@ -804,22 +802,22 @@
                           </div>
                         </div>
                       </td>
-                      <td>18 دقيقة</td>
+                      <td>18 min</td>
                       <td class="dots">●●●○○</td>
                       <td class="text-muted">41</td>
                     </tr>
                     <tr>
-                      <td class="fw-semibold">الجبيهة</td>
-                      <td>230 د.أ</td>
-                      <td>30 د.أ</td>
-                      <td>15 د.أ</td>
+                      <td class="fw-semibold">Al Jubeiha</td>
+                      <td>230 JOD</td>
+                      <td>30 JOD</td>
+                      <td>15 JOD</td>
                       <td>
                         <div class="total-bar">
-                          <b>275 د.أ</b>
+                          <b>275 JOD</b>
                           <div
                             class="progress flex-grow-1"
                             role="progressbar"
-                            aria-label="المجموع"
+                            aria-label="Total"
                             aria-valuenow="56"
                             aria-valuemin="0"
                             aria-valuemax="100"
@@ -828,22 +826,22 @@
                           </div>
                         </div>
                       </td>
-                      <td>8 دقيقة</td>
+                      <td>8 min</td>
                       <td class="dots">●●●●○</td>
                       <td class="text-muted">64</td>
                     </tr>
                     <tr>
-                      <td class="fw-semibold">تلاع العلي</td>
-                      <td>360 د.أ</td>
-                      <td>35 د.أ</td>
-                      <td>20 د.أ</td>
+                      <td class="fw-semibold">Tla Al Ali</td>
+                      <td>360 JOD</td>
+                      <td>35 JOD</td>
+                      <td>20 JOD</td>
                       <td>
                         <div class="total-bar">
-                          <b>415 د.أ</b>
+                          <b>415 JOD</b>
                           <div
                             class="progress flex-grow-1"
                             role="progressbar"
-                            aria-label="المجموع"
+                            aria-label="Total"
                             aria-valuenow="84"
                             aria-valuemin="0"
                             aria-valuemax="100"
@@ -852,22 +850,22 @@
                           </div>
                         </div>
                       </td>
-                      <td>14 دقيقة</td>
+                      <td>14 min</td>
                       <td class="dots">●●●●●</td>
                       <td class="text-muted">52</td>
                     </tr>
                     <tr>
-                      <td class="fw-semibold">الشميساني</td>
-                      <td>400 د.أ</td>
-                      <td>40 د.أ</td>
-                      <td>20 د.أ</td>
+                      <td class="fw-semibold">Shmeisani</td>
+                      <td>400 JOD</td>
+                      <td>40 JOD</td>
+                      <td>20 JOD</td>
                       <td>
                         <div class="total-bar">
-                          <b>460 د.أ</b>
+                          <b>460 JOD</b>
                           <div
                             class="progress flex-grow-1"
                             role="progressbar"
-                            aria-label="المجموع"
+                            aria-label="Total"
                             aria-valuenow="93"
                             aria-valuemin="0"
                             aria-valuemax="100"
@@ -876,22 +874,22 @@
                           </div>
                         </div>
                       </td>
-                      <td>22 دقيقة</td>
+                      <td>22 min</td>
                       <td class="dots">●●●○○</td>
                       <td class="text-muted">38</td>
                     </tr>
                     <tr>
-                      <td class="fw-semibold">خلدا</td>
-                      <td>420 د.أ</td>
-                      <td>40 د.أ</td>
-                      <td>20 د.أ</td>
+                      <td class="fw-semibold">Khalda</td>
+                      <td>420 JOD</td>
+                      <td>40 JOD</td>
+                      <td>20 JOD</td>
                       <td>
                         <div class="total-bar">
-                          <b>480 د.أ</b>
+                          <b>480 JOD</b>
                           <div
                             class="progress flex-grow-1"
                             role="progressbar"
-                            aria-label="المجموع"
+                            aria-label="Total"
                             aria-valuenow="97"
                             aria-valuemin="0"
                             aria-valuemax="100"
@@ -900,22 +898,22 @@
                           </div>
                         </div>
                       </td>
-                      <td>30 دقيقة</td>
+                      <td>30 min</td>
                       <td class="dots">●●●●●</td>
                       <td class="text-muted">47</td>
                     </tr>
                     <tr>
-                      <td class="fw-semibold">العبدلي</td>
-                      <td>430 د.أ</td>
-                      <td>40 د.أ</td>
-                      <td>20 د.أ</td>
+                      <td class="fw-semibold">Abdali</td>
+                      <td>430 JOD</td>
+                      <td>40 JOD</td>
+                      <td>20 JOD</td>
                       <td>
                         <div class="total-bar">
-                          <b>490 د.أ</b>
+                          <b>490 JOD</b>
                           <div
                             class="progress flex-grow-1"
                             role="progressbar"
-                            aria-label="المجموع"
+                            aria-label="Total"
                             aria-valuenow="99"
                             aria-valuemin="0"
                             aria-valuemax="100"
@@ -924,7 +922,7 @@
                           </div>
                         </div>
                       </td>
-                      <td>26 دقيقة</td>
+                      <td>26 min</td>
                       <td class="dots">●●○○○</td>
                       <td class="text-muted">29</td>
                     </tr>
@@ -938,8 +936,5 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/config.js"></script>
-    <script src="../assets/js/app.js"></script>
-    <script src="../assets/js/pages/seeker/search.js"></script>
   </body>
 </html>

@@ -1,14 +1,13 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>بيتي — لوحة التحكم</title>
+    <title>Bayti — Dashboard</title>
 
     <link
-      id="bootstrap-css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
@@ -25,27 +24,20 @@
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#appSidebar"
-        aria-label="القائمة"
+        aria-label="Menu"
       >
         <i class="bi bi-list"></i>
       </button>
       <a class="brand" href="dashboard.html"
-        ><span class="brand-mark">B</span><span>بيتي</span></a
+        ><span class="brand-mark">B</span><span>Bayti</span></a
       >
       <div class="ms-auto d-flex align-items-center gap-1">
-        <button
-          type="button"
-          class="btn btn-link nav-lang px-2"
-          data-action="toggle-lang"
-        >
-          <i class="bi bi-translate"></i><span>EN</span>
-        </button>
         <div class="dropdown">
           <button
             class="icon-btn"
             type="button"
             data-bs-toggle="dropdown"
-            aria-label="الإشعارات"
+            aria-label="Notifications"
           >
             <i class="bi bi-bell"></i><span class="dot"></span>
           </button>
@@ -53,7 +45,7 @@
             class="dropdown-menu dropdown-menu-end shadow-sm p-0"
             style="width: 320px"
           >
-            <div class="px-3 py-2 border-bottom fw-semibold">الإشعارات</div>
+            <div class="px-3 py-2 border-bottom fw-semibold">Notifications</div>
             <div class="py-1">
               <a
                 class="dropdown-item d-flex gap-2 py-2 text-wrap"
@@ -65,9 +57,9 @@
                   ><i class="bi bi-inbox"></i
                 ></span>
                 <span class="small">
-                  <span class="d-block">طلب معاينة جديد من سارة خالد</span>
+                  <span class="d-block">New viewing request from Sara Khaled</span>
                   <span class="text-muted" style="font-size: 0.72rem"
-                    >قبل 10 دقايق</span
+                    >10 minutes ago</span
                   >
                 </span>
               </a>
@@ -81,9 +73,11 @@
                   ><i class="bi bi-shield-check"></i
                 ></span>
                 <span class="small">
-                  <span class="d-block">تم توثيق عقارك استوديو الجبيهة</span>
+                  <span class="d-block"
+                    >Your Al Jubeiha studio has been verified</span
+                  >
                   <span class="text-muted" style="font-size: 0.72rem"
-                    >قبل ساعة</span
+                    >1 hour ago</span
                   >
                 </span>
               </a>
@@ -92,21 +86,21 @@
         </div>
         <div class="dropdown">
           <button class="app-user" type="button" data-bs-toggle="dropdown">
-            <span class="avatar">أ</span>
+            <span class="avatar">A</span>
             <span class="d-none d-md-inline text-start lh-sm">
-              <span class="d-block small fw-semibold">أبو أحمد</span>
+              <span class="d-block small fw-semibold">Abu Ahmad</span>
               <span class="d-block text-muted" style="font-size: 0.72rem"
-                >صاحب عقار</span
+                >Property owner</span
               >
             </span>
             <i class="bi bi-chevron-down small text-muted"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-            <li><a class="dropdown-item" href="account.html">حسابي</a></li>
+            <li><a class="dropdown-item" href="account.html">My account</a></li>
             <li><hr class="dropdown-divider" /></li>
             <li>
               <a class="dropdown-item text-danger" href="../index.html"
-                >تسجيل الخروج</a
+                >Log out</a
               >
             </li>
           </ul>
@@ -123,67 +117,67 @@
       >
         <div class="offcanvas-header border-bottom">
           <a class="brand" href="../index.html"
-            ><span class="brand-mark">B</span><span>بيتي</span></a
+            ><span class="brand-mark">B</span><span>Bayti</span></a
           >
           <button
             type="button"
             class="btn-close"
             data-bs-dismiss="offcanvas"
             data-bs-target="#appSidebar"
-            aria-label="إغلاق"
+            aria-label="Close"
           ></button>
         </div>
         <div class="offcanvas-body">
-          <div class="side-label">صاحب عقار</div>
+          <div class="side-label">Property owner</div>
           <a class="side-link active" href="dashboard.html" aria-current="page"
             ><i class="bi bi-grid-1x2"></i
-            ><span class="flex-grow-1">لوحة التحكم</span></a
+            ><span class="flex-grow-1">Dashboard</span></a
           >
           <a class="side-link" href="properties.html"
             ><i class="bi bi-house-door"></i
-            ><span class="flex-grow-1">عقاراتي</span></a
+            ><span class="flex-grow-1">My properties</span></a
           >
           <a class="side-link" href="property-form.html"
             ><i class="bi bi-plus-square"></i
-            ><span class="flex-grow-1">إضافة عقار</span></a
+            ><span class="flex-grow-1">Add property</span></a
           >
           <a class="side-link" href="requests.html"
             ><i class="bi bi-inbox"></i
-            ><span class="flex-grow-1">الطلبات والمعاينات</span
+            ><span class="flex-grow-1">Requests &amp; viewings</span
             ><span class="side-badge">3</span></a
           >
           <a class="side-link" href="chat.html"
             ><i class="bi bi-chat-dots"></i
-            ><span class="flex-grow-1">الرسائل</span
+            ><span class="flex-grow-1">Messages</span
             ><span class="side-badge">1</span></a
           >
           <a class="side-link" href="account.html"
             ><i class="bi bi-person-badge"></i
-            ><span class="flex-grow-1">حسابي</span></a
+            ><span class="flex-grow-1">My account</span></a
           >
         </div>
       </aside>
 
       <!-- ===== Content ===== -->
       <main class="app-main">
-        <!-- 1. راس الصفحة -->
+        <!-- 1. Page header -->
         <div class="page-head">
           <div>
-            <h1>أهلين، أبو أحمد</h1>
-            <p>هيك ماشية عقاراتك آخر 30 يوم.</p>
+            <h1>Welcome back, Abu Ahmad</h1>
+            <p>Here's how your properties did over the last 30 days.</p>
           </div>
           <a href="property-form.html" class="btn btn-accent">
             <i class="bi bi-plus-lg"></i>
-            <span>أضف عقار</span>
+            <span>Add property</span>
           </a>
         </div>
 
-        <!-- 2. تنبيه تأكيد التوفر -->
+        <!-- 2. Availability confirmation alert -->
         <div class="alert-soft flex-wrap mb-4" id="staleAlert">
           <i class="bi bi-arrow-repeat"></i>
           <span class="flex-grow-1"
-            >"شقة غرفة نوم — الجبيهة" بحاجة تأكيد إنها لسا متاحة، وإلا رح تختفي
-            من النتائج بكرا.</span
+            >"1-bedroom apartment — Al Jubeiha" needs you to confirm it's still
+            available, or it will be hidden from results tomorrow.</span
           >
           <button
             type="button"
@@ -191,17 +185,17 @@
             data-action="confirm-available"
             data-property="3"
           >
-            لسا متاحة
+            Still available
           </button>
         </div>
 
-        <!-- 3. الأرقام -->
+        <!-- 3. Key numbers -->
         <div class="row g-3 mb-4" id="ownerKpis">
           <div class="col-sm-6 col-xl-3">
             <div class="kpi">
               <span class="kpi-icon"><i class="bi bi-eye"></i></span>
               <div>
-                <b>1,240</b><span>مشاهدة</span> <span class="trend">+12%</span>
+                <b>1,240</b><span>Views</span> <span class="trend">+12%</span>
               </div>
             </div>
           </div>
@@ -209,39 +203,39 @@
             <div class="kpi">
               <span class="kpi-icon"><i class="bi bi-inbox"></i></span>
               <div>
-                <b>18</b><span>طلب حجز</span> <span class="trend">+4</span>
+                <b>18</b><span>Booking requests</span>
+                <span class="trend">+4</span>
               </div>
             </div>
           </div>
           <div class="col-sm-6 col-xl-3">
             <div class="kpi">
               <span class="kpi-icon"><i class="bi bi-stars"></i></span>
-              <div><b>84%</b><span>متوسط التوافق</span></div>
+              <div><b>84%</b><span>Average match</span></div>
             </div>
           </div>
           <div class="col-sm-6 col-xl-3">
             <div class="kpi">
               <span class="kpi-icon"><i class="bi bi-house-door"></i></span>
-              <div><b>3 / 4</b><span>عقارات فعّالة</span></div>
+              <div><b>3 / 4</b><span>Active properties</span></div>
             </div>
           </div>
         </div>
 
         <div class="row g-4">
-          <!-- العمود الرئيسي -->
+          <!-- Main column -->
           <div class="col-lg-8 d-flex flex-column gap-4">
-            <!-- 4. المشاهدات -->
+            <!-- 4. Views -->
             <section class="panel" aria-labelledby="viewsTitle">
               <div class="panel-head">
-                <h2 id="viewsTitle">مشاهدات عقاراتك · آخر 14 يوم</h2>
+                <h2 id="viewsTitle">Property views · last 14 days</h2>
                 <span class="trend-up">+12%</span>
               </div>
               <div
                 class="bar-chart"
-                dir="ltr"
                 id="viewsChart"
                 role="img"
-                aria-label="المشاهدات اليومية لآخر 14 يوم، بازدياد 12%"
+                aria-label="Daily views over the last 14 days, up 12%"
               >
                 <div class="bar" style="height: 32%"></div>
                 <div class="bar" style="height: 41%"></div>
@@ -258,28 +252,28 @@
                 <div class="bar is-hi" style="height: 88%"></div>
                 <div class="bar is-hi" style="height: 97%"></div>
               </div>
-              <div class="chart-labels" dir="ltr">
+              <div class="chart-labels">
                 <span>27 Sep</span><span>3 Oct</span><span>10 Oct</span>
               </div>
             </section>
 
-            <!-- 5. طلبات الحجز الجديدة -->
+            <!-- 5. New booking requests -->
             <section class="panel" aria-labelledby="newRequestsTitle">
               <div class="panel-head">
-                <h2 id="newRequestsTitle">طلبات حجز جديدة</h2>
-                <a href="requests.html">عرض الكل</a>
+                <h2 id="newRequestsTitle">New booking requests</h2>
+                <a href="requests.html">View all</a>
               </div>
               <ul class="list-clean" id="newRequests">
                 <li class="list-row flex-wrap">
-                  <span class="avatar avatar-lg">س</span>
+                  <span class="avatar avatar-lg">S</span>
                   <div class="grow flex-main">
                     <b
-                      >سارة خالد
-                      <span class="fw-medium small text-muted">· دراسة</span></b
+                      >Sara Khaled
+                      <span class="fw-medium small text-muted">· Study</span></b
                     >
-                    <small>استوديو — الجبيهة · من 1 نوفمبر · 6 شهور</small>
+                    <small>Studio — Al Jubeiha · from 1 Nov · 6 months</small>
                   </div>
-                  <span class="pill-soft">توافق 92%</span>
+                  <span class="pill-soft">92% match</span>
                   <div class="d-flex gap-2">
                     <button
                       type="button"
@@ -287,7 +281,7 @@
                       data-action="accept"
                       data-request="1"
                     >
-                      قبول
+                      Accept
                     </button>
                     <button
                       type="button"
@@ -295,20 +289,22 @@
                       data-action="reject"
                       data-request="1"
                     >
-                      رفض
+                      Decline
                     </button>
                   </div>
                 </li>
                 <li class="list-row flex-wrap">
-                  <span class="avatar avatar-lg">م</span>
+                  <span class="avatar avatar-lg">M</span>
                   <div class="grow flex-main">
                     <b
-                      >محمد العلي
-                      <span class="fw-medium small text-muted">· شغل</span></b
+                      >Mohammad Al Ali
+                      <span class="fw-medium small text-muted">· Work</span></b
                     >
-                    <small>غرفة مشتركة — الجبيهة · من 15 نوفمبر · 3 شهور</small>
+                    <small
+                      >Shared room — Al Jubeiha · from 15 Nov · 3 months</small
+                    >
                   </div>
-                  <span class="pill-soft">توافق 81%</span>
+                  <span class="pill-soft">81% match</span>
                   <div class="d-flex gap-2">
                     <button
                       type="button"
@@ -316,7 +312,7 @@
                       data-action="accept"
                       data-request="2"
                     >
-                      قبول
+                      Accept
                     </button>
                     <button
                       type="button"
@@ -324,7 +320,7 @@
                       data-action="reject"
                       data-request="2"
                     >
-                      رفض
+                      Decline
                     </button>
                   </div>
                 </li>
@@ -333,11 +329,13 @@
                   <div class="grow flex-main">
                     <b
                       >Emily Carter
-                      <span class="fw-medium small text-muted">· سياحة</span></b
+                      <span class="fw-medium small text-muted"
+                        >· Tourism</span
+                      ></b
                     >
-                    <small>استوديو — الجبيهة · من 20 أكتوبر · شهر</small>
+                    <small>Studio — Al Jubeiha · from 20 Oct · 1 month</small>
                   </div>
-                  <span class="pill-soft">توافق 77%</span>
+                  <span class="pill-soft">77% match</span>
                   <div class="d-flex gap-2">
                     <button
                       type="button"
@@ -345,7 +343,7 @@
                       data-action="accept"
                       data-request="3"
                     >
-                      قبول
+                      Accept
                     </button>
                     <button
                       type="button"
@@ -353,7 +351,7 @@
                       data-action="reject"
                       data-request="3"
                     >
-                      رفض
+                      Decline
                     </button>
                   </div>
                 </li>
@@ -361,38 +359,38 @@
             </section>
           </div>
 
-          <!-- العمود الجانبي -->
+          <!-- Side column -->
           <div class="col-lg-4 d-flex flex-column gap-4">
-            <!-- 6. الإعلان المميز -->
+            <!-- 6. Featured listing -->
             <section class="panel panel-featured">
               <div class="featured-label">
-                <i class="bi bi-star-fill"></i>إعلان مميز فعّال
+                <i class="bi bi-star-fill"></i>Featured listing active
               </div>
-              <b class="d-block fs-5 mb-1">استوديو مفروش — الجبيهة</b>
+              <b class="d-block fs-5 mb-1">Furnished studio — Al Jubeiha</b>
               <p>
-                بيظهر بأول النتائج لحد 30 أكتوبر. جاب 3 أضعاف المشاهدات
-                هالأسبوع.
+                Shows at the top of results until 30 Oct. It brought in 3× the
+                views this week.
               </p>
               <a href="account.html" class="btn btn-light text-primary-bt"
-                >جدّد الاشتراك</a
+                >Renew subscription</a
               >
             </section>
 
-            <!-- 7. أداء كل عقار -->
+            <!-- 7. Per-property performance -->
             <section class="panel" aria-labelledby="perfTitle">
               <div class="panel-head">
-                <h2 id="perfTitle">أداء كل عقار</h2>
+                <h2 id="perfTitle">Performance by property</h2>
               </div>
               <div class="d-flex flex-column gap-3" id="propertyPerformance">
                 <div>
                   <div class="d-flex justify-content-between small mb-1">
-                    <span class="fw-medium">استوديو — الجبيهة</span
-                    ><span class="text-muted">642 مشاهدة</span>
+                    <span class="fw-medium">Studio — Al Jubeiha</span
+                    ><span class="text-muted">642 views</span>
                   </div>
                   <div
                     class="progress"
                     role="progressbar"
-                    aria-label="مشاهدات استوديو الجبيهة"
+                    aria-label="Al Jubeiha studio views"
                     aria-valuenow="100"
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -402,13 +400,13 @@
                 </div>
                 <div>
                   <div class="d-flex justify-content-between small mb-1">
-                    <span class="fw-medium">غرفة مشتركة — الجبيهة</span
-                    ><span class="text-muted">318 مشاهدة</span>
+                    <span class="fw-medium">Shared room — Al Jubeiha</span
+                    ><span class="text-muted">318 views</span>
                   </div>
                   <div
                     class="progress"
                     role="progressbar"
-                    aria-label="مشاهدات الغرفة المشتركة"
+                    aria-label="Shared room views"
                     aria-valuenow="50"
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -418,13 +416,13 @@
                 </div>
                 <div>
                   <div class="d-flex justify-content-between small mb-1">
-                    <span class="fw-medium">شقة غرفة — الجبيهة</span
-                    ><span class="text-muted">211 مشاهدة</span>
+                    <span class="fw-medium">1-bedroom apartment — Al Jubeiha</span
+                    ><span class="text-muted">211 views</span>
                   </div>
                   <div
                     class="progress"
                     role="progressbar"
-                    aria-label="مشاهدات شقة الغرفة"
+                    aria-label="1-bedroom apartment views"
                     aria-valuenow="33"
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -435,15 +433,15 @@
               </div>
             </section>
 
-            <!-- 8. حالة التوثيق -->
+            <!-- 8. Verification status -->
             <section class="panel d-flex align-items-center gap-3">
               <span class="kpi-icon is-success"
                 ><i class="bi bi-patch-check-fill"></i
               ></span>
               <div>
-                <b class="d-block">حسابك موثّق</b>
+                <b class="d-block">Your account is verified</b>
                 <span class="small text-muted"
-                  >الشارة بتظهر على كل عقاراتك.</span
+                  >The badge shows on all your properties.</span
                 >
               </div>
             </section>
@@ -453,8 +451,5 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/config.js"></script>
-    <script src="../assets/js/app.js"></script>
-    <script src="../assets/js/pages/owner/dashboard.js"></script>
   </body>
 </html>

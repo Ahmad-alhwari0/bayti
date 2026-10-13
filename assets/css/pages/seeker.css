@@ -1,6 +1,6 @@
 /* =========================================================
-   Seeker pages — ستايلات خاصة بصفحات الباحث عن سكن
-   (المكونات المشتركة بـ main.css)
+   Seeker pages — styles specific to the home seeker pages
+   (shared components live in main.css)
    ========================================================= */
 
 /* ---------- search.html ---------- */
@@ -16,7 +16,7 @@
   gap: 0.6rem;
 }
 .total-bar b {
-  width: 64px;
+  width: 72px;
   color: var(--bt-primary);
   flex-shrink: 0;
 }
@@ -25,7 +25,7 @@
 }
 
 /* ---------- shared (property / bookings / profile) ---------- */
-/* مربع أيقونة صغير بخلفية بترولي فاتحة */
+/* Small icon tile with a light petrol background */
 .icon-tile {
   width: 36px;
   height: 36px;
@@ -91,7 +91,7 @@
   border: 1px solid var(--bt-line);
 }
 .why-bars .score-bar {
-  grid-template-columns: 96px 1fr 28px;
+  grid-template-columns: 112px 1fr 28px;
 }
 .why-checks {
   display: flex;
@@ -126,7 +126,7 @@
   border-top: 1px solid var(--bt-line);
   margin-top: 0.4rem;
 }
-/* مساعد الأحياء جوا الصفحة (مش عائم) */
+/* Neighborhood assistant inline in the page (not floating) */
 .ai-panel.is-inline {
   position: static;
   display: flex;
@@ -163,17 +163,6 @@
 }
 
 /* ---------- profile.html ---------- */
-/* سويتش اللغة بشكل التابات */
-.seg-tabs .btn-check:checked + .nav-link {
-  background: var(--bt-surface);
-  color: var(--bt-primary);
-  font-weight: 600;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-}
-.seg-tabs label.nav-link {
-  cursor: pointer;
-  text-align: center;
-}
 .switch-row {
   display: flex;
   align-items: center;

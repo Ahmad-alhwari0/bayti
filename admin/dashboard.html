@@ -1,14 +1,13 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>بيتي — لوحة تحكم الأدمن</title>
+    <title>Bayti — Admin dashboard</title>
 
     <link
-      id="bootstrap-css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
@@ -25,27 +24,20 @@
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#appSidebar"
-        aria-label="القائمة"
+        aria-label="Menu"
       >
         <i class="bi bi-list"></i>
       </button>
       <a class="brand" href="dashboard.html"
-        ><span class="brand-mark">B</span><span>بيتي</span></a
+        ><span class="brand-mark">B</span><span>Bayti</span></a
       >
       <div class="ms-auto d-flex align-items-center gap-1">
-        <button
-          type="button"
-          class="btn btn-link nav-lang px-2"
-          data-action="toggle-lang"
-        >
-          <i class="bi bi-translate"></i><span>EN</span>
-        </button>
         <div class="dropdown">
           <button
             class="icon-btn"
             type="button"
             data-bs-toggle="dropdown"
-            aria-label="الإشعارات"
+            aria-label="Notifications"
           >
             <i class="bi bi-bell"></i><span class="dot"></span>
           </button>
@@ -53,7 +45,7 @@
             class="dropdown-menu dropdown-menu-end shadow-sm p-0"
             style="width: 320px"
           >
-            <div class="px-3 py-2 border-bottom fw-semibold">الإشعارات</div>
+            <div class="px-3 py-2 border-bottom fw-semibold">Notifications</div>
             <div class="py-1">
               <a
                 class="dropdown-item d-flex gap-2 py-2 text-wrap"
@@ -66,10 +58,10 @@
                 ></span>
                 <span class="small">
                   <span class="d-block"
-                    >4 طلبات توثيق جديدة بانتظار المراجعة</span
+                    >4 verification requests waiting for review</span
                   >
                   <span class="text-muted" style="font-size: 0.72rem"
-                    >اليوم</span
+                    >Today</span
                   >
                 </span>
               </a>
@@ -78,11 +70,11 @@
         </div>
         <div class="dropdown">
           <button class="app-user" type="button" data-bs-toggle="dropdown">
-            <span class="avatar">م</span>
+            <span class="avatar">A</span>
             <span class="d-none d-md-inline text-start lh-sm">
-              <span class="d-block small fw-semibold">مدير النظام</span>
+              <span class="d-block small fw-semibold">System admin</span>
               <span class="d-block text-muted" style="font-size: 0.72rem"
-                >الأدمن</span
+                >Admin</span
               >
             </span>
             <i class="bi bi-chevron-down small text-muted"></i>
@@ -90,7 +82,7 @@
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
             <li>
               <a class="dropdown-item text-danger" href="../index.html"
-                >تسجيل الخروج</a
+                >Log out</a
               >
             </li>
           </ul>
@@ -107,56 +99,56 @@
       >
         <div class="offcanvas-header border-bottom">
           <a class="brand" href="../index.html"
-            ><span class="brand-mark">B</span><span>بيتي</span></a
+            ><span class="brand-mark">B</span><span>Bayti</span></a
           >
           <button
             type="button"
             class="btn-close"
             data-bs-dismiss="offcanvas"
             data-bs-target="#appSidebar"
-            aria-label="إغلاق"
+            aria-label="Close"
           ></button>
         </div>
         <div class="offcanvas-body">
-          <div class="side-label">الأدمن</div>
+          <div class="side-label">Admin</div>
           <a class="side-link active" href="dashboard.html" aria-current="page"
             ><i class="bi bi-grid-1x2"></i
-            ><span class="flex-grow-1">لوحة التحكم</span></a
+            ><span class="flex-grow-1">Dashboard</span></a
           >
           <a class="side-link" href="verifications.html"
             ><i class="bi bi-patch-check"></i
-            ><span class="flex-grow-1">طلبات التوثيق</span
+            ><span class="flex-grow-1">Verifications</span
             ><span class="side-badge">4</span></a
           >
           <a class="side-link" href="users.html"
             ><i class="bi bi-people"></i
-            ><span class="flex-grow-1">المستخدمين</span></a
+            ><span class="flex-grow-1">Users</span></a
           >
           <a class="side-link" href="places.html"
             ><i class="bi bi-geo-alt"></i
-            ><span class="flex-grow-1">الأحياء والأماكن</span></a
+            ><span class="flex-grow-1">Areas &amp; places</span></a
           >
         </div>
       </aside>
 
       <!-- ===== Content ===== -->
       <main class="app-main">
-        <!-- 1. راس الصفحة -->
+        <!-- 1. Page header -->
         <div class="page-head">
           <div>
-            <h1>لوحة التحكم</h1>
-            <p>نظرة عامة على المنصة · أكتوبر 2026</p>
+            <h1>Dashboard</h1>
+            <p>Platform overview · October 2026</p>
           </div>
         </div>
 
-        <!-- 2. الأرقام -->
+        <!-- 2. Key numbers -->
         <div class="row g-3 mb-4" id="adminKpis">
           <div class="col-sm-6 col-xl-3">
             <div class="kpi">
               <span class="kpi-icon"><i class="bi bi-people"></i></span>
               <div>
                 <b>1,284</b>
-                <span>مستخدم</span> <span class="trend">+8%</span>
+                <span>Users</span> <span class="trend">+8%</span>
               </div>
             </div>
           </div>
@@ -165,7 +157,7 @@
               <span class="kpi-icon"><i class="bi bi-house-door"></i></span>
               <div>
                 <b>342</b>
-                <span>عقار</span> <span class="trend">+21</span>
+                <span>Properties</span> <span class="trend">+21</span>
               </div>
             </div>
           </div>
@@ -174,7 +166,7 @@
               <span class="kpi-icon"><i class="bi bi-calendar-check"></i></span>
               <div>
                 <b>96</b>
-                <span>حجز هالشهر</span>
+                <span>Bookings this month</span>
               </div>
             </div>
           </div>
@@ -182,56 +174,57 @@
             <div class="kpi">
               <span class="kpi-icon"><i class="bi bi-cash-stack"></i></span>
               <div>
-                <b>2,880 د.أ</b>
-                <span>عمولات هالشهر</span> <span class="trend">+29%</span>
+                <b>2,880 JOD</b>
+                <span>Commissions this month</span>
+                <span class="trend">+29%</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 3. العمولات + بتستنى توثيق -->
+        <!-- 3. Commissions + awaiting verification -->
         <div class="row g-4 mb-4 align-items-start">
           <div class="col-lg-8">
             <section class="panel" aria-labelledby="revTitle">
               <div class="panel-head">
-                <h2 id="revTitle">العمولات · آخر 6 شهور</h2>
-                <span class="small text-muted">بالدينار</span>
+                <h2 id="revTitle">Commissions · last 6 months</h2>
+                <span class="small text-muted">In JOD</span>
               </div>
               <div
                 class="bar-chart rev-chart"
                 id="revenueChart"
                 role="img"
-                aria-label="العمولات بالدينار: مايو 1,420، يونيو 1,760، يوليو 2,310، أغسطس 2,650، سبتمبر 2,240، أكتوبر 2,880"
+                aria-label="Commissions in JOD: May 1,420, June 1,760, July 2,310, August 2,650, September 2,240, October 2,880"
               >
                 <div class="bar-col">
                   <span>1,420</span>
                   <div class="bar" style="height: 79px"></div>
-                  <span>مايو</span>
+                  <span>May</span>
                 </div>
                 <div class="bar-col">
                   <span>1,760</span>
                   <div class="bar" style="height: 98px"></div>
-                  <span>يونيو</span>
+                  <span>Jun</span>
                 </div>
                 <div class="bar-col">
                   <span>2,310</span>
                   <div class="bar" style="height: 128px"></div>
-                  <span>يوليو</span>
+                  <span>Jul</span>
                 </div>
                 <div class="bar-col">
                   <span>2,650</span>
                   <div class="bar" style="height: 147px"></div>
-                  <span>أغسطس</span>
+                  <span>Aug</span>
                 </div>
                 <div class="bar-col">
                   <span>2,240</span>
                   <div class="bar" style="height: 124px"></div>
-                  <span>سبتمبر</span>
+                  <span>Sep</span>
                 </div>
                 <div class="bar-col">
                   <span>2,880</span>
                   <div class="bar is-hi" style="height: 160px"></div>
-                  <span>أكتوبر</span>
+                  <span>Oct</span>
                 </div>
               </div>
             </section>
@@ -240,56 +233,56 @@
           <div class="col-lg-4">
             <section class="panel" aria-labelledby="pendingTitle">
               <div class="panel-head">
-                <h2 id="pendingTitle">بتستنى توثيق</h2>
-                <a href="verifications.html">عرض الكل</a>
+                <h2 id="pendingTitle">Awaiting verification</h2>
+                <a href="verifications.html">View all</a>
               </div>
               <ul class="list-clean" id="pendingList">
                 <li class="list-row">
-                  <span class="avatar">أ</span>
+                  <span class="avatar">A</span>
                   <div class="grow">
-                    <b class="d-block small">أبو أحمد</b
-                    ><small>مالك · وثيقتين · اليوم 9:12 ص</small>
+                    <b class="d-block small">Abu Ahmad</b
+                    ><small>Owner · 2 documents · Today 9:12 AM</small>
                   </div>
                   <a
                     href="verifications.html"
                     class="small fw-semibold text-decoration-none"
-                    >راجع</a
+                    >Review</a
                   >
                 </li>
                 <li class="list-row">
-                  <span class="avatar">ر</span>
+                  <span class="avatar">R</span>
                   <div class="grow">
-                    <b class="d-block small">مكتب الريادة العقاري</b
-                    ><small>مكتب · 3 وثائق · اليوم 8:40 ص</small>
+                    <b class="d-block small">Al Riyada Real Estate Office</b
+                    ><small>Office · 3 documents · Today 8:40 AM</small>
                   </div>
                   <a
                     href="verifications.html"
                     class="small fw-semibold text-decoration-none"
-                    >راجع</a
+                    >Review</a
                   >
                 </li>
                 <li class="list-row">
-                  <span class="avatar">ي</span>
+                  <span class="avatar">Y</span>
                   <div class="grow">
-                    <b class="d-block small">أم يزن</b
-                    ><small>مالك · وثيقتين · أمس</small>
+                    <b class="d-block small">Umm Yazan</b
+                    ><small>Owner · 2 documents · Yesterday</small>
                   </div>
                   <a
                     href="verifications.html"
                     class="small fw-semibold text-decoration-none"
-                    >راجع</a
+                    >Review</a
                   >
                 </li>
                 <li class="list-row">
-                  <span class="avatar">س</span>
+                  <span class="avatar">S</span>
                   <div class="grow">
-                    <b class="d-block small">سامي حداد</b
-                    ><small>مالك · وثيقة · أمس</small>
+                    <b class="d-block small">Sami Haddad</b
+                    ><small>Owner · 1 document · Yesterday</small>
                   </div>
                   <a
                     href="verifications.html"
                     class="small fw-semibold text-decoration-none"
-                    >راجع</a
+                    >Review</a
                   >
                 </li>
               </ul>
@@ -297,67 +290,69 @@
           </div>
         </div>
 
-        <!-- 4. الحجوزات + المخالفات + الإعلانات المميزة -->
+        <!-- 4. Bookings + violations + featured listings -->
         <div class="row g-4 align-items-start">
           <div class="col-lg-8">
             <section class="panel" aria-labelledby="bookingsTitle">
               <div class="panel-head">
-                <h2 id="bookingsTitle">آخر الحجوزات والعمولات</h2>
+                <h2 id="bookingsTitle">Latest bookings &amp; commissions</h2>
               </div>
               <div class="table-responsive">
                 <table class="table bt-table bookings-table">
                   <thead>
                     <tr>
-                      <th scope="col">رقم الحجز</th>
-                      <th scope="col">الباحث</th>
-                      <th scope="col">العقار</th>
-                      <th scope="col">المبلغ</th>
-                      <th scope="col">العمولة</th>
-                      <th scope="col">الحالة</th>
+                      <th scope="col">Booking ID</th>
+                      <th scope="col">Seeker</th>
+                      <th scope="col">Property</th>
+                      <th scope="col">Amount</th>
+                      <th scope="col">Commission</th>
+                      <th scope="col">Status</th>
                     </tr>
                   </thead>
                   <tbody id="bookingsBody">
                     <tr>
-                      <td class="text-muted" dir="ltr">BK-1042</td>
-                      <td class="fw-medium">سارة خالد</td>
-                      <td>استوديو — الجبيهة</td>
-                      <td>265 د.أ</td>
-                      <td class="fw-semibold text-primary-bt">26.5 د.أ</td>
+                      <td class="text-muted">BK-1042</td>
+                      <td class="fw-medium">Sara Khaled</td>
+                      <td>Studio — Al Jubeiha</td>
+                      <td>265 JOD</td>
+                      <td class="fw-semibold text-primary-bt">26.5 JOD</td>
                       <td>
-                        <span class="status status--info">الدفع محجوز</span>
+                        <span class="status status--info">Payment held</span>
                       </td>
                     </tr>
                     <tr>
-                      <td class="text-muted" dir="ltr">BK-1041</td>
-                      <td class="fw-medium">خالد يوسف</td>
-                      <td>شقة غرفة — الجبيهة</td>
-                      <td>305 د.أ</td>
-                      <td class="fw-semibold text-primary-bt">30.5 د.أ</td>
+                      <td class="text-muted">BK-1041</td>
+                      <td class="fw-medium">Khaled Youssef</td>
+                      <td>1-bedroom apartment — Al Jubeiha</td>
+                      <td>305 JOD</td>
+                      <td class="fw-semibold text-primary-bt">30.5 JOD</td>
                       <td>
                         <span class="status status--success"
-                          >تم تحرير الدفع</span
+                          >Payment released</span
                         >
                       </td>
                     </tr>
                     <tr>
-                      <td class="text-muted" dir="ltr">BK-1040</td>
-                      <td class="fw-medium">لينا حمدان</td>
-                      <td>شقة غرفتين — تلاع العلي</td>
-                      <td>395 د.أ</td>
-                      <td class="fw-semibold text-primary-bt">39.5 د.أ</td>
+                      <td class="text-muted">BK-1040</td>
+                      <td class="fw-medium">Lina Hamdan</td>
+                      <td>2-bedroom apartment — Tla Al Ali</td>
+                      <td>395 JOD</td>
+                      <td class="fw-semibold text-primary-bt">39.5 JOD</td>
                       <td>
                         <span class="status status--success"
-                          >تم تحرير الدفع</span
+                          >Payment released</span
                         >
                       </td>
                     </tr>
                     <tr>
-                      <td class="text-muted" dir="ltr">BK-1039</td>
-                      <td class="fw-medium">عمر زيد</td>
-                      <td>استوديو — صويلح</td>
-                      <td>220 د.أ</td>
-                      <td class="fw-semibold text-primary-bt">22 د.أ</td>
-                      <td><span class="status status--muted">ملغي</span></td>
+                      <td class="text-muted">BK-1039</td>
+                      <td class="fw-medium">Omar Zaid</td>
+                      <td>Studio — Sweileh</td>
+                      <td>220 JOD</td>
+                      <td class="fw-semibold text-primary-bt">22 JOD</td>
+                      <td>
+                        <span class="status status--muted">Cancelled</span>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -366,11 +361,11 @@
           </div>
 
           <div class="col-lg-4 d-flex flex-column gap-4">
-            <!-- مخالفات الشات -->
+            <!-- Chat violations -->
             <section class="panel" aria-labelledby="violationsTitle">
               <div class="panel-head">
-                <h2 id="violationsTitle">مخالفات الشات</h2>
-                <a href="users.html">عرض الكل</a>
+                <h2 id="violationsTitle">Chat violations</h2>
+                <a href="users.html">View all</a>
               </div>
               <ul class="list-clean" id="violationsList">
                 <li class="list-row">
@@ -378,10 +373,10 @@
                     ><i class="bi bi-shield-exclamation"></i
                   ></span>
                   <div class="grow">
-                    <b class="d-block small">فادي منصور</b
-                    ><small>رقم هاتف · اليوم</small>
+                    <b class="d-block small">Fadi Mansour</b
+                    ><small>Phone number · Today</small>
                   </div>
-                  <span class="status status--danger no-dot">4 مخالفات</span>
+                  <span class="status status--danger no-dot">4 violations</span>
                 </li>
                 <li class="list-row">
                   <span class="icon-tile icon-tile--danger"
@@ -389,52 +384,54 @@
                   ></span>
                   <div class="grow">
                     <b class="d-block small">Emily Carter</b
-                    ><small>واتساب · أمس</small>
+                    ><small>WhatsApp · Yesterday</small>
                   </div>
-                  <span class="status status--pending no-dot">2 مخالفة</span>
+                  <span class="status status--pending no-dot"
+                    >2 violations</span
+                  >
                 </li>
                 <li class="list-row">
                   <span class="icon-tile icon-tile--danger"
                     ><i class="bi bi-shield-exclamation"></i
                   ></span>
                   <div class="grow">
-                    <b class="d-block small">أبو أحمد</b
-                    ><small>رقم هاتف · أمس</small>
+                    <b class="d-block small">Abu Ahmad</b
+                    ><small>Phone number · Yesterday</small>
                   </div>
-                  <span class="status status--muted no-dot">1 مخالفة</span>
+                  <span class="status status--muted no-dot">1 violation</span>
                 </li>
               </ul>
             </section>
 
-            <!-- الإعلانات المميزة -->
+            <!-- Featured listings -->
             <section class="panel" aria-labelledby="featuredTitle">
               <div class="panel-head">
-                <h2 id="featuredTitle">الإعلانات المميزة</h2>
+                <h2 id="featuredTitle">Featured listings</h2>
               </div>
               <ul class="list-clean" id="featuredList">
                 <li class="list-row">
                   <i class="bi bi-star-fill ic-star" aria-hidden="true"></i>
                   <div class="grow">
-                    <b class="d-block small">أبو أحمد</b
-                    ><small>استوديو — الجبيهة · لحد 30 أكتوبر</small>
+                    <b class="d-block small">Abu Ahmad</b
+                    ><small>Studio — Al Jubeiha · until Oct 30</small>
                   </div>
-                  <span class="status status--success">فعّال</span>
+                  <span class="status status--success">Active</span>
                 </li>
                 <li class="list-row">
                   <i class="bi bi-star-fill ic-star" aria-hidden="true"></i>
                   <div class="grow">
-                    <b class="d-block small">أم يزن</b
-                    ><small>شقة غرفة — الشميساني · لحد 12 نوفمبر</small>
+                    <b class="d-block small">Umm Yazan</b
+                    ><small>1-bedroom apartment — Shmeisani · until Nov 12</small>
                   </div>
-                  <span class="status status--success">فعّال</span>
+                  <span class="status status--success">Active</span>
                 </li>
                 <li class="list-row">
                   <i class="bi bi-star-fill ic-star" aria-hidden="true"></i>
                   <div class="grow">
-                    <b class="d-block small">دار السكن</b
-                    ><small>شقة غرفتين — العبدلي · لحد 2 أكتوبر</small>
+                    <b class="d-block small">Dar Al Sakan</b
+                    ><small>2-bedroom apartment — Abdali · until Oct 2</small>
                   </div>
-                  <span class="status status--muted">منتهي</span>
+                  <span class="status status--muted">Expired</span>
                 </li>
               </ul>
             </section>
@@ -444,8 +441,5 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/config.js"></script>
-    <script src="../assets/js/app.js"></script>
-    <script src="../assets/js/pages/admin/dashboard.js"></script>
   </body>
 </html>

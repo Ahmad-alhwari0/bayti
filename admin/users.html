@@ -1,14 +1,13 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>بيتي — المستخدمين</title>
+    <title>Bayti — Users</title>
 
     <link
-      id="bootstrap-css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
@@ -25,27 +24,20 @@
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#appSidebar"
-        aria-label="القائمة"
+        aria-label="Menu"
       >
         <i class="bi bi-list"></i>
       </button>
       <a class="brand" href="dashboard.html"
-        ><span class="brand-mark">B</span><span>بيتي</span></a
+        ><span class="brand-mark">B</span><span>Bayti</span></a
       >
       <div class="ms-auto d-flex align-items-center gap-1">
-        <button
-          type="button"
-          class="btn btn-link nav-lang px-2"
-          data-action="toggle-lang"
-        >
-          <i class="bi bi-translate"></i><span>EN</span>
-        </button>
         <div class="dropdown">
           <button
             class="icon-btn"
             type="button"
             data-bs-toggle="dropdown"
-            aria-label="الإشعارات"
+            aria-label="Notifications"
           >
             <i class="bi bi-bell"></i><span class="dot"></span>
           </button>
@@ -53,7 +45,7 @@
             class="dropdown-menu dropdown-menu-end shadow-sm p-0"
             style="width: 320px"
           >
-            <div class="px-3 py-2 border-bottom fw-semibold">الإشعارات</div>
+            <div class="px-3 py-2 border-bottom fw-semibold">Notifications</div>
             <div class="py-1">
               <a
                 class="dropdown-item d-flex gap-2 py-2 text-wrap"
@@ -66,10 +58,10 @@
                 ></span>
                 <span class="small">
                   <span class="d-block"
-                    >4 طلبات توثيق جديدة بانتظار المراجعة</span
+                    >4 verification requests waiting for review</span
                   >
                   <span class="text-muted" style="font-size: 0.72rem"
-                    >اليوم</span
+                    >Today</span
                   >
                 </span>
               </a>
@@ -78,11 +70,11 @@
         </div>
         <div class="dropdown">
           <button class="app-user" type="button" data-bs-toggle="dropdown">
-            <span class="avatar">م</span>
+            <span class="avatar">A</span>
             <span class="d-none d-md-inline text-start lh-sm">
-              <span class="d-block small fw-semibold">مدير النظام</span>
+              <span class="d-block small fw-semibold">System admin</span>
               <span class="d-block text-muted" style="font-size: 0.72rem"
-                >الأدمن</span
+                >Admin</span
               >
             </span>
             <i class="bi bi-chevron-down small text-muted"></i>
@@ -90,7 +82,7 @@
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
             <li>
               <a class="dropdown-item text-danger" href="../index.html"
-                >تسجيل الخروج</a
+                >Log out</a
               >
             </li>
           </ul>
@@ -107,49 +99,52 @@
       >
         <div class="offcanvas-header border-bottom">
           <a class="brand" href="../index.html"
-            ><span class="brand-mark">B</span><span>بيتي</span></a
+            ><span class="brand-mark">B</span><span>Bayti</span></a
           >
           <button
             type="button"
             class="btn-close"
             data-bs-dismiss="offcanvas"
             data-bs-target="#appSidebar"
-            aria-label="إغلاق"
+            aria-label="Close"
           ></button>
         </div>
         <div class="offcanvas-body">
-          <div class="side-label">الأدمن</div>
+          <div class="side-label">Admin</div>
           <a class="side-link" href="dashboard.html"
             ><i class="bi bi-grid-1x2"></i
-            ><span class="flex-grow-1">لوحة التحكم</span></a
+            ><span class="flex-grow-1">Dashboard</span></a
           >
           <a class="side-link" href="verifications.html"
             ><i class="bi bi-patch-check"></i
-            ><span class="flex-grow-1">طلبات التوثيق</span
+            ><span class="flex-grow-1">Verifications</span
             ><span class="side-badge">4</span></a
           >
           <a class="side-link active" href="users.html" aria-current="page"
             ><i class="bi bi-people"></i
-            ><span class="flex-grow-1">المستخدمين</span></a
+            ><span class="flex-grow-1">Users</span></a
           >
           <a class="side-link" href="places.html"
             ><i class="bi bi-geo-alt"></i
-            ><span class="flex-grow-1">الأحياء والأماكن</span></a
+            ><span class="flex-grow-1">Areas &amp; places</span></a
           >
         </div>
       </aside>
 
       <!-- ===== Content ===== -->
       <main class="app-main">
-        <!-- 1. راس الصفحة -->
+        <!-- 1. Page header -->
         <div class="page-head">
           <div>
-            <h1>المستخدمين</h1>
-            <p>إدارة الحسابات ومراقبة محاولات التواصل برا المنصة.</p>
+            <h1>Users</h1>
+            <p>
+              Manage accounts and monitor attempts to communicate outside the
+              platform.
+            </p>
           </div>
         </div>
 
-        <!-- 2. التابات والبحث -->
+        <!-- 2. Tabs and search -->
         <div
           class="users-toolbar d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3"
         >
@@ -164,7 +159,7 @@
                 aria-controls="tab-users"
                 aria-selected="true"
               >
-                المستخدمين<span class="count">1,284</span>
+                Users<span class="count">1,284</span>
               </button>
             </li>
             <li class="nav-item" role="presentation">
@@ -177,7 +172,7 @@
                 aria-controls="tab-violations"
                 aria-selected="false"
               >
-                مخالفات الشات<span class="count">4</span>
+                Chat violations<span class="count">4</span>
               </button>
             </li>
           </ul>
@@ -188,14 +183,14 @@
               class="form-control"
               id="usersQuery"
               name="q"
-              placeholder="ابحث بالاسم أو الإيميل..."
-              aria-label="ابحث بالاسم أو الإيميل"
+              placeholder="Search by name or email..."
+              aria-label="Search by name or email"
             />
           </form>
         </div>
 
         <div class="tab-content">
-          <!-- ===== المستخدمين ===== -->
+          <!-- ===== Users ===== -->
           <section
             class="tab-pane fade show active"
             id="tab-users"
@@ -207,147 +202,149 @@
                 <table class="table bt-table users-table">
                   <thead>
                     <tr>
-                      <th scope="col">المستخدم</th>
-                      <th scope="col">الدور</th>
-                      <th scope="col">انضم</th>
-                      <th scope="col">مخالفات</th>
-                      <th scope="col">الحالة</th>
-                      <th scope="col">إجراءات</th>
+                      <th scope="col">User</th>
+                      <th scope="col">Role</th>
+                      <th scope="col">Joined</th>
+                      <th scope="col">Violations</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Actions</th>
                     </tr>
                   </thead>
                   <tbody id="usersBody">
                     <tr>
                       <td>
                         <div class="cell-user">
-                          <span class="avatar">س</span
+                          <span class="avatar">S</span
                           ><span
-                            ><b>سارة خالد</b
-                            ><small dir="ltr">sara@example.com</small></span
+                            ><b>Sara Khaled</b
+                            ><small>sara@example.com</small></span
                           >
                         </div>
                       </td>
-                      <td>باحث عن سكن</td>
-                      <td class="text-muted">2 أكتوبر</td>
+                      <td>Home seeker</td>
+                      <td class="text-muted">Oct 2</td>
                       <td>
                         <span class="status status--muted no-dot">0</span>
                       </td>
-                      <td><span class="status status--success">فعّال</span></td>
+                      <td><span class="status status--success">Active</span></td>
                       <td>
                         <button
                           type="button"
                           class="btn btn-sm btn-outline-danger"
                           data-action="suspend"
-                          aria-label="إيقاف سارة خالد"
+                          aria-label="Suspend Sara Khaled"
                         >
-                          إيقاف
+                          Suspend
                         </button>
                       </td>
                     </tr>
                     <tr>
                       <td>
                         <div class="cell-user">
-                          <span class="avatar">أ</span
+                          <span class="avatar">A</span
                           ><span
-                            ><b>أبو أحمد</b
-                            ><small dir="ltr">abuahmad@example.com</small></span
+                            ><b>Abu Ahmad</b
+                            ><small>abuahmad@example.com</small></span
                           >
                         </div>
                       </td>
-                      <td>صاحب عقار</td>
-                      <td class="text-muted">12 سبتمبر</td>
+                      <td>Property owner</td>
+                      <td class="text-muted">Sep 12</td>
                       <td>
                         <span class="status status--pending no-dot">1</span>
                       </td>
-                      <td><span class="status status--success">فعّال</span></td>
+                      <td><span class="status status--success">Active</span></td>
                       <td>
                         <button
                           type="button"
                           class="btn btn-sm btn-outline-danger"
                           data-action="suspend"
-                          aria-label="إيقاف أبو أحمد"
+                          aria-label="Suspend Abu Ahmad"
                         >
-                          إيقاف
+                          Suspend
                         </button>
                       </td>
                     </tr>
                     <tr>
                       <td>
                         <div class="cell-user">
-                          <span class="avatar">ر</span
+                          <span class="avatar">R</span
                           ><span
-                            ><b>مكتب الريادة العقاري</b
-                            ><small dir="ltr">info@riyada.jo</small></span
+                            ><b>Al Riyada Real Estate Office</b
+                            ><small>info@riyada.jo</small></span
                           >
                         </div>
                       </td>
-                      <td>صاحب عقار</td>
-                      <td class="text-muted">3 سبتمبر</td>
+                      <td>Property owner</td>
+                      <td class="text-muted">Sep 3</td>
                       <td>
                         <span class="status status--muted no-dot">0</span>
                       </td>
-                      <td><span class="status status--success">فعّال</span></td>
+                      <td><span class="status status--success">Active</span></td>
                       <td>
                         <button
                           type="button"
                           class="btn btn-sm btn-outline-danger"
                           data-action="suspend"
-                          aria-label="إيقاف مكتب الريادة العقاري"
+                          aria-label="Suspend Al Riyada Real Estate Office"
                         >
-                          إيقاف
+                          Suspend
                         </button>
                       </td>
                     </tr>
                     <tr>
                       <td>
                         <div class="cell-user">
-                          <span class="avatar">ف</span
+                          <span class="avatar">F</span
                           ><span
-                            ><b>فادي منصور</b
-                            ><small dir="ltr">fadi.m@example.com</small></span
+                            ><b>Fadi Mansour</b
+                            ><small>fadi.m@example.com</small></span
                           >
                         </div>
                       </td>
-                      <td>صاحب عقار</td>
-                      <td class="text-muted">28 أغسطس</td>
+                      <td>Property owner</td>
+                      <td class="text-muted">Aug 28</td>
                       <td>
                         <span class="status status--danger no-dot">4</span>
                       </td>
-                      <td><span class="status status--danger">موقوف</span></td>
+                      <td>
+                        <span class="status status--danger">Suspended</span>
+                      </td>
                       <td>
                         <button
                           type="button"
                           class="btn btn-sm btn-outline-primary"
                           data-action="activate"
-                          aria-label="تفعيل فادي منصور"
+                          aria-label="Reactivate Fadi Mansour"
                         >
-                          تفعيل
+                          Reactivate
                         </button>
                       </td>
                     </tr>
                     <tr>
                       <td>
                         <div class="cell-user">
-                          <span class="avatar">م</span
+                          <span class="avatar">M</span
                           ><span
-                            ><b>محمد العلي</b
-                            ><small dir="ltr">m.ali@example.com</small></span
+                            ><b>Mohammad Al Ali</b
+                            ><small>m.ali@example.com</small></span
                           >
                         </div>
                       </td>
-                      <td>باحث عن سكن</td>
-                      <td class="text-muted">25 أغسطس</td>
+                      <td>Home seeker</td>
+                      <td class="text-muted">Aug 25</td>
                       <td>
                         <span class="status status--muted no-dot">0</span>
                       </td>
-                      <td><span class="status status--success">فعّال</span></td>
+                      <td><span class="status status--success">Active</span></td>
                       <td>
                         <button
                           type="button"
                           class="btn btn-sm btn-outline-danger"
                           data-action="suspend"
-                          aria-label="إيقاف محمد العلي"
+                          aria-label="Suspend Mohammad Al Ali"
                         >
-                          إيقاف
+                          Suspend
                         </button>
                       </td>
                     </tr>
@@ -357,24 +354,24 @@
                           <span class="avatar">E</span
                           ><span
                             ><b>Emily Carter</b
-                            ><small dir="ltr">emily.c@example.com</small></span
+                            ><small>emily.c@example.com</small></span
                           >
                         </div>
                       </td>
-                      <td>باحث عن سكن</td>
-                      <td class="text-muted">20 أغسطس</td>
+                      <td>Home seeker</td>
+                      <td class="text-muted">Aug 20</td>
                       <td>
                         <span class="status status--pending no-dot">2</span>
                       </td>
-                      <td><span class="status status--success">فعّال</span></td>
+                      <td><span class="status status--success">Active</span></td>
                       <td>
                         <button
                           type="button"
                           class="btn btn-sm btn-outline-danger"
                           data-action="suspend"
-                          aria-label="إيقاف Emily Carter"
+                          aria-label="Suspend Emily Carter"
                         >
-                          إيقاف
+                          Suspend
                         </button>
                       </td>
                     </tr>
@@ -384,7 +381,7 @@
             </div>
           </section>
 
-          <!-- ===== مخالفات الشات ===== -->
+          <!-- ===== Chat violations ===== -->
           <section
             class="tab-pane fade"
             id="tab-violations"
@@ -394,8 +391,8 @@
             <div class="alert-soft mb-3 small">
               <i class="bi bi-shield-exclamation"></i>
               <span
-                >كل رسالة فيها رقم أو إيميل أو رابط بتنحجب وبتنسجل هون. بعد 3
-                مخالفات بيوصلك تنبيه.</span
+                >Any message containing a phone number, email or link is blocked
+                and logged here. You'll get an alert after 3 violations.</span
               >
             </div>
             <div class="panel panel-table">
@@ -403,20 +400,22 @@
                 <table class="table bt-table violations-table">
                   <thead>
                     <tr>
-                      <th scope="col">المستخدم</th>
-                      <th scope="col">النوع</th>
-                      <th scope="col">الرسالة المحجوبة</th>
-                      <th scope="col">التاريخ</th>
-                      <th scope="col">المجموع</th>
-                      <th scope="col">إجراء</th>
+                      <th scope="col">User</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Blocked message</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Total</th>
+                      <th scope="col">Action</th>
                     </tr>
                   </thead>
                   <tbody id="violationsBody">
                     <tr>
-                      <td class="fw-semibold">فادي منصور</td>
-                      <td>رقم هاتف</td>
-                      <td><span class="blocked-msg">رقمي 079•••••••</span></td>
-                      <td class="text-muted">اليوم 10:02 ص</td>
+                      <td class="fw-semibold">Fadi Mansour</td>
+                      <td>Phone number</td>
+                      <td>
+                        <span class="blocked-msg">My number is 079•••••••</span>
+                      </td>
+                      <td class="text-muted">Today 10:02 AM</td>
                       <td>
                         <span class="status status--danger no-dot">4</span>
                       </td>
@@ -426,19 +425,17 @@
                           class="btn btn-sm btn-outline-danger"
                           data-action="suspend"
                         >
-                          إيقاف الحساب
+                          Suspend account
                         </button>
                       </td>
                     </tr>
                     <tr>
                       <td class="fw-semibold">Emily Carter</td>
-                      <td>واتساب</td>
+                      <td>WhatsApp</td>
                       <td>
-                        <span class="blocked-msg" dir="ltr"
-                          >add me on whats•••</span
-                        >
+                        <span class="blocked-msg">add me on whats•••</span>
                       </td>
-                      <td class="text-muted">أمس</td>
+                      <td class="text-muted">Yesterday</td>
                       <td>
                         <span class="status status--pending no-dot">2</span>
                       </td>
@@ -448,17 +445,17 @@
                           class="btn btn-sm btn-outline-primary"
                           data-action="warn"
                         >
-                          إرسال تحذير
+                          Send warning
                         </button>
                       </td>
                     </tr>
                     <tr>
-                      <td class="fw-semibold">أبو أحمد</td>
-                      <td>رقم هاتف</td>
+                      <td class="fw-semibold">Abu Ahmad</td>
+                      <td>Phone number</td>
                       <td>
-                        <span class="blocked-msg">اتصلي على 078•••••••</span>
+                        <span class="blocked-msg">Call me on 078•••••••</span>
                       </td>
-                      <td class="text-muted">أمس</td>
+                      <td class="text-muted">Yesterday</td>
                       <td>
                         <span class="status status--pending no-dot">1</span>
                       </td>
@@ -468,19 +465,17 @@
                           class="btn btn-sm btn-outline-primary"
                           data-action="warn"
                         >
-                          إرسال تحذير
+                          Send warning
                         </button>
                       </td>
                     </tr>
                     <tr>
-                      <td class="fw-semibold">فادي منصور</td>
-                      <td>إيميل</td>
+                      <td class="fw-semibold">Fadi Mansour</td>
+                      <td>Email</td>
                       <td>
-                        <span class="blocked-msg" dir="ltr"
-                          >fadi•••@gmail.com</span
-                        >
+                        <span class="blocked-msg">fadi•••@gmail.com</span>
                       </td>
-                      <td class="text-muted">5 أكتوبر</td>
+                      <td class="text-muted">Oct 5</td>
                       <td>
                         <span class="status status--danger no-dot">4</span>
                       </td>
@@ -490,7 +485,7 @@
                           class="btn btn-sm btn-outline-danger"
                           data-action="suspend"
                         >
-                          إيقاف الحساب
+                          Suspend account
                         </button>
                       </td>
                     </tr>
@@ -504,8 +499,5 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/config.js"></script>
-    <script src="../assets/js/app.js"></script>
-    <script src="../assets/js/pages/admin/users.js"></script>
   </body>
 </html>
