@@ -17,6 +17,14 @@
     <link rel="stylesheet" href="../assets/css/pages/admin.css" />
   </head>
   <body data-role="admin" data-page="dashboard">
+    <!-- Desktop: collapses the sidebar to an icon rail (CSS only) -->
+    <input
+      type="checkbox"
+      class="sidebar-toggle"
+      id="sidebarToggle"
+      aria-label="Collapse the menu"
+    />
+
     <!-- ===== Topbar ===== -->
     <header class="app-topbar">
       <button
@@ -28,6 +36,14 @@
       >
         <i class="bi bi-list"></i>
       </button>
+      <label
+        for="sidebarToggle"
+        class="icon-btn sidebar-burger d-none d-lg-inline-flex"
+        title="Collapse or expand the menu"
+        aria-hidden="true"
+      >
+        <i class="bi bi-list"></i>
+      </label>
       <a class="brand" href="dashboard.html"
         ><span class="brand-mark">B</span><span>Bayti</span></a
       >
@@ -119,24 +135,24 @@
         </div>
         <div class="offcanvas-body">
           <div class="side-label">Admin</div>
-          <a class="side-link active" href="dashboard.html" aria-current="page"
+          <a class="side-link active" href="dashboard.html" aria-current="page" title="Dashboard"
             ><i class="bi bi-grid-1x2"></i
             ><span class="flex-grow-1">Dashboard</span></a
           >
-          <a class="side-link" href="verifications.html"
+          <a class="side-link" href="verifications.html" title="Verifications"
             ><i class="bi bi-patch-check"></i
             ><span class="flex-grow-1">Verifications</span
             ><span class="side-badge">4</span></a
           >
-          <a class="side-link" href="users.html"
+          <a class="side-link" href="users.html" title="Users"
             ><i class="bi bi-people"></i
             ><span class="flex-grow-1">Users</span></a
           >
-          <a class="side-link" href="places.html"
+          <a class="side-link" href="places.html" title="Areas &amp; places"
             ><i class="bi bi-geo-alt"></i
             ><span class="flex-grow-1">Areas &amp; places</span></a
           >
-          <a class="side-link" href="chat.html"
+          <a class="side-link" href="chat.html" title="Messages"
             ><i class="bi bi-chat-dots"></i
             ><span class="flex-grow-1">Messages</span
             ><span class="side-badge">2</span></a

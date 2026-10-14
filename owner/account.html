@@ -17,6 +17,14 @@
     <link rel="stylesheet" href="../assets/css/pages/owner.css" />
   </head>
   <body data-role="owner" data-page="account">
+    <!-- Desktop: collapses the sidebar to an icon rail (CSS only) -->
+    <input
+      type="checkbox"
+      class="sidebar-toggle"
+      id="sidebarToggle"
+      aria-label="Collapse the menu"
+    />
+
     <!-- ===== Topbar ===== -->
     <header class="app-topbar">
       <button
@@ -28,6 +36,14 @@
       >
         <i class="bi bi-list"></i>
       </button>
+      <label
+        for="sidebarToggle"
+        class="icon-btn sidebar-burger d-none d-lg-inline-flex"
+        title="Collapse or expand the menu"
+        aria-hidden="true"
+      >
+        <i class="bi bi-list"></i>
+      </label>
       <a class="brand" href="dashboard.html"
         ><span class="brand-mark">B</span><span>Bayti</span></a
       >
@@ -137,29 +153,29 @@
         </div>
         <div class="offcanvas-body">
           <div class="side-label">Property owner</div>
-          <a class="side-link" href="dashboard.html"
+          <a class="side-link" href="dashboard.html" title="Dashboard"
             ><i class="bi bi-grid-1x2"></i
             ><span class="flex-grow-1">Dashboard</span></a
           >
-          <a class="side-link" href="properties.html"
+          <a class="side-link" href="properties.html" title="My properties"
             ><i class="bi bi-house-door"></i
             ><span class="flex-grow-1">My properties</span></a
           >
-          <a class="side-link" href="property-form.html"
+          <a class="side-link" href="property-form.html" title="Add property"
             ><i class="bi bi-plus-square"></i
             ><span class="flex-grow-1">Add property</span></a
           >
-          <a class="side-link" href="requests.html"
+          <a class="side-link" href="requests.html" title="Requests &amp; viewings"
             ><i class="bi bi-inbox"></i
             ><span class="flex-grow-1">Requests &amp; viewings</span
             ><span class="side-badge">3</span></a
           >
-          <a class="side-link" href="chat.html"
+          <a class="side-link" href="chat.html" title="Messages"
             ><i class="bi bi-chat-dots"></i
             ><span class="flex-grow-1">Messages</span
             ><span class="side-badge">1</span></a
           >
-          <a class="side-link active" href="account.html" aria-current="page"
+          <a class="side-link active" href="account.html" aria-current="page" title="My account"
             ><i class="bi bi-person-badge"></i
             ><span class="flex-grow-1">My account</span></a
           >
