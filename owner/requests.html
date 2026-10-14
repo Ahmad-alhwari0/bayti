@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bayti — Requests &amp; viewings</title>
+    <title>Bayti — Booking requests</title>
 
     <link
       rel="stylesheet"
@@ -81,7 +81,7 @@
                   ><i class="bi bi-inbox"></i
                 ></span>
                 <span class="small">
-                  <span class="d-block">New viewing request from Sara Khaled</span>
+                  <span class="d-block">New booking request from Sara Khaled</span>
                   <span class="text-muted" style="font-size: 0.72rem"
                     >10 minutes ago</span
                   >
@@ -165,9 +165,9 @@
             ><i class="bi bi-plus-square"></i
             ><span class="flex-grow-1">Add property</span></a
           >
-          <a class="side-link active" href="requests.html" aria-current="page" title="Requests &amp; viewings"
+          <a class="side-link active" href="requests.html" aria-current="page" title="Booking requests"
             ><i class="bi bi-inbox"></i
-            ><span class="flex-grow-1">Requests &amp; viewings</span
+            ><span class="flex-grow-1">Booking requests</span
             ><span class="side-badge">3</span></a
           >
           <a class="side-link" href="chat.html" title="Messages"
@@ -187,7 +187,7 @@
         <!-- 1. Page header -->
         <div class="page-head">
           <div>
-            <h1>Requests &amp; viewings</h1>
+            <h1>Booking requests</h1>
             <p>
               Reply to requests quickly — seekers prefer owners who respond
               within hours.
@@ -195,44 +195,8 @@
           </div>
         </div>
 
-        <!-- 2. Tabs -->
-        <ul class="nav seg-tabs mb-3" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link active"
-              data-bs-toggle="tab"
-              data-bs-target="#tab-requests"
-              type="button"
-              role="tab"
-              aria-controls="tab-requests"
-              aria-selected="true"
-            >
-              Booking requests<span class="count">5</span>
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              data-bs-toggle="tab"
-              data-bs-target="#tab-slots"
-              type="button"
-              role="tab"
-              aria-controls="tab-slots"
-              aria-selected="false"
-            >
-              Viewing times<span class="count">3</span>
-            </button>
-          </li>
-        </ul>
-
-        <div class="tab-content">
-          <!-- ===== Booking requests ===== -->
-          <section
-            class="tab-pane fade show active"
-            id="tab-requests"
-            role="tabpanel"
-            tabindex="0"
-          >
+          <!-- ===== 2. Booking requests ===== -->
+          <section aria-label="Booking requests">
             <!-- Filters -->
             <div
               class="d-flex flex-wrap gap-2 mb-3"
@@ -494,136 +458,6 @@
               </article>
             </div>
           </section>
-
-          <!-- ===== Viewing times ===== -->
-          <section
-            class="tab-pane fade"
-            id="tab-slots"
-            role="tabpanel"
-            tabindex="0"
-          >
-            <div class="row g-4 align-items-start">
-              <!-- Current times -->
-              <div class="col-lg-7">
-                <div class="panel">
-                  <ul class="list-clean" id="slotsList">
-                    <li class="list-row flex-wrap" data-slot="1">
-                      <span class="day-tile"
-                        ><i class="bi bi-clock"></i>Thu</span
-                      >
-                      <div class="grow flex-main">
-                        <b class="d-block">5:00 – 7:00 PM</b>
-                        <small>Studio — Al Jubeiha</small>
-                      </div>
-                      <span class="status status--info">1 booked</span>
-                      <button
-                        type="button"
-                        class="btn btn-link btn-square btn-delete"
-                        data-action="delete-slot"
-                        aria-label="Delete time slot"
-                      >
-                        <i class="bi bi-trash3"></i>
-                      </button>
-                    </li>
-                    <li class="list-row flex-wrap" data-slot="2">
-                      <span class="day-tile"
-                        ><i class="bi bi-clock"></i>Sat</span
-                      >
-                      <div class="grow flex-main">
-                        <b class="d-block">11:00 AM – 1:00 PM</b>
-                        <small>Studio — Al Jubeiha</small>
-                      </div>
-                      <span class="status status--muted">Open</span>
-                      <button
-                        type="button"
-                        class="btn btn-link btn-square btn-delete"
-                        data-action="delete-slot"
-                        aria-label="Delete time slot"
-                      >
-                        <i class="bi bi-trash3"></i>
-                      </button>
-                    </li>
-                    <li class="list-row flex-wrap" data-slot="3">
-                      <span class="day-tile"
-                        ><i class="bi bi-clock"></i>Sat</span
-                      >
-                      <div class="grow flex-main">
-                        <b class="d-block">4:00 – 6:00 PM</b>
-                        <small>Room in a shared apartment — Al Jubeiha</small>
-                      </div>
-                      <span class="status status--info">2 booked</span>
-                      <button
-                        type="button"
-                        class="btn btn-link btn-square btn-delete"
-                        data-action="delete-slot"
-                        aria-label="Delete time slot"
-                      >
-                        <i class="bi bi-trash3"></i>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- Add a time -->
-              <div class="col-lg-5">
-                <form class="panel" id="slotForm">
-                  <h2 class="h5 mb-3">Add a viewing time</h2>
-                  <div class="mb-3">
-                    <label for="sProperty" class="form-label">Property</label>
-                    <select class="form-select" id="sProperty" name="property">
-                      <option value="1" selected>
-                        Studio — Al Jubeiha
-                      </option>
-                      <option value="2">
-                        Room in a shared apartment — Al Jubeiha
-                      </option>
-                      <option value="3">3-bedroom apartment — Khalda</option>
-                      <option value="4">Studio — Sweileh</option>
-                    </select>
-                  </div>
-                  <div class="mb-3">
-                    <label for="sDay" class="form-label">Day</label>
-                    <select class="form-select" id="sDay" name="day">
-                      <option value="sun" selected>Sunday</option>
-                      <option value="mon">Monday</option>
-                      <option value="tue">Tuesday</option>
-                      <option value="wed">Wednesday</option>
-                      <option value="thu">Thursday</option>
-                      <option value="fri">Friday</option>
-                      <option value="sat">Saturday</option>
-                    </select>
-                  </div>
-                  <div class="row g-2 mb-3">
-                    <div class="col-6">
-                      <label for="sFrom" class="form-label">From</label>
-                      <input
-                        type="time"
-                        class="form-control"
-                        id="sFrom"
-                        name="from"
-                        value="17:00"
-                      />
-                    </div>
-                    <div class="col-6">
-                      <label for="sTo" class="form-label">To</label>
-                      <input
-                        type="time"
-                        class="form-control"
-                        id="sTo"
-                        name="to"
-                        value="19:00"
-                      />
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary w-100">
-                    Add time
-                  </button>
-                </form>
-              </div>
-            </div>
-          </section>
-        </div>
       </main>
     </div>
 
