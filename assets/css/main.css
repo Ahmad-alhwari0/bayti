@@ -2587,10 +2587,12 @@ html[dir="ltr"] .dir-flip {
   justify-content: center;
   border: 2px solid var(--bt-surface);
 }
-.app-nav .icon-btn {
+.app-nav .icon-btn,
+.app-topbar a.icon-btn {
   text-decoration: none;
 }
-.app-nav .icon-btn.is-active {
+.app-nav .icon-btn.is-active,
+.app-topbar .icon-btn.is-active {
   background: var(--bt-primary-soft);
   color: var(--bt-primary);
 }

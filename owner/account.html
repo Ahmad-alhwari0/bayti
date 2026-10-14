@@ -32,6 +32,14 @@
         ><span class="brand-mark">B</span><span>Bayti</span></a
       >
       <div class="ms-auto d-flex align-items-center gap-1">
+        <!-- Messages: icon with unread count -->
+        <a
+          class="icon-btn"
+          href="chat.html"
+          aria-label="Messages, 1 unread"
+        >
+          <i class="bi bi-chat-dots"></i><span class="icon-badge">1</span>
+        </a>
         <div class="dropdown">
           <button
             class="icon-btn"
@@ -85,17 +93,17 @@
           </div>
         </div>
         <div class="dropdown">
-          <button class="app-user" type="button" data-bs-toggle="dropdown">
+          <button
+            class="app-user app-user--avatar"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            aria-label="Account menu, Abu Ahmad"
+          >
             <span class="avatar">A</span>
-            <span class="d-none d-md-inline text-start lh-sm">
-              <span class="d-block small fw-semibold">Abu Ahmad</span>
-              <!-- <span class="d-block text-muted" style="font-size: 0.72rem"
-                >Property owner</span
-              > -->
-            </span>
-            <i class="bi bi-chevron-down small text-muted"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+            <li><h6 class="dropdown-header">Abu Ahmad</h6></li>
             <li><a class="dropdown-item" href="account.html">My account</a></li>
             <li><hr class="dropdown-divider" /></li>
             <li>
@@ -145,11 +153,6 @@
             ><i class="bi bi-inbox"></i
             ><span class="flex-grow-1">Requests &amp; viewings</span
             ><span class="side-badge">3</span></a
-          >
-          <a class="side-link" href="chat.html"
-            ><i class="bi bi-chat-dots"></i
-            ><span class="flex-grow-1">Messages</span
-            ><span class="side-badge">1</span></a
           >
           <a class="side-link active" href="account.html" aria-current="page"
             ><i class="bi bi-person-badge"></i
