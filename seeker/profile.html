@@ -79,7 +79,7 @@
                     ></span>
                     <span class="small">
                       <span class="d-block"
-                        >Abu Ahmad confirmed your viewing on Thursday</span
+                        >Abu Ahmad accepted your booking</span
                       >
                       <span class="text-muted" style="font-size: 0.72rem"
                         >1 hour ago</span
@@ -204,7 +204,7 @@
                   </div>
                   <div class="form-check form-switch switch-row">
                     <label class="form-check-label" for="alertBookings"
-                      >Booking and viewing updates</label
+                      >Booking updates</label
                     >
                     <input
                       class="form-check-input"
@@ -301,26 +301,41 @@
                 </div>
               </fieldset>
 
-              <!-- 4. Your daily place -->
+              <!-- 4. Where you want to live -->
               <section class="panel" aria-labelledby="placeTitle">
-                <h2 class="h5 mb-3" id="placeTitle">Your daily place</h2>
-                <div
-                  class="d-flex flex-wrap align-items-center gap-3"
-                  id="dailyPlace"
-                >
-                  <span class="icon-tile icon-tile--lg is-solid"
-                    ><i class="bi bi-mortarboard"></i
-                  ></span>
-                  <div class="flex-grow-1">
-                    <b class="d-block">University of Jordan</b>
-                    <span class="small text-muted"
-                      >University · Al Jubeiha</span
-                    >
+                <h2 class="h5 mb-3" id="placeTitle">Where you want to live</h2>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="city">City</label>
+                    <select class="form-select" id="city" name="city">
+                      <option value="amman" selected>Amman</option>
+                      <option value="irbid">Irbid</option>
+                      <option value="zarqa">Zarqa</option>
+                      <option value="aqaba">Aqaba</option>
+                      <option value="salt">Salt</option>
+                      <option value="madaba">Madaba</option>
+                      <option value="jerash">Jerash</option>
+                      <option value="ajloun">Ajloun</option>
+                      <option value="mafraq">Mafraq</option>
+                      <option value="karak">Karak</option>
+                      <option value="tafilah">Tafilah</option>
+                      <option value="maan">Ma'an</option>
+                    </select>
                   </div>
-                  <input type="hidden" name="placeId" value="ju" />
-                  <button type="button" class="btn btn-outline-primary">
-                    <i class="bi bi-geo-alt me-1"></i>Change place
-                  </button>
+                  <div class="col-md-6">
+                    <label class="form-label" for="area"
+                      >Area <span class="text-muted fw-normal">(optional)</span></label
+                    >
+                    <select class="form-select" id="area" name="area">
+                      <option value="">Any area</option>
+                      <option selected>Al Jubeiha</option>
+                      <option>Abdali</option>
+                      <option>Khalda</option>
+                      <option>Shmeisani</option>
+                      <option>Sweileh</option>
+                      <option>Tla Al Ali</option>
+                    </select>
+                  </div>
                 </div>
               </section>
 

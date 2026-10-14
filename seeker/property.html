@@ -80,7 +80,7 @@
                     ></span>
                     <span class="small">
                       <span class="d-block"
-                        >Abu Ahmad confirmed your viewing on Thursday</span
+                        >Abu Ahmad accepted your booking</span
                       >
                       <span class="text-muted" style="font-size: 0.72rem"
                         >1 hour ago</span
@@ -407,17 +407,8 @@
                 <div class="book-total">
                   <span>Monthly rent</span><span id="bookingTotal">265 JOD</span>
                 </div>
-                <button type="submit" class="btn btn-accent btn-lg w-100 mb-2">
+                <button type="submit" class="btn btn-accent btn-lg w-100 mb-3">
                   Request booking
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-outline-primary w-100 mb-3"
-                  id="bookViewingBtn"
-                  data-bs-toggle="modal"
-                  data-bs-target="#viewingModal"
-                >
-                  Book a viewing
                 </button>
               </form>
               <div class="privacy-note">
@@ -500,77 +491,6 @@
         >
           <i class="bi bi-stars me-1"></i>Ask about the area
         </button>
-
-        <!-- ===== Book a viewing ===== -->
-        <div
-          class="modal fade"
-          id="viewingModal"
-          tabindex="-1"
-          aria-labelledby="viewingTitle"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered">
-            <form class="modal-content" id="viewingForm" action="bookings.html" method="post">
-              <div class="modal-header">
-                <h2 class="modal-title h5" id="viewingTitle">Book a viewing</h2>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <p class="small text-muted">
-                  Pick a time to see <b class="text-body">Studio — Al Jubeiha</b>.
-                  Abu Ahmad will confirm it.
-                </p>
-                <div class="row g-3">
-                  <div class="col-sm-6">
-                    <label class="form-label" for="viewingDate">Day</label>
-                    <input
-                      type="date"
-                      class="form-control"
-                      id="viewingDate"
-                      name="date"
-                      required
-                    />
-                  </div>
-                  <div class="col-sm-6">
-                    <label class="form-label" for="viewingTime">Time</label>
-                    <select class="form-select" id="viewingTime" name="time" required>
-                      <option value="" selected disabled>Choose a time</option>
-                      <option>10:00 AM</option>
-                      <option>12:00 PM</option>
-                      <option>2:00 PM</option>
-                      <option>5:00 PM</option>
-                      <option>7:00 PM</option>
-                    </select>
-                  </div>
-                  <div class="col-12">
-                    <label class="form-label" for="viewingNote"
-                      >Note for the owner
-                      <span class="text-muted fw-normal">(optional)</span></label
-                    >
-                    <textarea
-                      class="form-control"
-                      id="viewingNote"
-                      name="note"
-                      rows="2"
-                      placeholder="e.g. I'll come with my brother"
-                    ></textarea>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-link text-muted" data-bs-dismiss="modal">
-                  Cancel
-                </button>
-                <button type="submit" class="btn btn-primary">Send request</button>
-              </div>
-            </form>
-          </div>
-        </div>
 
         <!-- ===== Report this listing ===== -->
         <div

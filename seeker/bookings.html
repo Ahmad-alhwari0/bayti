@@ -80,7 +80,7 @@
                     ></span>
                     <span class="small">
                       <span class="d-block"
-                        >Abu Ahmad confirmed your viewing on Thursday</span
+                        >Abu Ahmad accepted your booking</span
                       >
                       <span class="text-muted" style="font-size: 0.72rem"
                         >1 hour ago</span
@@ -173,23 +173,9 @@
         </div>
       </div>
 
-      <!-- 2. Bookings / Viewings -->
-      <ul class="nav seg-tabs mb-4" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="bookings-tab" data-bs-toggle="tab" data-bs-target="#tab-bookings" type="button" role="tab" aria-controls="tab-bookings" aria-selected="true">
-            Bookings<span class="count">3</span>
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="viewings-tab" data-bs-toggle="tab" data-bs-target="#tab-viewings" type="button" role="tab" aria-controls="tab-viewings" aria-selected="false">
-            Viewings<span class="count">2</span>
-          </button>
-        </li>
-      </ul>
-
-      <div class="tab-content">
         <!-- ===== Bookings ===== -->
-        <section class="tab-pane fade show active" id="tab-bookings" role="tabpanel" aria-labelledby="bookings-tab" tabindex="0">
+        <!-- 2. Bookings -->
+        <section aria-label="Bookings">
           <div class="bk-list" id="bookingsList">
           <article class="bk-card" data-booking="BK-1042">
             <a href="property.html" class="bk-thumb ph ph-1" tabindex="-1" aria-hidden="true"></a>
@@ -322,105 +308,12 @@
           </div>
         </section>
 
-        <!-- ===== Viewings ===== -->
-        <section class="tab-pane fade" id="tab-viewings" role="tabpanel" aria-labelledby="viewings-tab" tabindex="0">
-          <div class="bk-list" id="viewingsList">
-          <article class="bk-card" data-booking="VW-201">
-            <a href="property.html" class="bk-thumb ph ph-3" tabindex="-1" aria-hidden="true"></a>
-            <div class="bk-body">
-              <div class="bk-top">
-                <a href="property.html" class="bk-title">Room in a shared apartment — Al Jubeiha</a>
-                <span class="status status--success">Confirmed</span>
-              </div>
-              <div class="bk-meta">Al Jubeiha, Amman · Thu, Oct 15 · 5:00 PM</div>
-              <!-- Latest update, sent by the owner -->
-              <div class="bk-update">
-                <span class="avatar">A</span>
-                <p>
-                  <b>Abu Ahmad</b> confirmed your viewing. Ring the bell at building 14.
-                  <small>Oct 11</small>
-                </p>
-              </div>
-            </div>
-            <div class="bk-actions">
-              <a href="tel:+962791234567" class="btn btn-icon-sm" aria-label="Call Abu Ahmad"
-                ><i class="bi bi-telephone"></i
-              ></a>
-              <a href="chat.html" class="btn btn-icon-sm" aria-label="Message Abu Ahmad"
-                ><i class="bi bi-chat-dots"></i
-              ></a>
-              <div class="dropdown">
-                <button
-                  type="button"
-                  class="btn btn-icon-sm"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  aria-label="More options"
-                >
-                  <i class="bi bi-three-dots"></i>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-                  <li><a class="dropdown-item" href="property.html"><i class="bi bi-house-door me-2"></i>View home</a></li>
-                  <li><a class="dropdown-item" href="property.html"><i class="bi bi-calendar-event me-2"></i>Change time</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li><button type="button" class="dropdown-item text-danger" data-bs-toggle="modal" data-bs-target="#cancelModal"><i class="bi bi-x-circle me-2"></i>Cancel viewing</button></li>
-                </ul>
-              </div>
-            </div>
-          </article>
-          <article class="bk-card" data-booking="VW-202">
-            <a href="property.html" class="bk-thumb ph ph-4" tabindex="-1" aria-hidden="true"></a>
-            <div class="bk-body">
-              <div class="bk-top">
-                <a href="property.html" class="bk-title">1-bedroom apartment — Shmeisani</a>
-                <span class="status status--pending">Awaiting reply</span>
-              </div>
-              <div class="bk-meta">Shmeisani, Amman · Sat, Oct 17 · 11:00 AM</div>
-              <!-- Latest update, sent by the owner -->
-              <div class="bk-update is-waiting">
-                <i class="bi bi-hourglass-split"></i>
-                <p>
-                  Waiting for <b>Umm Yazan</b> to confirm this time.
-                  <small>Oct 12</small>
-                </p>
-              </div>
-            </div>
-            <div class="bk-actions">
-              <a href="tel:+962786660202" class="btn btn-icon-sm" aria-label="Call Umm Yazan"
-                ><i class="bi bi-telephone"></i
-              ></a>
-              <a href="chat.html" class="btn btn-icon-sm" aria-label="Message Umm Yazan"
-                ><i class="bi bi-chat-dots"></i
-              ></a>
-              <div class="dropdown">
-                <button
-                  type="button"
-                  class="btn btn-icon-sm"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  aria-label="More options"
-                >
-                  <i class="bi bi-three-dots"></i>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-                  <li><a class="dropdown-item" href="property.html"><i class="bi bi-house-door me-2"></i>View home</a></li>
-                  <li><a class="dropdown-item" href="property.html"><i class="bi bi-calendar-event me-2"></i>Change time</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li><button type="button" class="dropdown-item text-danger" data-bs-toggle="modal" data-bs-target="#cancelModal"><i class="bi bi-x-circle me-2"></i>Cancel viewing</button></li>
-                </ul>
-              </div>
-            </div>
-          </article>
-          </div>
-        </section>
-      </div>
-
-      <!-- ===== Cancel a booking or viewing ===== -->
+      <!-- ===== Cancel a booking request ===== -->
       <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <form class="modal-content" id="cancelForm" method="post">
             <div class="modal-header">
-              <h2 class="modal-title h5" id="cancelTitle">Cancel this?</h2>
+              <h2 class="modal-title h5" id="cancelTitle">Cancel this request?</h2>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
