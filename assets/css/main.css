@@ -2720,3 +2720,19 @@ html[dir="ltr"] .dir-flip {
   padding-inline-start: 0.6em; /* balances the letter spacing */
   font-variant-numeric: tabular-nums;
 }
+
+/* Landing navbar: a link per section */
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+section[id] {
+  scroll-margin-top: var(--bt-topbar-h); /* heading not hidden under the sticky navbar */
+}
+.landing-nav .nav-link {
+  white-space: nowrap;
+}
