@@ -2476,7 +2476,6 @@ html[dir="ltr"] .dir-flip {
 /* Search box in the seeker navbar */
 .nav-search {
   position: relative;
-  margin-inline-start: auto;
   width: 260px;
 }
 .nav-search i {
