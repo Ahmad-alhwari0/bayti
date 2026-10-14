@@ -1,7 +1,22 @@
-# Bayti — Database (ERD)
+# Bayti — Database design
 
-12 tables. Rent is paid directly to the owner, so there are no payment or commission tables;
+Rent is paid directly to the owner, so there are no payment or commission tables;
 Bayti only earns from owner subscriptions.
+
+## 1. ERD (conceptual, Chen notation)
+
+Entities, relationships, cardinalities and the main attributes.
+
+![Bayti ERD](ERD-chen.svg)
+
+- `USER` is specialized (ISA, by role) into `SEEKER`, `OWNER` and `ADMIN`.
+- `PHOTO` is a weak entity: it only exists for a `PROPERTY`.
+- `saves` (seeker ↔ property, M:N) becomes the `favorites` table.
+- `takes part` (user ↔ conversation, M:N) is stored as the two users on each conversation.
+
+## 2. Relational schema (12 tables)
+
+How the ERD maps to tables, with keys.
 
 ```mermaid
 erDiagram
@@ -162,7 +177,7 @@ erDiagram
   }
 ```
 
-## Notes
+## 3. Notes
 
 - **One profile per user:** a seeker has one `seeker_profiles` row, an owner has one `owner_profiles` row, and an admin has neither.
 - **Plans are fixed** (Free 0 · Featured 10 JOD per property per month · Agency 35 JOD per month), so they live in code; `subscriptions.plan` stores the name.
