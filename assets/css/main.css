@@ -2610,3 +2610,36 @@ html[dir="ltr"] .dir-flip {
 .app-user--avatar:focus-visible .avatar {
   box-shadow: 0 0 0 2px var(--bt-surface), 0 0 0 4px var(--bt-primary);
 }
+
+/* Chat: user type next to a name (User / Owner / Admin) */
+.role-tag {
+  display: inline-block;
+  margin-inline-start: 0.3rem;
+  padding: 0.05rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  line-height: 1.5;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.role-tag--user {
+  background: var(--bt-primary-soft);
+  color: var(--bt-primary);
+}
+.role-tag--owner {
+  background: #f6e9e1;
+  color: var(--bt-accent-hover);
+}
+.role-tag--admin {
+  background: var(--bt-primary);
+  color: #fff;
+}
+.chat-item .meta b > span {
+  min-width: 0;
+}
+/* Bayti Support (admin) avatar */
+.avatar--support {
+  background: var(--bt-primary);
+  color: #fff;
+}

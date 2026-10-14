@@ -204,3 +204,12 @@
   padding: 0.15rem 0.65rem;
   white-space: nowrap;
 }
+
+/* ---------- chat.html ---------- */
+.chat-item .meta .prop {
+  color: var(--bt-primary);
+  font-size: 0.75rem;
+}
+.chat-head small.is-online {
+  color: var(--bt-success);
+}
