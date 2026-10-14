@@ -118,7 +118,7 @@
 
           <!-- Page links -->
           <div class="collapse navbar-collapse" id="appNav">
-            <ul class="navbar-nav mx-auto gap-lg-1">
+            <ul class="navbar-nav ms-lg-3 gap-lg-1">
             <li class="nav-item">
               <a class="nav-link active" href="search.html"
                 ><i class="bi bi-stars"></i><span>Discover</span></a
@@ -135,6 +135,22 @@
               >
             </li>
             </ul>
+            <!-- Search: plain GET form, opens the Discover page -->
+            <form
+              class="nav-search"
+              action="search.html"
+              method="get"
+              role="search"
+            >
+              <i class="bi bi-search" aria-hidden="true"></i>
+              <input
+                type="search"
+                class="form-control"
+                name="q"
+                placeholder="Search by neighborhood..."
+                aria-label="Search homes by neighborhood"
+              />
+            </form>
           </div>
         </div>
       </nav>

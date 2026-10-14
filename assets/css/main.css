@@ -2472,3 +2472,43 @@ html[dir="ltr"] .dir-flip {
 .app-page {
   padding-block: 1.75rem 3rem;
 }
+
+/* Search box in the seeker navbar */
+.nav-search {
+  position: relative;
+  margin-inline-start: auto;
+  width: 260px;
+}
+.nav-search i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  inset-inline-start: 0.8rem;
+  color: var(--bt-muted);
+  pointer-events: none;
+}
+.nav-search .form-control {
+  padding-block: 0.45rem;
+  padding-inline-start: 2.3rem;
+  border-radius: 999px;
+  background: var(--bt-bg);
+}
+.nav-search .form-control:focus {
+  background: var(--bt-surface);
+}
+@media (max-width: 991.98px) {
+  .nav-search {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .nav-search {
+    margin-inline-end: 0.75rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .nav-search {
+    width: 180px;
+  }
+}
