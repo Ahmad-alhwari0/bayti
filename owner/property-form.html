@@ -190,7 +190,7 @@
                       class="form-control"
                       id="fTitle"
                       name="title"
-                      value="Furnished studio near the University of Jordan"
+                      value="Studio near the University of Jordan"
                       required
                     />
                   </div>
@@ -236,23 +236,42 @@
                       value="2"
                     />
                   </div>
+                  <fieldset class="col-12">
+                    <legend class="form-label fs-6">Furnished?</legend>
+                    <div
+                      class="d-flex flex-wrap gap-2"
+                      role="radiogroup"
+                      id="furnishing"
+                    >
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        id="fFurnished"
+                        name="furnished"
+                        value="yes"
+                        checked
+                      />
+                      <label class="chip-select" for="fFurnished"
+                        ><i class="bi bi-lamp"></i>Furnished</label
+                      >
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        id="fUnfurnished"
+                        name="furnished"
+                        value="no"
+                      />
+                      <label class="chip-select" for="fUnfurnished"
+                        ><i class="bi bi-square"></i>Unfurnished</label
+                      >
+                    </div>
+                  </fieldset>
                 </div>
 
                 <!-- Amenities -->
                 <fieldset class="mt-3">
                   <legend class="visually-hidden">Amenities</legend>
                   <div class="d-flex flex-wrap gap-2" id="amenities">
-                    <input
-                      type="checkbox"
-                      class="btn-check"
-                      id="amFurnished"
-                      name="amenities"
-                      value="furnished"
-                      checked
-                    />
-                    <label class="chip-select" for="amFurnished"
-                      ><i class="bi bi-house-door"></i>Furnished</label
-                    >
                     <input
                       type="checkbox"
                       class="btn-check"
@@ -470,6 +489,7 @@
                       <option value="jubeiha" selected>Al Jubeiha</option>
                       <option value="sweileh">Sweileh</option>
                       <option value="tla-al-ali">Tla Al Ali</option>
+                      <option value="khalda">Khalda</option>
                     </select>
                   </div>
                   <div class="col-md-8">

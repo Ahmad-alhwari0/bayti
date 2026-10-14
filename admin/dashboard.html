@@ -156,8 +156,8 @@
             <div class="kpi">
               <span class="kpi-icon"><i class="bi bi-house-door"></i></span>
               <div>
-                <b>342</b>
-                <span>Properties</span> <span class="trend">+21</span>
+                <b>6</b>
+                <span>Properties</span> <span class="trend">+1</span>
               </div>
             </div>
           </div>
@@ -165,7 +165,7 @@
             <div class="kpi">
               <span class="kpi-icon"><i class="bi bi-calendar-check"></i></span>
               <div>
-                <b>96</b>
+                <b>4</b>
                 <span>Bookings this month</span>
               </div>
             </div>
@@ -174,55 +174,54 @@
             <div class="kpi">
               <span class="kpi-icon"><i class="bi bi-cash-stack"></i></span>
               <div>
-                <b>2,880 JOD</b>
-                <span>Commissions this month</span>
-                <span class="trend">+29%</span>
+                <b>55 JOD</b>
+                <span>Subscription revenue</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 3. Commissions + awaiting verification -->
+        <!-- 3. Subscription revenue + awaiting verification -->
         <div class="row g-4 mb-4 align-items-start">
           <div class="col-lg-8">
             <section class="panel" aria-labelledby="revTitle">
               <div class="panel-head">
-                <h2 id="revTitle">Commissions · last 6 months</h2>
+                <h2 id="revTitle">Subscription revenue · last 6 months</h2>
                 <span class="small text-muted">In JOD</span>
               </div>
               <div
                 class="bar-chart rev-chart"
                 id="revenueChart"
                 role="img"
-                aria-label="Commissions in JOD: May 1,420, June 1,760, July 2,310, August 2,650, September 2,240, October 2,880"
+                aria-label="Subscription revenue in JOD: May 10, June 10, July 20, August 35, September 45, October 55"
               >
                 <div class="bar-col">
-                  <span>1,420</span>
-                  <div class="bar" style="height: 79px"></div>
+                  <span>10</span>
+                  <div class="bar" style="height: 29px"></div>
                   <span>May</span>
                 </div>
                 <div class="bar-col">
-                  <span>1,760</span>
-                  <div class="bar" style="height: 98px"></div>
+                  <span>10</span>
+                  <div class="bar" style="height: 29px"></div>
                   <span>Jun</span>
                 </div>
                 <div class="bar-col">
-                  <span>2,310</span>
-                  <div class="bar" style="height: 128px"></div>
+                  <span>20</span>
+                  <div class="bar" style="height: 58px"></div>
                   <span>Jul</span>
                 </div>
                 <div class="bar-col">
-                  <span>2,650</span>
-                  <div class="bar" style="height: 147px"></div>
+                  <span>35</span>
+                  <div class="bar" style="height: 102px"></div>
                   <span>Aug</span>
                 </div>
                 <div class="bar-col">
-                  <span>2,240</span>
-                  <div class="bar" style="height: 124px"></div>
+                  <span>45</span>
+                  <div class="bar" style="height: 131px"></div>
                   <span>Sep</span>
                 </div>
                 <div class="bar-col">
-                  <span>2,880</span>
+                  <span>55</span>
                   <div class="bar is-hi" style="height: 160px"></div>
                   <span>Oct</span>
                 </div>
@@ -295,7 +294,7 @@
           <div class="col-lg-8">
             <section class="panel" aria-labelledby="bookingsTitle">
               <div class="panel-head">
-                <h2 id="bookingsTitle">Latest bookings &amp; commissions</h2>
+                <h2 id="bookingsTitle">Latest bookings</h2>
               </div>
               <div class="table-responsive">
                 <table class="table bt-table bookings-table">
@@ -305,7 +304,6 @@
                       <th scope="col">Seeker</th>
                       <th scope="col">Property</th>
                       <th scope="col">Amount</th>
-                      <th scope="col">Commission</th>
                       <th scope="col">Status</th>
                     </tr>
                   </thead>
@@ -315,7 +313,6 @@
                       <td class="fw-medium">Sara Khaled</td>
                       <td>Studio — Al Jubeiha</td>
                       <td>265 JOD</td>
-                      <td class="fw-semibold text-primary-bt">26.5 JOD</td>
                       <td>
                         <span class="status status--info">Payment held</span>
                       </td>
@@ -323,9 +320,8 @@
                     <tr>
                       <td class="text-muted">BK-1041</td>
                       <td class="fw-medium">Khaled Youssef</td>
-                      <td>1-bedroom apartment — Al Jubeiha</td>
-                      <td>305 JOD</td>
-                      <td class="fw-semibold text-primary-bt">30.5 JOD</td>
+                      <td>1-bedroom apartment — Shmeisani</td>
+                      <td>440 JOD</td>
                       <td>
                         <span class="status status--success"
                           >Payment released</span
@@ -337,7 +333,6 @@
                       <td class="fw-medium">Lina Hamdan</td>
                       <td>2-bedroom apartment — Tla Al Ali</td>
                       <td>395 JOD</td>
-                      <td class="fw-semibold text-primary-bt">39.5 JOD</td>
                       <td>
                         <span class="status status--success"
                           >Payment released</span
@@ -349,7 +344,6 @@
                       <td class="fw-medium">Omar Zaid</td>
                       <td>Studio — Sweileh</td>
                       <td>220 JOD</td>
-                      <td class="fw-semibold text-primary-bt">22 JOD</td>
                       <td>
                         <span class="status status--muted">Cancelled</span>
                       </td>
@@ -425,13 +419,38 @@
                   </div>
                   <span class="status status--success">Active</span>
                 </li>
+              </ul>
+            </section>
+
+            <!-- Active subscriptions -->
+            <section class="panel" aria-labelledby="subsTitle">
+              <div class="panel-head">
+                <h2 id="subsTitle">Active subscriptions</h2>
+              </div>
+              <ul class="list-clean" id="subsList">
                 <li class="list-row">
-                  <i class="bi bi-star-fill ic-star" aria-hidden="true"></i>
+                  <span class="avatar">A</span>
                   <div class="grow">
-                    <b class="d-block small">Dar Al Sakan</b
-                    ><small>2-bedroom apartment — Abdali · until Oct 2</small>
+                    <b class="d-block small">Abu Ahmad</b
+                    ><small>Featured · 1 property</small>
                   </div>
-                  <span class="status status--muted">Expired</span>
+                  <span class="small fw-semibold">10 JOD/month</span>
+                </li>
+                <li class="list-row">
+                  <span class="avatar">R</span>
+                  <div class="grow">
+                    <b class="d-block small">Al Riyada Real Estate Office</b
+                    ><small>Agency</small>
+                  </div>
+                  <span class="small fw-semibold">35 JOD/month</span>
+                </li>
+                <li class="list-row">
+                  <span class="avatar">U</span>
+                  <div class="grow">
+                    <b class="d-block small">Umm Yazan</b
+                    ><small>Featured · 1 property</small>
+                  </div>
+                  <span class="small fw-semibold">10 JOD/month</span>
                 </li>
               </ul>
             </section>
