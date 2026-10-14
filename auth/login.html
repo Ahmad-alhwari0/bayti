@@ -57,22 +57,29 @@
           ></a>
         </div>
 
-        <!-- action: where the form goes on "Log in". required on fields = the browser checks they are not empty -->
-        <form class="auth-form" id="loginForm" action="../seeker/search.html">
+        <!-- After log in (decided by the backend): seekers go to Discover,
+             owners to their dashboard, admins to the admin dashboard -->
+        <form
+          class="auth-form"
+          id="loginForm"
+          action="../seeker/search.html"
+          method="post"
+        >
           <h1>Welcome back</h1>
           <p class="text-muted mb-4">Log in to pick up where you left off.</p>
 
           <div class="mb-3">
-            <label class="form-label" for="email">Email</label>
+            <label class="form-label" for="login">Email or phone number</label>
             <div class="input-icon">
-              <i class="bi bi-envelope"></i>
+              <i class="bi bi-person"></i>
               <input
-                type="email"
+                type="text"
                 class="form-control"
-                id="email"
-                autocomplete="email"
+                id="login"
+                name="login"
+                autocomplete="username"
                 required
-                placeholder="name@example.com"
+                placeholder="name@example.com or 07X XXX XXXX"
               />
             </div>
           </div>
@@ -85,6 +92,7 @@
                 type="password"
                 class="form-control pe-5"
                 id="password"
+                name="password"
                 autocomplete="current-password"
                 required
                 placeholder="••••••••"
@@ -108,6 +116,8 @@
                 class="form-check-input"
                 type="checkbox"
                 id="remember"
+                name="remember"
+                value="1"
                 checked
               />
               <label
@@ -115,7 +125,7 @@
                 for="remember"
               >Remember me</label>
             </div>
-            <a href="#" class="small">Forgot password?</a>
+            <a href="forgot-password.html" class="small">Forgot password?</a>
           </div>
 
           <button
@@ -127,28 +137,28 @@
             <span>or</span>
           </div>
 
-          <button
-            type="button"
-            class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center gap-2"
-          >
-            <i class="bi bi-google"></i
-            ><span>Continue with Google</span>
-          </button>
+          <!-- Log in with Google / Apple -->
+          <div class="d-grid gap-2">
+            <button
+              type="button"
+              class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center gap-2"
+              data-provider="google"
+            >
+              <i class="bi bi-google"></i><span>Continue with Google</span>
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center gap-2"
+              data-provider="apple"
+            >
+              <i class="bi bi-apple"></i><span>Continue with Apple</span>
+            </button>
+          </div>
 
-          <p class="text-center small mt-4 mb-2">
+          <p class="text-center small mt-4 mb-0">
             <span class="text-muted">Don't have an account?</span>
             <a href="register.html" class="fw-semibold">Create one</a>
           </p>
-
-          <!-- For the committee demo: quick login for each role -->
-          <div class="text-center small text-muted border-top pt-3 mt-3">
-            <span>Demo login:</span>
-            <a href="../seeker/search.html" class="mx-1">Home seeker</a
-            >·
-            <a href="../owner/dashboard.html" class="mx-1">Property owner</a
-            >·
-            <a href="../admin/dashboard.html" class="mx-1">Admin</a>
-          </div>
         </form>
       </section>
     </main>
