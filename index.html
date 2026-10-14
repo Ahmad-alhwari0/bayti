@@ -156,9 +156,26 @@
                 neighborhood.
               </p>
             </div>
-            <a href="seeker/search.html" class="btn btn-outline-primary"
-              >Browse all homes <i class="bi bi-arrow-right"></i
-            ></a>
+            <!-- Category picker: a plain GET form, opens the search page -->
+            <form
+              class="d-flex flex-wrap gap-2 category-form"
+              action="seeker/search.html"
+              method="get"
+              role="search"
+            >
+              <label for="homeCategory" class="visually-hidden">Category</label>
+              <select class="form-select" id="homeCategory" name="category">
+                <option value="">All categories</option>
+                <option value="studio">Studio</option>
+                <option value="villa">Villa</option>
+                <option value="mansion">Mansion</option>
+                <option value="detached-house">Detached house</option>
+                <option value="apartment">Apartment</option>
+              </select>
+              <button type="submit" class="btn btn-outline-primary">
+                Browse homes <i class="bi bi-arrow-right"></i>
+              </button>
+            </form>
           </div>
 
           <div class="row g-4" id="homesGrid">

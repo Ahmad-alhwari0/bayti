@@ -2428,3 +2428,7 @@ html[dir="ltr"] .dir-flip {
 .home-card .stretched-link:focus {
   outline: none;
 }
+.category-form .form-select {
+  width: auto;
+  min-width: 190px;
+}
