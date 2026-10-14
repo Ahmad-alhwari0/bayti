@@ -21,10 +21,6 @@
   --bs-btn-active-border-color: var(--bt-danger);
   --bs-btn-focus-shadow-rgb: 180, 35, 24;
 }
-/* Number badge without the dot */
-.status.no-dot::before {
-  display: none;
-}
 /* Square icon button (edit) */
 .btn-icon {
   width: 40px;

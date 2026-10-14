@@ -16,12 +16,6 @@
   justify-content: center;
   flex-shrink: 0;
 }
-.icon-tile--lg {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  font-size: 1.3rem;
-}
 .icon-tile.is-solid {
   background: var(--bt-primary);
   color: #fff;
