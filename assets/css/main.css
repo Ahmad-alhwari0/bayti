@@ -2512,3 +2512,30 @@ html[dir="ltr"] .dir-flip {
     width: 180px;
   }
 }
+
+/* Count badge on the corner of a navbar icon (e.g. unread messages) */
+.icon-badge {
+  position: absolute;
+  top: 3px;
+  inset-inline-end: 1px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--bt-accent);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--bt-surface);
+}
+.app-nav .icon-btn {
+  text-decoration: none;
+}
+.app-nav .icon-btn.is-active {
+  background: var(--bt-primary-soft);
+  color: var(--bt-primary);
+}
