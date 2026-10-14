@@ -166,6 +166,7 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.75rem;
   max-width: 1040px;
+  margin-inline: auto; /* centered */
 }
 .discover-switch .nav-link {
   width: 100%;
