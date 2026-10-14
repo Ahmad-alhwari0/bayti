@@ -414,7 +414,8 @@ h6,
   gap: 0.5rem;
   padding-inline: 1rem;
 }
-.app-topbar .icon-btn {
+.app-topbar .icon-btn,
+.app-nav .icon-btn {
   width: 40px;
   height: 40px;
   border-radius: 10px;
@@ -427,7 +428,8 @@ h6,
   position: relative;
   font-size: 1.2rem;
 }
-.app-topbar .icon-btn:hover {
+.app-topbar .icon-btn:hover,
+.app-nav .icon-btn:hover {
   background: var(--bt-bg);
   color: var(--bt-primary);
 }
@@ -2431,4 +2433,42 @@ html[dir="ltr"] .dir-flip {
 .category-form .form-select {
   width: auto;
   min-width: 190px;
+}
+
+/* =========================================================
+   Seeker pages — top navbar instead of the dashboard sidebar
+   ========================================================= */
+.app-nav {
+  background: var(--bt-surface);
+  border-bottom-color: var(--bt-line);
+}
+.app-nav .nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--bt-radius-sm);
+}
+.app-nav .nav-link:hover {
+  background: var(--bt-bg);
+}
+.app-nav .nav-link.active {
+  color: var(--bt-primary);
+  background: var(--bt-primary-soft);
+  font-weight: 600;
+}
+.app-nav .nav-link .side-badge {
+  margin-inline-start: 0.1rem;
+}
+/* On phones the links open as a list under the bar */
+@media (max-width: 991.98px) {
+  .app-nav .navbar-collapse {
+    padding-block: 0.5rem 1rem;
+  }
+  .app-nav .nav-link {
+    display: flex;
+  }
+}
+.app-page {
+  padding-block: 1.75rem 3rem;
 }

@@ -17,143 +17,135 @@
     <link rel="stylesheet" href="../assets/css/pages/seeker.css" />
   </head>
   <body data-role="seeker" data-page="profile">
-    <!-- ===== Topbar ===== -->
-    <header class="app-topbar">
-      <button
-        class="icon-btn d-lg-none"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#appSidebar"
-        aria-label="Menu"
-      >
-        <i class="bi bi-list"></i>
-      </button>
-      <a class="brand" href="search.html"
-        ><span class="brand-mark">B</span><span>Bayti</span></a
-      >
-      <div class="ms-auto d-flex align-items-center gap-1">
-        <div class="dropdown">
-          <button
-            class="icon-btn"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-label="Notifications"
-          >
-            <i class="bi bi-bell"></i><span class="dot"></span>
-          </button>
-          <div
-            class="dropdown-menu dropdown-menu-end shadow-sm p-0"
-            style="width: 320px"
-          >
-            <div class="px-3 py-2 border-bottom fw-semibold">Notifications</div>
-            <div class="py-1">
-              <a
-                class="dropdown-item d-flex gap-2 py-2 text-wrap"
-                href="property.html"
-              >
-                <span
-                  class="kpi-icon flex-shrink-0"
-                  style="width: 34px; height: 34px; font-size: 1rem"
-                  ><i class="bi bi-stars"></i
-                ></span>
-                <span class="small">
-                  <span class="d-block"
-                    >A new home just listed in Al Jubeiha with a 92% match</span
-                  >
-                  <span class="text-muted" style="font-size: 0.72rem"
-                    >10 minutes ago</span
-                  >
-                </span>
-              </a>
-              <a
-                class="dropdown-item d-flex gap-2 py-2 text-wrap"
-                href="bookings.html"
-              >
-                <span
-                  class="kpi-icon flex-shrink-0"
-                  style="width: 34px; height: 34px; font-size: 1rem"
-                  ><i class="bi bi-check2-circle"></i
-                ></span>
-                <span class="small">
-                  <span class="d-block"
-                    >Abu Ahmad confirmed your viewing on Thursday</span
-                  >
-                  <span class="text-muted" style="font-size: 0.72rem"
-                    >1 hour ago</span
-                  >
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="app-user" type="button" data-bs-toggle="dropdown">
-            <span class="avatar">S</span>
-            <span class="d-none d-md-inline text-start lh-sm">
-              <span class="d-block small fw-semibold">Sara Khaled</span>
-              <!-- <span class="d-block text-muted" style="font-size: 0.72rem"
-                >Home seeker</span
-              > -->
-            </span>
-            <i class="bi bi-chevron-down small text-muted"></i>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-            <li><a class="dropdown-item" href="profile.html">My profile</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li>
-              <a class="dropdown-item text-danger" href="../index.html"
-                >Log out</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
-
-    <div class="app-shell">
-      <!-- ===== Sidebar ===== -->
-      <aside
-        class="app-sidebar offcanvas-lg offcanvas-start"
-        tabindex="-1"
-        id="appSidebar"
-      >
-        <div class="offcanvas-header border-bottom">
-          <a class="brand" href="../index.html"
+    <!-- ===== Navbar ===== -->
+    <header class="site-header app-nav">
+      <nav class="navbar navbar-expand-lg" aria-label="Main">
+        <div class="container">
+          <a class="brand" href="search.html"
             ><span class="brand-mark">B</span><span>Bayti</span></a
           >
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="offcanvas"
-            data-bs-target="#appSidebar"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="offcanvas-body">
-          <div class="side-label">Home seeker</div>
-          <a class="side-link" href="search.html"
-            ><i class="bi bi-stars"></i
-            ><span class="flex-grow-1">Discover</span></a
-          >
-          <a class="side-link" href="bookings.html"
-            ><i class="bi bi-calendar-check"></i
-            ><span class="flex-grow-1">My bookings</span
-            ><span class="side-badge">1</span></a
-          >
-          <a class="side-link" href="chat.html"
-            ><i class="bi bi-chat-dots"></i
-            ><span class="flex-grow-1">Messages</span
-            ><span class="side-badge">2</span></a
-          >
-          <a class="side-link active" href="profile.html" aria-current="page"
-            ><i class="bi bi-sliders"></i
-            ><span class="flex-grow-1">Profile &amp; priorities</span></a
-          >
-        </div>
-      </aside>
 
-      <!-- ===== Content ===== -->
-      <main class="app-main">
+          <!-- Notifications + user menu (stay visible on phones) -->
+          <div class="d-flex align-items-center gap-1 ms-auto order-lg-last">
+            <div class="dropdown">
+              <button
+                class="icon-btn"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-label="Notifications"
+              >
+                <i class="bi bi-bell"></i><span class="dot"></span>
+              </button>
+              <div
+                class="dropdown-menu dropdown-menu-end shadow-sm p-0"
+                style="width: 320px"
+              >
+                <div class="px-3 py-2 border-bottom fw-semibold">Notifications</div>
+                <div class="py-1">
+                  <a
+                    class="dropdown-item d-flex gap-2 py-2 text-wrap"
+                    href="property.html"
+                  >
+                    <span
+                      class="kpi-icon flex-shrink-0"
+                      style="width: 34px; height: 34px; font-size: 1rem"
+                      ><i class="bi bi-stars"></i
+                    ></span>
+                    <span class="small">
+                      <span class="d-block"
+                        >A new home just listed in Al Jubeiha with a 92% match</span
+                      >
+                      <span class="text-muted" style="font-size: 0.72rem"
+                        >10 minutes ago</span
+                      >
+                    </span>
+                  </a>
+                  <a
+                    class="dropdown-item d-flex gap-2 py-2 text-wrap"
+                    href="bookings.html"
+                  >
+                    <span
+                      class="kpi-icon flex-shrink-0"
+                      style="width: 34px; height: 34px; font-size: 1rem"
+                      ><i class="bi bi-check2-circle"></i
+                    ></span>
+                    <span class="small">
+                      <span class="d-block"
+                        >Abu Ahmad confirmed your viewing on Thursday</span
+                      >
+                      <span class="text-muted" style="font-size: 0.72rem"
+                        >1 hour ago</span
+                      >
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="app-user" type="button" data-bs-toggle="dropdown">
+                <span class="avatar">S</span>
+                <span class="d-none d-md-inline text-start lh-sm">
+                  <span class="d-block small fw-semibold">Sara Khaled</span>
+                  <!-- <span class="d-block text-muted" style="font-size: 0.72rem"
+                    >Home seeker</span
+                  > -->
+                </span>
+                <i class="bi bi-chevron-down small text-muted"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                <li><a class="dropdown-item" href="profile.html">My profile</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-danger" href="../index.html"
+                    >Log out</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <button
+              class="navbar-toggler border-0"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#appNav"
+              aria-controls="appNav"
+              aria-expanded="false"
+              aria-label="Menu"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <!-- Page links -->
+          <div class="collapse navbar-collapse" id="appNav">
+            <ul class="navbar-nav mx-auto gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link" href="search.html"
+                ><i class="bi bi-stars"></i><span>Discover</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bookings.html"
+                ><i class="bi bi-calendar-check"></i><span>My bookings</span><span class="side-badge">1</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="chat.html"
+                ><i class="bi bi-chat-dots"></i><span>Messages</span><span class="side-badge">2</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="profile.html" aria-current="page"
+                ><i class="bi bi-sliders"></i><span>Profile &amp; priorities</span></a
+              >
+            </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ===== Content ===== -->
+    <main class="app-page container">
         <!-- 1. Page header -->
         <div class="page-head">
           <div>
@@ -442,7 +434,6 @@
           </div>
         </form>
       </main>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
