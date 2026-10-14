@@ -158,166 +158,87 @@
 
     <!-- ===== Content ===== -->
     <main class="app-page container">
-        <!-- 1. Page header -->
-        <div class="page-head">
-          <div>
-            <h1>Your best-fit homes</h1>
-            <p>
-              Ranked by how well they match your priorities · from University
-              of Jordan
-            </p>
-          </div>
-          <a href="profile.html" class="btn btn-outline-primary">
-            <i class="bi bi-sliders"></i>
-            <span>Edit my priorities</span>
-          </a>
+      <!-- 1. Page header -->
+      <div class="page-head">
+        <div>
+          <h1>Discover homes</h1>
+          <p>
+            See the homes picked for your priorities, or browse everything
+            owners have listed.
+          </p>
         </div>
+        <a href="profile.html" class="btn btn-outline-primary">
+          <i class="bi bi-sliders"></i>
+          <span>Edit my priorities</span>
+        </a>
+      </div>
 
-        <!-- 2. New home alert -->
-        <div class="notice mb-3">
-          <span class="d-flex align-items-center gap-2"
-            ><i class="bi bi-stars fs-5"></i>A new home just listed in Al
-            Jubeiha with a 92% match</span
+      <!-- 2. New home alert -->
+      <div class="notice mb-4">
+        <span class="d-flex align-items-center gap-2"
+          ><i class="bi bi-stars fs-5"></i>A new home just listed in Al
+          Jubeiha with a 92% match</span
+        >
+        <a href="property.html">View it</a>
+      </div>
+
+      <!-- 3. Two views: matches for you / all homes -->
+      <ul class="nav discover-switch mb-4" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="matches-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#tab-matches"
+            type="button"
+            role="tab"
+            aria-controls="tab-matches"
+            aria-selected="true"
           >
-          <a href="property.html">View it</a>
-        </div>
-
-        <!-- 3. Tabs -->
-        <ul class="nav seg-tabs mb-3" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link active"
-              data-bs-toggle="tab"
-              data-bs-target="#tab-results"
-              type="button"
-              role="tab"
-              aria-controls="tab-results"
-              aria-selected="true"
-            >
-              Results<span class="count">6</span>
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              data-bs-toggle="tab"
-              data-bs-target="#tab-favorites"
-              type="button"
-              role="tab"
-              aria-controls="tab-favorites"
-              aria-selected="false"
-            >
-              Favorites<span class="count">2</span>
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              data-bs-toggle="tab"
-              data-bs-target="#tab-areas"
-              type="button"
-              role="tab"
-              aria-controls="tab-areas"
-              aria-selected="false"
-            >
-              Compare neighborhoods
-            </button>
-          </li>
-        </ul>
-
-        <div class="tab-content">
-          <!-- ===== Results ===== -->
-          <section
-            class="tab-pane fade show active"
-            id="tab-results"
-            role="tabpanel"
-            tabindex="0"
+            <i class="bi bi-stars"></i>
+            <span class="text-start">
+              <b>Matches for you</b>
+              <small>Ranked by your priorities</small>
+            </span>
+            <span class="count">6</span>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="all-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#tab-all"
+            type="button"
+            role="tab"
+            aria-controls="tab-all"
+            aria-selected="false"
           >
-            <!-- Filters -->
-            <form class="filter-bar mb-3" role="search" id="searchFilters">
-              <div class="search-input">
-                <i class="bi bi-search"></i>
-                <input
-                  type="search"
-                  class="form-control"
-                  name="q"
-                  placeholder="Search by neighborhood..."
-                  aria-label="Search by neighborhood"
-                />
-              </div>
-              <select class="form-select" name="price" aria-label="Price">
-                <option value="300">Up to 300 JOD</option>
-                <option value="">Any price</option>
-              </select>
-              <select class="form-select" name="category" aria-label="Category">
-                <option value="">All categories</option>
-                <option value="studio">Studio</option>
-                <option value="villa">Villa</option>
-                <option value="mansion">Mansion</option>
-                <option value="detached-house">Detached house</option>
-                <option value="apartment">Apartment</option>
-              </select>
-              <select class="form-select" name="sort" aria-label="Sort by">
-                <option value="score">Best match</option>
-                <option value="price">Lowest price</option>
-                <option value="distance">Closest</option>
-              </select>
-              <input
-                type="checkbox"
-                class="btn-check"
-                id="fVerified"
-                name="verified"
-                checked
-              />
-              <label class="chip-select py-2" for="fVerified"
-                ><i class="bi bi-patch-check"></i>Verified only</label
-              >
-              <input
-                type="checkbox"
-                class="btn-check"
-                id="fReady"
-                name="ready"
-              />
-              <label class="chip-select py-2" for="fReady"
-                ><i class="bi bi-lightning-charge"></i>Ready now</label
-              >
-              <input
-                type="checkbox"
-                class="btn-check"
-                id="fFurnished"
-                name="furnished"
-              />
-              <label class="chip-select py-2" for="fFurnished"
-                ><i class="bi bi-lamp"></i>Furnished</label
-              >
-              <div
-                class="btn-group view-toggle ms-auto"
-                role="group"
-                aria-label="View"
-              >
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary active"
-                  aria-pressed="true"
-                  aria-label="Grid"
-                >
-                  <i class="bi bi-grid"></i>
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary"
-                  aria-pressed="false"
-                  aria-label="Map"
-                >
-                  <i class="bi bi-map"></i>
-                </button>
-              </div>
-            </form>
+            <i class="bi bi-houses"></i>
+            <span class="text-start">
+              <b>All homes</b>
+              <small>Everything owners have listed</small>
+            </span>
+            <span class="count">6</span>
+          </button>
+        </li>
+      </ul>
 
-            <p class="small text-muted mb-3">6 homes · sorted by match</p>
+      <div class="tab-content">
+        <!-- ===== Matches for you ===== -->
+        <section
+          class="tab-pane fade show active"
+          id="tab-matches"
+          role="tabpanel"
+          aria-labelledby="matches-tab"
+          tabindex="0"
+        >
+          <p class="small text-muted mb-3">
+            6 homes · ranked by how well they match your priorities
+          </p>
 
-            <!-- Cards -->
-            <div class="row g-4" id="resultsGrid">
+          <!-- Cards: ranked by match -->
+            <div class="row g-4" id="matchesGrid">
               <div class="col-sm-6 col-xl-4">
                 <article class="prop-card">
                   <button
@@ -638,34 +559,24 @@
                 </article>
               </div>
             </div>
+        </section>
 
-            <!-- Compare tray -->
-            <!-- <div class="compare-tray is-open is-inline" id="compareTray">
-              <span class="fw-medium">2 selected to compare</span>
-              <div class="d-flex gap-2">
-                <button
-                  type="button"
-                  class="btn btn-link text-white text-decoration-none"
-                >
-                  Clear
-                </button>
-                <button type="button" class="btn btn-light text-primary-bt">
-                  Compare now
-                </button>
-              </div>
-            </div> -->
-          </section>
+        <!-- ===== All homes ===== -->
+        <section
+          class="tab-pane fade"
+          id="tab-all"
+          role="tabpanel"
+          aria-labelledby="all-tab"
+          tabindex="0"
+        >
+          <p class="small text-muted mb-3">
+            6 homes · featured listings first
+          </p>
 
-          <!-- ===== Favorites ===== -->
-          <section
-            class="tab-pane fade"
-            id="tab-favorites"
-            role="tabpanel"
-            tabindex="0"
-          >
-            <div class="row g-4">
+          <!-- Cards: every listing; featured (paid) ones first -->
+          <div class="row g-4" id="allHomesGrid">
               <div class="col-sm-6 col-xl-4">
-                <article class="prop-card">
+                <article class="prop-card home-card">
                   <button
                     type="button"
                     class="fav-btn is-on"
@@ -674,53 +585,38 @@
                   >
                     <i class="bi bi-heart-fill"></i>
                   </button>
-                  <a
-                    href="property.html"
-                    class="prop-media ph ph-1"
-                    tabindex="-1"
-                    aria-hidden="true"
-                  >
-                    <span class="ph-icon"
-                      ><i class="bi bi-house-door"></i
-                    ></span>
+                  <div class="prop-media ph ph-1">
+                    <span class="ph-icon"><i class="bi bi-house-door"></i></span>
                     <span class="badge-verified"
                       ><i class="bi bi-patch-check-fill"></i>Verified</span
                     >
                     <span class="badge-featured"
                       ><i class="bi bi-star-fill"></i>Featured</span
                     >
-                    <div class="score-ring" style="--value: 92">
-                      <div class="score-ring__inner">
-                        92<small>match</small>
-                      </div>
-                    </div>
-                  </a>
+                  </div>
                   <div class="prop-body">
-                    <a href="property.html" class="prop-title"
+                    <a href="property.html" class="prop-title stretched-link"
                       >Studio — Al Jubeiha</a
                     >
-                    <span class="prop-match">High match</span>
+                    <span class="listed-by"
+                      ><i class="bi bi-person"></i> Listed by Abu Ahmad</span
+                    >
                     <div class="prop-meta">
-                      <span><i class="bi bi-clock"></i> 8 min to your place</span>
-                      <span
-                        ><i class="bi bi-arrows-angle-expand"></i> 45 m²</span
-                      >
+                      <span><i class="bi bi-geo-alt"></i> Al Jubeiha</span>
+                      <span><i class="bi bi-arrows-angle-expand"></i> 45 m²</span>
                       <span><i class="bi bi-lamp"></i> Furnished</span>
                     </div>
                     <div class="prop-price">
                       <div><b>265 JOD</b> <span>per month, bills included</span></div>
-                      <label class="compare-check"
-                        ><input
-                          type="checkbox"
-                          class="form-check-input m-0"
-                        />Compare</label
-                      >
+                      <span class="view-more"
+                        >View details <i class="bi bi-arrow-right"></i
+                      ></span>
                     </div>
                   </div>
                 </article>
               </div>
               <div class="col-sm-6 col-xl-4">
-                <article class="prop-card">
+                <article class="prop-card home-card">
                   <button
                     type="button"
                     class="fav-btn is-on"
@@ -729,238 +625,182 @@
                   >
                     <i class="bi bi-heart-fill"></i>
                   </button>
-                  <a
-                    href="property.html"
-                    class="prop-media ph ph-4"
-                    tabindex="-1"
-                    aria-hidden="true"
-                  >
-                    <span class="ph-icon"
-                      ><i class="bi bi-house-door"></i
-                    ></span>
+                  <div class="prop-media ph ph-4">
+                    <span class="ph-icon"><i class="bi bi-house-door"></i></span>
                     <span class="badge-verified"
                       ><i class="bi bi-patch-check-fill"></i>Verified</span
                     >
                     <span class="badge-featured"
                       ><i class="bi bi-star-fill"></i>Featured</span
                     >
-                    <div class="score-ring" style="--value: 74">
-                      <div class="score-ring__inner">
-                        74<small>match</small>
-                      </div>
-                    </div>
-                  </a>
+                  </div>
                   <div class="prop-body">
-                    <a href="property.html" class="prop-title"
+                    <a href="property.html" class="prop-title stretched-link"
                       >1-bedroom apartment — Shmeisani</a
                     >
-                    <span class="prop-match">Good match</span>
+                    <span class="listed-by"
+                      ><i class="bi bi-person"></i> Listed by Umm Yazan</span
+                    >
                     <div class="prop-meta">
-                      <span><i class="bi bi-clock"></i> 22 min to your place</span>
-                      <span
-                        ><i class="bi bi-arrows-angle-expand"></i> 70 m²</span
-                      >
+                      <span><i class="bi bi-geo-alt"></i> Shmeisani</span>
+                      <span><i class="bi bi-arrows-angle-expand"></i> 70 m²</span>
                       <span><i class="bi bi-lamp"></i> Furnished</span>
                     </div>
                     <div class="prop-price">
                       <div><b>440 JOD</b> <span>per month, bills included</span></div>
-                      <label class="compare-check"
-                        ><input
-                          type="checkbox"
-                          class="form-check-input m-0"
-                        />Compare</label
-                      >
+                      <span class="view-more"
+                        >View details <i class="bi bi-arrow-right"></i
+                      ></span>
                     </div>
                   </div>
                 </article>
               </div>
-            </div>
-          </section>
-
-          <!-- ===== Neighborhood comparison ===== -->
-          <section
-            class="tab-pane fade"
-            id="tab-areas"
-            role="tabpanel"
-            tabindex="0"
-          >
-            <div class="panel">
-              <h2 class="h5 mb-1">Same math, every neighborhood</h2>
-              <p class="text-muted small mb-3">
-                Average full monthly cost, and travel time to your daily place.
-              </p>
-              <div class="table-responsive">
-                <table class="table bt-table areas-table">
-                  <thead>
-                    <tr>
-                      <th scope="col">Neighborhood</th>
-                      <th scope="col">Avg. rent</th>
-                      <th scope="col">Bills</th>
-                      <th scope="col">Internet</th>
-                      <th scope="col" class="col-total">Total</th>
-                      <th scope="col">To your place</th>
-                      <th scope="col">Quiet</th>
-                      <th scope="col">Listings</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="fw-semibold">
-                        Sweileh
-                        <span class="status status--success ms-1">Cheapest</span>
-                      </td>
-                      <td>200 JOD</td>
-                      <td>25 JOD</td>
-                      <td>15 JOD</td>
-                      <td>
-                        <div class="total-bar">
-                          <b>240 JOD</b>
-                          <div
-                            class="progress flex-grow-1"
-                            role="progressbar"
-                            aria-label="Total"
-                            aria-valuenow="48"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                          >
-                            <div
-                              class="progress-bar is-best"
-                              style="width: 48%"
-                            ></div>
-                          </div>
-                        </div>
-                      </td>
-                      <td>18 min</td>
-                      <td class="dots">●●●○○</td>
-                      <td class="text-muted">1</td>
-                    </tr>
-                    <tr>
-                      <td class="fw-semibold">Al Jubeiha</td>
-                      <td>230 JOD</td>
-                      <td>30 JOD</td>
-                      <td>15 JOD</td>
-                      <td>
-                        <div class="total-bar">
-                          <b>275 JOD</b>
-                          <div
-                            class="progress flex-grow-1"
-                            role="progressbar"
-                            aria-label="Total"
-                            aria-valuenow="56"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                          >
-                            <div class="progress-bar" style="width: 56%"></div>
-                          </div>
-                        </div>
-                      </td>
-                      <td>8 min</td>
-                      <td class="dots">●●●●○</td>
-                      <td class="text-muted">2</td>
-                    </tr>
-                    <tr>
-                      <td class="fw-semibold">Tla Al Ali</td>
-                      <td>360 JOD</td>
-                      <td>35 JOD</td>
-                      <td>20 JOD</td>
-                      <td>
-                        <div class="total-bar">
-                          <b>415 JOD</b>
-                          <div
-                            class="progress flex-grow-1"
-                            role="progressbar"
-                            aria-label="Total"
-                            aria-valuenow="84"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                          >
-                            <div class="progress-bar" style="width: 84%"></div>
-                          </div>
-                        </div>
-                      </td>
-                      <td>14 min</td>
-                      <td class="dots">●●●●●</td>
-                      <td class="text-muted">1</td>
-                    </tr>
-                    <tr>
-                      <td class="fw-semibold">Shmeisani</td>
-                      <td>400 JOD</td>
-                      <td>40 JOD</td>
-                      <td>20 JOD</td>
-                      <td>
-                        <div class="total-bar">
-                          <b>460 JOD</b>
-                          <div
-                            class="progress flex-grow-1"
-                            role="progressbar"
-                            aria-label="Total"
-                            aria-valuenow="93"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                          >
-                            <div class="progress-bar" style="width: 93%"></div>
-                          </div>
-                        </div>
-                      </td>
-                      <td>22 min</td>
-                      <td class="dots">●●●○○</td>
-                      <td class="text-muted">1</td>
-                    </tr>
-                    <tr>
-                      <td class="fw-semibold">Khalda</td>
-                      <td>420 JOD</td>
-                      <td>40 JOD</td>
-                      <td>20 JOD</td>
-                      <td>
-                        <div class="total-bar">
-                          <b>480 JOD</b>
-                          <div
-                            class="progress flex-grow-1"
-                            role="progressbar"
-                            aria-label="Total"
-                            aria-valuenow="97"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                          >
-                            <div class="progress-bar" style="width: 97%"></div>
-                          </div>
-                        </div>
-                      </td>
-                      <td>30 min</td>
-                      <td class="dots">●●●●●</td>
-                      <td class="text-muted">1</td>
-                    </tr>
-                    <tr>
-                      <td class="fw-semibold">Abdali</td>
-                      <td>430 JOD</td>
-                      <td>40 JOD</td>
-                      <td>20 JOD</td>
-                      <td>
-                        <div class="total-bar">
-                          <b>490 JOD</b>
-                          <div
-                            class="progress flex-grow-1"
-                            role="progressbar"
-                            aria-label="Total"
-                            aria-valuenow="99"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                          >
-                            <div class="progress-bar" style="width: 99%"></div>
-                          </div>
-                        </div>
-                      </td>
-                      <td>26 min</td>
-                      <td class="dots">●●○○○</td>
-                      <td class="text-muted">0</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="col-sm-6 col-xl-4">
+                <article class="prop-card home-card">
+                  <button
+                    type="button"
+                    class="fav-btn"
+                    aria-label="Add to favorites"
+                    aria-pressed="false"
+                  >
+                    <i class="bi bi-heart"></i>
+                  </button>
+                  <div class="prop-media ph ph-2">
+                    <span class="ph-icon"><i class="bi bi-house-door"></i></span>
+                    <span class="badge-verified"
+                      ><i class="bi bi-patch-check-fill"></i>Verified</span
+                    >
+                  </div>
+                  <div class="prop-body">
+                    <a href="property.html" class="prop-title stretched-link"
+                      >2-bedroom apartment — Tla Al Ali</a
+                    >
+                    <span class="listed-by"
+                      ><i class="bi bi-person"></i> Listed by Al Riyada Real Estate Office</span
+                    >
+                    <div class="prop-meta">
+                      <span><i class="bi bi-geo-alt"></i> Tla Al Ali</span>
+                      <span><i class="bi bi-arrows-angle-expand"></i> 95 m²</span>
+                      <span><i class="bi bi-lamp"></i> Unfurnished</span>
+                    </div>
+                    <div class="prop-price">
+                      <div><b>395 JOD</b> <span>per month, bills included</span></div>
+                      <span class="view-more"
+                        >View details <i class="bi bi-arrow-right"></i
+                      ></span>
+                    </div>
+                  </div>
+                </article>
               </div>
-            </div>
-          </section>
-        </div>
-      </main>
+              <div class="col-sm-6 col-xl-4">
+                <article class="prop-card home-card">
+                  <button
+                    type="button"
+                    class="fav-btn"
+                    aria-label="Add to favorites"
+                    aria-pressed="false"
+                  >
+                    <i class="bi bi-heart"></i>
+                  </button>
+                  <div class="prop-media ph ph-5">
+                    <span class="ph-icon"><i class="bi bi-house-door"></i></span>
+                    <span class="badge-verified"
+                      ><i class="bi bi-patch-check-fill"></i>Verified</span
+                    >
+                  </div>
+                  <div class="prop-body">
+                    <a href="property.html" class="prop-title stretched-link"
+                      >Studio — Sweileh</a
+                    >
+                    <span class="listed-by"
+                      ><i class="bi bi-person"></i> Listed by Abu Ahmad</span
+                    >
+                    <div class="prop-meta">
+                      <span><i class="bi bi-geo-alt"></i> Sweileh</span>
+                      <span><i class="bi bi-arrows-angle-expand"></i> 40 m²</span>
+                      <span><i class="bi bi-lamp"></i> Unfurnished</span>
+                    </div>
+                    <div class="prop-price">
+                      <div><b>220 JOD</b> <span>per month, bills included</span></div>
+                      <span class="view-more"
+                        >View details <i class="bi bi-arrow-right"></i
+                      ></span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-sm-6 col-xl-4">
+                <article class="prop-card home-card">
+                  <button
+                    type="button"
+                    class="fav-btn"
+                    aria-label="Add to favorites"
+                    aria-pressed="false"
+                  >
+                    <i class="bi bi-heart"></i>
+                  </button>
+                  <div class="prop-media ph ph-3">
+                    <span class="ph-icon"><i class="bi bi-house-door"></i></span>
+                  </div>
+                  <div class="prop-body">
+                    <a href="property.html" class="prop-title stretched-link"
+                      >Room in a shared apartment — Al Jubeiha</a
+                    >
+                    <span class="listed-by"
+                      ><i class="bi bi-person"></i> Listed by Abu Ahmad</span
+                    >
+                    <div class="prop-meta">
+                      <span><i class="bi bi-geo-alt"></i> Al Jubeiha</span>
+                      <span><i class="bi bi-arrows-angle-expand"></i> 18 m²</span>
+                      <span><i class="bi bi-lamp"></i> Furnished</span>
+                    </div>
+                    <div class="prop-price">
+                      <div><b>170 JOD</b> <span>per month, bills included</span></div>
+                      <span class="view-more"
+                        >View details <i class="bi bi-arrow-right"></i
+                      ></span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-sm-6 col-xl-4">
+                <article class="prop-card home-card">
+                  <button
+                    type="button"
+                    class="fav-btn"
+                    aria-label="Add to favorites"
+                    aria-pressed="false"
+                  >
+                    <i class="bi bi-heart"></i>
+                  </button>
+                  <div class="prop-media ph ph-6">
+                    <span class="ph-icon"><i class="bi bi-house-door"></i></span>
+                  </div>
+                  <div class="prop-body">
+                    <a href="property.html" class="prop-title stretched-link"
+                      >3-bedroom apartment — Khalda</a
+                    >
+                    <span class="listed-by"
+                      ><i class="bi bi-person"></i> Listed by Abu Ahmad</span
+                    >
+                    <div class="prop-meta">
+                      <span><i class="bi bi-geo-alt"></i> Khalda</span>
+                      <span><i class="bi bi-arrows-angle-expand"></i> 150 m²</span>
+                      <span><i class="bi bi-lamp"></i> Unfurnished</span>
+                    </div>
+                    <div class="prop-price">
+                      <div><b>595 JOD</b> <span>per month, bills included</span></div>
+                      <span class="view-more"
+                        >View details <i class="bi bi-arrow-right"></i
+                      ></span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+          </div>
+        </section>
+      </div>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
