@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bayti — Areas &amp; places</title>
+    <title>Bayti — Areas</title>
 
     <link
       rel="stylesheet"
@@ -148,9 +148,9 @@
             ><i class="bi bi-people"></i
             ><span class="flex-grow-1">Users</span></a
           >
-          <a class="side-link active" href="places.html" aria-current="page" title="Areas &amp; places"
+          <a class="side-link active" href="places.html" aria-current="page" title="Areas"
             ><i class="bi bi-geo-alt"></i
-            ><span class="flex-grow-1">Areas &amp; places</span></a
+            ><span class="flex-grow-1">Areas</span></a
           >
           <a class="side-link" href="chat.html" title="Messages"
             ><i class="bi bi-chat-dots"></i
@@ -165,80 +165,33 @@
         <!-- 1. Page header -->
         <div class="page-head">
           <div>
-            <h1>Areas &amp; places</h1>
+            <h1>Areas</h1>
             <p>
-              Area data powers the estimated costs and the area assistant;
-              places show up during onboarding.
+              Average bills and internet for each area power the true monthly
+              cost on every home.
             </p>
           </div>
-          <!-- The add button switches with the open tab (CSS) -->
           <button
             type="button"
-            class="btn btn-primary d-inline-flex align-items-center gap-2 add-hood"
+            class="btn btn-primary d-inline-flex align-items-center gap-2"
             id="addHoodBtn"
             data-action="add-hood"
           >
             <i class="bi bi-plus-lg"></i><span>Add area</span>
           </button>
-          <button
-            type="button"
-            class="btn btn-primary d-inline-flex align-items-center gap-2 add-place"
-            id="addPlaceBtn"
-            data-action="add-place"
-          >
-            <i class="bi bi-plus-lg"></i><span>Add place</span>
-          </button>
         </div>
 
-        <!-- 2. Tabs -->
-        <ul class="nav seg-tabs mb-3" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link active"
-              data-bs-toggle="tab"
-              data-bs-target="#tab-hoods"
-              type="button"
-              role="tab"
-              aria-controls="tab-hoods"
-              aria-selected="true"
-            >
-              Areas<span class="count">6</span>
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              data-bs-toggle="tab"
-              data-bs-target="#tab-places"
-              type="button"
-              role="tab"
-              aria-controls="tab-places"
-              aria-selected="false"
-            >
-              Places<span class="count">7</span>
-            </button>
-          </li>
-        </ul>
-
-        <div class="tab-content">
-          <!-- ===== Areas ===== -->
-          <section
-            class="tab-pane fade show active"
-            id="tab-hoods"
-            role="tabpanel"
-            tabindex="0"
-          >
+          <!-- ===== 2. Areas ===== -->
+          <section aria-label="Areas">
             <div class="panel panel-table">
               <div class="table-responsive">
                 <table class="table bt-table hoods-table">
                   <thead>
                     <tr>
                       <th scope="col">Area</th>
-                      <th scope="col">Governorate</th>
+                      <th scope="col">City</th>
                       <th scope="col">Avg. electricity &amp; water</th>
                       <th scope="col">Internet</th>
-                      <th scope="col">Safety</th>
-                      <th scope="col">Quietness</th>
                       <th scope="col">Properties</th>
                       <th scope="col">
                         <span class="visually-hidden">Actions</span>
@@ -251,8 +204,6 @@
                       <td class="text-muted">Amman</td>
                       <td>30 JOD</td>
                       <td>15 JOD</td>
-                      <td class="dots" aria-label="4 out of 5">●●●●○</td>
-                      <td class="dots" aria-label="4 out of 5">●●●●○</td>
                       <td class="text-muted">2</td>
                       <td>
                         <button
@@ -270,8 +221,6 @@
                       <td class="text-muted">Amman</td>
                       <td>25 JOD</td>
                       <td>15 JOD</td>
-                      <td class="dots" aria-label="4 out of 5">●●●●○</td>
-                      <td class="dots" aria-label="3 out of 5">●●●○○</td>
                       <td class="text-muted">1</td>
                       <td>
                         <button
@@ -289,8 +238,6 @@
                       <td class="text-muted">Amman</td>
                       <td>35 JOD</td>
                       <td>20 JOD</td>
-                      <td class="dots" aria-label="5 out of 5">●●●●●</td>
-                      <td class="dots" aria-label="5 out of 5">●●●●●</td>
                       <td class="text-muted">1</td>
                       <td>
                         <button
@@ -308,8 +255,6 @@
                       <td class="text-muted">Amman</td>
                       <td>40 JOD</td>
                       <td>20 JOD</td>
-                      <td class="dots" aria-label="5 out of 5">●●●●●</td>
-                      <td class="dots" aria-label="3 out of 5">●●●○○</td>
                       <td class="text-muted">1</td>
                       <td>
                         <button
@@ -327,8 +272,6 @@
                       <td class="text-muted">Amman</td>
                       <td>40 JOD</td>
                       <td>20 JOD</td>
-                      <td class="dots" aria-label="5 out of 5">●●●●●</td>
-                      <td class="dots" aria-label="5 out of 5">●●●●●</td>
                       <td class="text-muted">1</td>
                       <td>
                         <button
@@ -346,8 +289,6 @@
                       <td class="text-muted">Amman</td>
                       <td>40 JOD</td>
                       <td>20 JOD</td>
-                      <td class="dots" aria-label="4 out of 5">●●●●○</td>
-                      <td class="dots" aria-label="2 out of 5">●●○○○</td>
                       <td class="text-muted">0</td>
                       <td>
                         <button
@@ -365,134 +306,6 @@
               </div>
             </div>
           </section>
-
-          <!-- ===== Places ===== -->
-          <section
-            class="tab-pane fade"
-            id="tab-places"
-            role="tabpanel"
-            tabindex="0"
-          >
-            <div class="panel">
-              <ul class="list-clean" id="placesList">
-                <li class="list-row flex-wrap">
-                  <span class="kpi-icon"
-                    ><i class="bi bi-mortarboard"></i
-                  ></span>
-                  <div class="grow">
-                    <b class="d-block">University of Jordan</b
-                    ><small>Al Jubeiha</small>
-                  </div>
-                  <span class="place-type">University</span>
-                  <button
-                    type="button"
-                    class="btn-icon"
-                    data-action="edit-place"
-                    aria-label="Edit University of Jordan"
-                  >
-                    <i class="bi bi-pencil"></i>
-                  </button>
-                </li>
-                <li class="list-row flex-wrap">
-                  <span class="kpi-icon"
-                    ><i class="bi bi-mortarboard"></i
-                  ></span>
-                  <div class="grow">
-                    <b class="d-block">Applied Science University</b
-                    ><small>Shafa Badran</small>
-                  </div>
-                  <span class="place-type">University</span>
-                  <button
-                    type="button"
-                    class="btn-icon"
-                    data-action="edit-place"
-                    aria-label="Edit Applied Science University"
-                  >
-                    <i class="bi bi-pencil"></i>
-                  </button>
-                </li>
-                <li class="list-row flex-wrap">
-                  <span class="kpi-icon"><i class="bi bi-hospital"></i></span>
-                  <div class="grow">
-                    <b class="d-block">Al Khalidi Hospital</b
-                    ><small>Jabal Amman</small>
-                  </div>
-                  <span class="place-type">Hospital</span>
-                  <button
-                    type="button"
-                    class="btn-icon"
-                    data-action="edit-place"
-                    aria-label="Edit Al Khalidi Hospital"
-                  >
-                    <i class="bi bi-pencil"></i>
-                  </button>
-                </li>
-                <li class="list-row flex-wrap">
-                  <span class="kpi-icon"><i class="bi bi-hospital"></i></span>
-                  <div class="grow">
-                    <b class="d-block">The Specialty Hospital</b
-                    ><small>Shmeisani</small>
-                  </div>
-                  <span class="place-type">Hospital</span>
-                  <button
-                    type="button"
-                    class="btn-icon"
-                    data-action="edit-place"
-                    aria-label="Edit The Specialty Hospital"
-                  >
-                    <i class="bi bi-pencil"></i>
-                  </button>
-                </li>
-                <li class="list-row flex-wrap">
-                  <span class="kpi-icon"><i class="bi bi-hospital"></i></span>
-                  <div class="grow">
-                    <b class="d-block">Jordan University Hospital</b
-                    ><small>Al Jubeiha</small>
-                  </div>
-                  <span class="place-type">Hospital</span>
-                  <button
-                    type="button"
-                    class="btn-icon"
-                    data-action="edit-place"
-                    aria-label="Edit Jordan University Hospital"
-                  >
-                    <i class="bi bi-pencil"></i>
-                  </button>
-                </li>
-                <li class="list-row flex-wrap">
-                  <span class="kpi-icon"><i class="bi bi-briefcase"></i></span>
-                  <div class="grow">
-                    <b class="d-block">Abdali Boulevard</b><small>Abdali</small>
-                  </div>
-                  <span class="place-type">Work</span>
-                  <button
-                    type="button"
-                    class="btn-icon"
-                    data-action="edit-place"
-                    aria-label="Edit Abdali Boulevard"
-                  >
-                    <i class="bi bi-pencil"></i>
-                  </button>
-                </li>
-                <li class="list-row flex-wrap">
-                  <span class="kpi-icon"><i class="bi bi-geo-alt"></i></span>
-                  <div class="grow">
-                    <b class="d-block">Downtown Amman</b><small>Al Balad</small>
-                  </div>
-                  <span class="place-type">Landmark</span>
-                  <button
-                    type="button"
-                    class="btn-icon"
-                    data-action="edit-place"
-                    aria-label="Edit Downtown Amman"
-                  >
-                    <i class="bi bi-pencil"></i>
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </section>
-        </div>
       </main>
     </div>
 

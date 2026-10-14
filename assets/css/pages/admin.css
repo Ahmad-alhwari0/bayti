@@ -74,12 +74,6 @@
 .rev-chart .bar.is-hi {
   background: var(--bt-primary);
 }
-.ic-star {
-  color: var(--bt-accent);
-}
-.bookings-table {
-  min-width: 560px;
-}
 
 /* ---------- verifications.html ---------- */
 .pill-tabs {
@@ -161,24 +155,9 @@
   min-width: 680px;
 }
 
-/* ---------- places.html ---------- */
+/* ---------- places.html (Areas) ---------- */
 .hoods-table {
-  min-width: 780px;
-}
-/* The add button switches with the open tab (CSS only) */
-.app-main:has(#tab-places.active) .add-hood,
-.app-main:not(:has(#tab-places.active)) .add-place {
-  /* !important so it overrides Bootstrap's d-inline-flex */
-  display: none !important;
-}
-.place-type {
-  font-size: 0.75rem;
-  font-weight: 600;
-  background: var(--bt-bg);
-  color: var(--bt-muted);
-  border-radius: 999px;
-  padding: 0.15rem 0.65rem;
-  white-space: nowrap;
+  min-width: 560px;
 }
 
 /* ---------- chat.html ---------- */

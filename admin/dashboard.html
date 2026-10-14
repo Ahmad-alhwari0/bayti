@@ -148,9 +148,9 @@
             ><i class="bi bi-people"></i
             ><span class="flex-grow-1">Users</span></a
           >
-          <a class="side-link" href="places.html" title="Areas &amp; places"
+          <a class="side-link" href="places.html" title="Areas"
             ><i class="bi bi-geo-alt"></i
-            ><span class="flex-grow-1">Areas &amp; places</span></a
+            ><span class="flex-grow-1">Areas</span></a
           >
           <a class="side-link" href="chat.html" title="Messages"
             ><i class="bi bi-chat-dots"></i
@@ -318,125 +318,41 @@
           </div>
         </div>
 
-        <!-- 4. Bookings + featured listings + subscriptions -->
-        <div class="row g-4 align-items-start">
+        <!-- 4. Active subscriptions -->
+        <div class="row g-4">
           <div class="col-lg-8">
-            <section class="panel" aria-labelledby="bookingsTitle">
-              <div class="panel-head">
-                <h2 id="bookingsTitle">Latest bookings</h2>
-              </div>
-              <div class="table-responsive">
-                <table class="table bt-table bookings-table">
-                  <thead>
-                    <tr>
-                      <th scope="col">Booking ID</th>
-                      <th scope="col">Seeker</th>
-                      <th scope="col">Property</th>
-                      <th scope="col">Monthly rent</th>
-                      <th scope="col">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody id="bookingsBody">
-                    <tr>
-                      <td class="text-muted">BK-1042</td>
-                      <td class="fw-medium">Sara Khaled</td>
-                      <td>Studio — Al Jubeiha</td>
-                      <td>265 JOD</td>
-                      <td>
-                        <span class="status status--info">Accepted</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-muted">BK-1041</td>
-                      <td class="fw-medium">Khaled Youssef</td>
-                      <td>1-bedroom apartment — Shmeisani</td>
-                      <td>440 JOD</td>
-                      <td>
-                        <span class="status status--success">Moved in</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-muted">BK-1040</td>
-                      <td class="fw-medium">Lina Hamdan</td>
-                      <td>2-bedroom apartment — Tla Al Ali</td>
-                      <td>395 JOD</td>
-                      <td>
-                        <span class="status status--muted">Completed</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-muted">BK-1039</td>
-                      <td class="fw-medium">Omar Zaid</td>
-                      <td>Studio — Sweileh</td>
-                      <td>220 JOD</td>
-                      <td>
-                        <span class="status status--muted">Cancelled</span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </section>
+        <!-- Active subscriptions -->
+        <section class="panel" aria-labelledby="subsTitle">
+          <div class="panel-head">
+            <h2 id="subsTitle">Active subscriptions</h2>
           </div>
-
-          <div class="col-lg-4 d-flex flex-column gap-4">
-            <!-- Featured listings -->
-            <section class="panel" aria-labelledby="featuredTitle">
-              <div class="panel-head">
-                <h2 id="featuredTitle">Featured listings</h2>
+          <ul class="list-clean" id="subsList">
+            <li class="list-row">
+              <span class="avatar">A</span>
+              <div class="grow">
+                <b class="d-block small">Abu Ahmad</b
+                ><small>Featured · 1 property</small>
               </div>
-              <ul class="list-clean" id="featuredList">
-                <li class="list-row">
-                  <i class="bi bi-star-fill ic-star" aria-hidden="true"></i>
-                  <div class="grow">
-                    <b class="d-block small">Abu Ahmad</b
-                    ><small>Studio — Al Jubeiha · until Oct 30</small>
-                  </div>
-                  <span class="status status--success">Active</span>
-                </li>
-                <li class="list-row">
-                  <i class="bi bi-star-fill ic-star" aria-hidden="true"></i>
-                  <div class="grow">
-                    <b class="d-block small">Umm Yazan</b
-                    ><small>1-bedroom apartment — Shmeisani · until Nov 12</small>
-                  </div>
-                  <span class="status status--success">Active</span>
-                </li>
-              </ul>
-            </section>
-
-            <!-- Active subscriptions -->
-            <section class="panel" aria-labelledby="subsTitle">
-              <div class="panel-head">
-                <h2 id="subsTitle">Active subscriptions</h2>
+              <span class="small fw-semibold">10 JOD/month</span>
+            </li>
+            <li class="list-row">
+              <span class="avatar">R</span>
+              <div class="grow">
+                <b class="d-block small">Al Riyada Real Estate Office</b
+                ><small>Agency</small>
               </div>
-              <ul class="list-clean" id="subsList">
-                <li class="list-row">
-                  <span class="avatar">A</span>
-                  <div class="grow">
-                    <b class="d-block small">Abu Ahmad</b
-                    ><small>Featured · 1 property</small>
-                  </div>
-                  <span class="small fw-semibold">10 JOD/month</span>
-                </li>
-                <li class="list-row">
-                  <span class="avatar">R</span>
-                  <div class="grow">
-                    <b class="d-block small">Al Riyada Real Estate Office</b
-                    ><small>Agency</small>
-                  </div>
-                  <span class="small fw-semibold">35 JOD/month</span>
-                </li>
-                <li class="list-row">
-                  <span class="avatar">U</span>
-                  <div class="grow">
-                    <b class="d-block small">Umm Yazan</b
-                    ><small>Featured · 1 property</small>
-                  </div>
-                  <span class="small fw-semibold">10 JOD/month</span>
-                </li>
-              </ul>
-            </section>
+              <span class="small fw-semibold">35 JOD/month</span>
+            </li>
+            <li class="list-row">
+              <span class="avatar">U</span>
+              <div class="grow">
+                <b class="d-block small">Umm Yazan</b
+                ><small>Featured · 1 property</small>
+              </div>
+              <span class="small fw-semibold">10 JOD/month</span>
+            </li>
+          </ul>
+        </section>
           </div>
         </div>
       </main>
