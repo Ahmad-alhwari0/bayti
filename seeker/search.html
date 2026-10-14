@@ -180,16 +180,7 @@
         </a>
       </div>
 
-      <!-- 2. New home alert -->
-      <div class="notice mb-4">
-        <span class="d-flex align-items-center gap-2"
-          ><i class="bi bi-stars fs-5"></i>A new home just listed in Al
-          Jubeiha with a 92% match</span
-        >
-        <a href="property.html">View it</a>
-      </div>
-
-      <!-- 3. Two views: matches for you / all homes -->
+      <!-- 2. Three views: all homes / matches for you / favorites -->
       <ul class="nav discover-switch mb-4" role="tablist">
         <li class="nav-item" role="presentation">
           <button
@@ -229,6 +220,25 @@
             <span class="count">6</span>
           </button>
         </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="favorites-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#tab-favorites"
+            type="button"
+            role="tab"
+            aria-controls="tab-favorites"
+            aria-selected="false"
+          >
+            <i class="bi bi-heart"></i>
+            <span class="text-start">
+              <b>Favorites</b>
+              <small>Homes you saved</small>
+            </span>
+            <span class="count">2</span>
+          </button>
+        </li>
       </ul>
 
       <div class="tab-content">
@@ -243,6 +253,20 @@
           <p class="small text-muted mb-3">
             6 homes · ranked by how well they match your priorities
           </p>
+
+          <!-- Visitors (not logged in): shown instead of the cards by JS -->
+          <div class="guest-prompt panel text-center" id="matchesGuestPrompt" hidden>
+            <span class="feature-icon"><i class="bi bi-stars"></i></span>
+            <h2 class="h5">See the homes that fit you</h2>
+            <p class="text-muted mb-3">
+              Create a free account and answer three quick questions. We'll rank
+              every home by how well it matches your priorities.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+              <a href="../auth/register.html" class="btn btn-accent">Create account</a>
+              <a href="../auth/login.html" class="btn btn-outline-primary">Log in</a>
+            </div>
+          </div>
 
           <!-- Cards: ranked by match -->
             <div class="row g-4" id="matchesGrid">
@@ -283,7 +307,7 @@
                     >
                     <span class="prop-match">High match</span>
                     <div class="prop-meta">
-                      <span><i class="bi bi-clock"></i> 8 min to your place</span>
+                      <span><i class="bi bi-geo-alt"></i> Al Jubeiha, Amman</span>
                       <span
                         ><i class="bi bi-arrows-angle-expand"></i> 45 m²</span
                       >
@@ -337,7 +361,7 @@
                     >
                     <span class="prop-match">High match</span>
                     <div class="prop-meta">
-                      <span><i class="bi bi-clock"></i> 14 min to your place</span>
+                      <span><i class="bi bi-geo-alt"></i> Tla Al Ali, Amman</span>
                       <span
                         ><i class="bi bi-arrows-angle-expand"></i> 95 m²</span
                       >
@@ -388,7 +412,7 @@
                     >
                     <span class="prop-match">High match</span>
                     <div class="prop-meta">
-                      <span><i class="bi bi-clock"></i> 5 min to your place</span>
+                      <span><i class="bi bi-geo-alt"></i> Al Jubeiha, Amman</span>
                       <span
                         ><i class="bi bi-arrows-angle-expand"></i> 18 m²</span
                       >
@@ -444,7 +468,7 @@
                     >
                     <span class="prop-match">Good match</span>
                     <div class="prop-meta">
-                      <span><i class="bi bi-clock"></i> 22 min to your place</span>
+                      <span><i class="bi bi-geo-alt"></i> Shmeisani, Amman</span>
                       <span
                         ><i class="bi bi-arrows-angle-expand"></i> 70 m²</span
                       >
@@ -497,7 +521,7 @@
                     >
                     <span class="prop-match">Good match</span>
                     <div class="prop-meta">
-                      <span><i class="bi bi-clock"></i> 18 min to your place</span>
+                      <span><i class="bi bi-geo-alt"></i> Sweileh, Amman</span>
                       <span
                         ><i class="bi bi-arrows-angle-expand"></i> 40 m²</span
                       >
@@ -547,7 +571,7 @@
                     >
                     <span class="prop-match">Fair match</span>
                     <div class="prop-meta">
-                      <span><i class="bi bi-clock"></i> 30 min to your place</span>
+                      <span><i class="bi bi-geo-alt"></i> Khalda, Amman</span>
                       <span
                         ><i class="bi bi-arrows-angle-expand"></i> 150 m²</span
                       >
@@ -609,7 +633,7 @@
                       ><i class="bi bi-person"></i> Listed by Abu Ahmad</span
                     >
                     <div class="prop-meta">
-                      <span><i class="bi bi-geo-alt"></i> Al Jubeiha</span>
+                      <span><i class="bi bi-geo-alt"></i> Al Jubeiha, Amman</span>
                       <span><i class="bi bi-arrows-angle-expand"></i> 45 m²</span>
                       <span><i class="bi bi-lamp"></i> Furnished</span>
                     </div>
@@ -649,7 +673,7 @@
                       ><i class="bi bi-person"></i> Listed by Umm Yazan</span
                     >
                     <div class="prop-meta">
-                      <span><i class="bi bi-geo-alt"></i> Shmeisani</span>
+                      <span><i class="bi bi-geo-alt"></i> Shmeisani, Amman</span>
                       <span><i class="bi bi-arrows-angle-expand"></i> 70 m²</span>
                       <span><i class="bi bi-lamp"></i> Furnished</span>
                     </div>
@@ -686,7 +710,7 @@
                       ><i class="bi bi-person"></i> Listed by Al Riyada Real Estate Office</span
                     >
                     <div class="prop-meta">
-                      <span><i class="bi bi-geo-alt"></i> Tla Al Ali</span>
+                      <span><i class="bi bi-geo-alt"></i> Tla Al Ali, Amman</span>
                       <span><i class="bi bi-arrows-angle-expand"></i> 95 m²</span>
                       <span><i class="bi bi-lamp"></i> Unfurnished</span>
                     </div>
@@ -723,7 +747,7 @@
                       ><i class="bi bi-person"></i> Listed by Abu Ahmad</span
                     >
                     <div class="prop-meta">
-                      <span><i class="bi bi-geo-alt"></i> Sweileh</span>
+                      <span><i class="bi bi-geo-alt"></i> Sweileh, Amman</span>
                       <span><i class="bi bi-arrows-angle-expand"></i> 40 m²</span>
                       <span><i class="bi bi-lamp"></i> Unfurnished</span>
                     </div>
@@ -757,7 +781,7 @@
                       ><i class="bi bi-person"></i> Listed by Abu Ahmad</span
                     >
                     <div class="prop-meta">
-                      <span><i class="bi bi-geo-alt"></i> Al Jubeiha</span>
+                      <span><i class="bi bi-geo-alt"></i> Al Jubeiha, Amman</span>
                       <span><i class="bi bi-arrows-angle-expand"></i> 18 m²</span>
                       <span><i class="bi bi-lamp"></i> Furnished</span>
                     </div>
@@ -791,12 +815,107 @@
                       ><i class="bi bi-person"></i> Listed by Abu Ahmad</span
                     >
                     <div class="prop-meta">
-                      <span><i class="bi bi-geo-alt"></i> Khalda</span>
+                      <span><i class="bi bi-geo-alt"></i> Khalda, Amman</span>
                       <span><i class="bi bi-arrows-angle-expand"></i> 150 m²</span>
                       <span><i class="bi bi-lamp"></i> Unfurnished</span>
                     </div>
                     <div class="prop-price">
                       <div><b>595 JOD</b> <span>per month, bills included</span></div>
+                      <span class="view-more"
+                        >View details <i class="bi bi-arrow-right"></i
+                      ></span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+          </div>
+        </section>
+
+        <!-- ===== Favorites ===== -->
+        <section
+          class="tab-pane fade"
+          id="tab-favorites"
+          role="tabpanel"
+          aria-labelledby="favorites-tab"
+          tabindex="0"
+        >
+          <p class="small text-muted mb-3">2 saved homes</p>
+
+          <!-- Cards: homes the seeker saved with the heart button -->
+          <div class="row g-4" id="favoritesGrid">
+              <div class="col-sm-6 col-xl-4">
+                <article class="prop-card home-card">
+                  <button
+                    type="button"
+                    class="fav-btn is-on"
+                    aria-label="Remove from favorites"
+                    aria-pressed="true"
+                  >
+                    <i class="bi bi-heart-fill"></i>
+                  </button>
+                  <div class="prop-media ph ph-1">
+                    <span class="ph-icon"><i class="bi bi-house-door"></i></span>
+                    <span class="badge-verified"
+                      ><i class="bi bi-patch-check-fill"></i>Verified</span
+                    >
+                    <span class="badge-featured"
+                      ><i class="bi bi-star-fill"></i>Featured</span
+                    >
+                  </div>
+                  <div class="prop-body">
+                    <a href="property.html" class="prop-title stretched-link"
+                      >Studio — Al Jubeiha</a
+                    >
+                    <span class="listed-by"
+                      ><i class="bi bi-person"></i> Listed by Abu Ahmad</span
+                    >
+                    <div class="prop-meta">
+                      <span><i class="bi bi-geo-alt"></i> Al Jubeiha, Amman</span>
+                      <span><i class="bi bi-arrows-angle-expand"></i> 45 m²</span>
+                      <span><i class="bi bi-lamp"></i> Furnished</span>
+                    </div>
+                    <div class="prop-price">
+                      <div><b>265 JOD</b> <span>per month, bills included</span></div>
+                      <span class="view-more"
+                        >View details <i class="bi bi-arrow-right"></i
+                      ></span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-sm-6 col-xl-4">
+                <article class="prop-card home-card">
+                  <button
+                    type="button"
+                    class="fav-btn is-on"
+                    aria-label="Remove from favorites"
+                    aria-pressed="true"
+                  >
+                    <i class="bi bi-heart-fill"></i>
+                  </button>
+                  <div class="prop-media ph ph-4">
+                    <span class="ph-icon"><i class="bi bi-house-door"></i></span>
+                    <span class="badge-verified"
+                      ><i class="bi bi-patch-check-fill"></i>Verified</span
+                    >
+                    <span class="badge-featured"
+                      ><i class="bi bi-star-fill"></i>Featured</span
+                    >
+                  </div>
+                  <div class="prop-body">
+                    <a href="property.html" class="prop-title stretched-link"
+                      >1-bedroom apartment — Shmeisani</a
+                    >
+                    <span class="listed-by"
+                      ><i class="bi bi-person"></i> Listed by Umm Yazan</span
+                    >
+                    <div class="prop-meta">
+                      <span><i class="bi bi-geo-alt"></i> Shmeisani, Amman</span>
+                      <span><i class="bi bi-arrows-angle-expand"></i> 70 m²</span>
+                      <span><i class="bi bi-lamp"></i> Furnished</span>
+                    </div>
+                    <div class="prop-price">
+                      <div><b>440 JOD</b> <span>per month, bills included</span></div>
                       <span class="view-more"
                         >View details <i class="bi bi-arrow-right"></i
                       ></span>
