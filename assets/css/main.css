@@ -2442,73 +2442,129 @@ html[dir="ltr"] .dir-flip {
   background: var(--bt-surface);
   border-bottom-color: var(--bt-line);
 }
-.app-nav .nav-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.5rem 0.85rem;
-  border-radius: var(--bt-radius-sm);
-}
-.app-nav .nav-link:hover {
-  background: var(--bt-bg);
-}
-.app-nav .nav-link.active {
-  color: var(--bt-primary);
-  background: var(--bt-primary-soft);
-  font-weight: 600;
-}
-.app-nav .nav-link .side-badge {
-  margin-inline-start: 0.1rem;
-}
-/* On phones the links open as a list under the bar */
-@media (max-width: 991.98px) {
-  .app-nav .navbar-collapse {
-    padding-block: 0.5rem 1rem;
-  }
-  .app-nav .nav-link {
-    display: flex;
-  }
-}
 .app-page {
   padding-block: 1.75rem 3rem;
 }
 
-/* Search box in the seeker navbar */
+/* Links + search grouped in one capsule (desktop) */
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.app-nav .nav-group .navbar-nav {
+  gap: 0.25rem;
+}
+.app-nav .nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  height: 38px;
+  padding: 0 0.95rem;
+  border-radius: 999px;
+  color: var(--bt-muted);
+  font-weight: 500;
+  white-space: nowrap;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.app-nav .nav-link:hover {
+  color: var(--bt-primary);
+}
+.app-nav .nav-link.active {
+  color: var(--bt-primary);
+  font-weight: 600;
+}
+.app-nav .nav-link .side-badge {
+  min-width: 18px;
+  height: 18px;
+  font-size: 0.65rem;
+}
+.nav-group-divider {
+  width: 1px;
+  height: 22px;
+  background: var(--bt-line);
+  margin-inline: 0.35rem;
+}
+
+/* Search box */
 .nav-search {
   position: relative;
-  width: 260px;
+  width: 240px;
 }
 .nav-search i {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  inset-inline-start: 0.8rem;
+  inset-inline-start: 0.85rem;
   color: var(--bt-muted);
   pointer-events: none;
 }
 .nav-search .form-control {
-  padding-block: 0.45rem;
+  height: 38px;
+  padding-block: 0;
   padding-inline-start: 2.3rem;
   border-radius: 999px;
-  background: var(--bt-bg);
 }
-.nav-search .form-control:focus {
-  background: var(--bt-surface);
-}
-@media (max-width: 991.98px) {
-  .nav-search {
-    width: 100%;
-    margin-top: 0.5rem;
-  }
-}
+
 @media (min-width: 992px) {
-  .nav-search {
-    margin-inline-end: 0.75rem;
+  .nav-group {
+    margin-inline: auto;
+    padding: 4px;
+    background: var(--bt-bg);
+    border: 1px solid var(--bt-line);
+    border-radius: 999px;
+  }
+  .app-nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.7);
+  }
+  .app-nav .nav-link.active {
+    background: var(--bt-surface);
+    box-shadow: 0 1px 3px rgba(30, 42, 42, 0.12);
+  }
+  .nav-search .form-control {
+    background: transparent;
+    border-color: transparent;
+  }
+  .nav-search .form-control:focus {
+    background: var(--bt-surface);
+    border-color: var(--bt-primary);
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .nav-search {
-    width: 180px;
+    width: 170px;
+  }
+}
+
+/* Phones: the group opens as a list under the bar */
+@media (max-width: 991.98px) {
+  .app-nav .navbar-collapse {
+    padding-block: 0.5rem 1rem;
+  }
+  .nav-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .app-nav .nav-link {
+    display: flex;
+    height: 44px;
+    border-radius: var(--bt-radius-sm);
+  }
+  .app-nav .nav-link.active {
+    background: var(--bt-primary-soft);
+  }
+  .nav-group-divider {
+    display: none;
+  }
+  .nav-search {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .nav-search .form-control {
+    height: 44px;
+    background: var(--bt-bg);
   }
 }
 
