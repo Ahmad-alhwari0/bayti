@@ -249,3 +249,126 @@
   margin-inline: auto;
   padding: 2rem 1.5rem;
 }
+
+/* ---------- bookings.html: simple cards with the owner's latest update ---------- */
+.bk-list {
+  display: grid;
+  gap: 0.85rem;
+}
+.bk-card {
+  display: grid;
+  grid-template-columns: 96px 1fr auto;
+  gap: 1rem;
+  align-items: start;
+  background: var(--bt-surface);
+  border-radius: var(--bt-radius);
+  box-shadow: var(--bt-shadow);
+  padding: 1rem;
+}
+.bk-thumb {
+  display: block;
+  width: 96px;
+  height: 96px;
+  border-radius: 12px;
+}
+.bk-body {
+  min-width: 0;
+}
+.bk-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.bk-title {
+  font-weight: 600;
+  color: var(--bt-text);
+  text-decoration: none;
+}
+.bk-title:hover {
+  color: var(--bt-primary);
+}
+.bk-meta {
+  margin-top: 0.15rem;
+  font-size: 0.82rem;
+  color: var(--bt-muted);
+}
+/* the owner's message */
+.bk-update {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--bt-radius-sm);
+  background: var(--bt-bg);
+}
+.bk-update .avatar {
+  width: 28px;
+  height: 28px;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+.bk-update.is-waiting > i {
+  font-size: 1.05rem;
+  color: var(--bt-warning);
+  padding-top: 0.1rem;
+}
+.bk-update p {
+  margin: 0;
+  font-size: 0.88rem;
+}
+.bk-update small {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--bt-muted);
+}
+.bk-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.btn-icon-sm {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--bt-line);
+  background: var(--bt-surface);
+  color: var(--bt-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-icon-sm:hover,
+.btn-icon-sm:focus-visible,
+.btn-icon-sm[aria-expanded="true"] {
+  background: var(--bt-primary-soft);
+  border-color: var(--bt-primary-soft);
+  color: var(--bt-primary);
+}
+.bk-section-title {
+  margin: 2rem 0 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--bt-muted);
+}
+.bk-card.is-past .bk-thumb {
+  filter: grayscale(0.5);
+}
+@media (max-width: 575.98px) {
+  .bk-card {
+    grid-template-columns: 64px 1fr;
+  }
+  .bk-thumb {
+    width: 64px;
+    height: 64px;
+  }
+  .bk-actions {
+    grid-column: 1 / -1;
+    justify-content: flex-end;
+  }
+  .bk-actions > .btn:not(.btn-icon-sm) {
+    margin-inline-end: auto;
+  }
+}

@@ -165,344 +165,307 @@
 
     <!-- ===== Content ===== -->
     <main class="app-page container">
-        <!-- 1. Page header -->
-        <div class="page-head">
-          <div>
-            <h1>My bookings</h1>
-            <p>Track your bookings and viewing appointments.</p>
-          </div>
+      <!-- 1. Page header -->
+      <div class="page-head">
+        <div>
+          <h1>My bookings</h1>
+          <p>Updates from owners show up here.</p>
         </div>
-
-        <!-- 2. Tabs -->
-        <ul class="nav seg-tabs mb-3" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link active"
-              data-bs-toggle="tab"
-              data-bs-target="#tab-bookings"
-              type="button"
-              role="tab"
-              aria-controls="tab-bookings"
-              aria-selected="true"
-            >
-              Bookings<span class="count">3</span>
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              data-bs-toggle="tab"
-              data-bs-target="#tab-viewings"
-              type="button"
-              role="tab"
-              aria-controls="tab-viewings"
-              aria-selected="false"
-            >
-              Viewings<span class="count">2</span>
-            </button>
-          </li>
-        </ul>
-
-        <div class="tab-content">
-          <!-- ===== Bookings ===== -->
-          <section
-            class="tab-pane fade show active"
-            id="tab-bookings"
-            role="tabpanel"
-            tabindex="0"
-          >
-            <div class="d-flex flex-column gap-3" id="bookingsList">
-              <!-- Booking: owner accepted -->
-              <article class="panel">
-                <div class="booking-card">
-                  <a
-                    href="property.html"
-                    class="thumb ph ph-1"
-                    tabindex="-1"
-                    aria-hidden="true"
-                  ></a>
-                  <div class="min-w-0">
-                    <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
-                      <a
-                        href="property.html"
-                        class="fw-semibold fs-6 text-body text-decoration-none"
-                        >Studio — Al Jubeiha</a
-                      >
-                      <span class="status status--info">Accepted</span>
-                    </div>
-                    <div class="info-row mb-2">
-                      <span>Move-in: Nov 1, 2026</span
-                      ><span>Duration: 6 months</span><span>Rent: 265 JOD / month</span>
-                    </div>
-                    <div class="steps-h" aria-label="Booking steps">
-                      <span class="s is-done">Requested</span
-                      ><span class="sep is-done"></span>
-                      <span class="s is-done">Owner accepted</span
-                      ><span class="sep"></span>
-                      <span class="s is-now" aria-current="step">Moved in</span
-                      ><span class="sep"></span>
-                      <span class="s">Completed</span>
-                    </div>
-                  </div>
-                  <div class="actions d-flex flex-wrap gap-2">
-                    <button
-                      type="button"
-                      class="btn btn-accent"
-                      data-bs-toggle="modal"
-                      data-bs-target="#confirmMoveIn"
-                    >
-                      I've moved in
-                    </button>
-                    <a
-                      href="chat.html"
-                      class="btn btn-outline-secondary px-3"
-                      aria-label="Messages"
-                      ><i class="bi bi-chat-dots text-primary-bt"></i
-                    ></a>
-                  </div>
-                </div>
-                <div class="privacy-note mt-3">
-                  <i class="bi bi-info-circle"></i>Once you've moved in, mark it
-                  here so the owner knows. You pay the rent directly to the
-                  owner.
-                </div>
-              </article>
-
-              <!-- Booking: awaiting reply -->
-              <article class="panel">
-                <div class="booking-card">
-                  <a
-                    href="property.html"
-                    class="thumb ph ph-2"
-                    tabindex="-1"
-                    aria-hidden="true"
-                  ></a>
-                  <div class="min-w-0">
-                    <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
-                      <a
-                        href="property.html"
-                        class="fw-semibold fs-6 text-body text-decoration-none"
-                        >2-bedroom apartment — Tla Al Ali</a
-                      >
-                      <span class="status status--pending">Awaiting reply</span>
-                    </div>
-                    <div class="info-row mb-2">
-                      <span>Move-in: Nov 15, 2026</span
-                      ><span>Duration: 6 months</span><span>Rent: 395 JOD / month</span>
-                    </div>
-                    <div class="steps-h" aria-label="Booking steps">
-                      <span class="s is-now" aria-current="step">Requested</span
-                      ><span class="sep"></span>
-                      <span class="s">Owner accepted</span
-                      ><span class="sep"></span> <span class="s">Moved in</span
-                      ><span class="sep"></span>
-                      <span class="s">Completed</span>
-                    </div>
-                  </div>
-                  <div class="actions d-flex flex-wrap gap-2">
-                    <button
-                      type="button"
-                      class="btn btn-outline-secondary fw-medium"
-                    >
-                      Cancel request
-                    </button>
-                    <a
-                      href="chat.html"
-                      class="btn btn-outline-secondary px-3"
-                      aria-label="Messages"
-                      ><i class="bi bi-chat-dots text-primary-bt"></i
-                    ></a>
-                  </div>
-                </div>
-                <div class="privacy-note mt-3">
-                  <i class="bi bi-shield-check"></i>The owner usually replies within
-                  24 hours.
-                </div>
-              </article>
-
-              <!-- Booking: completed -->
-              <article class="panel">
-                <div class="booking-card">
-                  <a
-                    href="property.html"
-                    class="thumb ph ph-5"
-                    tabindex="-1"
-                    aria-hidden="true"
-                  ></a>
-                  <div class="min-w-0">
-                    <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
-                      <a
-                        href="property.html"
-                        class="fw-semibold fs-6 text-body text-decoration-none"
-                        >Studio — Sweileh</a
-                      >
-                      <span class="status status--muted">Completed</span>
-                    </div>
-                    <div class="info-row mb-2">
-                      <span>Move-in: Jul 1, 2026</span><span>Duration: 2 months</span
-                      ><span>Rent: 220 JOD / month</span>
-                    </div>
-                    <div class="steps-h" aria-label="Booking steps">
-                      <span class="s is-done">Requested</span
-                      ><span class="sep is-done"></span>
-                      <span class="s is-done">Owner accepted</span
-                      ><span class="sep is-done"></span>
-                      <span class="s is-done">Moved in</span
-                      ><span class="sep is-done"></span>
-                      <span class="s is-done">Completed</span>
-                    </div>
-                  </div>
-                  <div class="actions d-flex flex-wrap gap-2">
-                    <button type="button" class="btn btn-outline-primary">
-                      <i class="bi bi-star me-1"></i>Rate your stay
-                    </button>
-                    <a
-                      href="chat.html"
-                      class="btn btn-outline-secondary px-3"
-                      aria-label="Messages"
-                      ><i class="bi bi-chat-dots text-primary-bt"></i
-                    ></a>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </section>
-
-          <!-- ===== Viewings ===== -->
-          <section
-            class="tab-pane fade"
-            id="tab-viewings"
-            role="tabpanel"
-            tabindex="0"
-          >
-            <div class="panel">
-              <ul class="list-clean" id="viewingsList">
-                <li class="list-row flex-wrap">
-                  <span class="icon-tile icon-tile--lg"
-                    ><i class="bi bi-calendar3"></i
-                  ></span>
-                  <div class="grow">
-                    <b class="d-block">Room in a shared apartment — Al Jubeiha</b>
-                    <small>Thu, Oct 15 · 5:00 PM</small>
-                  </div>
-                  <span class="status status--success">Confirmed</span>
-                  <button type="button" class="btn btn-outline-primary btn-sm">
-                    <i class="bi bi-calendar-plus me-1"></i>Add to calendar
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-link btn-sm text-danger text-decoration-none"
-                  >
-                    Cancel viewing
-                  </button>
-                </li>
-                <li class="list-row flex-wrap">
-                  <span class="icon-tile icon-tile--lg"
-                    ><i class="bi bi-calendar3"></i
-                  ></span>
-                  <div class="grow">
-                    <b class="d-block">1-bedroom apartment — Shmeisani</b>
-                    <small>Sat, Oct 17 · 11:00 AM</small>
-                  </div>
-                  <span class="status status--pending">Awaiting reply</span>
-                  <button type="button" class="btn btn-outline-primary btn-sm">
-                    <i class="bi bi-calendar-plus me-1"></i>Add to calendar
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-link btn-sm text-danger text-decoration-none"
-                  >
-                    Cancel viewing
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </section>
-        </div>
-      </main>
-
-    <!-- ===== Move-in confirmation modal ===== -->
-    <div
-      class="modal fade"
-      id="confirmMoveIn"
-      tabindex="-1"
-      aria-labelledby="confirmMoveInTitle"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <form class="modal-content border-0 p-2" id="confirmMoveInForm">
-          <div class="modal-header border-0 pb-0">
-            <h2 class="modal-title h5" id="confirmMoveInTitle">
-              Confirm move-in
-            </h2>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <p class="small text-muted mb-3">
-              This marks your booking as moved in and lets the owner know.
-              Check these points before you confirm.
-            </p>
-            <div class="form-check py-2">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="chkMatch"
-                name="matches"
-                checked
-                required
-              />
-              <label class="form-check-label" for="chkMatch"
-                >The home matches the photos and description</label
-              >
-            </div>
-            <div class="form-check py-2">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="chkBills"
-                name="bills"
-                checked
-                required
-              />
-              <label class="form-check-label" for="chkBills"
-                >Bills and internet are as listed</label
-              >
-            </div>
-            <div class="form-check py-2">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="chkKeys"
-                name="keys"
-                required
-              />
-              <label class="form-check-label" for="chkKeys"
-                >I have the keys and everything works</label
-              >
-            </div>
-          </div>
-          <div
-            class="modal-footer border-0 flex-column align-items-stretch pt-0"
-          >
-            <button type="submit" class="btn btn-accent btn-lg m-0 mb-1">
-              Confirm move-in
-            </button>
-            <button
-              type="button"
-              class="btn btn-link text-danger text-decoration-none m-0"
-              data-bs-dismiss="modal"
-            >
-              Problem? Report it before confirming
-            </button>
-          </div>
-        </form>
       </div>
-    </div>
+
+      <!-- 2. Bookings / Viewings -->
+      <ul class="nav seg-tabs mb-4" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="bookings-tab" data-bs-toggle="tab" data-bs-target="#tab-bookings" type="button" role="tab" aria-controls="tab-bookings" aria-selected="true">
+            Bookings<span class="count">3</span>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="viewings-tab" data-bs-toggle="tab" data-bs-target="#tab-viewings" type="button" role="tab" aria-controls="tab-viewings" aria-selected="false">
+            Viewings<span class="count">2</span>
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <!-- ===== Bookings ===== -->
+        <section class="tab-pane fade show active" id="tab-bookings" role="tabpanel" aria-labelledby="bookings-tab" tabindex="0">
+          <div class="bk-list" id="bookingsList">
+          <article class="bk-card" data-booking="BK-1042">
+            <a href="property.html" class="bk-thumb ph ph-1" tabindex="-1" aria-hidden="true"></a>
+            <div class="bk-body">
+              <div class="bk-top">
+                <a href="property.html" class="bk-title">Studio — Al Jubeiha</a>
+                <span class="status status--info">Accepted</span>
+              </div>
+              <div class="bk-meta">Al Jubeiha, Amman · Move-in Nov 1 · 6 months · 265 JOD / month</div>
+              <!-- Latest update, sent by the owner -->
+              <div class="bk-update">
+                <span class="avatar">A</span>
+                <p>
+                  <b>Abu Ahmad</b> accepted your booking. See you on Nov 1!
+                  <small>Oct 10</small>
+                </p>
+              </div>
+            </div>
+            <div class="bk-actions">
+              <a href="tel:+962791234567" class="btn btn-icon-sm" aria-label="Call Abu Ahmad"
+                ><i class="bi bi-telephone"></i
+              ></a>
+              <a href="chat.html" class="btn btn-icon-sm" aria-label="Message Abu Ahmad"
+                ><i class="bi bi-chat-dots"></i
+              ></a>
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn btn-icon-sm"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  aria-label="More options"
+                >
+                  <i class="bi bi-three-dots"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                  <li><a class="dropdown-item" href="property.html"><i class="bi bi-house-door me-2"></i>View home</a></li>
+                  <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#reportModal"><i class="bi bi-flag me-2"></i>Report a problem</button></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><button type="button" class="dropdown-item text-danger" data-bs-toggle="modal" data-bs-target="#cancelModal"><i class="bi bi-x-circle me-2"></i>Cancel booking</button></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="bk-card" data-booking="BK-1043">
+            <a href="property.html" class="bk-thumb ph ph-2" tabindex="-1" aria-hidden="true"></a>
+            <div class="bk-body">
+              <div class="bk-top">
+                <a href="property.html" class="bk-title">2-bedroom apartment — Tla Al Ali</a>
+                <span class="status status--pending">Awaiting reply</span>
+              </div>
+              <div class="bk-meta">Tla Al Ali, Amman · Move-in Nov 15 · 6 months · 395 JOD / month</div>
+              <!-- Latest update, sent by the owner -->
+              <div class="bk-update is-waiting">
+                <i class="bi bi-hourglass-split"></i>
+                <p>
+                  Request sent to <b>Al Riyada Real Estate Office</b>. Owners usually reply within a day.
+                  <small>Oct 12</small>
+                </p>
+              </div>
+            </div>
+            <div class="bk-actions">
+              <a href="tel:+962795550101" class="btn btn-icon-sm" aria-label="Call Al Riyada Real Estate Office"
+                ><i class="bi bi-telephone"></i
+              ></a>
+              <a href="chat.html" class="btn btn-icon-sm" aria-label="Message Al Riyada Real Estate Office"
+                ><i class="bi bi-chat-dots"></i
+              ></a>
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn btn-icon-sm"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  aria-label="More options"
+                >
+                  <i class="bi bi-three-dots"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                  <li><a class="dropdown-item" href="property.html"><i class="bi bi-house-door me-2"></i>View home</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><button type="button" class="dropdown-item text-danger" data-bs-toggle="modal" data-bs-target="#cancelModal"><i class="bi bi-x-circle me-2"></i>Cancel request</button></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          </div>
+
+          <h2 class="bk-section-title">Past bookings</h2>
+          <div class="bk-list" id="pastBookingsList">
+          <article class="bk-card is-past" data-booking="BK-1031">
+            <a href="property.html" class="bk-thumb ph ph-5" tabindex="-1" aria-hidden="true"></a>
+            <div class="bk-body">
+              <div class="bk-top">
+                <a href="property.html" class="bk-title">Studio — Sweileh</a>
+                <span class="status status--muted">Completed</span>
+              </div>
+              <div class="bk-meta">Sweileh, Amman · Jul 1 – Sep 1, 2026 · 220 JOD / month</div>
+              <!-- Latest update, sent by the owner -->
+              <div class="bk-update">
+                <span class="avatar">A</span>
+                <p>
+                  <b>Abu Ahmad</b> marked your stay as completed. Thanks for staying!
+                  <small>Sep 1</small>
+                </p>
+              </div>
+            </div>
+            <div class="bk-actions">
+              <button type="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-star me-1"></i>Rate your stay</button>
+              <a href="tel:+962791234567" class="btn btn-icon-sm" aria-label="Call Abu Ahmad"
+                ><i class="bi bi-telephone"></i
+              ></a>
+              <a href="chat.html" class="btn btn-icon-sm" aria-label="Message Abu Ahmad"
+                ><i class="bi bi-chat-dots"></i
+              ></a>
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn btn-icon-sm"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  aria-label="More options"
+                >
+                  <i class="bi bi-three-dots"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                  <li><a class="dropdown-item" href="property.html"><i class="bi bi-house-door me-2"></i>View home</a></li>
+                  <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#reportModal"><i class="bi bi-flag me-2"></i>Report a problem</button></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          </div>
+        </section>
+
+        <!-- ===== Viewings ===== -->
+        <section class="tab-pane fade" id="tab-viewings" role="tabpanel" aria-labelledby="viewings-tab" tabindex="0">
+          <div class="bk-list" id="viewingsList">
+          <article class="bk-card" data-booking="VW-201">
+            <a href="property.html" class="bk-thumb ph ph-3" tabindex="-1" aria-hidden="true"></a>
+            <div class="bk-body">
+              <div class="bk-top">
+                <a href="property.html" class="bk-title">Room in a shared apartment — Al Jubeiha</a>
+                <span class="status status--success">Confirmed</span>
+              </div>
+              <div class="bk-meta">Al Jubeiha, Amman · Thu, Oct 15 · 5:00 PM</div>
+              <!-- Latest update, sent by the owner -->
+              <div class="bk-update">
+                <span class="avatar">A</span>
+                <p>
+                  <b>Abu Ahmad</b> confirmed your viewing. Ring the bell at building 14.
+                  <small>Oct 11</small>
+                </p>
+              </div>
+            </div>
+            <div class="bk-actions">
+              <a href="tel:+962791234567" class="btn btn-icon-sm" aria-label="Call Abu Ahmad"
+                ><i class="bi bi-telephone"></i
+              ></a>
+              <a href="chat.html" class="btn btn-icon-sm" aria-label="Message Abu Ahmad"
+                ><i class="bi bi-chat-dots"></i
+              ></a>
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn btn-icon-sm"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  aria-label="More options"
+                >
+                  <i class="bi bi-three-dots"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                  <li><a class="dropdown-item" href="property.html"><i class="bi bi-house-door me-2"></i>View home</a></li>
+                  <li><a class="dropdown-item" href="property.html"><i class="bi bi-calendar-event me-2"></i>Change time</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><button type="button" class="dropdown-item text-danger" data-bs-toggle="modal" data-bs-target="#cancelModal"><i class="bi bi-x-circle me-2"></i>Cancel viewing</button></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="bk-card" data-booking="VW-202">
+            <a href="property.html" class="bk-thumb ph ph-4" tabindex="-1" aria-hidden="true"></a>
+            <div class="bk-body">
+              <div class="bk-top">
+                <a href="property.html" class="bk-title">1-bedroom apartment — Shmeisani</a>
+                <span class="status status--pending">Awaiting reply</span>
+              </div>
+              <div class="bk-meta">Shmeisani, Amman · Sat, Oct 17 · 11:00 AM</div>
+              <!-- Latest update, sent by the owner -->
+              <div class="bk-update is-waiting">
+                <i class="bi bi-hourglass-split"></i>
+                <p>
+                  Waiting for <b>Umm Yazan</b> to confirm this time.
+                  <small>Oct 12</small>
+                </p>
+              </div>
+            </div>
+            <div class="bk-actions">
+              <a href="tel:+962786660202" class="btn btn-icon-sm" aria-label="Call Umm Yazan"
+                ><i class="bi bi-telephone"></i
+              ></a>
+              <a href="chat.html" class="btn btn-icon-sm" aria-label="Message Umm Yazan"
+                ><i class="bi bi-chat-dots"></i
+              ></a>
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn btn-icon-sm"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  aria-label="More options"
+                >
+                  <i class="bi bi-three-dots"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                  <li><a class="dropdown-item" href="property.html"><i class="bi bi-house-door me-2"></i>View home</a></li>
+                  <li><a class="dropdown-item" href="property.html"><i class="bi bi-calendar-event me-2"></i>Change time</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><button type="button" class="dropdown-item text-danger" data-bs-toggle="modal" data-bs-target="#cancelModal"><i class="bi bi-x-circle me-2"></i>Cancel viewing</button></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          </div>
+        </section>
+      </div>
+
+      <!-- ===== Cancel a booking or viewing ===== -->
+      <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <form class="modal-content" id="cancelForm" method="post">
+            <div class="modal-header">
+              <h2 class="modal-title h5" id="cancelTitle">Cancel this?</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p class="small text-muted">The owner will be told right away.</p>
+              <label class="form-label" for="cancelReason">Reason <span class="text-muted fw-normal">(optional)</span></label>
+              <select class="form-select" id="cancelReason" name="reason">
+                <option value="">Choose a reason</option>
+                <option value="found_other">I found another home</option>
+                <option value="plans_changed">My plans changed</option>
+                <option value="price">The price doesn't work for me</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-link text-muted" data-bs-dismiss="modal">Keep it</button>
+              <button type="submit" class="btn btn-danger">Yes, cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- ===== Report a problem ===== -->
+      <div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <form class="modal-content" id="reportForm" method="post">
+            <div class="modal-header">
+              <h2 class="modal-title h5" id="reportTitle">Report a problem</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <label class="form-label" for="reportDetails">What happened?</label>
+              <textarea class="form-control" id="reportDetails" name="details" rows="4" required></textarea>
+              <p class="small text-muted mt-2 mb-0">Bayti Support will reply in your messages.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-link text-muted" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
