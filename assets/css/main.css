@@ -1726,6 +1726,35 @@ h6,
   border-radius: 999px;
   padding: 0.2rem 0.5rem;
 }
+/* Yes/no priority (checkbox instead of a slider) */
+.priority--check {
+  grid-template-columns: 1fr auto;
+}
+.priority--check .form-check-input {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  cursor: pointer;
+}
+/* Shared housing is for students only: when "Study" isn't picked in step 1,
+   the row fades and the slider is hidden, so it can't be used (mouse or keyboard) */
+.students-only-note {
+  color: var(--bt-muted);
+}
+.wizard:not(:has(#pStudy:checked)) .priority--students {
+  opacity: 0.55;
+}
+.wizard:not(:has(#pStudy:checked)) .priority--students .form-range,
+.wizard:not(:has(#pStudy:checked)) .priority--students .prio-val {
+  visibility: hidden;
+}
+.wizard:not(:has(#pStudy:checked)) .students-only-note {
+  color: var(--bt-accent);
+  font-weight: 600;
+}
+.budget-input {
+  max-width: 320px;
+}
 @media (max-width: 575.98px) {
   .priority {
     grid-template-columns: 1fr auto;

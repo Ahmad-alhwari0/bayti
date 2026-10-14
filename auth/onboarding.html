@@ -292,25 +292,40 @@
             based on your reason.
           </p>
 
+          <!-- Budget: type any amount, or pick one from the list -->
           <div class="panel mb-3">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <label
-                class="form-label mb-0"
-                for="budget"
-              >Monthly budget (bills included)</label>
-              <b class="text-primary fs-5" id="budgetVal"
-                >300 <span>JOD</span
-              ></b>
+            <label class="form-label" for="budget"
+              >Monthly budget (bills included)</label
+            >
+            <div class="input-group budget-input">
+              <input
+                type="number"
+                class="form-control form-control-lg"
+                id="budget"
+                name="budget"
+                list="budgetOptions"
+                min="100"
+                max="2000"
+                step="10"
+                value="300"
+                placeholder="e.g. 300"
+                aria-describedby="budgetHint"
+              />
+              <span class="input-group-text">JOD / month</span>
             </div>
-            <input
-              type="range"
-              class="form-range"
-              id="budget"
-              min="100"
-              max="800"
-              step="10"
-              value="300"
-            />
+            <datalist id="budgetOptions">
+              <option value="150"></option>
+              <option value="200"></option>
+              <option value="250"></option>
+              <option value="300"></option>
+              <option value="400"></option>
+              <option value="500"></option>
+              <option value="750"></option>
+              <option value="1000"></option>
+            </datalist>
+            <small class="form-text text-muted" id="budgetHint"
+              >Type an amount or pick one from the list.</small
+            >
           </div>
 
           <!-- Values here are suggested defaults for a student -->
@@ -360,20 +375,24 @@
               />
               <span class="prio-val">Important</span>
             </div>
-            <div class="priority">
+            <!-- Easy access: a yes/no need, not a scale -->
+            <div class="priority priority--check">
               <label for="pr-access"
                 ><i class="bi bi-universal-access"></i
-                ><span>Easy access (elevator, ground floor)</span
-              ></label>
+                ><span
+                  >Easy access
+                  <small class="d-block text-muted fw-normal"
+                    >Elevator or ground floor</small
+                  ></span
+                ></label
+              >
               <input
-                type="range"
-                class="form-range"
+                type="checkbox"
+                class="form-check-input"
                 id="pr-access"
-                min="1"
-                max="5"
-                value="2"
+                name="easy_access"
+                value="1"
               />
-              <span class="prio-val">Low</span>
             </div>
             <div class="priority">
               <label for="pr-ready"
@@ -390,15 +409,23 @@
               />
               <span class="prio-val">Medium</span>
             </div>
-            <div class="priority">
+            <!-- Shared housing: only usable when "Study" is picked in step 1
+                 (CSS: .wizard:not(:has(#pStudy:checked)) .priority--students) -->
+            <div class="priority priority--students">
               <label for="pr-sharing"
                 ><i class="bi bi-people"></i
-                ><span>Shared housing</span
-              ></label>
+                ><span
+                  >Shared housing
+                  <small class="students-only-note d-block fw-normal"
+                    >For students only</small
+                  ></span
+                ></label
+              >
               <input
                 type="range"
                 class="form-range"
                 id="pr-sharing"
+                name="shared_housing"
                 min="1"
                 max="5"
                 value="3"
