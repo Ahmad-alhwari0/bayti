@@ -288,8 +288,7 @@
           <span class="step-tag">Step 3 of 3</span>
           <h1 class="h2">What matters most?</h1>
           <p class="text-muted mb-4">
-            Move each slider to match how much it matters. We pre-filled them
-            based on your reason.
+            Set your budget and tick anything you need.
           </p>
 
           <!-- Budget: type any amount, or pick one from the list -->
@@ -328,54 +327,8 @@
             >
           </div>
 
-          <!-- Values here are suggested defaults for a student -->
+          <!-- What you need (yes/no) -->
           <div class="panel" id="priorities">
-            <div class="priority">
-              <label for="pr-price"
-                ><i class="bi bi-cash-coin"></i
-                ><span>Price</span
-              ></label>
-              <input
-                type="range"
-                class="form-range"
-                id="pr-price"
-                min="1"
-                max="5"
-                value="5"
-              />
-              <span class="prio-val">Very important</span>
-            </div>
-            <div class="priority">
-              <label for="pr-distance"
-                ><i class="bi bi-geo-alt"></i
-                ><span>Close to your place</span
-              ></label>
-              <input
-                type="range"
-                class="form-range"
-                id="pr-distance"
-                min="1"
-                max="5"
-                value="5"
-              />
-              <span class="prio-val">Very important</span>
-            </div>
-            <div class="priority">
-              <label for="pr-quiet"
-                ><i class="bi bi-volume-mute"></i
-                ><span>Quiet</span
-              ></label>
-              <input
-                type="range"
-                class="form-range"
-                id="pr-quiet"
-                min="1"
-                max="5"
-                value="4"
-              />
-              <span class="prio-val">Important</span>
-            </div>
-            <!-- Easy access: a yes/no need, not a scale -->
             <div class="priority priority--check">
               <label for="pr-access"
                 ><i class="bi bi-universal-access"></i
@@ -394,24 +347,9 @@
                 value="1"
               />
             </div>
-            <div class="priority">
-              <label for="pr-ready"
-                ><i class="bi bi-lightning-charge"></i
-                ><span>Ready right away</span
-              ></label>
-              <input
-                type="range"
-                class="form-range"
-                id="pr-ready"
-                min="1"
-                max="5"
-                value="3"
-              />
-              <span class="prio-val">Medium</span>
-            </div>
             <!-- Shared housing: only usable when "Study" is picked in step 1
                  (CSS: .wizard:not(:has(#pStudy:checked)) .priority--students) -->
-            <div class="priority priority--students">
+            <div class="priority priority--check priority--students">
               <label for="pr-sharing"
                 ><i class="bi bi-people"></i
                 ><span
@@ -422,15 +360,12 @@
                 ></label
               >
               <input
-                type="range"
-                class="form-range"
+                type="checkbox"
+                class="form-check-input"
                 id="pr-sharing"
                 name="shared_housing"
-                min="1"
-                max="5"
-                value="3"
+                value="1"
               />
-              <span class="prio-val">Medium</span>
             </div>
           </div>
         </section>

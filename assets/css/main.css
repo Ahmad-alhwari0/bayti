@@ -1737,15 +1737,14 @@ h6,
   cursor: pointer;
 }
 /* Shared housing is for students only: when "Study" isn't picked in step 1,
-   the row fades and the slider is hidden, so it can't be used (mouse or keyboard) */
+   the row fades and the checkbox is hidden, so it can't be used (mouse or keyboard) */
 .students-only-note {
   color: var(--bt-muted);
 }
 .wizard:not(:has(#pStudy:checked)) .priority--students {
   opacity: 0.55;
 }
-.wizard:not(:has(#pStudy:checked)) .priority--students .form-range,
-.wizard:not(:has(#pStudy:checked)) .priority--students .prio-val {
+.wizard:not(:has(#pStudy:checked)) .priority--students .form-check-input {
   visibility: hidden;
 }
 .wizard:not(:has(#pStudy:checked)) .students-only-note {
