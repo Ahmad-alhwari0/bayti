@@ -161,124 +161,58 @@
           </div>
         </section>
 
-        <!-- ===== Step 2: Where do you go ===== -->
+        <!-- ===== Step 2: Where do you want to live ===== -->
         <section class="wizard-step" data-step="2">
           <span class="step-tag">Step 2 of 3</span>
-          <h1 class="h2">Where do you go every day?</h1>
+          <h1 class="h2">Where do you want to live?</h1>
           <p class="text-muted mb-4">
-            We'll calculate distance and commute time from this place.
+            Pick a city, then an area if you have one in mind. We'll show homes
+            there first.
           </p>
 
-          <div class="search-input mb-3">
-            <i class="bi bi-search"></i>
-            <input
-              type="search"
-              class="form-control form-control-lg"
-              id="placeSearch"
-              placeholder="Search for a university, hospital, office..."
-            />
-          </div>
-
-          <div class="row g-4">
+          <div class="row g-3">
             <div class="col-md-6">
-              <p class="small fw-semibold text-muted mb-2">Suggested places</p>
-              <div class="d-grid gap-2" id="placeList">
-                <div>
-                  <input
-                    type="radio"
-                    class="btn-check"
-                    name="place"
-                    id="p1"
-                    value="p1"
-                    checked
-                  />
-                  <label class="choice-card align-items-center py-2" for="p1">
-                    <span class="ci"><i class="bi bi-mortarboard"></i></span>
-                    <span
-                      ><b>University of Jordan</b
-                      ><small>University · Al Jubeiha</small
-                    ></span>
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="radio"
-                    class="btn-check"
-                    name="place"
-                    id="p2"
-                    value="p2"
-                  />
-                  <label class="choice-card align-items-center py-2" for="p2">
-                    <span class="ci"><i class="bi bi-mortarboard"></i></span>
-                    <span
-                      ><b>Applied Science University</b
-                      ><small>University · Shafa Badran</small
-                    ></span>
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="radio"
-                    class="btn-check"
-                    name="place"
-                    id="p3"
-                    value="p3"
-                  />
-                  <label class="choice-card align-items-center py-2" for="p3">
-                    <span class="ci"><i class="bi bi-hospital"></i></span>
-                    <span
-                      ><b>Khalidi Hospital</b
-                      ><small>Hospital · Jabal Amman</small
-                    ></span>
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="radio"
-                    class="btn-check"
-                    name="place"
-                    id="p4"
-                    value="p4"
-                  />
-                  <label class="choice-card align-items-center py-2" for="p4">
-                    <span class="ci"><i class="bi bi-briefcase"></i></span>
-                    <span
-                      ><b>Abdali Boulevard</b
-                      ><small>Work · Abdali</small
-                    ></span>
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="radio"
-                    class="btn-check"
-                    name="place"
-                    id="p5"
-                    value="p5"
-                  />
-                  <label class="choice-card align-items-center py-2" for="p5">
-                    <span class="ci"><i class="bi bi-geo"></i></span>
-                    <span
-                      ><b>Downtown Amman</b
-                      ><small>Landmark · Al Balad</small
-                    ></span>
-                  </label>
-                </div>
-              </div>
+              <label class="form-label" for="city">City</label>
+              <select class="form-select form-select-lg" id="city" name="city" required>
+                <option value="" selected disabled>Choose a city</option>
+                <option value="amman">Amman</option>
+                <option value="irbid">Irbid</option>
+                <option value="zarqa">Zarqa</option>
+                <option value="aqaba">Aqaba</option>
+                <option value="salt">Salt</option>
+                <option value="madaba">Madaba</option>
+                <option value="jerash">Jerash</option>
+                <option value="ajloun">Ajloun</option>
+                <option value="mafraq">Mafraq</option>
+                <option value="karak">Karak</option>
+                <option value="tafilah">Tafilah</option>
+                <option value="maan">Ma'an</option>
+              </select>
             </div>
             <div class="col-md-6">
-              <p
-                class="small fw-semibold text-muted mb-2"
-              >Or pick the spot on the map</p>
-              <div class="map-mock" style="min-height: 300px">
-                <span
-                  class="map-area"
-                  style="left: 46%; top: 48%; width: 150px; height: 150px"
-                ></span>
-                <span class="map-place" style="left: 46%; top: 48%"
-                  ><i class="bi bi-mortarboard-fill"></i
-                ></span>
-              </div>
+              <label class="form-label" for="area"
+                >Area <span class="text-muted fw-normal">(optional)</span></label
+              >
+              <!-- Areas are grouped by city; the backend fills this list -->
+              <select class="form-select form-select-lg" id="area" name="area">
+                <option value="" selected>Any area</option>
+                <optgroup label="Amman">
+                  <option>Abdali</option>
+                  <option>Al Jubeiha</option>
+                  <option>Khalda</option>
+                  <option>Shmeisani</option>
+                  <option>Sweileh</option>
+                  <option>Tla Al Ali</option>
+                </optgroup>
+                <optgroup label="Irbid">
+                  <option>Al Hay Al Janoubi</option>
+                  <option>Al Nuzha</option>
+                </optgroup>
+                <optgroup label="Aqaba">
+                  <option>Al Shallaleh</option>
+                  <option>Area 9</option>
+                </optgroup>
+              </select>
             </div>
           </div>
         </section>
