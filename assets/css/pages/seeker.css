@@ -372,3 +372,9 @@
     margin-inline-end: auto;
   }
 }
+/* automatic updates from Bayti (e.g. stay ended) */
+.bk-update.is-system > i {
+  font-size: 1.05rem;
+  color: var(--bt-success);
+  padding-top: 0.1rem;
+}
