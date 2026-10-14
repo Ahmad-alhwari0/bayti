@@ -212,7 +212,7 @@
             tabindex="0"
           >
             <div class="d-flex flex-column gap-3" id="bookingsList">
-              <!-- Booking: payment held -->
+              <!-- Booking: owner accepted -->
               <article class="panel">
                 <div class="booking-card">
                   <a
@@ -228,22 +228,20 @@
                         class="fw-semibold fs-6 text-body text-decoration-none"
                         >Studio — Al Jubeiha</a
                       >
-                      <span class="status status--info">Payment held</span>
+                      <span class="status status--info">Accepted</span>
                     </div>
                     <div class="info-row mb-2">
                       <span>Move-in: Nov 1, 2026</span
-                      ><span>Duration: 6 months</span><span>Payment: 265 JOD</span>
+                      ><span>Duration: 6 months</span><span>Rent: 265 JOD / month</span>
                     </div>
                     <div class="steps-h" aria-label="Booking steps">
-                      <span class="s is-done">Request</span
+                      <span class="s is-done">Requested</span
                       ><span class="sep is-done"></span>
-                      <span class="s is-done">Owner accepts</span
-                      ><span class="sep is-done"></span>
-                      <span class="s is-done">Payment held</span
+                      <span class="s is-done">Owner accepted</span
                       ><span class="sep"></span>
-                      <span class="s is-now" aria-current="step">Move-in</span
+                      <span class="s is-now" aria-current="step">Moved in</span
                       ><span class="sep"></span>
-                      <span class="s">Done</span>
+                      <span class="s">Completed</span>
                     </div>
                   </div>
                   <div class="actions d-flex flex-wrap gap-2">
@@ -264,8 +262,8 @@
                   </div>
                 </div>
                 <div class="privacy-note mt-3">
-                  <i class="bi bi-shield-check"></i>Move in and check that the home
-                  matches the listing, then confirm to release payment to the
+                  <i class="bi bi-info-circle"></i>Once you've moved in, mark it
+                  here so the owner knows. You pay the rent directly to the
                   owner.
                 </div>
               </article>
@@ -290,18 +288,15 @@
                     </div>
                     <div class="info-row mb-2">
                       <span>Move-in: Nov 15, 2026</span
-                      ><span>Duration: 6 months</span><span>Payment: 395 JOD</span>
+                      ><span>Duration: 6 months</span><span>Rent: 395 JOD / month</span>
                     </div>
                     <div class="steps-h" aria-label="Booking steps">
-                      <span class="s is-done">Request</span
+                      <span class="s is-now" aria-current="step">Requested</span
                       ><span class="sep"></span>
-                      <span class="s is-now" aria-current="step"
-                        >Owner accepts</span
+                      <span class="s">Owner accepted</span
+                      ><span class="sep"></span> <span class="s">Moved in</span
                       ><span class="sep"></span>
-                      <span class="s">Payment held</span
-                      ><span class="sep"></span> <span class="s">Move-in</span
-                      ><span class="sep"></span>
-                      <span class="s">Done</span>
+                      <span class="s">Completed</span>
                     </div>
                   </div>
                   <div class="actions d-flex flex-wrap gap-2">
@@ -345,18 +340,16 @@
                     </div>
                     <div class="info-row mb-2">
                       <span>Move-in: Jul 1, 2026</span><span>Duration: 2 months</span
-                      ><span>Payment: 220 JOD</span>
+                      ><span>Rent: 220 JOD / month</span>
                     </div>
                     <div class="steps-h" aria-label="Booking steps">
-                      <span class="s is-done">Request</span
+                      <span class="s is-done">Requested</span
                       ><span class="sep is-done"></span>
-                      <span class="s is-done">Owner accepts</span
+                      <span class="s is-done">Owner accepted</span
                       ><span class="sep is-done"></span>
-                      <span class="s is-done">Payment held</span
+                      <span class="s is-done">Moved in</span
                       ><span class="sep is-done"></span>
-                      <span class="s is-done">Move-in</span
-                      ><span class="sep is-done"></span>
-                      <span class="s is-done">Done</span>
+                      <span class="s is-done">Completed</span>
                     </div>
                   </div>
                   <div class="actions d-flex flex-wrap gap-2">
@@ -451,8 +444,8 @@
           </div>
           <div class="modal-body">
             <p class="small text-muted mb-3">
-              Check these points before you confirm. Once confirmed, payment is
-              released to the owner.
+              This marks your booking as moved in and lets the owner know.
+              Check these points before you confirm.
             </p>
             <div class="form-check py-2">
               <input
@@ -497,7 +490,7 @@
             class="modal-footer border-0 flex-column align-items-stretch pt-0"
           >
             <button type="submit" class="btn btn-accent btn-lg m-0 mb-1">
-              Confirm and release payment
+              Confirm move-in
             </button>
             <button
               type="button"

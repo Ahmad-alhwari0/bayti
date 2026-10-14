@@ -166,45 +166,17 @@
         <div class="page-head">
           <div>
             <h1>Users</h1>
-            <p>
-              Manage accounts and monitor attempts to communicate outside the
-              platform.
-            </p>
+            <p>Manage home seeker and property owner accounts.</p>
           </div>
         </div>
 
-        <!-- 2. Tabs and search -->
+        <!-- 2. Count and search -->
         <div
           class="users-toolbar d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3"
         >
-          <ul class="nav seg-tabs" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link active"
-                data-bs-toggle="tab"
-                data-bs-target="#tab-users"
-                type="button"
-                role="tab"
-                aria-controls="tab-users"
-                aria-selected="true"
-              >
-                Users<span class="count">1,284</span>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#tab-violations"
-                type="button"
-                role="tab"
-                aria-controls="tab-violations"
-                aria-selected="false"
-              >
-                Chat violations<span class="count">4</span>
-              </button>
-            </li>
-          </ul>
+          <h2 class="h5 mb-0" id="usersTitle">
+            All users <span class="text-muted fw-normal">· 1,284</span>
+          </h2>
           <form class="search-input" role="search" id="usersSearch">
             <i class="bi bi-search"></i>
             <input
@@ -218,312 +190,172 @@
           </form>
         </div>
 
-        <div class="tab-content">
-          <!-- ===== Users ===== -->
-          <section
-            class="tab-pane fade show active"
-            id="tab-users"
-            role="tabpanel"
-            tabindex="0"
-          >
-            <div class="panel panel-table">
-              <div class="table-responsive">
-                <table class="table bt-table users-table">
-                  <thead>
-                    <tr>
-                      <th scope="col">User</th>
-                      <th scope="col">Role</th>
-                      <th scope="col">Joined</th>
-                      <th scope="col">Violations</th>
-                      <th scope="col">Status</th>
-                      <th scope="col">Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody id="usersBody">
-                    <tr>
-                      <td>
-                        <div class="cell-user">
-                          <span class="avatar">S</span
-                          ><span
-                            ><b>Sara Khaled</b
-                            ><small>sara@example.com</small></span
-                          >
-                        </div>
-                      </td>
-                      <td>Home seeker</td>
-                      <td class="text-muted">Oct 2</td>
-                      <td>
-                        <span class="status status--muted no-dot">0</span>
-                      </td>
-                      <td><span class="status status--success">Active</span></td>
-                      <td>
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-outline-danger"
-                          data-action="suspend"
-                          aria-label="Suspend Sara Khaled"
+        <!-- 3. Users table -->
+        <section aria-labelledby="usersTitle">
+          <div class="panel panel-table">
+            <div class="table-responsive">
+              <table class="table bt-table users-table">
+                <thead>
+                  <tr>
+                    <th scope="col">User</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Joined</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="usersBody">
+                  <tr>
+                    <td>
+                      <div class="cell-user">
+                        <span class="avatar">S</span
+                        ><span
+                          ><b>Sara Khaled</b
+                          ><small>sara@example.com</small></span
                         >
-                          Suspend
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="cell-user">
-                          <span class="avatar">A</span
-                          ><span
-                            ><b>Abu Ahmad</b
-                            ><small>abuahmad@example.com</small></span
-                          >
-                        </div>
-                      </td>
-                      <td>Property owner</td>
-                      <td class="text-muted">Sep 12</td>
-                      <td>
-                        <span class="status status--pending no-dot">1</span>
-                      </td>
-                      <td><span class="status status--success">Active</span></td>
-                      <td>
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-outline-danger"
-                          data-action="suspend"
-                          aria-label="Suspend Abu Ahmad"
+                      </div>
+                    </td>
+                    <td>Home seeker</td>
+                    <td class="text-muted">Oct 2</td>
+                    <td><span class="status status--success">Active</span></td>
+                    <td>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-danger"
+                        data-action="suspend"
+                        aria-label="Suspend Sara Khaled"
+                      >
+                        Suspend
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="cell-user">
+                        <span class="avatar">A</span
+                        ><span
+                          ><b>Abu Ahmad</b
+                          ><small>abuahmad@example.com</small></span
                         >
-                          Suspend
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="cell-user">
-                          <span class="avatar">R</span
-                          ><span
-                            ><b>Al Riyada Real Estate Office</b
-                            ><small>info@riyada.jo</small></span
-                          >
-                        </div>
-                      </td>
-                      <td>Property owner</td>
-                      <td class="text-muted">Sep 3</td>
-                      <td>
-                        <span class="status status--muted no-dot">0</span>
-                      </td>
-                      <td><span class="status status--success">Active</span></td>
-                      <td>
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-outline-danger"
-                          data-action="suspend"
-                          aria-label="Suspend Al Riyada Real Estate Office"
+                      </div>
+                    </td>
+                    <td>Property owner</td>
+                    <td class="text-muted">Sep 12</td>
+                    <td><span class="status status--success">Active</span></td>
+                    <td>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-danger"
+                        data-action="suspend"
+                        aria-label="Suspend Abu Ahmad"
+                      >
+                        Suspend
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="cell-user">
+                        <span class="avatar">R</span
+                        ><span
+                          ><b>Al Riyada Real Estate Office</b
+                          ><small>info@riyada.jo</small></span
                         >
-                          Suspend
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="cell-user">
-                          <span class="avatar">F</span
-                          ><span
-                            ><b>Fadi Mansour</b
-                            ><small>fadi.m@example.com</small></span
-                          >
-                        </div>
-                      </td>
-                      <td>Property owner</td>
-                      <td class="text-muted">Aug 28</td>
-                      <td>
-                        <span class="status status--danger no-dot">4</span>
-                      </td>
-                      <td>
-                        <span class="status status--danger">Suspended</span>
-                      </td>
-                      <td>
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-outline-primary"
-                          data-action="activate"
-                          aria-label="Reactivate Fadi Mansour"
+                      </div>
+                    </td>
+                    <td>Property owner</td>
+                    <td class="text-muted">Sep 3</td>
+                    <td><span class="status status--success">Active</span></td>
+                    <td>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-danger"
+                        data-action="suspend"
+                        aria-label="Suspend Al Riyada Real Estate Office"
+                      >
+                        Suspend
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="cell-user">
+                        <span class="avatar">F</span
+                        ><span
+                          ><b>Fadi Mansour</b
+                          ><small>fadi.m@example.com</small></span
                         >
-                          Reactivate
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="cell-user">
-                          <span class="avatar">M</span
-                          ><span
-                            ><b>Mohammad Al Ali</b
-                            ><small>m.ali@example.com</small></span
-                          >
-                        </div>
-                      </td>
-                      <td>Home seeker</td>
-                      <td class="text-muted">Aug 25</td>
-                      <td>
-                        <span class="status status--muted no-dot">0</span>
-                      </td>
-                      <td><span class="status status--success">Active</span></td>
-                      <td>
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-outline-danger"
-                          data-action="suspend"
-                          aria-label="Suspend Mohammad Al Ali"
+                      </div>
+                    </td>
+                    <td>Property owner</td>
+                    <td class="text-muted">Aug 28</td>
+                    <td>
+                      <span class="status status--danger">Suspended</span>
+                    </td>
+                    <td>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-primary"
+                        data-action="activate"
+                        aria-label="Reactivate Fadi Mansour"
+                      >
+                        Reactivate
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="cell-user">
+                        <span class="avatar">M</span
+                        ><span
+                          ><b>Mohammad Al Ali</b
+                          ><small>m.ali@example.com</small></span
                         >
-                          Suspend
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="cell-user">
-                          <span class="avatar">E</span
-                          ><span
-                            ><b>Emily Carter</b
-                            ><small>emily.c@example.com</small></span
-                          >
-                        </div>
-                      </td>
-                      <td>Home seeker</td>
-                      <td class="text-muted">Aug 20</td>
-                      <td>
-                        <span class="status status--pending no-dot">2</span>
-                      </td>
-                      <td><span class="status status--success">Active</span></td>
-                      <td>
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-outline-danger"
-                          data-action="suspend"
-                          aria-label="Suspend Emily Carter"
+                      </div>
+                    </td>
+                    <td>Home seeker</td>
+                    <td class="text-muted">Aug 25</td>
+                    <td><span class="status status--success">Active</span></td>
+                    <td>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-danger"
+                        data-action="suspend"
+                        aria-label="Suspend Mohammad Al Ali"
+                      >
+                        Suspend
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="cell-user">
+                        <span class="avatar">E</span
+                        ><span
+                          ><b>Emily Carter</b
+                          ><small>emily.c@example.com</small></span
                         >
-                          Suspend
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                      </div>
+                    </td>
+                    <td>Home seeker</td>
+                    <td class="text-muted">Aug 20</td>
+                    <td><span class="status status--success">Active</span></td>
+                    <td>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-danger"
+                        data-action="suspend"
+                        aria-label="Suspend Emily Carter"
+                      >
+                        Suspend
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-          </section>
-
-          <!-- ===== Chat violations ===== -->
-          <section
-            class="tab-pane fade"
-            id="tab-violations"
-            role="tabpanel"
-            tabindex="0"
-          >
-            <div class="alert-soft mb-3 small">
-              <i class="bi bi-shield-exclamation"></i>
-              <span
-                >Any message containing a phone number, email or link is blocked
-                and logged here. You'll get an alert after 3 violations.</span
-              >
-            </div>
-            <div class="panel panel-table">
-              <div class="table-responsive">
-                <table class="table bt-table violations-table">
-                  <thead>
-                    <tr>
-                      <th scope="col">User</th>
-                      <th scope="col">Type</th>
-                      <th scope="col">Blocked message</th>
-                      <th scope="col">Date</th>
-                      <th scope="col">Total</th>
-                      <th scope="col">Action</th>
-                    </tr>
-                  </thead>
-                  <tbody id="violationsBody">
-                    <tr>
-                      <td class="fw-semibold">Fadi Mansour</td>
-                      <td>Phone number</td>
-                      <td>
-                        <span class="blocked-msg">My number is 079•••••••</span>
-                      </td>
-                      <td class="text-muted">Today 10:02 AM</td>
-                      <td>
-                        <span class="status status--danger no-dot">4</span>
-                      </td>
-                      <td>
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-outline-danger"
-                          data-action="suspend"
-                        >
-                          Suspend account
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="fw-semibold">Emily Carter</td>
-                      <td>WhatsApp</td>
-                      <td>
-                        <span class="blocked-msg">add me on whats•••</span>
-                      </td>
-                      <td class="text-muted">Yesterday</td>
-                      <td>
-                        <span class="status status--pending no-dot">2</span>
-                      </td>
-                      <td>
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-outline-primary"
-                          data-action="warn"
-                        >
-                          Send warning
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="fw-semibold">Abu Ahmad</td>
-                      <td>Phone number</td>
-                      <td>
-                        <span class="blocked-msg">Call me on 078•••••••</span>
-                      </td>
-                      <td class="text-muted">Yesterday</td>
-                      <td>
-                        <span class="status status--pending no-dot">1</span>
-                      </td>
-                      <td>
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-outline-primary"
-                          data-action="warn"
-                        >
-                          Send warning
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="fw-semibold">Fadi Mansour</td>
-                      <td>Email</td>
-                      <td>
-                        <span class="blocked-msg">fadi•••@gmail.com</span>
-                      </td>
-                      <td class="text-muted">Oct 5</td>
-                      <td>
-                        <span class="status status--danger no-dot">4</span>
-                      </td>
-                      <td>
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-outline-danger"
-                          data-action="suspend"
-                        >
-                          Suspend account
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </main>
     </div>
 

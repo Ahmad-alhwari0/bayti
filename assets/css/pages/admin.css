@@ -6,7 +6,6 @@
 :root {
   /* Regular chart bars (slightly darker than primary-soft so they stand out) */
   --admin-bar: #c9d9d7;
-  --admin-danger-soft: #fbe7e5;
 }
 
 /* ---------- Shared across admin pages ---------- */
@@ -74,19 +73,6 @@
 }
 .rev-chart .bar.is-hi {
   background: var(--bt-primary);
-}
-.icon-tile {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.icon-tile--danger {
-  background: var(--admin-danger-soft);
-  color: var(--bt-danger);
 }
 .ic-star {
   color: var(--bt-accent);
@@ -172,17 +158,7 @@
   flex: 0 1 300px;
 }
 .users-table {
-  min-width: 760px;
-}
-.violations-table {
-  min-width: 720px;
-}
-.blocked-msg {
-  background: var(--bt-bg);
-  border-radius: 6px;
-  padding: 0.1rem 0.5rem;
-  font-size: 0.82rem;
-  white-space: nowrap;
+  min-width: 680px;
 }
 
 /* ---------- places.html ---------- */

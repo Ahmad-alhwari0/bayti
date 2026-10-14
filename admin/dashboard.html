@@ -318,7 +318,7 @@
           </div>
         </div>
 
-        <!-- 4. Bookings + violations + featured listings -->
+        <!-- 4. Bookings + featured listings + subscriptions -->
         <div class="row g-4 align-items-start">
           <div class="col-lg-8">
             <section class="panel" aria-labelledby="bookingsTitle">
@@ -332,7 +332,7 @@
                       <th scope="col">Booking ID</th>
                       <th scope="col">Seeker</th>
                       <th scope="col">Property</th>
-                      <th scope="col">Amount</th>
+                      <th scope="col">Monthly rent</th>
                       <th scope="col">Status</th>
                     </tr>
                   </thead>
@@ -343,7 +343,7 @@
                       <td>Studio — Al Jubeiha</td>
                       <td>265 JOD</td>
                       <td>
-                        <span class="status status--info">Payment held</span>
+                        <span class="status status--info">Accepted</span>
                       </td>
                     </tr>
                     <tr>
@@ -352,9 +352,7 @@
                       <td>1-bedroom apartment — Shmeisani</td>
                       <td>440 JOD</td>
                       <td>
-                        <span class="status status--success"
-                          >Payment released</span
-                        >
+                        <span class="status status--success">Moved in</span>
                       </td>
                     </tr>
                     <tr>
@@ -363,9 +361,7 @@
                       <td>2-bedroom apartment — Tla Al Ali</td>
                       <td>395 JOD</td>
                       <td>
-                        <span class="status status--success"
-                          >Payment released</span
-                        >
+                        <span class="status status--muted">Completed</span>
                       </td>
                     </tr>
                     <tr>
@@ -384,48 +380,6 @@
           </div>
 
           <div class="col-lg-4 d-flex flex-column gap-4">
-            <!-- Chat violations -->
-            <section class="panel" aria-labelledby="violationsTitle">
-              <div class="panel-head">
-                <h2 id="violationsTitle">Chat violations</h2>
-                <a href="users.html">View all</a>
-              </div>
-              <ul class="list-clean" id="violationsList">
-                <li class="list-row">
-                  <span class="icon-tile icon-tile--danger"
-                    ><i class="bi bi-shield-exclamation"></i
-                  ></span>
-                  <div class="grow">
-                    <b class="d-block small">Fadi Mansour</b
-                    ><small>Phone number · Today</small>
-                  </div>
-                  <span class="status status--danger no-dot">4 violations</span>
-                </li>
-                <li class="list-row">
-                  <span class="icon-tile icon-tile--danger"
-                    ><i class="bi bi-shield-exclamation"></i
-                  ></span>
-                  <div class="grow">
-                    <b class="d-block small">Emily Carter</b
-                    ><small>WhatsApp · Yesterday</small>
-                  </div>
-                  <span class="status status--pending no-dot"
-                    >2 violations</span
-                  >
-                </li>
-                <li class="list-row">
-                  <span class="icon-tile icon-tile--danger"
-                    ><i class="bi bi-shield-exclamation"></i
-                  ></span>
-                  <div class="grow">
-                    <b class="d-block small">Abu Ahmad</b
-                    ><small>Phone number · Yesterday</small>
-                  </div>
-                  <span class="status status--muted no-dot">1 violation</span>
-                </li>
-              </ul>
-            </section>
-
             <!-- Featured listings -->
             <section class="panel" aria-labelledby="featuredTitle">
               <div class="panel-head">
