@@ -2698,3 +2698,25 @@ html[dir="ltr"] .dir-flip {
     font-size: 0.6rem;
   }
 }
+
+/* Register: owner fields only for owners, agency name only for agencies (CSS only) */
+.auth-form .owner-only,
+.auth-form .agency-only {
+  display: none;
+}
+.auth-form:has(#roleOwner:checked) .owner-only {
+  display: block;
+}
+.auth-form:has(#roleOwner:checked):has(#otAgency:checked) .agency-only {
+  display: block;
+}
+
+/* Verify email: one input for the 6-digit code */
+.otp-input {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.6em;
+  text-align: center;
+  padding-inline-start: 0.6em; /* balances the letter spacing */
+  font-variant-numeric: tabular-nums;
+}
