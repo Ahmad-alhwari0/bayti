@@ -2538,3 +2538,17 @@ html[dir="ltr"] .dir-flip {
   background: var(--bt-primary-soft);
   color: var(--bt-primary);
 }
+
+/* Profile button showing only the avatar */
+.app-user--avatar {
+  padding: 0.2rem;
+  border-radius: 50%;
+}
+.app-user--avatar .avatar {
+  width: 38px;
+  height: 38px;
+}
+.app-user--avatar[aria-expanded="true"] .avatar,
+.app-user--avatar:focus-visible .avatar {
+  box-shadow: 0 0 0 2px var(--bt-surface), 0 0 0 4px var(--bt-primary);
+}
