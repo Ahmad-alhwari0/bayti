@@ -58,8 +58,7 @@
                 ></span>
                 <span class="small">
                   <span class="d-block"
-                    >A new home just listed in Al Jubeiha with a 92%
-                    match</span
+                    >A new home just listed in Al Jubeiha with a 92% match</span
                   >
                   <span class="text-muted" style="font-size: 0.72rem"
                     >10 minutes ago</span
@@ -92,9 +91,9 @@
             <span class="avatar">S</span>
             <span class="d-none d-md-inline text-start lh-sm">
               <span class="d-block small fw-semibold">Sara Khaled</span>
-              <span class="d-block text-muted" style="font-size: 0.72rem"
+              <!-- <span class="d-block text-muted" style="font-size: 0.72rem"
                 >Home seeker</span
-              >
+              > -->
             </span>
             <i class="bi bi-chevron-down small text-muted"></i>
           </button>
@@ -172,7 +171,9 @@
                   <span class="avatar avatar-xl mb-2">S</span>
                   <b class="d-block fs-5">Sara Khaled</b>
                   <div class="small text-muted">sara@example.com</div>
-                  <span class="status status--success mt-2">Email verified</span>
+                  <span class="status status--success mt-2"
+                    >Email verified</span
+                  >
                 </div>
 
                 <!-- Notifications -->
@@ -302,7 +303,9 @@
                   ></span>
                   <div class="flex-grow-1">
                     <b class="d-block">University of Jordan</b>
-                    <span class="small text-muted">University · Al Jubeiha</span>
+                    <span class="small text-muted"
+                      >University · Al Jubeiha</span
+                    >
                   </div>
                   <input type="hidden" name="placeId" value="ju" />
                   <button type="button" class="btn btn-outline-primary">
@@ -311,44 +314,64 @@
                 </div>
               </section>
 
-              <!-- 5. Priorities -->
+              
               <section class="panel" aria-labelledby="prioTitle">
                 <h2 class="h5 mb-3" id="prioTitle">Your priorities</h2>
-                <div
-                  class="d-flex justify-content-between align-items-center mb-1"
-                >
-                  <label for="budget" class="fw-medium"
-                    >Your monthly budget (bills included)</label
-                  >
-                  <output
-                    for="budget"
-                    class="fw-bold fs-5 text-primary-bt"
-                    id="budgetVal"
-                    >300 JOD</output
-                  >
-                </div>
-                <input
-                  type="range"
-                  class="form-range mb-2"
-                  id="budget"
-                  name="budget"
-                  min="100"
-                  max="800"
-                  step="10"
-                  value="300"
-                />
 
-                <div id="priorities" class="border-top">
+                <!-- Monthly Budget -->
+                <div class="panel mb-3">
+                  <label class="form-label" for="budget">
+                    Monthly budget (bills included)
+                  </label>
+
+                  <div class="input-group budget-input">
+                    <input
+                      type="number"
+                      class="form-control form-control-lg"
+                      id="budget"
+                      name="budget"
+                      list="budgetOptions"
+                      min="100"
+                      max="2000"
+                      step="10"
+                      value="300"
+                      placeholder="e.g. 300"
+                      aria-describedby="budgetHint"
+                    />
+
+                    <span class="input-group-text">JOD / month</span>
+                  </div>
+
+                  <datalist id="budgetOptions">
+                    <option value="150"></option>
+                    <option value="200"></option>
+                    <option value="250"></option>
+                    <option value="300"></option>
+                    <option value="400"></option>
+                    <option value="500"></option>
+                    <option value="750"></option>
+                    <option value="1000"></option>
+                  </datalist>
+
+                  <small class="form-text text-muted" id="budgetHint">
+                    Type an amount or pick one from the list.
+                  </small>
+                </div>
+
+                <!-- What you need -->
+                <div class="panel" id="priorities">
+                  <!-- Furnished -->
                   <div class="priority priority--check">
-                    <label for="pr-furnished"
-                      ><i class="bi bi-lamp"></i
-                      ><span
-                        >Furnished
-                        <small class="d-block text-muted fw-normal"
-                          >I want it furnished</small
-                        ></span
-                      ></label
-                    >
+                    <label for="pr-furnished">
+                      <i class="bi bi-lamp"></i>
+                      <span>
+                        Furnished
+                        <small class="d-block text-muted fw-normal">
+                          I want it furnished
+                        </small>
+                      </span>
+                    </label>
+
                     <input
                       type="checkbox"
                       class="form-check-input"
@@ -357,106 +380,59 @@
                       value="1"
                     />
                   </div>
-                  <div class="priority">
-                    <label for="pr-price"
-                      ><i class="bi bi-cash-coin"></i>Price</label
-                    >
+
+                  <!-- Easy Access -->
+                  <div class="priority priority--check">
+                    <label for="pr-access">
+                      <i class="bi bi-universal-access"></i>
+                      <span>
+                        Easy access
+                        <small class="d-block text-muted fw-normal">
+                          Elevator or ground floor
+                        </small>
+                      </span>
+                    </label>
+
                     <input
-                      type="range"
-                      class="form-range"
-                      id="pr-price"
-                      name="price"
-                      min="1"
-                      max="5"
-                      value="5"
-                    />
-                    <span class="prio-val">Very important</span>
-                  </div>
-                  <div class="priority">
-                    <label for="pr-distance"
-                      ><i class="bi bi-geo-alt"></i>Distance to your place</label
-                    >
-                    <input
-                      type="range"
-                      class="form-range"
-                      id="pr-distance"
-                      name="distance"
-                      min="1"
-                      max="5"
-                      value="5"
-                    />
-                    <span class="prio-val">Very important</span>
-                  </div>
-                  <div class="priority">
-                    <label for="pr-quiet"
-                      ><i class="bi bi-volume-mute"></i>Quiet</label
-                    >
-                    <input
-                      type="range"
-                      class="form-range"
-                      id="pr-quiet"
-                      name="quiet"
-                      min="1"
-                      max="5"
-                      value="4"
-                    />
-                    <span class="prio-val">Important</span>
-                  </div>
-                  <div class="priority">
-                    <label for="pr-access"
-                      ><i class="bi bi-universal-access"></i>Accessibility</label
-                    >
-                    <input
-                      type="range"
-                      class="form-range"
+                      type="checkbox"
+                      class="form-check-input"
                       id="pr-access"
-                      name="access"
-                      min="1"
-                      max="5"
-                      value="2"
+                      name="easy_access"
+                      value="1"
                     />
-                    <span class="prio-val">Low</span>
                   </div>
-                  <div class="priority">
-                    <label for="pr-ready"
-                      ><i class="bi bi-lightning-charge"></i>Ready now</label
-                    >
+
+                  <!-- Shared Housing -->
+                  <div class="priority priority--check priority--students">
+                    <label for="pr-sharing">
+                      <i class="bi bi-people"></i>
+                      <span>
+                        Shared housing
+                        <small class="students-only-note d-block fw-normal">
+                          For students only
+                        </small>
+                      </span>
+                    </label>
+
                     <input
-                      type="range"
-                      class="form-range"
-                      id="pr-ready"
-                      name="ready"
-                      min="1"
-                      max="5"
-                      value="3"
-                    />
-                    <span class="prio-val">Medium</span>
-                  </div>
-                  <div class="priority">
-                    <label for="pr-sharing"
-                      ><i class="bi bi-people"></i>Shared housing</label
-                    >
-                    <input
-                      type="range"
-                      class="form-range"
+                      type="checkbox"
+                      class="form-check-input"
                       id="pr-sharing"
-                      name="sharing"
-                      min="1"
-                      max="5"
-                      value="3"
+                      name="shared_housing"
+                      value="1"
                     />
-                    <span class="prio-val">Medium</span>
                   </div>
                 </div>
               </section>
+             
 
               <!-- 6. Save -->
               <div
                 class="d-flex flex-wrap align-items-center justify-content-between gap-3"
               >
                 <span class="d-flex align-items-center gap-2 small text-muted"
-                  ><i class="bi bi-arrow-repeat"></i>We'll recalculate your match scores
-                  after you save.</span
+                  ><i class="bi bi-arrow-repeat"></i>We'll recalculate your
+                  match scores after you save.</span
                 >
                 <button type="submit" class="btn btn-primary btn-lg">
                   Save changes
