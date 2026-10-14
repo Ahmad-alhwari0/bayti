@@ -2397,3 +2397,34 @@ html[dir="ltr"] .dir-flip {
 .table-responsive {
   position: relative;
 }
+
+/* Landing — homes section: the whole card is a link to the property page */
+.home-card .prop-title {
+  padding-inline-end: 0;
+}
+.home-card .prop-price {
+  margin-top: auto;
+}
+.view-more {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--bt-primary);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.view-more i {
+  transition: transform 0.2s;
+}
+.home-card:hover .view-more i,
+.home-card:focus-within .view-more i {
+  transform: translateX(3px);
+}
+.home-card:focus-within {
+  outline: 2px solid var(--bt-primary);
+  outline-offset: 2px;
+}
+.home-card .stretched-link:focus {
+  outline: none;
+}
