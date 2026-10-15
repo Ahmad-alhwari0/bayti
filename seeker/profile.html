@@ -1,14 +1,13 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>بيتي — ملفي وأولوياتي</title>
+    <title>Bayti — Profile &amp; priorities</title>
 
     <link
-      id="bootstrap-css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
@@ -18,226 +17,457 @@
     <link rel="stylesheet" href="../assets/css/pages/seeker.css" />
   </head>
   <body data-role="seeker" data-page="profile">
-    <!-- ===== Topbar ===== -->
-    <header class="app-topbar">
-      <button
-        class="icon-btn d-lg-none"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#appSidebar"
-        aria-label="القائمة"
-      >
-        <i class="bi bi-list"></i>
-      </button>
-      <a class="brand" href="search.html"
-        ><span class="brand-mark">B</span><span>بيتي</span></a
-      >
-      <div class="ms-auto d-flex align-items-center gap-1">
-        <button type="button" class="btn btn-link nav-lang px-2" data-action="toggle-lang">
-          <i class="bi bi-translate"></i><span>EN</span>
-        </button>
-        <div class="dropdown">
-          <button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-label="الإشعارات">
-            <i class="bi bi-bell"></i><span class="dot"></span>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end shadow-sm p-0" style="width: 320px">
-            <div class="px-3 py-2 border-bottom fw-semibold">الإشعارات</div>
-            <div class="py-1">
-              <a class="dropdown-item d-flex gap-2 py-2 text-wrap" href="property.html">
-                <span class="kpi-icon flex-shrink-0" style="width: 34px; height: 34px; font-size: 1rem"><i class="bi bi-stars"></i></span>
-                <span class="small">
-                  <span class="d-block">نزل بيت جديد بتوافق 89% بالجبيهة</span>
-                  <span class="text-muted" style="font-size: 0.72rem">قبل 10 دقايق</span>
-                </span>
-              </a>
-              <a class="dropdown-item d-flex gap-2 py-2 text-wrap" href="bookings.html">
-                <span class="kpi-icon flex-shrink-0" style="width: 34px; height: 34px; font-size: 1rem"><i class="bi bi-check2-circle"></i></span>
-                <span class="small">
-                  <span class="d-block">أبو أحمد أكّد موعد المعاينة يوم الخميس</span>
-                  <span class="text-muted" style="font-size: 0.72rem">قبل ساعة</span>
-                </span>
-              </a>
+    <!-- ===== Navbar ===== -->
+    <header class="site-header app-nav">
+      <nav class="navbar navbar-expand-lg" aria-label="Main">
+        <div class="container">
+          <a class="brand" href="search.html"
+            ><span class="brand-mark">B</span><span>Bayti</span></a
+          >
+
+          <!-- Messages, notifications + user menu (stay visible on phones) -->
+          <div class="d-flex align-items-center gap-1 ms-auto order-lg-last">
+            <!-- Messages: icon with unread count -->
+            <a
+              class="icon-btn"
+              href="chat.html"
+              aria-label="Messages, 2 unread"
+            >
+              <i class="bi bi-chat-dots"></i><span class="icon-badge">2</span>
+            </a>
+            <div class="dropdown">
+              <button
+                class="icon-btn"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-label="Notifications"
+              >
+                <i class="bi bi-bell"></i><span class="dot"></span>
+              </button>
+              <div
+                class="dropdown-menu dropdown-menu-end shadow-sm p-0"
+                style="width: 320px"
+              >
+                <div class="px-3 py-2 border-bottom fw-semibold">Notifications</div>
+                <div class="py-1">
+                  <a
+                    class="dropdown-item d-flex gap-2 py-2 text-wrap"
+                    href="property.html"
+                  >
+                    <span
+                      class="kpi-icon flex-shrink-0"
+                      style="width: 34px; height: 34px; font-size: 1rem"
+                      ><i class="bi bi-stars"></i
+                    ></span>
+                    <span class="small">
+                      <span class="d-block"
+                        >A new home just listed in Al Jubeiha with a 92% match</span
+                      >
+                      <span class="text-muted" style="font-size: 0.72rem"
+                        >10 minutes ago</span
+                      >
+                    </span>
+                  </a>
+                  <a
+                    class="dropdown-item d-flex gap-2 py-2 text-wrap"
+                    href="bookings.html"
+                  >
+                    <span
+                      class="kpi-icon flex-shrink-0"
+                      style="width: 34px; height: 34px; font-size: 1rem"
+                      ><i class="bi bi-check2-circle"></i
+                    ></span>
+                    <span class="small">
+                      <span class="d-block"
+                        >Abu Ahmad accepted your booking</span
+                      >
+                      <span class="text-muted" style="font-size: 0.72rem"
+                        >1 hour ago</span
+                      >
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button
+                class="app-user app-user--avatar"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                aria-label="Account menu, Sara Khaled"
+              >
+                <span class="avatar">S</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                <li><h6 class="dropdown-header">Sara Khaled</h6></li>
+                <li><a class="dropdown-item" href="profile.html">My profile</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-danger" href="../index.html"
+                    >Log out</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <button
+              class="navbar-toggler border-0"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#appNav"
+              aria-controls="appNav"
+              aria-expanded="false"
+              aria-label="Menu"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <!-- Page links + search, grouped in one capsule -->
+          <div class="collapse navbar-collapse" id="appNav">
+            <div class="nav-group">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="search.html"
+                    ><i class="bi bi-stars"></i><span>Discover</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="bookings.html"
+                    ><i class="bi bi-calendar-check"></i><span>My bookings</span
+                    ><span class="side-badge">1</span></a
+                  >
+                </li>
+              </ul>
+              <span class="nav-group-divider" aria-hidden="true"></span>
+              <!-- Search: plain GET form, opens the Discover page -->
+              <form
+                class="nav-search"
+                action="search.html"
+                method="get"
+                role="search"
+              >
+                <i class="bi bi-search" aria-hidden="true"></i>
+                <input
+                  type="search"
+                  class="form-control"
+                  name="q"
+                  placeholder="Search by area..."
+                  aria-label="Search homes by neighborhood"
+                />
+              </form>
             </div>
           </div>
         </div>
-        <div class="dropdown">
-          <button class="app-user" type="button" data-bs-toggle="dropdown">
-            <span class="avatar">س</span>
-            <span class="d-none d-md-inline text-start lh-sm">
-              <span class="d-block small fw-semibold">سارة خالد</span>
-              <span class="d-block text-muted" style="font-size: 0.72rem">باحث عن سكن</span>
-            </span>
-            <i class="bi bi-chevron-down small text-muted"></i>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-            <li><a class="dropdown-item" href="profile.html">ملفي</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item text-danger" href="../index.html">تسجيل الخروج</a></li>
-          </ul>
-        </div>
-      </div>
+      </nav>
     </header>
 
-    <div class="app-shell">
-      <!-- ===== Sidebar ===== -->
-      <aside class="app-sidebar offcanvas-lg offcanvas-start" tabindex="-1" id="appSidebar">
-        <div class="offcanvas-header border-bottom">
-          <a class="brand" href="../index.html"><span class="brand-mark">B</span><span>بيتي</span></a>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#appSidebar" aria-label="إغلاق"></button>
-        </div>
-        <div class="offcanvas-body">
-          <div class="side-label">باحث عن سكن</div>
-          <a class="side-link" href="search.html"><i class="bi bi-stars"></i><span class="flex-grow-1">اكتشف بيتك</span></a>
-          <a class="side-link" href="bookings.html"><i class="bi bi-calendar-check"></i><span class="flex-grow-1">حجوزاتي</span><span class="side-badge">1</span></a>
-          <a class="side-link" href="chat.html"><i class="bi bi-chat-dots"></i><span class="flex-grow-1">الرسائل</span><span class="side-badge">2</span></a>
-          <a class="side-link active" href="profile.html" aria-current="page"><i class="bi bi-sliders"></i><span class="flex-grow-1">ملفي وأولوياتي</span></a>
-        </div>
-      </aside>
-
-      <!-- ===== Content ===== -->
-      <main class="app-main">
-        <!-- 1. راس الصفحة -->
+    <!-- ===== Content ===== -->
+    <main class="app-page container">
+        <!-- 1. Page header -->
         <div class="page-head">
           <div>
-            <h1>ملفي وأولوياتي</h1>
-            <p>أي تعديل هون بيحدّث نسب التوافق على كل البيوت.</p>
+            <h1>Profile &amp; priorities</h1>
+            <p>Any change here updates the match scores on every home.</p>
           </div>
         </div>
 
         <form id="profileForm">
           <div class="row g-4 align-items-start">
-            <!-- ===== 2. كرت الحساب ===== -->
+            <!-- ===== 2. Account card ===== -->
             <div class="col-lg-4">
-              <aside class="panel" aria-label="حسابي">
+              <aside class="panel" aria-label="My account">
                 <div class="text-center pb-3 border-bottom">
-                  <span class="avatar avatar-xl mb-2">س</span>
-                  <b class="d-block fs-5">سارة خالد</b>
+                  <span class="avatar avatar-xl mb-2">S</span>
+                  <b class="d-block fs-5">Sara Khaled</b>
                   <div class="small text-muted">sara@example.com</div>
-                  <span class="status status--success mt-2">الإيميل مؤكد</span>
+                  <span class="status status--success mt-2"
+                    >Email verified</span
+                  >
                 </div>
 
-                <!-- لغة الموقع -->
-                <fieldset class="py-3 border-bottom">
-                  <legend class="fs-6 fw-semibold mb-2">لغة الموقع</legend>
-                  <div class="seg-tabs d-flex w-100" role="radiogroup" aria-label="لغة الموقع">
-                    <input type="radio" class="btn-check" name="lang" id="langAr" value="ar" checked />
-                    <label class="nav-link flex-fill" for="langAr">العربية</label>
-                    <input type="radio" class="btn-check" name="lang" id="langEn" value="en" />
-                    <label class="nav-link flex-fill" for="langEn">English</label>
-                  </div>
-                </fieldset>
-
-                <!-- التنبيهات -->
+                <!-- Notifications -->
                 <fieldset class="pt-3">
-                  <legend class="fs-6 fw-semibold mb-1">التنبيهات</legend>
+                  <legend class="fs-6 fw-semibold mb-1">Notifications</legend>
                   <div class="form-check form-switch switch-row">
-                    <label class="form-check-label" for="alertNewMatch">بيت جديد بتوافق أعلى من 80%</label>
-                    <input class="form-check-input" type="checkbox" role="switch" id="alertNewMatch" name="alertNewMatch" checked />
+                    <label class="form-check-label" for="alertNewMatch"
+                      >New home with a match above 80%</label
+                    >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="alertNewMatch"
+                      name="alertNewMatch"
+                      checked
+                    />
                   </div>
                   <div class="form-check form-switch switch-row">
-                    <label class="form-check-label" for="alertBookings">تحديثات الحجز والمعاينات</label>
-                    <input class="form-check-input" type="checkbox" role="switch" id="alertBookings" name="alertBookings" checked />
+                    <label class="form-check-label" for="alertBookings"
+                      >Booking updates</label
+                    >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="alertBookings"
+                      name="alertBookings"
+                      checked
+                    />
                   </div>
                   <div class="form-check form-switch switch-row">
-                    <label class="form-check-label" for="alertMessages">رسائل جديدة</label>
-                    <input class="form-check-input" type="checkbox" role="switch" id="alertMessages" name="alertMessages" />
+                    <label class="form-check-label" for="alertMessages"
+                      >New messages</label
+                    >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="alertMessages"
+                      name="alertMessages"
+                    />
                   </div>
                 </fieldset>
               </aside>
             </div>
 
-            <!-- ===== الإعدادات ===== -->
+            <!-- ===== Settings ===== -->
             <div class="col-lg-8 d-flex flex-column gap-3">
-              <!-- 3. ليش جاي؟ -->
+              <!-- 3. Why are you coming? -->
               <fieldset class="panel">
-                <legend class="h5 mb-3">ليش جاي؟</legend>
+                <legend class="h5 mb-3">Why are you coming?</legend>
                 <div class="d-flex flex-wrap gap-2" id="purposeOptions">
-                  <input type="radio" class="btn-check" name="purpose" id="pStudy" value="study" checked />
-                  <label class="chip-select" for="pStudy"><i class="bi bi-mortarboard"></i>دراسة</label>
-                  <input type="radio" class="btn-check" name="purpose" id="pWork" value="work" />
-                  <label class="chip-select" for="pWork"><i class="bi bi-briefcase"></i>شغل</label>
-                  <input type="radio" class="btn-check" name="purpose" id="pTourism" value="tourism" />
-                  <label class="chip-select" for="pTourism"><i class="bi bi-camera"></i>سياحة</label>
-                  <input type="radio" class="btn-check" name="purpose" id="pMedical" value="medical" />
-                  <label class="chip-select" for="pMedical"><i class="bi bi-hospital"></i>علاج</label>
-                  <input type="radio" class="btn-check" name="purpose" id="pRelocation" value="relocation" />
-                  <label class="chip-select" for="pRelocation"><i class="bi bi-truck"></i>انتقال</label>
-                  <input type="radio" class="btn-check" name="purpose" id="pOther" value="other" />
-                  <label class="chip-select" for="pOther"><i class="bi bi-three-dots"></i>غير ذلك</label>
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="purpose"
+                    id="pStudy"
+                    value="study"
+                    checked
+                  />
+                  <label class="chip-select" for="pStudy"
+                    ><i class="bi bi-mortarboard"></i>Study</label
+                  >
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="purpose"
+                    id="pWork"
+                    value="work"
+                  />
+                  <label class="chip-select" for="pWork"
+                    ><i class="bi bi-briefcase"></i>Work</label
+                  >
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="purpose"
+                    id="pTourism"
+                    value="tourism"
+                  />
+                  <label class="chip-select" for="pTourism"
+                    ><i class="bi bi-camera"></i>Tourism</label
+                  >
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="purpose"
+                    id="pMedical"
+                    value="medical"
+                  />
+                  <label class="chip-select" for="pMedical"
+                    ><i class="bi bi-hospital"></i>Medical care</label
+                  >
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="purpose"
+                    id="pRelocation"
+                    value="relocation"
+                  />
+                  <label class="chip-select" for="pRelocation"
+                    ><i class="bi bi-truck"></i>Relocation</label
+                  >
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="purpose"
+                    id="pOther"
+                    value="other"
+                  />
+                  <label class="chip-select" for="pOther"
+                    ><i class="bi bi-three-dots"></i>Other</label
+                  >
                 </div>
               </fieldset>
 
-              <!-- 4. مكانك اليومي -->
+              <!-- 4. Where you want to live -->
               <section class="panel" aria-labelledby="placeTitle">
-                <h2 class="h5 mb-3" id="placeTitle">مكانك اليومي</h2>
-                <div class="d-flex flex-wrap align-items-center gap-3" id="dailyPlace">
-                  <span class="icon-tile icon-tile--lg is-solid"><i class="bi bi-mortarboard"></i></span>
-                  <div class="flex-grow-1">
-                    <b class="d-block">الجامعة الأردنية</b>
-                    <span class="small text-muted">جامعة · الجبيهة</span>
+                <h2 class="h5 mb-3" id="placeTitle">Where you want to live</h2>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="city">City</label>
+                    <select class="form-select" id="city" name="city">
+                      <option value="amman" selected>Amman</option>
+                      <option value="irbid">Irbid</option>
+                      <option value="zarqa">Zarqa</option>
+                      <option value="aqaba">Aqaba</option>
+                      <option value="salt">Salt</option>
+                      <option value="madaba">Madaba</option>
+                      <option value="jerash">Jerash</option>
+                      <option value="ajloun">Ajloun</option>
+                      <option value="mafraq">Mafraq</option>
+                      <option value="karak">Karak</option>
+                      <option value="tafilah">Tafilah</option>
+                      <option value="maan">Ma'an</option>
+                    </select>
                   </div>
-                  <input type="hidden" name="placeId" value="ju" />
-                  <button type="button" class="btn btn-outline-primary"><i class="bi bi-geo-alt me-1"></i>غيّر المكان</button>
+                  <div class="col-md-6">
+                    <label class="form-label" for="area"
+                      >Area <span class="text-muted fw-normal">(optional)</span></label
+                    >
+                    <select class="form-select" id="area" name="area">
+                      <option value="">Any area</option>
+                      <option selected>Al Jubeiha</option>
+                      <option>Abdali</option>
+                      <option>Khalda</option>
+                      <option>Shmeisani</option>
+                      <option>Sweileh</option>
+                      <option>Tla Al Ali</option>
+                    </select>
+                  </div>
                 </div>
               </section>
 
-              <!-- 5. الأولويات -->
+              
               <section class="panel" aria-labelledby="prioTitle">
-                <h2 class="h5 mb-3" id="prioTitle">أولوياتك</h2>
-                <div class="d-flex justify-content-between align-items-center mb-1">
-                  <label for="budget" class="fw-medium">ميزانيتك الشهرية (شامل الفواتير)</label>
-                  <output for="budget" class="fw-bold fs-5 text-primary-bt" id="budgetVal">300 د.أ</output>
-                </div>
-                <input type="range" class="form-range mb-2" id="budget" name="budget" min="100" max="800" step="10" value="300" />
+                <h2 class="h5 mb-3" id="prioTitle">Your priorities</h2>
 
-                <div id="priorities" class="border-top">
-                  <div class="priority">
-                    <label for="pr-price"><i class="bi bi-cash-coin"></i>السعر</label>
-                    <input type="range" class="form-range" id="pr-price" name="price" min="1" max="5" value="5" />
-                    <span class="prio-val">مهم جدا</span>
+                <!-- Monthly Budget -->
+                <div class="panel mb-3">
+                  <label class="form-label" for="budget">
+                    Monthly budget (bills included)
+                  </label>
+
+                  <div class="input-group budget-input">
+                    <input
+                      type="number"
+                      class="form-control form-control-lg"
+                      id="budget"
+                      name="budget"
+                      list="budgetOptions"
+                      min="100"
+                      max="2000"
+                      step="10"
+                      value="300"
+                      placeholder="e.g. 300"
+                      aria-describedby="budgetHint"
+                    />
+
+                    <span class="input-group-text">JOD / month</span>
                   </div>
-                  <div class="priority">
-                    <label for="pr-distance"><i class="bi bi-geo-alt"></i>القرب من مكانك</label>
-                    <input type="range" class="form-range" id="pr-distance" name="distance" min="1" max="5" value="5" />
-                    <span class="prio-val">مهم جدا</span>
+
+                  <datalist id="budgetOptions">
+                    <option value="150"></option>
+                    <option value="200"></option>
+                    <option value="250"></option>
+                    <option value="300"></option>
+                    <option value="400"></option>
+                    <option value="500"></option>
+                    <option value="750"></option>
+                    <option value="1000"></option>
+                  </datalist>
+
+                  <small class="form-text text-muted" id="budgetHint">
+                    Type an amount or pick one from the list.
+                  </small>
+                </div>
+
+                <!-- What you need -->
+                <div class="panel" id="priorities">
+                  <!-- Furnished -->
+                  <div class="priority priority--check">
+                    <label for="pr-furnished">
+                      <i class="bi bi-lamp"></i>
+                      <span>
+                        Furnished
+                        <small class="d-block text-muted fw-normal">
+                          I want it furnished
+                        </small>
+                      </span>
+                    </label>
+
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="pr-furnished"
+                      name="furnished"
+                      value="1"
+                    />
                   </div>
-                  <div class="priority">
-                    <label for="pr-quiet"><i class="bi bi-volume-mute"></i>الهدوء</label>
-                    <input type="range" class="form-range" id="pr-quiet" name="quiet" min="1" max="5" value="4" />
-                    <span class="prio-val">مهم</span>
+
+                  <!-- Easy Access -->
+                  <div class="priority priority--check">
+                    <label for="pr-access">
+                      <i class="bi bi-universal-access"></i>
+                      <span>
+                        Easy access
+                        <small class="d-block text-muted fw-normal">
+                          Elevator or ground floor
+                        </small>
+                      </span>
+                    </label>
+
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="pr-access"
+                      name="easy_access"
+                      value="1"
+                    />
                   </div>
-                  <div class="priority">
-                    <label for="pr-access"><i class="bi bi-universal-access"></i>سهولة الوصول</label>
-                    <input type="range" class="form-range" id="pr-access" name="access" min="1" max="5" value="2" />
-                    <span class="prio-val">قليل</span>
-                  </div>
-                  <div class="priority">
-                    <label for="pr-ready"><i class="bi bi-lightning-charge"></i>جاهز فورا</label>
-                    <input type="range" class="form-range" id="pr-ready" name="ready" min="1" max="5" value="3" />
-                    <span class="prio-val">متوسط</span>
-                  </div>
-                  <div class="priority">
-                    <label for="pr-sharing"><i class="bi bi-people"></i>مشاركة السكن</label>
-                    <input type="range" class="form-range" id="pr-sharing" name="sharing" min="1" max="5" value="3" />
-                    <span class="prio-val">متوسط</span>
+
+                  <!-- Shared Housing -->
+                  <div class="priority priority--check priority--students">
+                    <label for="pr-sharing">
+                      <i class="bi bi-people"></i>
+                      <span>
+                        Shared housing
+                        <small class="students-only-note d-block fw-normal">
+                          For students only
+                        </small>
+                      </span>
+                    </label>
+
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="pr-sharing"
+                      name="shared_housing"
+                      value="1"
+                    />
                   </div>
                 </div>
               </section>
+             
 
-              <!-- 6. الحفظ -->
-              <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
-                <span class="d-flex align-items-center gap-2 small text-muted"><i class="bi bi-arrow-repeat"></i>رح نعيد حساب نسب التوافق بعد الحفظ.</span>
-                <button type="submit" class="btn btn-primary btn-lg">حفظ التغييرات</button>
+              <!-- 6. Save -->
+              <div
+                class="d-flex flex-wrap align-items-center justify-content-between gap-3"
+              >
+                <span class="d-flex align-items-center gap-2 small text-muted"
+                  ><i class="bi bi-arrow-repeat"></i>We'll recalculate your
+                  match scores after you save.</span
+                >
+                <button type="submit" class="btn btn-primary btn-lg">
+                  Save changes
+                </button>
               </div>
             </div>
           </div>
         </form>
       </main>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/config.js"></script>
-    <script src="../assets/js/app.js"></script>
-    <script src="../assets/js/pages/seeker/profile.js"></script>
   </body>
 </html>

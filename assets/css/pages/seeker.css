@@ -1,31 +1,10 @@
 /* =========================================================
-   Seeker pages — ستايلات خاصة بصفحات الباحث عن سكن
-   (المكونات المشتركة بـ main.css)
+   Seeker pages — styles specific to the home seeker pages
+   (shared components live in main.css)
    ========================================================= */
 
-/* ---------- search.html ---------- */
-.areas-table {
-  min-width: 720px;
-}
-.areas-table .col-total {
-  width: 220px;
-}
-.total-bar {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-.total-bar b {
-  width: 64px;
-  color: var(--bt-primary);
-  flex-shrink: 0;
-}
-.total-bar .progress-bar.is-best {
-  background: var(--bt-success);
-}
-
 /* ---------- shared (property / bookings / profile) ---------- */
-/* مربع أيقونة صغير بخلفية بترولي فاتحة */
+/* Small icon tile with a light petrol background */
 .icon-tile {
   width: 36px;
   height: 36px;
@@ -36,12 +15,6 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-}
-.icon-tile--lg {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  font-size: 1.3rem;
 }
 .icon-tile.is-solid {
   background: var(--bt-primary);
@@ -90,23 +63,6 @@
   background: var(--bt-surface);
   border: 1px solid var(--bt-line);
 }
-.why-bars .score-bar {
-  grid-template-columns: 96px 1fr 28px;
-}
-.why-checks {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
-  border-top: 1px solid var(--bt-line);
-  margin-top: 0.9rem;
-  padding-top: 0.9rem;
-  font-size: 0.9rem;
-}
-.why-checks span {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
 .near-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -126,17 +82,12 @@
   border-top: 1px solid var(--bt-line);
   margin-top: 0.4rem;
 }
-/* مساعد الأحياء جوا الصفحة (مش عائم) */
-.ai-panel.is-inline {
-  position: static;
-  display: flex;
-  width: 380px;
-  max-width: 100%;
-  height: auto;
-  max-height: none;
+/* Neighborhood assistant: docked above the corner button (Bootstrap collapse) */
+.ai-dock .ai-panel {
+  height: 440px;
 }
 .ai-panel .chat-body {
-  flex: 0 0 auto;
+  flex: 1;
   padding: 0.9rem;
 }
 .ai-panel .msg {
@@ -144,7 +95,31 @@
   font-size: 0.88rem;
 }
 .ai-panel .ai-suggest {
-  padding: 0 0.9rem 0.9rem;
+  padding: 0.6rem 0.9rem 0.9rem;
+}
+/* Invitation to the assistant inside the Location panel */
+.ai-invite {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--bt-primary-soft);
+  color: var(--bt-primary);
+  border-radius: var(--bt-radius-sm);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+}
+.ai-invite > i {
+  font-size: 1.2rem;
+}
+/* Owner phone, visible to everyone */
+.owner-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+  font-weight: 600;
+  text-decoration: none;
 }
 .ai-head .btn-close {
   margin-inline-start: auto;
@@ -163,17 +138,6 @@
 }
 
 /* ---------- profile.html ---------- */
-/* سويتش اللغة بشكل التابات */
-.seg-tabs .btn-check:checked + .nav-link {
-  background: var(--bt-surface);
-  color: var(--bt-primary);
-  font-weight: 600;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-}
-.seg-tabs label.nav-link {
-  cursor: pointer;
-  text-align: center;
-}
 .switch-row {
   display: flex;
   align-items: center;
@@ -190,4 +154,221 @@
   width: 2.75em;
   height: 1.5em;
   flex-shrink: 0;
+}
+
+/* ---------- search.html (Discover): matches / all homes switch ---------- */
+.discover-switch {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  max-width: 1040px;
+  margin-inline: auto; /* centered */
+}
+.discover-switch .nav-link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.9rem 1rem;
+  border: 1.5px solid var(--bt-line);
+  border-radius: var(--bt-radius);
+  background: var(--bt-surface);
+  color: var(--bt-text);
+}
+.discover-switch .nav-link > i {
+  font-size: 1.35rem;
+  color: var(--bt-primary);
+}
+.discover-switch .nav-link b {
+  display: block;
+  line-height: 1.3;
+}
+.discover-switch .nav-link small {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--bt-muted);
+}
+.discover-switch .nav-link .count {
+  margin-inline-start: auto;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--bt-primary-soft);
+  color: var(--bt-primary);
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
+}
+.discover-switch .nav-link:hover {
+  border-color: #b9c9c6;
+}
+.discover-switch .nav-link.active {
+  border-color: var(--bt-primary);
+  background: var(--bt-primary);
+  color: #fff;
+}
+.discover-switch .nav-link.active > i,
+.discover-switch .nav-link.active small {
+  color: rgba(255, 255, 255, 0.8);
+}
+.discover-switch .nav-link.active .count {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+@media (max-width: 575.98px) {
+  .discover-switch .nav-link small {
+    display: none;
+  }
+}
+
+/* "Listed by" line on All homes cards */
+.listed-by {
+  font-size: 0.8rem;
+  color: var(--bt-muted);
+}
+.home-card > .fav-btn {
+  z-index: 3; /* stays clickable above the card's stretched link */
+}
+/* Phones: the three views stack as compact rows */
+@media (max-width: 575.98px) {
+  .discover-switch {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .discover-switch .nav-link {
+    padding: 0.6rem 0.9rem;
+  }
+}
+/* Matches: sign-up prompt for visitors (shown by JS) */
+.guest-prompt {
+  max-width: 560px;
+  margin-inline: auto;
+  padding: 2rem 1.5rem;
+}
+
+/* ---------- bookings.html: simple cards with the owner's latest update ---------- */
+.bk-list {
+  display: grid;
+  gap: 0.85rem;
+}
+.bk-card {
+  display: grid;
+  grid-template-columns: 96px 1fr auto;
+  gap: 1rem;
+  align-items: start;
+  background: var(--bt-surface);
+  border-radius: var(--bt-radius);
+  box-shadow: var(--bt-shadow);
+  padding: 1rem;
+}
+.bk-thumb {
+  display: block;
+  width: 96px;
+  height: 96px;
+  border-radius: 12px;
+}
+.bk-body {
+  min-width: 0;
+}
+.bk-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.bk-title {
+  font-weight: 600;
+  color: var(--bt-text);
+  text-decoration: none;
+}
+.bk-title:hover {
+  color: var(--bt-primary);
+}
+.bk-meta {
+  margin-top: 0.15rem;
+  font-size: 0.82rem;
+  color: var(--bt-muted);
+}
+/* the owner's message */
+.bk-update {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--bt-radius-sm);
+  background: var(--bt-bg);
+}
+.bk-update .avatar {
+  width: 28px;
+  height: 28px;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+.bk-update.is-waiting > i {
+  font-size: 1.05rem;
+  color: var(--bt-warning);
+  padding-top: 0.1rem;
+}
+.bk-update p {
+  margin: 0;
+  font-size: 0.88rem;
+}
+.bk-update small {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--bt-muted);
+}
+.bk-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.btn-icon-sm {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--bt-line);
+  background: var(--bt-surface);
+  color: var(--bt-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-icon-sm:hover,
+.btn-icon-sm:focus-visible,
+.btn-icon-sm[aria-expanded="true"] {
+  background: var(--bt-primary-soft);
+  border-color: var(--bt-primary-soft);
+  color: var(--bt-primary);
+}
+.bk-section-title {
+  margin: 2rem 0 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--bt-muted);
+}
+.bk-card.is-past .bk-thumb {
+  filter: grayscale(0.5);
+}
+@media (max-width: 575.98px) {
+  .bk-card {
+    grid-template-columns: 64px 1fr;
+  }
+  .bk-thumb {
+    width: 64px;
+    height: 64px;
+  }
+  .bk-actions {
+    grid-column: 1 / -1;
+    justify-content: flex-end;
+  }
+  .bk-actions > .btn:not(.btn-icon-sm) {
+    margin-inline-end: auto;
+  }
+}
+/* automatic updates from Bayti (e.g. stay ended) */
+.bk-update.is-system > i {
+  font-size: 1.05rem;
+  color: var(--bt-success);
+  padding-top: 0.1rem;
 }

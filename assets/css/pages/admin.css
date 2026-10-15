@@ -1,16 +1,15 @@
 /* =========================================================
-   Admin pages — ستايلات خاصة بصفحات الأدمن
-   (المكونات المشتركة بـ main.css)
+   Admin pages — styles specific to the admin pages
+   (shared components live in main.css)
    ========================================================= */
 
 :root {
-  /* أعمدة الرسم البياني العادية (أغمق شوي من primary-soft عشان تبين) */
+  /* Regular chart bars (slightly darker than primary-soft so they stand out) */
   --admin-bar: #c9d9d7;
-  --admin-danger-soft: #fbe7e5;
 }
 
-/* ---------- مشترك بين صفحات الأدمن ---------- */
-/* زر أحمر محدد بلون النظام */
+/* ---------- Shared across admin pages ---------- */
+/* Red outline button using the system danger color */
 .btn-outline-danger {
   --bs-btn-color: var(--bt-danger);
   --bs-btn-border-color: var(--bt-danger);
@@ -22,11 +21,7 @@
   --bs-btn-active-border-color: var(--bt-danger);
   --bs-btn-focus-shadow-rgb: 180, 35, 24;
 }
-/* شارة رقم بدون النقطة */
-.status.no-dot::before {
-  display: none;
-}
-/* زر أيقونة مربع (تعديل) */
+/* Square icon button (edit) */
 .btn-icon {
   width: 40px;
   height: 40px;
@@ -74,25 +69,6 @@
 }
 .rev-chart .bar.is-hi {
   background: var(--bt-primary);
-}
-.icon-tile {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.icon-tile--danger {
-  background: var(--admin-danger-soft);
-  color: var(--bt-danger);
-}
-.ic-star {
-  color: var(--bt-accent);
-}
-.bookings-table {
-  min-width: 560px;
 }
 
 /* ---------- verifications.html ---------- */
@@ -172,35 +148,19 @@
   flex: 0 1 300px;
 }
 .users-table {
-  min-width: 760px;
-}
-.violations-table {
-  min-width: 720px;
-}
-.blocked-msg {
-  background: var(--bt-bg);
-  border-radius: 6px;
-  padding: 0.1rem 0.5rem;
-  font-size: 0.82rem;
-  white-space: nowrap;
+  min-width: 680px;
 }
 
-/* ---------- places.html ---------- */
+/* ---------- places.html (Areas) ---------- */
 .hoods-table {
-  min-width: 780px;
+  min-width: 560px;
 }
-/* زر الإضافة بيتغير حسب التاب المفتوح (CSS بس) */
-.app-main:has(#tab-places.active) .add-hood,
-.app-main:not(:has(#tab-places.active)) .add-place {
-  /* !important عشان يغلب d-inline-flex تبع Bootstrap */
-  display: none !important;
-}
-.place-type {
+
+/* ---------- chat.html ---------- */
+.chat-item .meta .prop {
+  color: var(--bt-primary);
   font-size: 0.75rem;
-  font-weight: 600;
-  background: var(--bt-bg);
-  color: var(--bt-muted);
-  border-radius: 999px;
-  padding: 0.15rem 0.65rem;
-  white-space: nowrap;
+}
+.chat-head small.is-online {
+  color: var(--bt-success);
 }

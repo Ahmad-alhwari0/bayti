@@ -1,7 +1,7 @@
 /* =========================================================
    Bayti — Design tokens & base styles
-   الألوان: بترولي وطين | الخط: IBM Plex Sans Arabic
-   قاعدة 60-30-10: الخلفية 60% · البترولي 30% · الطين 10% (الزر الرئيسي بس)
+   Colors: petrol & clay | Font: IBM Plex Sans Arabic (Latin subset)
+   60-30-10 rule: background 60% · petrol 30% · clay 10% (primary button only)
    ========================================================= */
 
 /* ---------- Fonts (local, arabic + latin subsets) ---------- */
@@ -10,32 +10,32 @@
   font-weight: 400;
   font-display: swap;
   src: url(../fonts/plex-arabic-400.woff2) format("woff2");
-  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF,
-    U+200C-200F;
+  unicode-range:
+    U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F;
 }
 @font-face {
   font-family: "IBM Plex Sans Arabic";
   font-weight: 500;
   font-display: swap;
   src: url(../fonts/plex-arabic-500.woff2) format("woff2");
-  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF,
-    U+200C-200F;
+  unicode-range:
+    U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F;
 }
 @font-face {
   font-family: "IBM Plex Sans Arabic";
   font-weight: 600;
   font-display: swap;
   src: url(../fonts/plex-arabic-600.woff2) format("woff2");
-  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF,
-    U+200C-200F;
+  unicode-range:
+    U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F;
 }
 @font-face {
   font-family: "IBM Plex Sans Arabic";
   font-weight: 700;
   font-display: swap;
   src: url(../fonts/plex-arabic-700.woff2) format("woff2");
-  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF,
-    U+200C-200F;
+  unicode-range:
+    U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F;
 }
 @font-face {
   font-family: "IBM Plex Sans Arabic";
@@ -68,40 +68,40 @@
 
 /* ---------- Tokens ---------- */
 :root {
-  /* 60% — الجدران */
+  /* 60% — walls */
   --bt-bg: #f7f6f2;
   --bt-surface: #ffffff;
   --bt-line: #e2e4df;
 
-  /* النصوص */
+  /* Text */
   --bt-text: #1e2a2a;
   --bt-muted: #66706f;
 
-  /* 30% — البترولي */
+  /* 30% — petrol */
   --bt-primary: #1f4a4a;
   --bt-primary-hover: #183b3b;
   --bt-primary-soft: #e4edec;
 
-  /* 10% — الطين (للزر الرئيسي بس) */
+  /* 10% — clay (primary button only) */
   --bt-accent: #b05a30;
   --bt-accent-hover: #964c28;
 
-  /* رسائل النظام فقط — مش للـ Score */
+  /* System messages only — not for the match score */
   --bt-success: #2f7a55;
   --bt-warning: #b7791f;
   --bt-danger: #b42318;
 
-  /* الأشكال */
+  /* Shapes */
   --bt-radius: 14px;
   --bt-radius-sm: 10px;
   --bt-shadow: 0 1px 0 var(--bt-line), 0 8px 24px rgba(30, 42, 42, 0.06);
   --bt-topbar-h: 64px;
 
-  /* ربط Bootstrap بالألوان تبعتنا */
+  /* Map Bootstrap to our colors */
   --bs-body-bg: var(--bt-bg);
   --bs-body-color: var(--bt-text);
-  --bs-body-font-family: "IBM Plex Sans Arabic", system-ui, -apple-system,
-    "Segoe UI", sans-serif;
+  --bs-body-font-family:
+    "IBM Plex Sans Arabic", system-ui, -apple-system, "Segoe UI", sans-serif;
   --bs-heading-color: var(--bt-primary);
   --bs-secondary-color: var(--bt-muted);
   --bs-border-color: var(--bt-line);
@@ -126,18 +126,15 @@ h3,
 h4,
 h5,
 h6,
-.h1,
 .h2,
 .h3,
-.h4,
 .h5,
 .h6 {
   color: var(--bt-primary);
   font-weight: 700;
   line-height: 1.35;
 }
-.text-muted,
-.text-secondary {
+.text-muted {
   color: var(--bt-muted) !important;
 }
 ::selection {
@@ -158,7 +155,7 @@ h6,
   font-size: 1.05rem;
 }
 
-/* الزر الرئيسي — لون الطين. زر واحد بس بكل شاشة */
+/* Primary button — clay color. Only one per screen */
 .btn-accent {
   --bs-btn-color: #fff;
   --bs-btn-bg: var(--bt-accent);
@@ -203,6 +200,10 @@ h6,
   border-radius: var(--bt-radius-sm);
   border-color: var(--bt-line);
   padding: 0.6rem 0.9rem;
+}
+/* Leave room for the dropdown arrow */
+.form-select {
+  padding-inline-end: 2.25rem;
 }
 .form-control:focus,
 .form-select:focus {
@@ -267,17 +268,6 @@ h6,
 .site-header .nav-link:focus {
   color: var(--bt-primary);
 }
-.nav-lang {
-  color: var(--bt-muted);
-  text-decoration: none;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-.nav-lang:hover {
-  color: var(--bt-primary);
-}
 
 /* ---------- Footer ---------- */
 .site-footer {
@@ -309,7 +299,7 @@ h6,
 }
 
 /* ---------- Components ---------- */
-/* الكرت */
+/* Card */
 .bt-card {
   background: var(--bt-surface);
   border-radius: var(--bt-radius);
@@ -317,25 +307,7 @@ h6,
   overflow: hidden;
 }
 
-/* الفلاتر */
-.chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.3rem 0.9rem;
-  border-radius: 999px;
-  background: var(--bt-line);
-  color: var(--bt-text);
-  font-size: 0.875rem;
-  font-weight: 500;
-  border: 0;
-}
-.chip.is-active {
-  background: var(--bt-primary);
-  color: #fff;
-}
-
-/* شارة موثّق */
+/* Verified badge */
 .badge-verified {
   display: inline-flex;
   align-items: center;
@@ -348,7 +320,7 @@ h6,
   font-weight: 600;
 }
 
-/* حلقة التوافق — <div class="score-ring" style="--value:92"> */
+/* Match score ring — <div class="score-ring" style="--value:92"> */
 .score-ring {
   --value: 0;
   --size: 60px;
@@ -382,22 +354,13 @@ h6,
   font-weight: 600;
   margin-top: 3px;
 }
-.score-ring--lg {
-  --size: 96px;
-}
-.score-ring--lg .score-ring__inner {
-  font-size: 1.6rem;
-}
-.score-ring--lg .score-ring__inner small {
-  font-size: 0.75rem;
-}
 
-/* صورة بديلة لحد ما تجيب صور حقيقية */
+/* Placeholder image until real photos are added */
 .img-placeholder {
   background: linear-gradient(135deg, #e2e4df, #afc3c0);
 }
 
-/* ---------- App layout (بعد تسجيل الدخول) ---------- */
+/* ---------- App layout (after login) ---------- */
 .app-topbar {
   position: sticky;
   top: 0;
@@ -410,7 +373,8 @@ h6,
   gap: 0.5rem;
   padding-inline: 1rem;
 }
-.app-topbar .icon-btn {
+.app-topbar .icon-btn,
+.app-nav .icon-btn {
   width: 40px;
   height: 40px;
   border-radius: 10px;
@@ -423,7 +387,8 @@ h6,
   position: relative;
   font-size: 1.2rem;
 }
-.app-topbar .icon-btn:hover {
+.app-topbar .icon-btn:hover,
+.app-nav .icon-btn:hover {
   background: var(--bt-bg);
   color: var(--bt-primary);
 }
@@ -614,7 +579,7 @@ h6,
   }
 }
 
-/* راس كل قسم + كروت المميزات (بنستخدمهم بأكثر من قسم) */
+/* Section heading + feature cards (used in several sections) */
 .section-head {
   max-width: 40rem;
   margin: 0 auto 3rem;
@@ -640,12 +605,12 @@ h6,
   margin-bottom: 1rem;
 }
 
-/* قسم بخلفية بيضا عشان نفصل بين الأقسام */
+/* Section with a white background to separate sections */
 .section-alt {
   background: var(--bt-surface);
 }
 
-/* كيف بيشتغل */
+/* How it works */
 .step {
   text-align: center;
   padding-inline: 1rem;
@@ -712,7 +677,7 @@ h6,
   }
 }
 
-/* المميزات */
+/* Features */
 .feature-row + .feature-row {
   margin-top: 4rem;
 }
@@ -757,18 +722,6 @@ h6,
   --bs-progress-bg: var(--bt-line);
   --bs-progress-bar-bg: var(--bt-primary);
   --bs-progress-border-radius: 999px;
-}
-.score-bar {
-  display: grid;
-  grid-template-columns: 70px 1fr 28px;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 0.9rem;
-  margin-bottom: 0.6rem;
-}
-.score-bar b {
-  color: var(--bt-primary);
-  text-align: end;
 }
 .ic-ok {
   color: var(--bt-success);
@@ -830,7 +783,7 @@ h6,
   color: #fff;
 }
 
-/* لمين */
+/* Who it is for */
 .purpose-card {
   height: 100%;
   background: var(--bt-bg);
@@ -868,7 +821,7 @@ h6,
   box-shadow: 0 0 0 1px var(--bt-line);
 }
 
-/* للملاك */
+/* For owners */
 .stat-tiles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -921,7 +874,7 @@ h6,
   min-width: 0;
 }
 
-/* الدعوة الأخيرة */
+/* Final call to action */
 .cta-card {
   position: relative;
   overflow: hidden;
@@ -954,7 +907,7 @@ h6,
 }
 
 /* =========================================================
-   App components (لوحات التحكم وصفحات الباحث)
+   App components (dashboards and seeker pages)
    ========================================================= */
 @media (max-width: 575.98px) {
   .app-main {
@@ -1002,7 +955,7 @@ h6,
   text-decoration: none;
 }
 
-/* تابات */
+/* Tabs */
 .seg-tabs {
   display: inline-flex;
   flex-wrap: wrap;
@@ -1037,7 +990,7 @@ h6,
   margin-inline-start: 0.35rem;
 }
 
-/* حالات */
+/* Statuses */
 .status {
   display: inline-flex;
   align-items: center;
@@ -1076,7 +1029,7 @@ h6,
   color: var(--bt-muted);
 }
 
-/* جداول */
+/* Tables */
 .bt-table {
   --bs-table-bg: transparent;
   margin: 0;
@@ -1110,7 +1063,7 @@ h6,
   font-size: 0.75rem;
 }
 
-/* أرقام لوحة التحكم */
+/* Dashboard KPIs */
 .kpi {
   background: var(--bt-surface);
   border-radius: var(--bt-radius);
@@ -1149,7 +1102,7 @@ h6,
   color: var(--bt-success);
 }
 
-/* رسم بياني بسيط */
+/* Simple bar chart */
 .bar-chart {
   display: flex;
   align-items: flex-end;
@@ -1173,7 +1126,7 @@ h6,
   margin-top: 0.5rem;
 }
 
-/* صور بديلة بألوان مختلفة */
+/* Placeholder images in different colors */
 .ph {
   background: linear-gradient(
     135deg,
@@ -1206,7 +1159,7 @@ h6,
   --ph-b: #c9a595;
 }
 
-/* كرت العقار */
+/* Property card */
 .prop-card {
   background: var(--bt-surface);
   border-radius: var(--bt-radius);
@@ -1328,21 +1281,6 @@ h6,
   margin: 0;
 }
 
-/* شريط البحث والفلاتر */
-.filter-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
-  background: var(--bt-surface);
-  border-radius: var(--bt-radius);
-  box-shadow: var(--bt-shadow);
-  padding: 0.75rem;
-}
-.filter-bar .form-select {
-  width: auto;
-  min-width: 130px;
-}
 .search-input {
   position: relative;
   flex: 1;
@@ -1359,45 +1297,16 @@ h6,
   padding-inline-start: 2.4rem;
   width: 100%;
 }
-.view-toggle .btn {
-  padding: 0.45rem 0.7rem;
-}
-.view-toggle .btn.active {
-  background: var(--bt-primary);
-  color: #fff;
-  border-color: var(--bt-primary);
-}
 
-/* شريط المقارنة */
-.compare-tray {
-  position: fixed;
-  bottom: 1rem;
-  inset-inline: 1rem;
-  z-index: 1035;
-  max-width: 720px;
-  margin-inline: auto;
-  background: var(--bt-primary);
-  color: #fff;
-  border-radius: var(--bt-radius);
-  padding: 0.75rem 1rem;
-  display: none;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  box-shadow: 0 12px 30px rgba(31, 74, 74, 0.35);
-}
-.compare-tray.is-open {
-  display: flex;
-}
-
-/* خريطة بديلة (لحد ما نربط Leaflet) */
+/* Placeholder map (until Leaflet is connected) */
 .map-mock {
   position: relative;
   overflow: hidden;
   border-radius: var(--bt-radius);
   min-height: 260px;
   background-color: #e8ece6;
-  background-image: linear-gradient(#dce2da 1px, transparent 1px),
+  background-image:
+    linear-gradient(#dce2da 1px, transparent 1px),
     linear-gradient(90deg, #dce2da 1px, transparent 1px);
   background-size: 44px 44px;
 }
@@ -1405,7 +1314,8 @@ h6,
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       115deg,
       transparent 46%,
       #fff 46%,
@@ -1419,39 +1329,6 @@ h6,
       #fff 60.5%,
       transparent 60.5%
     );
-}
-.map-pin {
-  position: absolute;
-  transform: translate(-50%, -100%);
-  background: var(--bt-primary);
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.2rem 0.55rem;
-  border-radius: 999px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  white-space: nowrap;
-}
-.map-pin::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -5px;
-  transform: translateX(-50%);
-  border: 5px solid transparent;
-  border-top-color: inherit;
-  border-bottom: 0;
-}
-.map-pin {
-  border-top-color: var(--bt-primary);
-}
-.map-pin.is-mid {
-  background: #5c7f7f;
-  border-top-color: #5c7f7f;
-}
-.map-pin.is-low {
-  background: #93a5a4;
-  border-top-color: #93a5a4;
 }
 .map-area {
   position: absolute;
@@ -1474,7 +1351,7 @@ h6,
   box-shadow: 0 0 0 5px rgba(176, 90, 48, 0.25);
 }
 
-/* صفحات الدخول */
+/* Auth pages */
 .auth-wrap {
   min-height: 100vh;
   display: grid;
@@ -1514,11 +1391,6 @@ h6,
 .auth-side .brand-mark {
   background: #fff;
   color: var(--bt-primary);
-}
-.auth-quote {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: var(--bt-radius);
-  padding: 1.25rem;
 }
 .auth-main {
   display: flex;
@@ -1584,7 +1456,7 @@ h6,
   padding-inline-start: 2.5rem;
 }
 
-/* بطاقات الاختيار (radio/checkbox) */
+/* Choice cards (radio/checkbox) */
 .choice-card {
   display: flex;
   gap: 0.85rem;
@@ -1650,26 +1522,12 @@ h6,
   color: #fff;
 }
 
-/* الـ Onboarding */
+/* Onboarding */
 .wizard {
   max-width: 760px;
   margin: 0 auto;
 }
-.wizard-progress {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
-}
-.wizard-progress span {
-  flex: 1;
-  height: 6px;
-  border-radius: 999px;
-  background: var(--bt-line);
-}
-.wizard-progress span.is-done {
-  background: var(--bt-primary);
-}
-/* هلأ كل الخطوات ظاهرة ورا بعض. بمرحلة الـ JS بنخفيها ونعرض وحدة وحدة */
+/* All wizard steps are shown one after another */
 .wizard-step + .wizard-step {
   margin-top: 2.5rem;
   padding-top: 2.5rem;
@@ -1693,7 +1551,7 @@ h6,
 }
 .priority {
   display: grid;
-  grid-template-columns: minmax(150px, 1fr) 2fr 84px;
+  grid-template-columns: minmax(150px, 1fr) 2fr 112px;
   gap: 1rem;
   align-items: center;
   padding: 0.9rem 0;
@@ -1711,39 +1569,45 @@ h6,
 .priority label i {
   color: var(--bt-primary);
 }
-.prio-val {
-  text-align: center;
-  font-size: 0.78rem;
+/* Yes/no priority (checkbox instead of a slider) */
+.priority--check {
+  grid-template-columns: 1fr auto;
+}
+.priority--check .form-check-input {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  cursor: pointer;
+}
+/* Shared housing is for students only: when "Study" isn't picked in step 1,
+   the row fades and the checkbox is hidden, so it can't be used (mouse or keyboard) */
+.students-only-note {
+  color: var(--bt-muted);
+}
+.wizard:not(:has(#pStudy:checked)) .priority--students {
+  opacity: 0.55;
+}
+.wizard:not(:has(#pStudy:checked)) .priority--students .form-check-input {
+  visibility: hidden;
+}
+.wizard:not(:has(#pStudy:checked)) .students-only-note {
+  color: var(--bt-accent);
   font-weight: 600;
-  color: var(--bt-primary);
-  background: var(--bt-primary-soft);
-  border-radius: 999px;
-  padding: 0.2rem 0.5rem;
+}
+.budget-input {
+  max-width: 320px;
 }
 @media (max-width: 575.98px) {
   .priority {
     grid-template-columns: 1fr auto;
   }
-  .priority .form-range {
-    grid-column: 1 / -1;
-    order: 3;
-  }
-}
-.form-range::-webkit-slider-thumb {
-  background: var(--bt-primary);
-}
-.form-range::-moz-range-thumb {
-  background: var(--bt-primary);
-}
-.form-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 0.2rem rgba(31, 74, 74, 0.2);
 }
 .form-switch .form-check-input:checked {
   background-color: var(--bt-primary);
   border-color: var(--bt-primary);
 }
 
-/* صفحة العقار */
+/* Property page */
 .gallery {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -1838,7 +1702,7 @@ h6,
   color: var(--bt-primary);
 }
 
-/* مساعد الأحياء العائم */
+/* Floating neighborhood assistant */
 .ai-fab {
   position: fixed;
   bottom: 1.25rem;
@@ -1895,7 +1759,7 @@ h6,
   color: var(--bt-primary);
 }
 
-/* الشات */
+/* Chat */
 .chat {
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -2024,19 +1888,6 @@ h6,
   opacity: 0.65;
   margin-top: 0.2rem;
 }
-.msg-system {
-  align-self: center;
-  max-width: 90%;
-  text-align: center;
-  font-size: 0.78rem;
-  color: #8a5a12;
-  background: #fbf1e1;
-  border-radius: 12px;
-  padding: 0.4rem 0.9rem;
-  display: flex;
-  gap: 0.4rem;
-  align-items: center;
-}
 .day-sep {
   align-self: center;
   font-size: 0.72rem;
@@ -2066,70 +1917,7 @@ h6,
   }
 }
 
-/* خطوات أفقية (حالة الحجز) */
-.steps-h {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.75rem;
-  color: var(--bt-muted);
-  flex-wrap: wrap;
-}
-.steps-h .s {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-}
-.steps-h .s.is-done {
-  color: var(--bt-primary);
-  font-weight: 600;
-}
-.steps-h .s.is-now {
-  color: var(--bt-accent);
-  font-weight: 600;
-}
-.steps-h .sep {
-  flex: 1;
-  min-width: 14px;
-  height: 2px;
-  background: var(--bt-line);
-}
-.steps-h .sep.is-done {
-  background: var(--bt-primary);
-}
-
-.booking-card {
-  display: grid;
-  grid-template-columns: 120px 1fr auto;
-  gap: 1rem;
-  align-items: center;
-}
-.booking-card .thumb {
-  width: 120px;
-  height: 96px;
-  border-radius: 12px;
-}
-@media (max-width: 767.98px) {
-  .booking-card {
-    grid-template-columns: 84px 1fr;
-  }
-  .booking-card .thumb {
-    width: 84px;
-    height: 84px;
-  }
-  .booking-card .actions {
-    grid-column: 1 / -1;
-  }
-}
-.info-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem 1.2rem;
-  font-size: 0.82rem;
-  color: var(--bt-muted);
-}
-
-/* رفع ملفات وصور */
+/* File and photo uploads */
 .dropzone {
   border: 2px dashed var(--bt-line);
   border-radius: var(--bt-radius);
@@ -2194,7 +1982,7 @@ h6,
   color: var(--bt-primary);
 }
 
-/* خطط الاشتراك */
+/* Subscription plans */
 .plan {
   border: 1.5px solid var(--bt-line);
   border-radius: var(--bt-radius);
@@ -2278,31 +2066,21 @@ h6,
   font-size: 2rem;
   color: var(--bt-primary);
 }
-.masked {
-  font-family: monospace;
-  background: var(--bt-bg);
-  border-radius: 6px;
-  padding: 0 0.35rem;
-}
 
-/* أيقونات الأسهم بتنقلب مع اتجاه اللغة */
-html[dir="ltr"] .dir-flip {
-  display: inline-block;
-  transform: scaleX(-1);
-}
+/* Arrow icons flip to match the language direction */
 .choice-card small {
   display: block;
 }
 
-/* رقم التنبيه بالـ sidebar بدون النقطة */
+/* Sidebar badge number without the dot */
 .side-link .status::before {
   display: none;
 }
 
 /* =========================================================
-   Static shell helpers (صفحات الـ HTML الثابتة)
+   Static shell helpers (static HTML pages)
    ========================================================= */
-/* أيقونة بنص صورة الكرت لحد ما تيجي صور حقيقية */
+/* Icon centered in the card image until real photos are added */
 .prop-media .ph-icon {
   position: absolute;
   inset: 0;
@@ -2312,37 +2090,11 @@ html[dir="ltr"] .dir-flip {
   font-size: 2.5rem;
   color: rgba(255, 255, 255, 0.75);
 }
-/* شريط تنبيه ناعم بلون البترولي */
-.notice {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.6rem;
-  background: var(--bt-primary-soft);
-  color: var(--bt-primary);
-  border-radius: var(--bt-radius);
-  padding: 0.75rem 1rem;
-  font-weight: 500;
-}
-.notice a {
-  color: var(--bt-primary);
-  font-weight: 600;
-}
-/* شريط المقارنة جوا الصفحة (مش ثابت) */
-.compare-tray.is-inline {
-  position: sticky;
-  margin-top: 1.5rem;
-}
-/* نقاط الهدوء */
-.dots {
-  color: var(--bt-primary);
-  letter-spacing: 2px;
-}
+/* Quiet-level dots */
 .text-primary-bt {
   color: var(--bt-primary) !important;
 }
-/* رقم التنبيه بالـ sidebar (لون الطين زي التصميم) */
+/* Sidebar badge number (clay, as in the design) */
 .side-badge {
   min-width: 20px;
   height: 20px;
@@ -2355,4 +2107,348 @@ html[dir="ltr"] .dir-flip {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Keep absolutely positioned children (e.g. .visually-hidden labels in
+   table headers) inside the scroll box, so wide tables never make the
+   whole page scroll sideways on phones */
+.table-responsive {
+  position: relative;
+}
+
+/* Landing — homes section: the whole card is a link to the property page */
+.home-card .prop-title {
+  padding-inline-end: 0;
+}
+.home-card .prop-price {
+  margin-top: auto;
+}
+.view-more {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--bt-primary);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.view-more i {
+  transition: transform 0.2s;
+}
+.home-card:hover .view-more i,
+.home-card:focus-within .view-more i {
+  transform: translateX(3px);
+}
+.home-card:focus-within {
+  outline: 2px solid var(--bt-primary);
+  outline-offset: 2px;
+}
+.home-card .stretched-link:focus {
+  outline: none;
+}
+.category-form .form-select {
+  width: auto;
+  min-width: 190px;
+}
+
+/* =========================================================
+   Seeker pages — top navbar instead of the dashboard sidebar
+   ========================================================= */
+.app-nav {
+  background: var(--bt-surface);
+  border-bottom-color: var(--bt-line);
+}
+.app-page {
+  padding-block: 1.75rem 3rem;
+}
+
+/* Links + search grouped in one capsule (desktop) */
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.app-nav .nav-group .navbar-nav {
+  gap: 0.25rem;
+}
+.app-nav .nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  height: 38px;
+  padding: 0 0.95rem;
+  border-radius: 999px;
+  color: var(--bt-muted);
+  font-weight: 500;
+  white-space: nowrap;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.app-nav .nav-link:hover {
+  color: var(--bt-primary);
+}
+.app-nav .nav-link.active {
+  color: var(--bt-primary);
+  font-weight: 600;
+}
+.app-nav .nav-link .side-badge {
+  min-width: 18px;
+  height: 18px;
+  font-size: 0.65rem;
+}
+.nav-group-divider {
+  width: 1px;
+  height: 22px;
+  background: var(--bt-line);
+  margin-inline: 0.35rem;
+}
+
+/* Search box */
+.nav-search {
+  position: relative;
+  width: 240px;
+}
+.nav-search i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  inset-inline-start: 0.85rem;
+  color: var(--bt-muted);
+  pointer-events: none;
+}
+.nav-search .form-control {
+  height: 38px;
+  padding-block: 0;
+  padding-inline-start: 2.3rem;
+  border-radius: 999px;
+}
+
+@media (min-width: 992px) {
+  .nav-group {
+    margin-inline: auto;
+    padding: 4px;
+    background: var(--bt-bg);
+    border: 1px solid var(--bt-line);
+    border-radius: 999px;
+  }
+  .app-nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.7);
+  }
+  .app-nav .nav-link.active {
+    background: var(--bt-surface);
+    box-shadow: 0 1px 3px rgba(30, 42, 42, 0.12);
+  }
+  .nav-search .form-control {
+    background: transparent;
+    border-color: transparent;
+  }
+  .nav-search .form-control:focus {
+    background: var(--bt-surface);
+    border-color: var(--bt-primary);
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .nav-search {
+    width: 170px;
+  }
+}
+
+/* Phones: the group opens as a list under the bar */
+@media (max-width: 991.98px) {
+  .app-nav .navbar-collapse {
+    padding-block: 0.5rem 1rem;
+  }
+  .nav-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .app-nav .nav-link {
+    display: flex;
+    height: 44px;
+    border-radius: var(--bt-radius-sm);
+  }
+  .app-nav .nav-link.active {
+    background: var(--bt-primary-soft);
+  }
+  .nav-group-divider {
+    display: none;
+  }
+  .nav-search {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .nav-search .form-control {
+    height: 44px;
+    background: var(--bt-bg);
+  }
+}
+
+/* Count badge on the corner of a navbar icon (e.g. unread messages) */
+.icon-badge {
+  position: absolute;
+  top: 3px;
+  inset-inline-end: 1px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--bt-accent);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--bt-surface);
+}
+.app-nav .icon-btn,
+.app-topbar a.icon-btn {
+  text-decoration: none;
+}
+.app-nav .icon-btn.is-active,
+.app-topbar .icon-btn.is-active {
+  background: var(--bt-primary-soft);
+  color: var(--bt-primary);
+}
+
+/* Profile button showing only the avatar */
+.app-user--avatar {
+  padding: 0.2rem;
+  border-radius: 50%;
+}
+.app-user--avatar .avatar {
+  width: 38px;
+  height: 38px;
+}
+.app-user--avatar[aria-expanded="true"] .avatar,
+.app-user--avatar:focus-visible .avatar {
+  box-shadow: 0 0 0 2px var(--bt-surface), 0 0 0 4px var(--bt-primary);
+}
+
+/* Chat: user type next to a name (User / Owner / Admin) */
+.role-tag {
+  display: inline-block;
+  margin-inline-start: 0.3rem;
+  padding: 0.05rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  line-height: 1.5;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.role-tag--user {
+  background: var(--bt-primary-soft);
+  color: var(--bt-primary);
+}
+.role-tag--owner {
+  background: #f6e9e1;
+  color: var(--bt-accent-hover);
+}
+.role-tag--admin {
+  background: var(--bt-primary);
+  color: #fff;
+}
+.chat-item .meta b > span {
+  min-width: 0;
+}
+/* Bayti Support (admin) avatar */
+.avatar--support {
+  background: var(--bt-primary);
+  color: #fff;
+}
+
+/* =========================================================
+   Owner & admin: burger collapses the sidebar to an icon rail
+   (desktop only, CSS only: <input id="sidebarToggle"> + <label>)
+   ========================================================= */
+.sidebar-toggle {
+  /* hidden but still focusable with the keyboard */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.sidebar-burger {
+  cursor: pointer;
+  margin: 0;
+}
+.sidebar-toggle:focus-visible ~ .app-topbar .sidebar-burger {
+  outline: 2px solid var(--bt-primary);
+  outline-offset: 2px;
+}
+@media (min-width: 992px) {
+  .app-sidebar {
+    transition: width 0.2s ease;
+  }
+  .sidebar-toggle:checked ~ .app-topbar .sidebar-burger {
+    background: var(--bt-primary-soft);
+    color: var(--bt-primary);
+  }
+  .sidebar-toggle:checked ~ .app-shell .app-sidebar {
+    width: 76px;
+  }
+  .sidebar-toggle:checked ~ .app-shell .app-sidebar .offcanvas-body {
+    padding-inline: 0.75rem;
+  }
+  .sidebar-toggle:checked ~ .app-shell .side-label,
+  .sidebar-toggle:checked ~ .app-shell .side-link .flex-grow-1 {
+    display: none;
+  }
+  .sidebar-toggle:checked ~ .app-shell .side-link {
+    position: relative;
+    justify-content: center;
+    padding: 0.65rem 0;
+  }
+  /* the count becomes a small bubble on the icon */
+  .sidebar-toggle:checked ~ .app-shell .side-link .side-badge {
+    position: absolute;
+    top: 2px;
+    inset-inline-end: 4px;
+    min-width: 16px;
+    height: 16px;
+    padding: 0 4px;
+    font-size: 0.6rem;
+  }
+}
+
+/* Register: owner fields only for owners, agency name only for agencies (CSS only) */
+.auth-form .owner-only,
+.auth-form .agency-only {
+  display: none;
+}
+.auth-form:has(#roleOwner:checked) .owner-only {
+  display: block;
+}
+.auth-form:has(#roleOwner:checked):has(#otAgency:checked) .agency-only {
+  display: block;
+}
+
+/* Verify email: one input for the 6-digit code */
+.otp-input {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.6em;
+  text-align: center;
+  padding-inline-start: 0.6em; /* balances the letter spacing */
+  font-variant-numeric: tabular-nums;
+}
+
+/* Landing navbar: a link per section */
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+section[id] {
+  scroll-margin-top: var(--bt-topbar-h); /* heading not hidden under the sticky navbar */
+}
+.landing-nav .nav-link {
+  white-space: nowrap;
 }

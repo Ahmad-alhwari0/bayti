@@ -1,14 +1,13 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>بيتي — حجوزاتي</title>
+    <title>Bayti — My bookings</title>
 
     <link
-      id="bootstrap-css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
@@ -18,260 +17,346 @@
     <link rel="stylesheet" href="../assets/css/pages/seeker.css" />
   </head>
   <body data-role="seeker" data-page="bookings">
-    <!-- ===== Topbar ===== -->
-    <header class="app-topbar">
-      <button
-        class="icon-btn d-lg-none"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#appSidebar"
-        aria-label="القائمة"
-      >
-        <i class="bi bi-list"></i>
-      </button>
-      <a class="brand" href="search.html"
-        ><span class="brand-mark">B</span><span>بيتي</span></a
-      >
-      <div class="ms-auto d-flex align-items-center gap-1">
-        <button type="button" class="btn btn-link nav-lang px-2" data-action="toggle-lang">
-          <i class="bi bi-translate"></i><span>EN</span>
-        </button>
-        <div class="dropdown">
-          <button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-label="الإشعارات">
-            <i class="bi bi-bell"></i><span class="dot"></span>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end shadow-sm p-0" style="width: 320px">
-            <div class="px-3 py-2 border-bottom fw-semibold">الإشعارات</div>
-            <div class="py-1">
-              <a class="dropdown-item d-flex gap-2 py-2 text-wrap" href="property.html">
-                <span class="kpi-icon flex-shrink-0" style="width: 34px; height: 34px; font-size: 1rem"><i class="bi bi-stars"></i></span>
-                <span class="small">
-                  <span class="d-block">نزل بيت جديد بتوافق 89% بالجبيهة</span>
-                  <span class="text-muted" style="font-size: 0.72rem">قبل 10 دقايق</span>
-                </span>
-              </a>
-              <a class="dropdown-item d-flex gap-2 py-2 text-wrap" href="bookings.html">
-                <span class="kpi-icon flex-shrink-0" style="width: 34px; height: 34px; font-size: 1rem"><i class="bi bi-check2-circle"></i></span>
-                <span class="small">
-                  <span class="d-block">أبو أحمد أكّد موعد المعاينة يوم الخميس</span>
-                  <span class="text-muted" style="font-size: 0.72rem">قبل ساعة</span>
-                </span>
-              </a>
+    <!-- ===== Navbar ===== -->
+    <header class="site-header app-nav">
+      <nav class="navbar navbar-expand-lg" aria-label="Main">
+        <div class="container">
+          <a class="brand" href="search.html"
+            ><span class="brand-mark">B</span><span>Bayti</span></a
+          >
+
+          <!-- Messages, notifications + user menu (stay visible on phones) -->
+          <div class="d-flex align-items-center gap-1 ms-auto order-lg-last">
+            <!-- Messages: icon with unread count -->
+            <a
+              class="icon-btn"
+              href="chat.html"
+              aria-label="Messages, 2 unread"
+            >
+              <i class="bi bi-chat-dots"></i><span class="icon-badge">2</span>
+            </a>
+            <div class="dropdown">
+              <button
+                class="icon-btn"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-label="Notifications"
+              >
+                <i class="bi bi-bell"></i><span class="dot"></span>
+              </button>
+              <div
+                class="dropdown-menu dropdown-menu-end shadow-sm p-0"
+                style="width: 320px"
+              >
+                <div class="px-3 py-2 border-bottom fw-semibold">Notifications</div>
+                <div class="py-1">
+                  <a
+                    class="dropdown-item d-flex gap-2 py-2 text-wrap"
+                    href="property.html"
+                  >
+                    <span
+                      class="kpi-icon flex-shrink-0"
+                      style="width: 34px; height: 34px; font-size: 1rem"
+                      ><i class="bi bi-stars"></i
+                    ></span>
+                    <span class="small">
+                      <span class="d-block"
+                        >A new home just listed in Al Jubeiha with a 92%
+                        match</span
+                      >
+                      <span class="text-muted" style="font-size: 0.72rem"
+                        >10 minutes ago</span
+                      >
+                    </span>
+                  </a>
+                  <a
+                    class="dropdown-item d-flex gap-2 py-2 text-wrap"
+                    href="bookings.html"
+                  >
+                    <span
+                      class="kpi-icon flex-shrink-0"
+                      style="width: 34px; height: 34px; font-size: 1rem"
+                      ><i class="bi bi-check2-circle"></i
+                    ></span>
+                    <span class="small">
+                      <span class="d-block"
+                        >Abu Ahmad accepted your booking</span
+                      >
+                      <span class="text-muted" style="font-size: 0.72rem"
+                        >1 hour ago</span
+                      >
+                    </span>
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="app-user" type="button" data-bs-toggle="dropdown">
-            <span class="avatar">س</span>
-            <span class="d-none d-md-inline text-start lh-sm">
-              <span class="d-block small fw-semibold">سارة خالد</span>
-              <span class="d-block text-muted" style="font-size: 0.72rem">باحث عن سكن</span>
-            </span>
-            <i class="bi bi-chevron-down small text-muted"></i>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-            <li><a class="dropdown-item" href="profile.html">ملفي</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item text-danger" href="../index.html">تسجيل الخروج</a></li>
-          </ul>
-        </div>
-      </div>
-    </header>
-
-    <div class="app-shell">
-      <!-- ===== Sidebar ===== -->
-      <aside class="app-sidebar offcanvas-lg offcanvas-start" tabindex="-1" id="appSidebar">
-        <div class="offcanvas-header border-bottom">
-          <a class="brand" href="../index.html"><span class="brand-mark">B</span><span>بيتي</span></a>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#appSidebar" aria-label="إغلاق"></button>
-        </div>
-        <div class="offcanvas-body">
-          <div class="side-label">باحث عن سكن</div>
-          <a class="side-link" href="search.html"><i class="bi bi-stars"></i><span class="flex-grow-1">اكتشف بيتك</span></a>
-          <a class="side-link active" href="bookings.html" aria-current="page"><i class="bi bi-calendar-check"></i><span class="flex-grow-1">حجوزاتي</span><span class="side-badge">1</span></a>
-          <a class="side-link" href="chat.html"><i class="bi bi-chat-dots"></i><span class="flex-grow-1">الرسائل</span><span class="side-badge">2</span></a>
-          <a class="side-link" href="profile.html"><i class="bi bi-sliders"></i><span class="flex-grow-1">ملفي وأولوياتي</span></a>
-        </div>
-      </aside>
-
-      <!-- ===== Content ===== -->
-      <main class="app-main">
-        <!-- 1. راس الصفحة -->
-        <div class="page-head">
-          <div>
-            <h1>حجوزاتي</h1>
-            <p>تابع حالة حجوزاتك ومواعيد المعاينة.</p>
-          </div>
-        </div>
-
-        <!-- 2. التابات -->
-        <ul class="nav seg-tabs mb-3" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-bookings" type="button" role="tab" aria-controls="tab-bookings" aria-selected="true">
-              الحجوزات<span class="count">3</span>
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-viewings" type="button" role="tab" aria-controls="tab-viewings" aria-selected="false">
-              المعاينات<span class="count">2</span>
-            </button>
-          </li>
-        </ul>
-
-        <div class="tab-content">
-          <!-- ===== الحجوزات ===== -->
-          <section class="tab-pane fade show active" id="tab-bookings" role="tabpanel" tabindex="0">
-            <div class="d-flex flex-column gap-3" id="bookingsList">
-              <!-- حجز: الدفع محجوز -->
-              <article class="panel">
-                <div class="booking-card">
-                  <a href="property.html" class="thumb ph ph-1" tabindex="-1" aria-hidden="true"></a>
-                  <div class="min-w-0">
-                    <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
-                      <a href="property.html" class="fw-semibold fs-6 text-body text-decoration-none">استوديو مفروش — الجبيهة</a>
-                      <span class="status status--info">الدفع محجوز</span>
-                    </div>
-                    <div class="info-row mb-2">
-                      <span>الدخول: 1 نوفمبر 2026</span><span>المدة: 6 شهور</span><span>الدفعة: 265 د.أ</span>
-                    </div>
-                    <div class="steps-h" aria-label="مراحل الحجز">
-                      <span class="s is-done">الطلب</span><span class="sep is-done"></span>
-                      <span class="s is-done">قبول المالك</span><span class="sep is-done"></span>
-                      <span class="s is-done">الدفع محجوز</span><span class="sep"></span>
-                      <span class="s is-now" aria-current="step">الاستلام</span><span class="sep"></span>
-                      <span class="s">تم</span>
-                    </div>
-                  </div>
-                  <div class="actions d-flex flex-wrap gap-2">
-                    <button type="button" class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#confirmMoveIn">استلمت البيت</button>
-                    <a href="chat.html" class="btn btn-outline-secondary px-3" aria-label="الرسائل"><i class="bi bi-chat-dots text-primary-bt"></i></a>
-                  </div>
-                </div>
-                <div class="privacy-note mt-3"><i class="bi bi-shield-check"></i>استلم البيت وتأكد إنه مطابق للإعلان، وبعدها أكّد عشان يتحرر الدفع للمالك.</div>
-              </article>
-
-              <!-- حجز: بانتظار الرد -->
-              <article class="panel">
-                <div class="booking-card">
-                  <a href="property.html" class="thumb ph ph-2" tabindex="-1" aria-hidden="true"></a>
-                  <div class="min-w-0">
-                    <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
-                      <a href="property.html" class="fw-semibold fs-6 text-body text-decoration-none">شقة غرفتين — تلاع العلي</a>
-                      <span class="status status--pending">بانتظار الرد</span>
-                    </div>
-                    <div class="info-row mb-2">
-                      <span>الدخول: 15 نوفمبر 2026</span><span>المدة: 6 شهور</span><span>الدفعة: 395 د.أ</span>
-                    </div>
-                    <div class="steps-h" aria-label="مراحل الحجز">
-                      <span class="s is-done">الطلب</span><span class="sep"></span>
-                      <span class="s is-now" aria-current="step">قبول المالك</span><span class="sep"></span>
-                      <span class="s">الدفع محجوز</span><span class="sep"></span>
-                      <span class="s">الاستلام</span><span class="sep"></span>
-                      <span class="s">تم</span>
-                    </div>
-                  </div>
-                  <div class="actions d-flex flex-wrap gap-2">
-                    <button type="button" class="btn btn-outline-secondary fw-medium">إلغاء الطلب</button>
-                    <a href="chat.html" class="btn btn-outline-secondary px-3" aria-label="الرسائل"><i class="bi bi-chat-dots text-primary-bt"></i></a>
-                  </div>
-                </div>
-                <div class="privacy-note mt-3"><i class="bi bi-shield-check"></i>المالك عادة بيرد خلال 24 ساعة.</div>
-              </article>
-
-              <!-- حجز: منتهي -->
-              <article class="panel">
-                <div class="booking-card">
-                  <a href="property.html" class="thumb ph ph-4" tabindex="-1" aria-hidden="true"></a>
-                  <div class="min-w-0">
-                    <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
-                      <a href="property.html" class="fw-semibold fs-6 text-body text-decoration-none">استوديو بإطلالة — جبل عمّان</a>
-                      <span class="status status--muted">منتهي</span>
-                    </div>
-                    <div class="info-row mb-2">
-                      <span>الدخول: 1 يوليو 2026</span><span>المدة: 2 شهور</span><span>الدفعة: 345 د.أ</span>
-                    </div>
-                    <div class="steps-h" aria-label="مراحل الحجز">
-                      <span class="s is-done">الطلب</span><span class="sep is-done"></span>
-                      <span class="s is-done">قبول المالك</span><span class="sep is-done"></span>
-                      <span class="s is-done">الدفع محجوز</span><span class="sep is-done"></span>
-                      <span class="s is-done">الاستلام</span><span class="sep is-done"></span>
-                      <span class="s is-done">تم</span>
-                    </div>
-                  </div>
-                  <div class="actions d-flex flex-wrap gap-2">
-                    <button type="button" class="btn btn-outline-primary"><i class="bi bi-star me-1"></i>قيّم إقامتك</button>
-                    <a href="chat.html" class="btn btn-outline-secondary px-3" aria-label="الرسائل"><i class="bi bi-chat-dots text-primary-bt"></i></a>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </section>
-
-          <!-- ===== المعاينات ===== -->
-          <section class="tab-pane fade" id="tab-viewings" role="tabpanel" tabindex="0">
-            <div class="panel">
-              <ul class="list-clean" id="viewingsList">
-                <li class="list-row flex-wrap">
-                  <span class="icon-tile icon-tile--lg"><i class="bi bi-calendar3"></i></span>
-                  <div class="grow">
-                    <b class="d-block">غرفة بشقة مشتركة — الجبيهة</b>
-                    <small>الخميس 15 أكتوبر · 5:00 مساء</small>
-                  </div>
-                  <span class="status status--success">مؤكد</span>
-                  <button type="button" class="btn btn-outline-primary btn-sm"><i class="bi bi-calendar-plus me-1"></i>أضف للتقويم</button>
-                  <button type="button" class="btn btn-link btn-sm text-danger text-decoration-none">إلغاء الموعد</button>
-                </li>
-                <li class="list-row flex-wrap">
-                  <span class="icon-tile icon-tile--lg"><i class="bi bi-calendar3"></i></span>
-                  <div class="grow">
-                    <b class="d-block">شقة غرفة نوم — الشميساني</b>
-                    <small>السبت 17 أكتوبر · 11:00 صباحا</small>
-                  </div>
-                  <span class="status status--pending">بانتظار الرد</span>
-                  <button type="button" class="btn btn-outline-primary btn-sm"><i class="bi bi-calendar-plus me-1"></i>أضف للتقويم</button>
-                  <button type="button" class="btn btn-link btn-sm text-danger text-decoration-none">إلغاء الموعد</button>
+            <div class="dropdown">
+              <button
+                class="app-user app-user--avatar"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                aria-label="Account menu, Sara Khaled"
+              >
+                <span class="avatar">S</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                <li><h6 class="dropdown-header">Sara Khaled</h6></li>
+                <li><a class="dropdown-item" href="profile.html">My profile</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-danger" href="../index.html"
+                    >Log out</a
+                  >
                 </li>
               </ul>
             </div>
-          </section>
-        </div>
-      </main>
-    </div>
+            <button
+              class="navbar-toggler border-0"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#appNav"
+              aria-controls="appNav"
+              aria-expanded="false"
+              aria-label="Menu"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
 
-    <!-- ===== نافذة تأكيد الاستلام ===== -->
-    <div class="modal fade" id="confirmMoveIn" tabindex="-1" aria-labelledby="confirmMoveInTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <form class="modal-content border-0 p-2" id="confirmMoveInForm">
-          <div class="modal-header border-0 pb-0">
-            <h2 class="modal-title h5" id="confirmMoveInTitle">تأكيد الاستلام</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
-          </div>
-          <div class="modal-body">
-            <p class="small text-muted mb-3">تأكد من هالنقاط قبل ما تأكد. بعد التأكيد بيتحرر الدفع للمالك.</p>
-            <div class="form-check py-2">
-              <input class="form-check-input" type="checkbox" id="chkMatch" name="matches" checked required />
-              <label class="form-check-label" for="chkMatch">البيت مطابق للصور والوصف</label>
+          <!-- Page links + search, grouped in one capsule -->
+          <div class="collapse navbar-collapse" id="appNav">
+            <div class="nav-group">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="search.html"
+                    ><i class="bi bi-stars"></i><span>Discover</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="bookings.html"
+                    ><i class="bi bi-calendar-check"></i><span>My bookings</span
+                    ><span class="side-badge">1</span></a
+                  >
+                </li>
+              </ul>
+              <span class="nav-group-divider" aria-hidden="true"></span>
+              <!-- Search: plain GET form, opens the Discover page -->
+              <form
+                class="nav-search"
+                action="search.html"
+                method="get"
+                role="search"
+              >
+                <i class="bi bi-search" aria-hidden="true"></i>
+                <input
+                  type="search"
+                  class="form-control"
+                  name="q"
+                  placeholder="Search by area..."
+                  aria-label="Search homes by neighborhood"
+                />
+              </form>
             </div>
-            <div class="form-check py-2">
-              <input class="form-check-input" type="checkbox" id="chkBills" name="bills" checked required />
-              <label class="form-check-label" for="chkBills">الفواتير والإنترنت زي ما هو مكتوب</label>
-            </div>
-            <div class="form-check py-2">
-              <input class="form-check-input" type="checkbox" id="chkKeys" name="keys" required />
-              <label class="form-check-label" for="chkKeys">استلمت المفاتيح وكل شي شغّال</label>
-            </div>
           </div>
-          <div class="modal-footer border-0 flex-column align-items-stretch pt-0">
-            <button type="submit" class="btn btn-accent btn-lg m-0 mb-1">أكّد وحرّر الدفع</button>
-            <button type="button" class="btn btn-link text-danger text-decoration-none m-0" data-bs-dismiss="modal">في مشكلة؟ بلّغنا قبل ما تأكد</button>
-          </div>
-        </form>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ===== Content ===== -->
+    <main class="app-page container">
+      <!-- 1. Page header -->
+      <div class="page-head">
+        <div>
+          <h1>My bookings</h1>
+          <p>Updates from owners show up here.</p>
+        </div>
       </div>
-    </div>
+
+        <!-- ===== Bookings ===== -->
+        <!-- 2. Bookings -->
+        <section aria-label="Bookings">
+          <div class="bk-list" id="bookingsList">
+          <article class="bk-card" data-booking="BK-1042">
+            <a href="property.html" class="bk-thumb ph ph-1" tabindex="-1" aria-hidden="true"></a>
+            <div class="bk-body">
+              <div class="bk-top">
+                <a href="property.html" class="bk-title">Studio — Al Jubeiha</a>
+                <span class="status status--info">Accepted</span>
+              </div>
+              <div class="bk-meta">Al Jubeiha, Amman · Move-in Nov 1 · 6 months · 265 JOD / month</div>
+              <!-- Latest update, sent by the owner -->
+              <div class="bk-update">
+                <span class="avatar">A</span>
+                <p>
+                  <b>Abu Ahmad</b> accepted your booking. See you on Nov 1!
+                  <small>Oct 10</small>
+                </p>
+              </div>
+            </div>
+            <div class="bk-actions">
+              <a href="tel:+962791234567" class="btn btn-icon-sm" aria-label="Call Abu Ahmad"
+                ><i class="bi bi-telephone"></i
+              ></a>
+              <a href="chat.html" class="btn btn-icon-sm" aria-label="Message Abu Ahmad"
+                ><i class="bi bi-chat-dots"></i
+              ></a>
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn btn-icon-sm"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  aria-label="More options"
+                >
+                  <i class="bi bi-three-dots"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                  <li><a class="dropdown-item" href="property.html"><i class="bi bi-house-door me-2"></i>View home</a></li>
+                  <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#reportModal"><i class="bi bi-flag me-2"></i>Report a problem</button></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="bk-card" data-booking="BK-1043">
+            <a href="property.html" class="bk-thumb ph ph-2" tabindex="-1" aria-hidden="true"></a>
+            <div class="bk-body">
+              <div class="bk-top">
+                <a href="property.html" class="bk-title">2-bedroom apartment — Tla Al Ali</a>
+                <span class="status status--pending">Awaiting reply</span>
+              </div>
+              <div class="bk-meta">Tla Al Ali, Amman · Move-in Nov 15 · 6 months · 395 JOD / month</div>
+              <!-- Latest update, sent by the owner -->
+              <div class="bk-update is-waiting">
+                <i class="bi bi-hourglass-split"></i>
+                <p>
+                  Request sent to <b>Al Riyada Real Estate Office</b>. Owners usually reply within a day.
+                  <small>Oct 12</small>
+                </p>
+              </div>
+            </div>
+            <div class="bk-actions">
+              <a href="tel:+962795550101" class="btn btn-icon-sm" aria-label="Call Al Riyada Real Estate Office"
+                ><i class="bi bi-telephone"></i
+              ></a>
+              <a href="chat.html" class="btn btn-icon-sm" aria-label="Message Al Riyada Real Estate Office"
+                ><i class="bi bi-chat-dots"></i
+              ></a>
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn btn-icon-sm"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  aria-label="More options"
+                >
+                  <i class="bi bi-three-dots"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                  <li><a class="dropdown-item" href="property.html"><i class="bi bi-house-door me-2"></i>View home</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><button type="button" class="dropdown-item text-danger" data-bs-toggle="modal" data-bs-target="#cancelModal"><i class="bi bi-x-circle me-2"></i>Cancel request</button></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          </div>
+
+          <h2 class="bk-section-title">Past bookings</h2>
+          <div class="bk-list" id="pastBookingsList">
+          <article class="bk-card is-past" data-booking="BK-1031">
+            <a href="property.html" class="bk-thumb ph ph-5" tabindex="-1" aria-hidden="true"></a>
+            <div class="bk-body">
+              <div class="bk-top">
+                <a href="property.html" class="bk-title">Studio — Sweileh</a>
+                <span class="status status--muted">Completed</span>
+              </div>
+              <div class="bk-meta">Sweileh, Amman · Jul 1 – Sep 1, 2026 · 220 JOD / month</div>
+              <!-- Latest update, sent by the owner -->
+              <div class="bk-update is-system">
+                <i class="bi bi-check-circle"></i>
+                <p>
+                  Your stay ended on Sep 1. The booking closed automatically.
+                  <small>Sep 1</small>
+                </p>
+              </div>
+            </div>
+            <div class="bk-actions">
+              <a href="tel:+962791234567" class="btn btn-icon-sm" aria-label="Call Abu Ahmad"
+                ><i class="bi bi-telephone"></i
+              ></a>
+              <a href="chat.html" class="btn btn-icon-sm" aria-label="Message Abu Ahmad"
+                ><i class="bi bi-chat-dots"></i
+              ></a>
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn btn-icon-sm"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  aria-label="More options"
+                >
+                  <i class="bi bi-three-dots"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                  <li><a class="dropdown-item" href="property.html"><i class="bi bi-house-door me-2"></i>View home</a></li>
+                  <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#reportModal"><i class="bi bi-flag me-2"></i>Report a problem</button></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          </div>
+        </section>
+
+      <!-- ===== Cancel a booking request ===== -->
+      <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <form class="modal-content" id="cancelForm" method="post">
+            <div class="modal-header">
+              <h2 class="modal-title h5" id="cancelTitle">Cancel this request?</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p class="small text-muted">The owner will be told right away.</p>
+              <label class="form-label" for="cancelReason">Reason <span class="text-muted fw-normal">(optional)</span></label>
+              <select class="form-select" id="cancelReason" name="reason">
+                <option value="">Choose a reason</option>
+                <option value="found_other">I found another home</option>
+                <option value="plans_changed">My plans changed</option>
+                <option value="price">The price doesn't work for me</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-link text-muted" data-bs-dismiss="modal">Keep it</button>
+              <button type="submit" class="btn btn-danger">Yes, cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- ===== Report a problem ===== -->
+      <div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <form class="modal-content" id="reportForm" method="post">
+            <div class="modal-header">
+              <h2 class="modal-title h5" id="reportTitle">Report a problem</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <label class="form-label" for="reportDetails">What happened?</label>
+              <textarea class="form-control" id="reportDetails" name="details" rows="4" required></textarea>
+              <p class="small text-muted mt-2 mb-0">Bayti Support will reply in your messages.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-link text-muted" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/config.js"></script>
-    <script src="../assets/js/app.js"></script>
-    <script src="../assets/js/pages/seeker/bookings.js"></script>
   </body>
 </html>
